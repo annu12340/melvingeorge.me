@@ -1,12 +1,13 @@
 import Head from "next/head";
+import fetch from "node-fetch";
 import styles from "../styles/index/Index.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // COMPONENTS
 import { Navigation } from "../components/Navigation/Navigation";
-import { SinglePost } from "../components/SinglePost/SinglePost";
+import { SinglePostLink } from "../components/SinglePostLink/SinglePostLink";
 
 // ICONS
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faFacebook,
@@ -14,7 +15,7 @@ import {
   faFirefoxBrowser,
 } from "@fortawesome/free-brands-svg-icons";
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <>
       <Head>
@@ -68,7 +69,7 @@ export default function Home() {
             </div>
             {/* <!-- Hero Section: Image --> */}
             <div className="order-first lg:order-last">
-              <div className={`${styles.heroImg} block lg:hidden`}></div>
+              <div className={`${styles.heroImg} block lg:hidden`} />
               <img
                 className="hidden lg:block order-first md:order-last w-full z-0"
                 src="/me.png"
@@ -81,10 +82,27 @@ export default function Home() {
       {/* Main Section */}
       <main className="relative container mx-auto md:px-20 md:w-7/12 md:-mt-8 lg:-mt-12 py-10 mb-12 px-4 md:shadow-lg md:rounded-lg bg-white">
         <h1 className="text-3xl mb-6 font-medium">Blog</h1>
-        <SinglePost />
-        <SinglePost />
-        <SinglePost />
+        {posts && posts.length <= 0
+          ? null
+          : posts.map((post) => (
+              <SinglePostLink
+                title={post.title}
+                body={`${post.body.substring(0, 100)}...`}
+                id={post.id}
+                key={post.id}
+              />
+            ))}
       </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const posts = await res.json();
+  return {
+    props: {
+      posts,
+    },
+  };
 }
