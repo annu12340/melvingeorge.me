@@ -3,14 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 export const SinglePostLink = ({ title, body, id }) => (
   <div className="mb-10">
-    <Link href={`/posts/${id}`}>
-      <a className="text-xl font-medium cursor-pointer duration-300 transition transition-colors hover:text-blue-500">
+    <Link href="/posts/[id]" as={`/posts/${id}`}>
+      <a className="text-xl font-medium cursor-pointer duration-300 transition transition-colors  hover:bg-gray-200 hover:text-blue-600">
         {title}
       </a>
     </Link>
     <p className="italic mt-1">{body}</p>
     <a href="" className="inline-block cursor-pointer text-blue-500 mt-1">
-      <Link href={`/posts/${id}`}>
+      <Link href="/posts/[id]" as={`/posts/${id}`}>
         <a>
           Read <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
         </a>
