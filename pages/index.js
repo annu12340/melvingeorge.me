@@ -1,5 +1,6 @@
 import Head from "next/head";
-import fetch from "node-fetch";
+import fs from "fs";
+import path from "path";
 import styles from "../styles/index/Index.module.css";
 
 // COMPONENTS
@@ -14,8 +15,9 @@ import {
   faTwitter,
   faFirefoxBrowser,
 } from "@fortawesome/free-brands-svg-icons";
+import matter from "gray-matter";
 
-export default function Home({ posts }) {
+export default function Home({ linksData }) {
   return (
     <>
       <Head>
@@ -82,14 +84,14 @@ export default function Home({ posts }) {
       {/* Main Section */}
       <main className="relative container mx-auto md:px-20 md:w-7/12 md:-mt-8 lg:-mt-12 py-10 mb-12 px-4 md:shadow-lg md:rounded-lg bg-white">
         <h1 className="text-3xl mb-6 font-medium">Blog</h1>
-        {posts && posts.length <= 0
+        {linksData && linksData.length <= 0
           ? null
-          : posts.map((post) => (
+          : linksData.map((linkData) => (
               <SinglePostLink
-                title={post.title}
-                body={`${post.body.substring(0, 100)}...`}
-                id={post.id}
-                key={post.id}
+                title={linkData.title}
+                key={linkData.href}
+                href={linkData.href}
+                description={linkData.description}
               />
             ))}
       </main>
@@ -98,11 +100,26 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const posts = await res.json();
+  const filesString = fs.readdirSync(path.join("content")).toString();
+  const linksArray = filesString.split(",");
+  const linksData = linksArray.map((link) => {
+    const post = fs.readFileSync(path.join("content", link)).toString();
+    const { data } = matter(post);
+
+    const title = link.replace("-", " ").replace(".md", "");
+    const href = link.replace(".md", "");
+    const description = data.description;
+
+    return {
+      title,
+      href,
+      description,
+    };
+  });
+
   return {
     props: {
-      posts,
+      linksData,
     },
   };
 }
