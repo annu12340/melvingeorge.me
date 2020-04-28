@@ -14,10 +14,16 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "gray-matter": "^4.0.2",
-    "marked": "^1.0.0",
     "next": "9.3.5",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-markdown": "^4.3.1",
+    "react-typography": "^0.16.19",
+    "typeface-lato": "^0.0.75",
+    "typeface-merriweather": "^0.0.72",
+    "typeface-open-sans": "^0.0.75",
+    "typography": "^0.16.19",
+    "typography-theme-lincoln": "^0.16.19"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",

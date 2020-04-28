@@ -1,7 +1,8 @@
 ---
-title: Entahdo thaan nannavathe
-description: This is an expert from movie Ravanaprabhu, Hell Yeah!
+title: Enthado than nannavathe 🤽
+description: This is an exerpt from movie Ravanaprabhu, Hell Yeah!
 author: MELVIN GEORGE
+date: 2020-04-29
 ---
 
-<h1 class="text-blue-400 text-6xl p-2">Enthado than.... ingane! 🤽</h1>
+Athu angane oru katha .. daivame.

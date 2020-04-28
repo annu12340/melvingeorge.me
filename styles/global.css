@@ -3,4 +3,12 @@
 @tailwind components;
 /* purgecss end ignore */
 
+.blog h1 {
+  @apply text-blue-700 text-3xl;
+}
+
+.blog p {
+  @apply text-base tracking-wide;
+}
+
 @tailwind utilities;
