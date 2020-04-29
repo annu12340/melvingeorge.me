@@ -2,13 +2,31 @@
 @tailwind base;
 @tailwind components;
 /* purgecss end ignore */
-
 .blog h1 {
-  @apply text-blue-700 text-3xl;
+  @apply text-blue-700 text-4xl w-7/12;
+}
+.blog h2 {
+  @apply text-blue-500 text-xl mt-4;
 }
 
 .blog p {
-  @apply text-base tracking-wide;
+  @apply text-lg tracking-wide;
+}
+
+.blog a {
+  @apply border-b-2 border-blue-400 transition transition-all duration-200;
+}
+
+.blog a:hover {
+  @apply bg-blue-200;
+}
+
+.blog li {
+  @apply list-disc ml-4;
+}
+
+.blog .date {
+  @apply text-gray-600 text-sm italic mb-16;
 }
 
 @tailwind utilities;

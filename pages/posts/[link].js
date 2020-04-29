@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // ICONS
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import BlogLayout from "../../components/Layout/BlogLayout";
 
 export default ({ frontMatter, content }) => (
   <>
@@ -17,18 +18,20 @@ export default ({ frontMatter, content }) => (
       <meta name="description" content={frontMatter.description} />
       <meta name="author" content={frontMatter.author}></meta>
     </Head>
-    <article>
-      <ReactMarkdown escapeHtml={false} source={content} className="blog" />
+
+    <BlogLayout>
+      <article>
+        <ReactMarkdown escapeHtml={false} source={content} className="blog" />
+      </article>
       <Link href="/">
-        <a className="inline-block px-1 py-2 bg-blue-300 my-2 mx-1 rounded-sm">
+        <a className="fixed inline-block px-3 py-2 shadow-md bg-gray-700 rounded-full text-gray-100 mr-5 mb-5 bottom-0 right-0">
           <FontAwesomeIcon
             className="fa-1x"
             icon={faArrowLeft}
-          ></FontAwesomeIcon>{" "}
-          Go Back
+          ></FontAwesomeIcon>
         </a>
       </Link>
-    </article>
+    </BlogLayout>
   </>
 );
 
@@ -66,7 +69,9 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      content: `# ${data.title}\n${content}`,
+      content: `# ${data.title}
+      \n<p className="date">By ${frontMatter.author} - ${formattedDate}<p>
+      \n${content}`,
       frontMatter,
     },
   };
