@@ -1,8 +1,8 @@
 import Head from "next/head";
 import fs from "fs";
 import path from "path";
+import matter from "gray-matter";
 import styles from "../styles/index/Index.module.css";
-
 // COMPONENTS
 import { Navigation } from "../components/Navigation/Navigation";
 import { SinglePostLink } from "../components/SinglePostLink/SinglePostLink";
@@ -15,7 +15,6 @@ import {
   faTwitter,
   faFirefoxBrowser,
 } from "@fortawesome/free-brands-svg-icons";
-import matter from "gray-matter";
 
 export default function Home({ linksData }) {
   return (
@@ -106,7 +105,7 @@ export async function getStaticProps() {
     const post = fs.readFileSync(path.join("content", link)).toString();
     const { data } = matter(post);
 
-    const title = link.replace("-", " ").replace(".md", "");
+    const title = data.title;
     const href = link.replace(".md", "");
     const description = data.description;
 
