@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import styles from "../styles/index/Index.module.css";
+
 // COMPONENTS
 import { Navigation } from "../components/Navigation/Navigation";
 import { SinglePostLink } from "../components/SinglePostLink/SinglePostLink";
@@ -24,7 +25,7 @@ export default function Home({ linksData }) {
       </Head>
       <header className={`${styles.bgHero} z-0 pb-12`}>
         {/* <!-- Header Container --> */}
-        <div className="container mx-auto md:w-7/12 px-4 lg:px-10">
+        <div className="container max-w-screen-md mx-auto px-4">
           {/* <!-- Navigation Section --> */}
           <Navigation />
           {/* <!-- Hero section --> */}
@@ -68,7 +69,7 @@ export default function Home({ linksData }) {
                 </a>
               </p>
             </div>
-            {/* <!-- Hero Section: Image --> */}
+            {/* Hero Section: Image */}
             <div className="order-first lg:order-last">
               <div className={`${styles.heroImg} block lg:hidden`} />
               <img
@@ -81,8 +82,8 @@ export default function Home({ linksData }) {
         </div>
       </header>
       {/* Main Section */}
-      <main className="relative container mx-auto md:px-20 md:w-7/12 md:-mt-8 lg:-mt-12 py-10 mb-12 px-4 md:shadow-lg md:rounded-lg bg-white">
-        <h1 className="text-3xl mb-6 font-medium">Blog</h1>
+      <main className="relative container max-w-screen-md mx-auto px-4 md:px-20 md:-mt-8 lg:-mt-12 py-10 mb-12 md:shadow-lg md:rounded-lg bg-white">
+        <h1 className="text-2xl mb-10 font-semibold text-gray-800">Blog</h1>
         {linksData && linksData.length <= 0
           ? null
           : linksData.map((linkData) => (

@@ -24,11 +24,12 @@ export default ({ frontMatter, content }) => (
         <ReactMarkdown escapeHtml={false} source={content} className="blog" />
       </article>
       <Link href="/">
-        <a className="fixed inline-block px-3 py-2 shadow-md bg-gray-700 rounded-full text-gray-100 mr-5 mb-5 bottom-0 right-0">
+        <a className="fixed inline-block px-3 py-2 shadow-md bg-gray-700 rounded-full text-gray-100 mr-5 mb-5 bottom-0 right-0 opacity-75 duration-200 hover:opacity-100">
           <FontAwesomeIcon
             className="fa-1x"
             icon={faArrowLeft}
           ></FontAwesomeIcon>
+          <span className="hidden md:inline"> Go Back</span>
         </a>
       </Link>
     </BlogLayout>
@@ -70,7 +71,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       content: `# ${data.title}
-      \n<p className="date">By ${frontMatter.author} - ${formattedDate}<p>
+      \n<p className="date">${formattedDate}<p>
       \n${content}`,
       frontMatter,
     },

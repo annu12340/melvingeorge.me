@@ -3,7 +3,7 @@
 @tailwind components;
 
 .blog h1 {
-  @apply text-blue-700 text-4xl w-7/12;
+  @apply text-blue-700 text-4xl text-center;
 }
 .blog h2 {
   @apply text-blue-500 text-xl mt-4;
@@ -26,7 +26,7 @@
 }
 
 .blog .date {
-  @apply text-gray-600 text-sm italic mb-16;
+  @apply text-gray-600 text-sm italic mb-16 text-center;
 }
 
 /* purgecss end ignore */

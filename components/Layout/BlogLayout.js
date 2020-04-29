@@ -1,7 +1,11 @@
+import BlogNavigation from "../Navigation/BlogNavigation";
 const BlogLayout = ({ children }) => (
-  <div className="relative container mx-auto md:w-7/12 px-4 md:px-10 py-10 bg-white h-auto min-h-screen">
-    {children}
-  </div>
+  <>
+    <BlogNavigation />
+    <div className="relative container max-w-screen-md mx-auto px-4 py-10 bg-gray-100 h-auto min-h-screen rounded">
+      {children}
+    </div>
+  </>
 );
 
 export default BlogLayout;
