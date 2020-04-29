@@ -10,7 +10,7 @@
 }
 
 .blog p {
-  @apply text-lg tracking-wide;
+  @apply text-lg tracking-wide mt-6 font-normal;
 }
 
 .blog a {
@@ -21,12 +21,19 @@
   @apply bg-blue-200;
 }
 
+.blog ul {
+  @apply py-3 ml-10;
+}
 .blog li {
-  @apply list-disc ml-4;
+  @apply list-disc;
 }
 
 .blog .date {
   @apply text-gray-600 text-sm italic mb-16 text-center;
+}
+
+.blog img {
+  @apply rounded-sm;
 }
 
 /* purgecss end ignore */
