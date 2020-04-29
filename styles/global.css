@@ -1,7 +1,7 @@
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-/* purgecss end ignore */
+
 .blog h1 {
   @apply text-blue-700 text-4xl w-7/12;
 }
@@ -29,4 +29,5 @@
   @apply text-gray-600 text-sm italic mb-16;
 }
 
+/* purgecss end ignore */
 @tailwind utilities;
