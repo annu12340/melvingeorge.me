@@ -17,9 +17,9 @@ Because, Its more of like an engine instead of traditional frameworks.
 
 ✌️Secondly, You can use it as a:
 
-- Static Site Generator (SSG),
-- Server Side Renderer (SSR),
-- Client Side Renderer (CSR).
+- Static Site Generator (SSG)
+- Server Side Renderer (SSR)
+- Client Side Renderer (CSR)
 
 Cool! Right?
 

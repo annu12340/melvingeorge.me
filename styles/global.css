@@ -6,11 +6,11 @@
   @apply text-blue-700 text-4xl text-center;
 }
 .blog h2 {
-  @apply text-blue-500 text-xl mt-4;
+  @apply text-blue-700 text-2xl inline-block mt-10 mb-6 border-b-2 border-blue-700;
 }
 
 .blog p {
-  @apply text-lg tracking-wide leading-8 mt-6 font-normal;
+  @apply text-lg tracking-wide leading-relaxed mt-6 font-normal;
 }
 
 .blog a {

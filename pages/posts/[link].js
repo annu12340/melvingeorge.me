@@ -12,7 +12,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 // COMPONENTS
 import BlogLayout from "../../components/Layout/BlogLayout";
-import ImageUtil from "../../components/Utils/ImageUtil";
+import ImageLoaderUtil from "../../components/Utils/ImageLoaderUtil";
 import CodeBlockUtil from "../../components/Utils/CodeBlockUtil";
 
 export default ({ frontMatter, content }) => (
@@ -29,7 +29,7 @@ export default ({ frontMatter, content }) => (
           escapeHtml={false}
           source={content}
           renderers={{
-            image: ImageUtil,
+            image: ImageLoaderUtil,
             code: CodeBlockUtil,
           }}
           className="blog"
