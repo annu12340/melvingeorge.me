@@ -9,7 +9,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // ICONS
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
+// COMPONENTS
 import BlogLayout from "../../components/Layout/BlogLayout";
+import ImageUtil from "../../components/Utils/ImageUtil";
+import CodeBlockUtil from "../../components/Utils/CodeBlockUtil";
 
 export default ({ frontMatter, content }) => (
   <>
@@ -21,7 +25,15 @@ export default ({ frontMatter, content }) => (
 
     <BlogLayout>
       <article>
-        <ReactMarkdown escapeHtml={false} source={content} className="blog" />
+        <ReactMarkdown
+          escapeHtml={false}
+          source={content}
+          renderers={{
+            image: ImageUtil,
+            code: CodeBlockUtil,
+          }}
+          className="blog"
+        />
       </article>
       <Link href="/">
         <a className="fixed inline-block px-3 py-2 shadow-md bg-gray-700 rounded-full text-gray-100 mr-5 mb-5 bottom-0 right-0 opacity-75 duration-200 hover:opacity-100">
@@ -37,7 +49,7 @@ export default ({ frontMatter, content }) => (
 );
 
 export async function getStaticPaths() {
-  const filesString = fs.readdirSync(path.join("content")).toString();
+  const filesString = fs.readdirSync(path.join("content", "posts/")).toString();
   const linksArray = filesString.split(",");
   const params = linksArray.map((link) => ({
     params: {
@@ -54,7 +66,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // Get File and get YAML data from markdown
   const post = fs
-    .readFileSync(path.join("content", `${params.link}.md`))
+    .readFileSync(path.join("content", "posts/", `${params.link}.md`))
     .toString();
   const { data, content } = matter(post);
 

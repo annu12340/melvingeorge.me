@@ -74,7 +74,7 @@ export default function Home({ linksData }) {
               <div className={`${styles.heroImg} block lg:hidden`} />
               <img
                 className="hidden lg:block order-first md:order-last w-full z-0"
-                src="/me.png"
+                src={require("../public/me.png")}
                 alt="Picture of Melvin george"
               />
             </div>
@@ -100,10 +100,12 @@ export default function Home({ linksData }) {
 }
 
 export async function getStaticProps() {
-  const filesString = fs.readdirSync(path.join("content")).toString();
+  const filesString = fs.readdirSync(path.join("content", "posts/")).toString();
   const linksArray = filesString.split(",");
   const linksData = linksArray.map((link) => {
-    const post = fs.readFileSync(path.join("content", link)).toString();
+    const post = fs
+      .readFileSync(path.join("content", "posts/", link))
+      .toString();
     const { data } = matter(post);
 
     const title = data.title;
