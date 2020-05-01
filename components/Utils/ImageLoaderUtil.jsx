@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ImageLoaderUtil = ({ alt: alternative, src: source }) => {
@@ -9,7 +9,7 @@ const ImageLoaderUtil = ({ alt: alternative, src: source }) => {
     <p className="relative">
       <AnimatePresence>
         <motion.img
-          className={`w-full top-0 left-0 absolute`}
+          className="w-full top-0 left-0 absolute"
           src={src}
           initial={{ opacity: 0 }}
           animate={{ opacity: imageLoaded ? 1 : 0 }}
