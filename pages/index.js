@@ -1,13 +1,3 @@
-import Head from "next/head";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import styles from "../styles/index/Index.module.css";
-
-// COMPONENTS
-import { Navigation } from "../components/Navigation/Navigation";
-import { SinglePostLink } from "../components/SinglePostLink/SinglePostLink";
-
 // ICONS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,6 +6,17 @@ import {
   faTwitter,
   faFirefoxBrowser,
 } from "@fortawesome/free-brands-svg-icons";
+
+// MODULES
+import styles from "../styles/index/Index.module.css";
+import Head from "next/head";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
+// COMPONENTS
+import { Navigation } from "../components/Navigation/Navigation";
+import { SinglePostLink } from "../components/SinglePostLink/SinglePostLink";
 
 export default function Home({ linksData }) {
   return (
@@ -39,8 +40,9 @@ export default function Home({ linksData }) {
               <p className="pt-2 text-left text-blue-300">
                 <a href="https://www.github.com/melvin2016" target="blank">
                   <FontAwesomeIcon
-                    className="fa-2x transition transition-colors duration-300 hover:text-gray-900"
+                    className="transition transition-colors duration-300 hover:text-gray-900"
                     icon={faGithub}
+                    size="2x"
                   />
                 </a>
                 &nbsp;&nbsp;&nbsp;
@@ -49,22 +51,25 @@ export default function Home({ linksData }) {
                   target="blank"
                 >
                   <FontAwesomeIcon
-                    className="fa-2x transition transition-colors duration-300 hover:text-orange-500"
+                    className="transition transition-colors duration-300 hover:text-orange-500"
                     icon={faFirefoxBrowser}
+                    size="2x"
                   />
                 </a>
                 &nbsp;&nbsp;&nbsp;
                 <a href="https://www.facebook.com/alkitj10" target="blank">
                   <FontAwesomeIcon
-                    className="fa-2x transition transition-colors duration-300 hover:text-blue-700"
+                    className="transition transition-colors duration-300 hover:text-blue-700"
                     icon={faFacebook}
+                    size="2x"
                   />
                 </a>
                 &nbsp;&nbsp;&nbsp;
                 <a href="https://www.twitter.com/melvin2016_" target="blank">
                   <FontAwesomeIcon
-                    className="fa-2x transition transition-colors duration-300 hover:text-blue-400"
+                    className="transition transition-colors duration-300 hover:text-blue-400"
                     icon={faTwitter}
+                    size="2x"
                   />
                 </a>
               </p>

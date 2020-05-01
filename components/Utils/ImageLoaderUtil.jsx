@@ -1,25 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const ImageLoaderUtil = ({ alt, src }) => {
-  const image = require(`../../content/assets/${src}?trace`);
+const ImageLoaderUtil = ({ alt: alternative, src: source }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const { src, trace } = require(`../../content/assets/${source}?trace`);
 
   return (
     <p className="relative">
-      <img
-        className={`w-full ${imageLoaded ? " hidden" : " block"}`}
-        src={image.trace}
-        alt={alt}
-      />
-
-      <img
-        className={`w-full transition duration-500 ease-in ${
-          imageLoaded ? " block" : " hidden"
-        }`}
-        src={image.src}
-        alt={alt}
-        onLoad={() => setImageLoaded(true)}
-      />
+      <AnimatePresence>
+        <motion.img
+          className={`w-full top-0 left-0 absolute`}
+          src={src}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: imageLoaded ? 1 : 0 }}
+          alt={alternative}
+          loading="lazy"
+          transition={{ ease: "easeIn" }}
+          onLoad={() => setImageLoaded(true)}
+        />
+        <motion.img
+          className="w-full"
+          src={trace}
+          alt={alternative}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: imageLoaded ? 0 : 1 }}
+          loading="lazy"
+          transition={{ ease: "easeOut" }}
+        />
+      </AnimatePresence>
     </p>
   );
 };
