@@ -9,6 +9,7 @@ const ImageLoaderUtil = ({ alt: alternative, src: source }) => {
     <p className="relative">
       <AnimatePresence>
         <motion.img
+          key={src + Math.random()}
           className="w-full top-0 left-0 absolute"
           src={src}
           initial={{ opacity: 0 }}
@@ -19,12 +20,12 @@ const ImageLoaderUtil = ({ alt: alternative, src: source }) => {
           onLoad={() => setImageLoaded(true)}
         />
         <motion.img
+          key={src}
           className="w-full"
           src={trace}
           alt={alternative}
           initial={{ opacity: 1 }}
           animate={{ opacity: imageLoaded ? 0 : 1 }}
-          loading="lazy"
           transition={{ ease: "easeOut" }}
         />
       </AnimatePresence>
