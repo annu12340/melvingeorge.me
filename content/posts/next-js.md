@@ -3,7 +3,6 @@ title: Next.js Dummy Markdown
 description: How does this actually work?🤩
 author: MELVIN GEORGE
 date: 2020-04-09
-number: 2
 ---
 
 ## Getting Started

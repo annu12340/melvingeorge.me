@@ -3,7 +3,6 @@ title: What is SSG in Next.js
 description: Explaining the concepts of SSR, CSR and SSG using Nextjs
 author: MELVIN GEORGE
 date: 2020-04-09
-number: 1
 ---
 
 ![Computer](computer.jpg)

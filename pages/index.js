@@ -107,6 +107,7 @@ export default function Home({ linksData }) {
 export async function getStaticProps() {
   const filesString = fs.readdirSync(path.join("content", "posts/")).toString();
   const linksArray = filesString.split(",");
+
   const linksData = linksArray.map((link) => {
     const post = fs
       .readFileSync(path.join("content", "posts/", link))
@@ -116,12 +117,25 @@ export async function getStaticProps() {
     const title = data.title;
     const href = link.replace(".md", "");
     const description = data.description;
+    const date = data.date;
 
     return {
       title,
       href,
       description,
+      date,
     };
+  });
+
+  // Sort using date added
+  linksData.sort((firstFile, secondFile) => {
+    return new Date(secondFile.date) - new Date(firstFile.date);
+  });
+
+  // Delete unnecessary date property
+  linksData.map((link) => {
+    delete link.date;
+    return link;
   });
 
   return {

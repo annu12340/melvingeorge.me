@@ -2,8 +2,7 @@
 title: Lots and lots of Images
 description: Some of my favorite images so far
 author: MELVIN GEORGE
-date: 2020-05-01
-number: 2
+date: 2020-05-02
 ---
 
 ![1](1.jpg)
