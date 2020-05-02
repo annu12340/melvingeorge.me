@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ImageLoaderUtil = (link, { alt: altText, src: source }) => {
-  console.log(link);
   const [imageLoaded, setImageLoaded] = useState(false);
   const {
     src,

@@ -46,6 +46,10 @@ const BlogRenderer = ({ metadeta, content }) => {
             name: "keywords",
             content: metadeta.keywords,
           },
+          {
+            name: "twitter:image",
+            content: metaImageUrl,
+          },
         ]}
       />
       <BlogJsonLd
