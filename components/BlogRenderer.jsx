@@ -16,23 +16,25 @@ const BlogRenderer = ({ metadeta, content }) => (
         url: `https://melvingeorge.now.sh/posts/${metadeta.link}`,
         title: metadeta.title,
         description: metadeta.description,
+        type: "article",
         images: [
           {
-            url: "https://via.placeholder.com/800x600",
-            width: 800,
-            height: 600,
-            alt: "Og Image Alt",
+            url: "https://via.placeholder.com/69",
+            alt: "Image of Blog Post By MELVIN GEORGE",
           },
-          {
-            url: "https://via.placeholder.com/900x800",
-            width: 900,
-            height: 800,
-            alt: "Og Image Alt Second",
-          },
-          { url: "https://via.placeholder.com/69" },
         ],
         site_name: "MELVIN GEORGE Blog",
       }}
+      additionalMetaTags={[
+        {
+          name: "image",
+          content: "https://via.placeholder.com/69",
+        },
+        {
+          name: "keywords",
+          content: metadeta.keywords,
+        },
+      ]}
     />
     <BlogNavigation />
     <div className="relative container max-w-screen-md mx-auto px-4 py-10 bg-gray-100 h-auto min-h-screen rounded">
