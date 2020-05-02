@@ -11,7 +11,7 @@ const BlogRenderer = ({ metadeta, content }) => (
     <NextSeo
       title={metadeta.title}
       description={metadeta.description}
-      canonical={`https://melvingeorge.now.sh/post/${metadeta.link}`}
+      canonical={`https://melvingeorge.now.sh/posts/${metadeta.link}`}
       openGraph={{
         url: `https://melvingeorge.now.sh/posts/${metadeta.link}`,
         title: metadeta.title,
