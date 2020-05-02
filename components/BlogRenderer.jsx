@@ -40,8 +40,8 @@ const BlogRenderer = ({ metadeta, content }) => (
       url={`https://melvingeorge.now.sh/posts/${metadeta.link}`}
       title={metadeta.title}
       images={["https://via.placeholder.com/69"]}
-      datePublished={new Date(metadeta.date)}
-      dateModified={new Date(metadeta.date)}
+      datePublished={new Date(metadeta.date).toISOString()}
+      dateModified={new Date(metadeta.date).toISOString()}
       authorName="MELVIN GEORGE"
       description={metadeta.description}
     />
