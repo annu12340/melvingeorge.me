@@ -5,7 +5,7 @@ author: MELVIN GEORGE
 date: 2020-04-09
 ---
 
-![Computer](computer.jpg)
+![Computer](main.jpg)
 
 <div class="text-center mt-3">Photo by <span class="text-blue-600">Joshua Aragon</span> on Unsplash<div>
 

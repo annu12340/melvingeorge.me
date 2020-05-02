@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const ImageLoaderUtil = ({ alt: altText, src: source }) => {
+const ImageLoaderUtil = (link, { alt: altText, src: source }) => {
+  console.log(link);
   const [imageLoaded, setImageLoaded] = useState(false);
-  const { src, trace } = require(`../../content/assets/${source}?trace`);
+  const {
+    src,
+    trace,
+  } = require(`../../content/assets/${link}/${source}?trace`);
 
   return (
     <p className="relative">
