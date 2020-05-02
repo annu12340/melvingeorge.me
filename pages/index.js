@@ -21,9 +21,6 @@ import { SinglePostLink } from "../components/SinglePostLink/SinglePostLink";
 export default function Home({ linksData }) {
   return (
     <>
-      <Head>
-        <title>Home</title>
-      </Head>
       <header className={`${styles.bgHero} z-0 pb-12`}>
         {/* <!-- Header Container --> */}
         <div className="container max-w-screen-md mx-auto px-4">

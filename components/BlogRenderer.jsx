@@ -20,10 +20,15 @@ const BlogRenderer = ({ metadeta, content }) => (
         images: [
           {
             url: "https://via.placeholder.com/69",
-            alt: "Image of Blog Post By MELVIN GEORGE",
+            alt: "Image of BlogPost By MELVIN GEORGE",
           },
         ],
         site_name: "MELVIN GEORGE Blog",
+      }}
+      twitter={{
+        handle: "@melvin2016_",
+        site: "@melvin2016_",
+        cardType: "summary_large_image",
       }}
       additionalMetaTags={[
         {
