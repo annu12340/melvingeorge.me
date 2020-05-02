@@ -1,6 +1,6 @@
 // MODULES
 import ReactMarkdown from "react-markdown/with-html";
-import { NextSeo } from "next-seo";
+import { NextSeo, BlogJsonLd } from "next-seo";
 // COMPONENTS
 import BlogNavigation from "./Navigation/BlogNavigation";
 import ImageLoaderUtil from "./Utils/ImageLoaderUtil";
@@ -35,6 +35,15 @@ const BlogRenderer = ({ metadeta, content }) => (
           content: metadeta.keywords,
         },
       ]}
+    />
+    <BlogJsonLd
+      url={`https://melvingeorge.now.sh/posts/${metadeta.link}`}
+      title={metadeta.title}
+      images={["https://via.placeholder.com/69"]}
+      datePublished={new Date(metadeta.date)}
+      dateModified={new Date(metadeta.date)}
+      authorName="MELVIN GEORGE"
+      description={metadeta.description}
     />
     <BlogNavigation />
     <div className="relative container max-w-screen-md mx-auto px-4 py-10 bg-gray-100 h-auto min-h-screen rounded">
