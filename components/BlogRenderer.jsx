@@ -11,9 +11,9 @@ const BlogRenderer = ({ metadeta, content }) => (
     <NextSeo
       title={metadeta.title}
       description={metadeta.description}
-      canonical={`https://melvingeorge.now.sh/${metadeta.link}`}
+      canonical={`https://melvingeorge.now.sh/post/${metadeta.link}`}
       openGraph={{
-        url: `https://melvingeorge.now.sh/${metadeta.link}`,
+        url: `https://melvingeorge.now.sh/posts/${metadeta.link}`,
         title: metadeta.title,
         description: metadeta.description,
         images: [
@@ -29,6 +29,7 @@ const BlogRenderer = ({ metadeta, content }) => (
             height: 800,
             alt: "Og Image Alt Second",
           },
+          { url: "https://via.placeholder.com/69" },
         ],
         site_name: "MELVIN GEORGE Blog",
       }}
