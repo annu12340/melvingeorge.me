@@ -2,9 +2,7 @@ let metaImageUrl;
 let metaURl;
 if (process.browser) {
   metaURl = `${window.location.origin}`;
-  metaImageUrl = `${
-    window.location.origin
-  }${require(`../content/assets/${metadeta.link}/main.jpg`)}`;
+  metaImageUrl = `${window.location.origin}${require(`../../public/me.png`)}`;
 }
 
 export default {
