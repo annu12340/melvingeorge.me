@@ -21,6 +21,20 @@ const BlogRenderer = ({ metadeta, content }) => {
       <NextSeo
         title={metadeta.title}
         description={metadeta.description}
+        additionalMetaTags={[
+          {
+            name: "image",
+            content: metaImageUrl,
+          },
+          {
+            name: "keywords",
+            content: metadeta.keywords,
+          },
+          {
+            name: "twitter:image",
+            content: metaImageUrl,
+          },
+        ]}
         openGraph={{
           url: `${metaURl}/posts/${metadeta.link}`,
           title: metadeta.title,
@@ -39,20 +53,6 @@ const BlogRenderer = ({ metadeta, content }) => {
           site: "@melvin2016_",
           cardType: "summary_large_image",
         }}
-        additionalMetaTags={[
-          {
-            name: "image",
-            content: metaImageUrl,
-          },
-          {
-            name: "keywords",
-            content: metadeta.keywords,
-          },
-          {
-            name: "twitter:image",
-            content: metaImageUrl,
-          },
-        ]}
       />
       <BlogJsonLd
         url={`${metaURl}/posts/${metadeta.link}`}

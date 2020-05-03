@@ -4,13 +4,23 @@ if (process.browser) {
   metaURl = `${window.location.origin}`;
   metaImageUrl = `${
     window.location.origin
-  }${require(`../../public/me.png?resize&size=300`)}`;
+  }${require(`../../public/me.png?resize&size=1200`)}`;
 }
 
 export default {
   title: "MELVIN GEORGE",
   description:
     "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
+  additionalMetaTags: [
+    {
+      name: "image",
+      content: metaImageUrl,
+    },
+    {
+      name: "keywords",
+      content: "blog,melvin george,article,developer,javascript,reactjs",
+    },
+  ],
   openGraph: {
     title: "MELVIN GEORGE",
     description:
@@ -31,14 +41,4 @@ export default {
     site: "@melvin2016_",
     cardType: "summary_large_image",
   },
-  additionalMetaTags: [
-    {
-      name: "image",
-      content: metaImageUrl,
-    },
-    {
-      name: "keywords",
-      content: "blog,melvin george,article,developer,javascript,reactjs",
-    },
-  ],
 };
