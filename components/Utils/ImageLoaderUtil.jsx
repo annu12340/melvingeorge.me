@@ -12,16 +12,22 @@ const ImageLoaderUtil = (link, { alt: altText, src: source }) => {
     <p className="relative">
       <a className="cursor-pointer" href={src} target="blank">
         <AnimatePresence>
-          <motion.img
+          <motion.picture
             key={src}
             className="w-full top-0 left-0 absolute"
-            src={src}
             initial={{ opacity: 0 }}
             animate={{ opacity: imageLoaded ? 1 : 0 }}
-            alt={altText}
             transition={{ ease: "easeIn" }}
             onLoad={() => setImageLoaded(true)}
-          />
+          >
+            <source
+              srcSet={require(`../../content/assets/${link}/${source}?webp`)}
+              type="image/webp"
+            />
+            <source srcSet={src} type="image/jpeg" />
+            <img src={src} alt={altText} />
+          </motion.picture>
+
           <motion.img
             key={trace}
             className="w-full"

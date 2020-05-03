@@ -33,7 +33,7 @@
 }
 
 .blog img {
-  @apply rounded-sm;
+  @apply rounded-sm mx-auto h-full w-full;
 }
 
 /* purgecss end ignore */
