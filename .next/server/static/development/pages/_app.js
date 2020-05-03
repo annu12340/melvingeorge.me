@@ -108,7 +108,7 @@ let metaURl;
 if (false) {}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  title: "MELVIN GEORGE",
+  title: "Blog Of MELVIN GEORGE",
   description: "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
   additionalMetaTags: [{
     name: "keywords",
@@ -117,6 +117,9 @@ if (false) {}
     name: "image",
     property: "og:image",
     content: "https://melvingeorge.me/me.png"
+  }, {
+    name: "author",
+    content: "MELVIN GEORGE"
   }],
   openGraph: {
     title: "MELVIN GEORGE",
