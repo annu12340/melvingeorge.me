@@ -23,16 +23,8 @@ const BlogRenderer = ({ metadeta, content }) => {
         description={metadeta.description}
         additionalMetaTags={[
           {
-            name: "image",
-            content: metaImageUrl,
-          },
-          {
             name: "keywords",
             content: metadeta.keywords,
-          },
-          {
-            name: "twitter:image",
-            content: metaImageUrl,
           },
         ]}
         openGraph={{
@@ -43,7 +35,7 @@ const BlogRenderer = ({ metadeta, content }) => {
           images: [
             {
               url: metaImageUrl,
-              alt: "Image of BlogPost By MELVIN GEORGE",
+              alt: `Image of ${metadeta.link} By MELVIN GEORGE`,
             },
           ],
           site_name: "MELVIN GEORGE Blog",

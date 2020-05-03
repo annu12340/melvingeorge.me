@@ -13,10 +13,6 @@ export default {
     "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
   additionalMetaTags: [
     {
-      name: "image",
-      content: metaImageUrl,
-    },
-    {
       name: "keywords",
       content: "blog,melvin george,article,developer,javascript,reactjs",
     },
