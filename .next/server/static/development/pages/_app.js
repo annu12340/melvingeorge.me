@@ -111,7 +111,7 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     name: "image",
     property: "og:image",
-    content: __webpack_require__(/*! ../../public/metame.png?resize&size=600 */ "./public/metame.png?resize&size=600")
+    content: `https://melvingeorge.me${__webpack_require__(/*! ../../public/metame.png?resize&size=600 */ "./public/metame.png?resize&size=600")}`
   }, {
     name: "author",
     content: "MELVIN GEORGE"
@@ -120,7 +120,7 @@ __webpack_require__.r(__webpack_exports__);
     title: "MELVIN GEORGE",
     description: "Hi, I'm Melvin George. Come check out my blog to see more of my software developments",
     images: [{
-      url: __webpack_require__(/*! ../../public/metame.png?resize&size=600 */ "./public/metame.png?resize&size=600")
+      url: `https://melvingeorge.me${__webpack_require__(/*! ../../public/metame.png?resize&size=600 */ "./public/metame.png?resize&size=600")}`
     }],
     type: "website",
     locale: "en_IE",
