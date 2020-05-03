@@ -7,15 +7,6 @@ import ImageLoaderUtil from "./Utils/ImageLoaderUtil";
 import CodeBlockUtil from "./Utils/CodeBlockUtil";
 
 const BlogRenderer = ({ metadeta, content }) => {
-  let metaImageUrl;
-  let metaURl;
-  if (process.browser) {
-    metaURl = `${window.location.origin}`;
-    metaImageUrl = `${
-      window.location.origin
-    }${require(`../content/assets/${metadeta.link}/main.jpg?resize&size=1200`)}`;
-  }
-
   return (
     <>
       <NextSeo
@@ -29,16 +20,20 @@ const BlogRenderer = ({ metadeta, content }) => {
           {
             name: "image",
             property: "og:image",
-            content: metaImageUrl,
+            content: `https://melvingeorge.me${require(`../content/assets/${metadeta.link}/main.jpg?resize&size=1200`)}`,
           },
         ]}
         openGraph={{
-          url: `${metaURl}/posts/${metadeta.link}`,
+          url: `https://melvingeorge.me/posts/${metadeta.link}`,
           title: metadeta.title,
           description: metadeta.description,
           type: "article",
           site_name: "MELVIN GEORGE Blog",
-          images: [{ url: "https://melvingeorge.me/me.png" }],
+          images: [
+            {
+              url: `https://melvingeorge.me${require(`../content/assets/${metadeta.link}/main.jpg?resize&size=1200`)}`,
+            },
+          ],
         }}
         twitter={{
           handle: "@melvin2016_",
@@ -47,9 +42,11 @@ const BlogRenderer = ({ metadeta, content }) => {
         }}
       />
       <BlogJsonLd
-        url={`${metaURl}/posts/${metadeta.link}`}
+        url={`https://melvingeorge.me/posts/${metadeta.link}`}
         title={metadeta.title}
-        images={[metaImageUrl]}
+        images={[
+          `https://melvingeorge.me${require(`../content/assets/${metadeta.link}/main.jpg?resize&size=1200`)}`,
+        ]}
         datePublished={new Date(metadeta.date).toISOString()}
         dateModified={new Date(metadeta.date).toISOString()}
         authorName="MELVIN GEORGE"
