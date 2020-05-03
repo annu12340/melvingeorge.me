@@ -1,3 +1,12 @@
+let metaImageUrl;
+let metaURl;
+if (process.browser) {
+  metaURl = `${window.location.origin}`;
+  metaImageUrl = `${
+    window.location.origin
+  }${require(`../content/assets/${metadeta.link}/main.jpg`)}`;
+}
+
 export default {
   title: "MELVIN GEORGE",
   description:
@@ -5,14 +14,13 @@ export default {
   openGraph: {
     images: [
       {
-        url:
-          "https://avatars0.githubusercontent.com/u/22199666?s=400&u=2a9b1e5d0e42897470c4578e24891e07e99e8871&v=4",
+        url: metaImageUrl,
         alt: "Picture of MELVIN GEORGE",
       },
     ],
     type: "website",
     locale: "en_IE",
-    url: "https://melvingeorge.now.sh/",
+    url: metaURl,
     site_name: "MELVIN GEORGE Blog",
   },
   twitter: {
@@ -23,8 +31,7 @@ export default {
   additionalMetaTags: [
     {
       name: "image",
-      content:
-        "https://avatars0.githubusercontent.com/u/22199666?s=400&u=2a9b1e5d0e42897470c4578e24891e07e99e8871&v=4",
+      content: metaImageUrl,
     },
     {
       name: "keywords",
