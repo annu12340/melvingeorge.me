@@ -102,11 +102,6 @@ module.exports =
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-let metaImageUrl;
-let metaURl;
-
-if (false) {}
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   title: "Blog Of MELVIN GEORGE",
   description: "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
@@ -124,6 +119,9 @@ if (false) {}
   openGraph: {
     title: "MELVIN GEORGE",
     description: "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
+    images: [{
+      url: "https://melvingeorge.me/me.png"
+    }],
     type: "website",
     locale: "en_IE",
     url: "https://melvingeorge.me/",

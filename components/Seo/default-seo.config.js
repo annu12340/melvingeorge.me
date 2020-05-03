@@ -1,12 +1,3 @@
-let metaImageUrl;
-let metaURl;
-if (process.browser) {
-  metaURl = `${window.location.origin}`;
-  metaImageUrl = `${
-    window.location.origin
-  }${require(`../../public/me.png?resize&size=1200`)}`;
-}
-
 export default {
   title: "Blog Of MELVIN GEORGE",
   description:
@@ -30,6 +21,7 @@ export default {
     title: "MELVIN GEORGE",
     description:
       "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
+    images: [{ url: "https://melvingeorge.me/me.png" }],
     type: "website",
     locale: "en_IE",
     url: "https://melvingeorge.me/",

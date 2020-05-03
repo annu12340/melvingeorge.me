@@ -38,6 +38,7 @@ const BlogRenderer = ({ metadeta, content }) => {
           description: metadeta.description,
           type: "article",
           site_name: "MELVIN GEORGE Blog",
+          images: [{ url: "https://melvingeorge.me/me.png" }],
         }}
         twitter={{
           handle: "@melvin2016_",

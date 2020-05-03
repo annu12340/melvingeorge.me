@@ -169,7 +169,10 @@ const BlogRenderer = ({
       title: metadeta.title,
       description: metadeta.description,
       type: "article",
-      site_name: "MELVIN GEORGE Blog"
+      site_name: "MELVIN GEORGE Blog",
+      images: [{
+        url: "https://melvingeorge.me/me.png"
+      }]
     },
     twitter: {
       handle: "@melvin2016_",
@@ -193,14 +196,14 @@ const BlogRenderer = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 49,
       columnNumber: 7
     }
   }), __jsx(_Navigation_BlogNavigation__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 58,
       columnNumber: 7
     }
   }), __jsx("div", {
@@ -208,14 +211,14 @@ const BlogRenderer = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 59,
       columnNumber: 7
     }
   }, __jsx("article", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 60,
       columnNumber: 9
     }
   }, __jsx(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -229,7 +232,7 @@ const BlogRenderer = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 61,
       columnNumber: 11
     }
   }))));
