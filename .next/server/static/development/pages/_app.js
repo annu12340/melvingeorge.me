@@ -111,7 +111,7 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     name: "image",
     property: "og:image",
-    content: "https://melvingeorge.me/metame.png"
+    content: __webpack_require__(/*! ../../public/metame.png?resize&size=600 */ "./public/metame.png?resize&size=600")
   }, {
     name: "author",
     content: "MELVIN GEORGE"
@@ -120,7 +120,7 @@ __webpack_require__.r(__webpack_exports__);
     title: "MELVIN GEORGE",
     description: "Hi, I'm Melvin George. Come check out my blog to see more of my software developments",
     images: [{
-      url: "https://melvingeorge.me/metame.png"
+      url: __webpack_require__(/*! ../../public/metame.png?resize&size=600 */ "./public/metame.png?resize&size=600")
     }],
     type: "website",
     locale: "en_IE",
@@ -193,6 +193,17 @@ function App({
     }
   })));
 }
+
+/***/ }),
+
+/***/ "./public/metame.png?resize&size=600":
+/*!*******************************************!*\
+  !*** ./public/metame.png?resize&size=600 ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {srcSet:"/_next/static/images/metame-600-35b36bf737a1ecba0272e3b2a0e59ca7.png"+" 600w",images:[{path:"/_next/static/images/metame-600-35b36bf737a1ecba0272e3b2a0e59ca7.png",width:600,height:228}],src:"/_next/static/images/metame-600-35b36bf737a1ecba0272e3b2a0e59ca7.png",toString:function(){return "/_next/static/images/metame-600-35b36bf737a1ecba0272e3b2a0e59ca7.png"},placeholder: undefined,width:600,height:228};
 
 /***/ }),
 

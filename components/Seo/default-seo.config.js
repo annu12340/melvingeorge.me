@@ -10,7 +10,7 @@ export default {
     {
       name: "image",
       property: "og:image",
-      content: "https://melvingeorge.me/metame.png",
+      content: require("../../public/metame.png?resize&size=600"),
     },
     {
       name: "author",
@@ -21,7 +21,7 @@ export default {
     title: "MELVIN GEORGE",
     description:
       "Hi, I'm Melvin George. Come check out my blog to see more of my software developments",
-    images: [{ url: "https://melvingeorge.me/metame.png" }],
+    images: [{ url: require("../../public/metame.png?resize&size=600") }],
     type: "website",
     locale: "en_IE",
     url: "https://melvingeorge.me/",
