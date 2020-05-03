@@ -203,7 +203,7 @@ function App({
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {srcSet:"/_next/static/images/metame-600-35b36bf737a1ecba0272e3b2a0e59ca7.png"+" 600w",images:[{path:"/_next/static/images/metame-600-35b36bf737a1ecba0272e3b2a0e59ca7.png",width:600,height:228}],src:"/_next/static/images/metame-600-35b36bf737a1ecba0272e3b2a0e59ca7.png",toString:function(){return "/_next/static/images/metame-600-35b36bf737a1ecba0272e3b2a0e59ca7.png"},placeholder: undefined,width:600,height:228};
+module.exports = {srcSet:"/_next/static/images/metame-600-8fd1d47c5b3c08de651b28e5fe43231f.png"+" 600w",images:[{path:"/_next/static/images/metame-600-8fd1d47c5b3c08de651b28e5fe43231f.png",width:600,height:315}],src:"/_next/static/images/metame-600-8fd1d47c5b3c08de651b28e5fe43231f.png",toString:function(){return "/_next/static/images/metame-600-8fd1d47c5b3c08de651b28e5fe43231f.png"},placeholder: undefined,width:600,height:315};
 
 /***/ }),
 
