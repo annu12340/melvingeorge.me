@@ -116,14 +116,14 @@ if (false) {}
   }, {
     name: "image",
     property: "og:image",
-    content: metaImageUrl
+    content: "https://melvingeorge.me/me.png"
   }],
   openGraph: {
     title: "MELVIN GEORGE",
     description: "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
     type: "website",
     locale: "en_IE",
-    url: metaURl,
+    url: "https://melvingeorge.me/",
     site_name: "MELVIN GEORGE Blog"
   },
   twitter: {
