@@ -22,7 +22,7 @@ const BlogRenderer = ({ metadeta, content }) => {
         title={metadeta.title}
         description={metadeta.description}
         openGraph={{
-          url: `${metaURl}/${metadeta.link}`,
+          url: `${metaURl}/posts/${metadeta.link}`,
           title: metadeta.title,
           description: metadeta.description,
           type: "article",
@@ -55,7 +55,7 @@ const BlogRenderer = ({ metadeta, content }) => {
         ]}
       />
       <BlogJsonLd
-        url={`${metaURl}/${metadeta.link}`}
+        url={`${metaURl}/posts/${metadeta.link}`}
         title={metadeta.title}
         images={[metaImageUrl]}
         datePublished={new Date(metadeta.date).toISOString()}
