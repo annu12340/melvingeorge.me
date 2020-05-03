@@ -16,17 +16,16 @@ export default {
       name: "keywords",
       content: "blog,melvin george,article,developer,javascript,reactjs",
     },
+    {
+      name: "image",
+      property: "og:image",
+      content: metaImageUrl,
+    },
   ],
   openGraph: {
     title: "MELVIN GEORGE",
     description:
       "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
-    images: [
-      {
-        url: metaImageUrl,
-        alt: "Picture of MELVIN GEORGE",
-      },
-    ],
     type: "website",
     locale: "en_IE",
     url: metaURl,
