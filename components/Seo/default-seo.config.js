@@ -4,7 +4,7 @@ if (process.browser) {
   metaURl = `${window.location.origin}`;
   metaImageUrl = `${
     window.location.origin
-  }${require(`../../public/me.png?resize&size=630`)}`;
+  }${require(`../../public/me.png?resize&size=300`)}`;
 }
 
 export default {
