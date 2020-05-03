@@ -8,7 +8,9 @@ import CodeBlockUtil from "./Utils/CodeBlockUtil";
 
 const BlogRenderer = ({ metadeta, content }) => {
   let metaImageUrl;
+  let metaURl;
   if (process.browser) {
+    metaURl = `${window.location.origin}`;
     metaImageUrl = `${
       window.location.origin
     }${require(`../content/assets/${metadeta.link}/main.jpg`)}`;
@@ -20,7 +22,7 @@ const BlogRenderer = ({ metadeta, content }) => {
         title={metadeta.title}
         description={metadeta.description}
         openGraph={{
-          url: `https://melvingeorge.now.sh/posts/${metadeta.link}`,
+          url: `${metaURl}/${metadeta.link}`,
           title: metadeta.title,
           description: metadeta.description,
           type: "article",
@@ -53,7 +55,7 @@ const BlogRenderer = ({ metadeta, content }) => {
         ]}
       />
       <BlogJsonLd
-        url={`https://melvingeorge.now.sh/posts/${metadeta.link}`}
+        url={`${metaURl}/${metadeta.link}`}
         title={metadeta.title}
         images={[metaImageUrl]}
         datePublished={new Date(metadeta.date).toISOString()}
