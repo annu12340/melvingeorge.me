@@ -1,0 +1,26 @@
+webpackHotUpdate("static/development/pages/posts/[link].js",{
+
+/***/ "./content/assets/nextjs-ssg/main.jpg?resize&size=630":
+/*!************************************************************!*\
+  !*** ./content/assets/nextjs-ssg/main.jpg?resize&size=630 ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {srcSet:"/_next/static/images/main-280-e163a23f52b07cb01221870b3764fa1c.jpg"+" 280w",images:[{path:"/_next/static/images/main-280-e163a23f52b07cb01221870b3764fa1c.jpg",width:280,height:150}],src:"/_next/static/images/main-280-e163a23f52b07cb01221870b3764fa1c.jpg",toString:function(){return "/_next/static/images/main-280-e163a23f52b07cb01221870b3764fa1c.jpg"},placeholder: undefined,width:280,height:150};
+
+/***/ }),
+
+/***/ "./content/assets/nextjs-ssg/main.jpg?trace":
+/*!**************************************************!*\
+  !*** ./content/assets/nextjs-ssg/main.jpg?trace ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = { "src": "/_next/static/images/main-56a4eccff06cac66b6a50f138ff9c759.jpg" , "trace": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='150'%3E%3Cpath d='M0 31v32h4l86 29 1 5c0 4 0 5 8 9 4 2 6 2 14 3l13-1c4-2 4-2 11 0 8 2 11 4 11 7l-15 18-15 17h162l1-75V0H0v31m127 15c-7 1-12 4-15 7-12 14 13 30 36 23 7-1 11-3 15-7l6-4c3-2 4-5 2-6h1c2 0 3-1 0-3-2-2-5-3-9-3-2 1-4 0-5-1-7-5-22-8-31-6m-2 2l-5 3c-6 5-7 16-2 20 5 5 23 7 33 4 15-5 15-19 0-25-6-3-20-4-26-2M1 83c0 1 0 2 2 1v2c-2 1-2 3-2 8v6l5-5 7-5v-2l1-1c2 0 1 2-6 8l-7 6v49h19l23-23c19-20 23-24 21-24A2905 2905 0 001 83m43 15l4 2c1 0-14 15-16 15l-1 1-2 3a346 346 0 00-9 11c8-8 8-8 11-7s3 1 6-3l5-3c2 0 1-1-1-1l-4-2 3-3c3-4 3-4 7-2h4l2-4c3-3 4-3 6-2l3 1-3 3-4 3-1 1c0 2-6 7-8 7-1-1-1-1 0 0s0 2-2 4l-4 3c-1 0-2 0-1 1l-3 4 13-11 14-15-10-4c-12-4-13-4-9-2m46 10v6c1 3 1 3-1 5-4 5-2 8 7 6 5-1 11-5 10-6l1-2c2-2 1-2-7-4-6-2-9-5-3-4h3c1-1 0-2-5-3-3 0-4 0-5 2m-22 14v2l-4 5-4 5h28c2-2 0-3-3-3s-3 0 1-1c6-1 5-2-2-2-6 0-9-2-6-3 2-2 1-4-1-4h-6c-2-1-3-1-3 1m-32 24l-3 4h33l-11-4-13-4-6 4' fill='%230c3c44' fill-rule='evenodd'/%3E%3C/svg%3E" };
+
+/***/ })
+
+})
+//# sourceMappingURL=[link].js.64563495ff73b3bf84aa.hot-update.js.map
