@@ -10,7 +10,7 @@ export default {
     {
       name: "image",
       property: "og:image",
-      content: "https://melvingeorge.me/me.png",
+      content: "https://melvingeorge.me/metame.png",
     },
     {
       name: "author",
@@ -20,8 +20,8 @@ export default {
   openGraph: {
     title: "MELVIN GEORGE",
     description:
-      "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
-    images: [{ url: "https://melvingeorge.me/me.png" }],
+      "Hi, I'm Melvin George. Come check out my blog to see more of my software developments",
+    images: [{ url: "https://melvingeorge.me/metame.png" }],
     type: "website",
     locale: "en_IE",
     url: "https://melvingeorge.me/",
