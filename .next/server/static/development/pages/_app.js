@@ -131,6 +131,9 @@ __webpack_require__.r(__webpack_exports__);
     handle: "@melvin2016_",
     site: "@melvin2016_",
     cardType: "summary_large_image"
+  },
+  facebook: {
+    appId: 184687632619980
   }
 });
 

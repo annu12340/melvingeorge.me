@@ -36,7 +36,7 @@ export default {
     site: "@melvin2016_",
     cardType: "summary_large_image",
   },
-  facebook={
+  facebook: {
     appId: 184687632619980,
-  }
+  },
 };
