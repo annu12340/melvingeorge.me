@@ -13,7 +13,7 @@ const BlogRenderer = ({ metadeta, content }) => {
     metaURl = `${window.location.origin}`;
     metaImageUrl = `${
       window.location.origin
-    }${require(`../content/assets/${metadeta.link}/main.jpg`)}`;
+    }${require(`../content/assets/${metadeta.link}/main.jpg?resize&size=630`)}`;
   }
 
   return (

@@ -2,14 +2,19 @@ let metaImageUrl;
 let metaURl;
 if (process.browser) {
   metaURl = `${window.location.origin}`;
-  metaImageUrl = `${window.location.origin}${require(`../../public/me.png`)}`;
+  metaImageUrl = `${
+    window.location.origin
+  }${require(`../../public/me.png?resize&size=630`)}`;
 }
 
 export default {
   title: "MELVIN GEORGE",
   description:
-    "Hi, I'm Melvin George. I help the world by building quality software.",
+    "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
   openGraph: {
+    title: "MELVIN GEORGE",
+    description:
+      "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
     images: [
       {
         url: metaImageUrl,
