@@ -45,7 +45,11 @@ export default function Home({ linksData }) {
                 software.
               </p>
               <p className="pt-2 text-left text-blue-300">
-                <a href="https://www.github.com/melvin2016" target="blank">
+                <a
+                  href="https://www.github.com/melvin2016"
+                  alt="Github Icon"
+                  target="blank"
+                >
                   <FontAwesomeIcon
                     className="transition transition-colors duration-300 hover:text-gray-900"
                     icon={faGithub}
@@ -55,6 +59,7 @@ export default function Home({ linksData }) {
                 &nbsp;&nbsp;&nbsp;
                 <a
                   href="https://mozillians.org/en-US/u/melvin2016/"
+                  alt="Mozillian Icon"
                   target="blank"
                 >
                   <FontAwesomeIcon
@@ -64,7 +69,11 @@ export default function Home({ linksData }) {
                   />
                 </a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="https://www.facebook.com/alkitj10" target="blank">
+                <a
+                  href="https://www.facebook.com/alkitj10"
+                  alt="Facebook Icon"
+                  target="blank"
+                >
                   <FontAwesomeIcon
                     className="transition transition-colors duration-300 hover:text-blue-700"
                     icon={faFacebook}
@@ -72,7 +81,11 @@ export default function Home({ linksData }) {
                   />
                 </a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="https://www.twitter.com/melvin2016_" target="blank">
+                <a
+                  href="https://www.twitter.com/melvin2016_"
+                  alt="Twitter Icon"
+                  target="blank"
+                >
                   <FontAwesomeIcon
                     className="transition transition-colors duration-300 hover:text-blue-400"
                     icon={faTwitter}

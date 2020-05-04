@@ -278,6 +278,7 @@ function Home({
     }
   }, __jsx("a", {
     href: "https://www.github.com/melvin2016",
+    alt: "Github Icon",
     target: "blank",
     __self: this,
     __source: {
@@ -292,16 +293,17 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 53,
       columnNumber: 19
     }
   })), "\xA0\xA0\xA0", __jsx("a", {
     href: "https://mozillians.org/en-US/u/melvin2016/",
+    alt: "Mozillian Icon",
     target: "blank",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 60,
       columnNumber: 17
     }
   }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
@@ -311,16 +313,17 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 65,
       columnNumber: 19
     }
   })), "\xA0\xA0\xA0", __jsx("a", {
     href: "https://www.facebook.com/alkitj10",
+    alt: "Facebook Icon",
     target: "blank",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 72,
       columnNumber: 17
     }
   }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
@@ -330,16 +333,17 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 77,
       columnNumber: 19
     }
   })), "\xA0\xA0\xA0", __jsx("a", {
     href: "https://www.twitter.com/melvin2016_",
+    alt: "Twitter Icon",
     target: "blank",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 84,
       columnNumber: 17
     }
   }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
@@ -349,7 +353,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 89,
       columnNumber: 19
     }
   })))), __jsx("div", {
@@ -357,7 +361,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85,
+      lineNumber: 98,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -365,7 +369,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86,
+      lineNumber: 99,
       columnNumber: 15
     }
   }), __jsx("img", {
@@ -375,7 +379,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87,
+      lineNumber: 100,
       columnNumber: 15
     }
   }))))), __jsx("main", {
@@ -383,7 +387,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97,
+      lineNumber: 110,
       columnNumber: 7
     }
   }, __jsx("h1", {
@@ -391,7 +395,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98,
+      lineNumber: 111,
       columnNumber: 9
     }
   }, "Blog"), linksData && linksData.length <= 0 ? null : linksData.map(linkData => __jsx(SinglePostLink, {
@@ -402,7 +406,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102,
+      lineNumber: 115,
       columnNumber: 15
     }
   }))));

@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown/with-html";
 import { NextSeo, BlogJsonLd } from "next-seo";
 
 // COMPONENTS
-const BlogNavigation = dynamic(import("./Navigation/BlogNavigation"));
+import BlogNavigation from "./Navigation/BlogNavigation";
 const ImageLoaderUtil = dynamic(import("./Utils/ImageLoaderUtil"));
 const CodeBlockLoaderUtil = dynamic(import("./Utils/CodeBlockLoaderUtil"));
 

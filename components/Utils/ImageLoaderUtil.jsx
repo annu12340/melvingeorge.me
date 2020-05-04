@@ -7,12 +7,11 @@ const ImageLoaderUtil = ({ alt: altText, src: source, link }) => {
   const src = require(`../../content/assets/${link}/${source}?webp`);
   return (
     <p className="relative">
-      <a className="cursor-pointer" href={src} target="blank">
+      <a className="cursor-pointer" alt={altText} href={src} target="blank">
         <AnimatePresence>
           <motion.img
             className="w-full top-0 left-0 absolute"
             src={src}
-            alt={altText}
             key={src}
             initial={{ opacity: 0 }}
             animate={{ opacity: imageLoaded ? 1 : 0 }}
@@ -23,7 +22,6 @@ const ImageLoaderUtil = ({ alt: altText, src: source, link }) => {
           <motion.img
             className="w-full"
             src={trace}
-            alt={altText}
             key={trace}
             initial={{ opacity: 1 }}
             animate={{ opacity: imageLoaded ? 0 : 1 }}

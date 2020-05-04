@@ -9,7 +9,11 @@ export const SinglePostLink = ({ title, href, description }) => (
       </span>
     </Link>
     <p className="italic mt-1 text-xl font-normal">{description}</p>
-    <a href="" className="inline-block cursor-pointer text-blue-500 mt-1">
+    <a
+      href=""
+      alt={`Read More about ${title}`}
+      className="inline-block cursor-pointer text-blue-500 mt-1"
+    >
       <Link href="/posts/[link]" as={`/posts/${href}`}>
         <span className="font-light text-xl">
           Read <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
