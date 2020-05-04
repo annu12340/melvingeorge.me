@@ -25,18 +25,18 @@
       "publicPath": "static/chunks/3.js"
     }
   ],
-  "../components/SinglePostLink": [
+  "./SinglePostLink": [
     {
-      "id": "./components/SinglePostLink.jsx",
-      "name": "./components/SinglePostLink.jsx",
-      "file": "static/chunks/6.js",
-      "publicPath": "static/chunks/6.js"
+      "id": "./components/IndexPage/SinglePostLink.jsx",
+      "name": "./components/IndexPage/SinglePostLink.jsx",
+      "file": "static/chunks/2.js",
+      "publicPath": "static/chunks/2.js"
     },
     {
       "id": "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js",
       "name": "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js",
-      "file": "static/chunks/6.js",
-      "publicPath": "static/chunks/6.js"
+      "file": "static/chunks/2.js",
+      "publicPath": "static/chunks/2.js"
     }
   ],
   "./Utils/CodeBlockLoaderUtil": [
