@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -234,7 +234,6 @@ const Header = () => __jsx("header", {
   }
 }, __jsx("a", {
   href: "https://www.github.com/melvin2016",
-  alt: "Github Icon",
   target: "blank",
   __self: undefined,
   __source: {
@@ -249,17 +248,16 @@ const Header = () => __jsx("header", {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 36,
+    lineNumber: 32,
     columnNumber: 15
   }
 })), "\xA0\xA0\xA0", __jsx("a", {
   href: "https://mozillians.org/en-US/u/melvin2016/",
-  alt: "Mozillian Icon",
   target: "blank",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 43,
+    lineNumber: 39,
     columnNumber: 13
   }
 }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
@@ -269,17 +267,16 @@ const Header = () => __jsx("header", {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 48,
+    lineNumber: 40,
     columnNumber: 15
   }
 })), "\xA0\xA0\xA0", __jsx("a", {
   href: "https://www.facebook.com/alkitj10",
-  alt: "Facebook Icon",
   target: "blank",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 55,
+    lineNumber: 47,
     columnNumber: 13
   }
 }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
@@ -289,17 +286,16 @@ const Header = () => __jsx("header", {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 60,
+    lineNumber: 48,
     columnNumber: 15
   }
 })), "\xA0\xA0\xA0", __jsx("a", {
   href: "https://www.twitter.com/melvin2016_",
-  alt: "Twitter Icon",
   target: "blank",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 67,
+    lineNumber: 55,
     columnNumber: 13
   }
 }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
@@ -309,7 +305,7 @@ const Header = () => __jsx("header", {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 72,
+    lineNumber: 56,
     columnNumber: 15
   }
 })))), __jsx("div", {
@@ -317,7 +313,7 @@ const Header = () => __jsx("header", {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 81,
+    lineNumber: 65,
     columnNumber: 9
   }
 }, __jsx("div", {
@@ -325,7 +321,7 @@ const Header = () => __jsx("header", {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 82,
+    lineNumber: 66,
     columnNumber: 11
   }
 }), __jsx("img", {
@@ -335,7 +331,7 @@ const Header = () => __jsx("header", {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 83,
+    lineNumber: 67,
     columnNumber: 11
   }
 })))));
@@ -452,7 +448,6 @@ const Navigation = () => __jsx("nav", {
   }
 }, __jsx("a", {
   className: "transition transition-colors duration-300 hover:text-blue-800 text-blue-500 text-lg tracking-wider cursor-pointer",
-  alt: "Home Page Link",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -464,14 +459,14 @@ const Navigation = () => __jsx("nav", {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 17,
+    lineNumber: 14,
     columnNumber: 7
   }
 }, __jsx(_NavigationItems__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 18,
+    lineNumber: 15,
     columnNumber: 9
   }
 }))));
@@ -506,7 +501,6 @@ const NavigationItems = () => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a
 }, __jsx("a", {
   className: "cursor-pointer transition transition-colors duration-300 hover:text-blue-900 hover:bg-gray-400 p-2 rounded-sm",
   href: "",
-  alt: "Blog Page",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
@@ -518,17 +512,16 @@ const NavigationItems = () => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 12,
+    lineNumber: 11,
     columnNumber: 5
   }
 }, __jsx("a", {
   className: "cursor-pointer transition transition-colors duration-300 hover:text-blue-900 hover:bg-gray-400 p-2 rounded-sm",
   href: "",
-  alt: "Projects Page",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 13,
+    lineNumber: 12,
     columnNumber: 7
   }
 }, "Projects")), __jsx("li", {
@@ -536,17 +529,16 @@ const NavigationItems = () => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 21,
+    lineNumber: 19,
     columnNumber: 5
   }
 }, __jsx("a", {
   className: "cursor-pointer transition transition-colors duration-300 hover:text-blue-900 hover:bg-gray-400 p-2 rounded-sm",
   href: "",
-  alt: "About Page",
   __self: undefined,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 22,
+    lineNumber: 20,
     columnNumber: 7
   }
 }, "About")));
@@ -2605,7 +2597,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

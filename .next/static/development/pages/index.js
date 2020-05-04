@@ -87,7 +87,6 @@ var Header = function Header() {
     }
   }, __jsx("a", {
     href: "https://www.github.com/melvin2016",
-    alt: "Github Icon",
     target: "blank",
     __self: _this,
     __source: {
@@ -102,17 +101,16 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 32,
       columnNumber: 15
     }
   })), "\xA0\xA0\xA0", __jsx("a", {
     href: "https://mozillians.org/en-US/u/melvin2016/",
-    alt: "Mozillian Icon",
     target: "blank",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
+      lineNumber: 39,
       columnNumber: 13
     }
   }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
@@ -122,17 +120,16 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 40,
       columnNumber: 15
     }
   })), "\xA0\xA0\xA0", __jsx("a", {
     href: "https://www.facebook.com/alkitj10",
-    alt: "Facebook Icon",
     target: "blank",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 47,
       columnNumber: 13
     }
   }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
@@ -142,17 +139,16 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 48,
       columnNumber: 15
     }
   })), "\xA0\xA0\xA0", __jsx("a", {
     href: "https://www.twitter.com/melvin2016_",
-    alt: "Twitter Icon",
     target: "blank",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 55,
       columnNumber: 13
     }
   }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
@@ -162,7 +158,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72,
+      lineNumber: 56,
       columnNumber: 15
     }
   })))), __jsx("div", {
@@ -170,7 +166,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81,
+      lineNumber: 65,
       columnNumber: 9
     }
   }, __jsx("div", {
@@ -178,7 +174,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82,
+      lineNumber: 66,
       columnNumber: 11
     }
   }), __jsx("img", {
@@ -188,7 +184,7 @@ var Header = function Header() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83,
+      lineNumber: 67,
       columnNumber: 11
     }
   })))));
@@ -318,7 +314,6 @@ var Navigation = function Navigation() {
     }
   }, __jsx("a", {
     className: "transition transition-colors duration-300 hover:text-blue-800 text-blue-500 text-lg tracking-wider cursor-pointer",
-    alt: "Home Page Link",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -330,14 +325,14 @@ var Navigation = function Navigation() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 14,
       columnNumber: 7
     }
   }, __jsx(_NavigationItems__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 15,
       columnNumber: 9
     }
   }))));
@@ -376,7 +371,6 @@ var NavigationItems = function NavigationItems() {
   }, __jsx("a", {
     className: "cursor-pointer transition transition-colors duration-300 hover:text-blue-900 hover:bg-gray-400 p-2 rounded-sm",
     href: "",
-    alt: "Blog Page",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -388,17 +382,16 @@ var NavigationItems = function NavigationItems() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 11,
       columnNumber: 5
     }
   }, __jsx("a", {
     className: "cursor-pointer transition transition-colors duration-300 hover:text-blue-900 hover:bg-gray-400 p-2 rounded-sm",
     href: "",
-    alt: "Projects Page",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 12,
       columnNumber: 7
     }
   }, "Projects")), __jsx("li", {
@@ -406,17 +399,16 @@ var NavigationItems = function NavigationItems() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 19,
       columnNumber: 5
     }
   }, __jsx("a", {
     className: "cursor-pointer transition transition-colors duration-300 hover:text-blue-900 hover:bg-gray-400 p-2 rounded-sm",
     href: "",
-    alt: "About Page",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 20,
       columnNumber: 7
     }
   }, "About")));
@@ -13363,7 +13355,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmelvingeorge%2FPROJECTS%2Fongoing%2FmyBlog%2FmyBlogBackend%2Fpages%2Findex.js ***!
   \*********************************************************************************************************************************************************/
@@ -13386,5 +13378,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
