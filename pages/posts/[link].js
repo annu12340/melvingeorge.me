@@ -1,13 +1,14 @@
 /* PATH => /posts/<ID_NUMBER> */
 
 // MODULES
+import dynamic from "next/dynamic";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
 // COMPONENTS
-import BlogRenderer from "../../components/BlogRenderer";
-import GoBackButton from "../../components/GoBackButton";
+const BlogRenderer = dynamic(import("../../components/BlogRenderer"));
+const GoBackButton = dynamic(import("../../components/GoBackButton"));
 
 export default ({ frontMatter: metadata, content }) => (
   <>

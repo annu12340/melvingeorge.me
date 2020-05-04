@@ -1,3 +1,6 @@
+// CSS
+import styles from "../styles/index/Index.module.css";
+
 // ICONS
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,15 +11,21 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 // MODULES
-import styles from "../styles/index/Index.module.css";
+import dynamic from "next/dynamic";
 import { NextSeo } from "next-seo";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
 // COMPONENTS
-import { Navigation } from "../components/Navigation/Navigation";
-import { SinglePostLink } from "../components/SinglePostLink";
+const Navigation = dynamic(async () => {
+  const module = await import("../components/Navigation/Navigation");
+  return module.Navigation;
+});
+const SinglePostLink = dynamic(async () => {
+  const module = await import("../components/SinglePostLink");
+  return module.SinglePostLink;
+});
 
 export default function Home({ linksData }) {
   return (

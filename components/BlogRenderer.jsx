@@ -1,10 +1,12 @@
 // MODULES
+import dynamic from "next/dynamic";
 import ReactMarkdown from "react-markdown/with-html";
 import { NextSeo, BlogJsonLd } from "next-seo";
+
 // COMPONENTS
-import BlogNavigation from "./Navigation/BlogNavigation";
-import ImageLoaderUtil from "./Utils/ImageLoaderUtil";
-import CodeBlockLoaderUtil from "./Utils/CodeBlockLoaderUtil";
+const BlogNavigation = dynamic(import("./Navigation/BlogNavigation"));
+const ImageLoaderUtil = dynamic(import("./Utils/ImageLoaderUtil"));
+const CodeBlockLoaderUtil = dynamic(import("./Utils/CodeBlockLoaderUtil"));
 
 const BlogRenderer = ({ metadeta, content }) => {
   return (
@@ -59,7 +61,9 @@ const BlogRenderer = ({ metadeta, content }) => {
             escapeHtml={false}
             source={content}
             renderers={{
-              image: ImageLoaderUtil.bind(null, metadeta.link),
+              image: (props) => {
+                return <ImageLoaderUtil {...props} link={metadeta.link} />;
+              },
               code: CodeBlockLoaderUtil,
             }}
             className="blog"
