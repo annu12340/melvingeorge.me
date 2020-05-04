@@ -194,7 +194,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-markdown/with-html */ "./node_modules/react-markdown/with-html.js");
 /* harmony import */ var react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _BlogSeo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./BlogSeo */ "./components/PostsPage/BlogSeo.jsx");
+/* harmony import */ var _BlogSEO__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./BlogSEO */ "./components/PostsPage/BlogSEO.jsx");
 /* harmony import */ var _Navigation_BlogNavigation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Navigation/BlogNavigation */ "./components/Navigation/BlogNavigation.jsx");
 /* harmony import */ var _Utils_ImageLoaderUtil__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Utils/ImageLoaderUtil */ "./components/Utils/ImageLoaderUtil.jsx");
 
@@ -225,7 +225,7 @@ var CodeBlockLoaderUtil = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(fu
 var BlogRenderer = function BlogRenderer(_ref) {
   var metadata = _ref.metadata,
       content = _ref.content;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_BlogSeo__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_BlogSEO__WEBPACK_IMPORTED_MODULE_4__["default"], {
     metadata: metadata,
     __self: _this,
     __source: {
@@ -286,9 +286,9 @@ var BlogRenderer = function BlogRenderer(_ref) {
 
 /***/ }),
 
-/***/ "./components/PostsPage/BlogSeo.jsx":
+/***/ "./components/PostsPage/BlogSEO.jsx":
 /*!******************************************!*\
-  !*** ./components/PostsPage/BlogSeo.jsx ***!
+  !*** ./components/PostsPage/BlogSEO.jsx ***!
   \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -300,7 +300,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-seo */ "./node_modules/next-seo/lib/index.js");
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_1__);
 var _this = undefined,
-    _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/PostsPage/BlogSeo.jsx";
+    _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/PostsPage/BlogSEO.jsx";
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;

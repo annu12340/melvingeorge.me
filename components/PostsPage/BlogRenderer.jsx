@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import ReactMarkdown from "react-markdown/with-html";
 
 // COMPONENTS
-import BlogSEO from "./BlogSeo";
+import BlogSEO from "./BlogSEO";
 import BlogNavigation from "../Navigation/BlogNavigation";
 import ImageLoaderUtil from "../Utils/ImageLoaderUtil";
 const CodeBlockLoaderUtil = dynamic(import("../Utils/CodeBlockLoaderUtil"));
