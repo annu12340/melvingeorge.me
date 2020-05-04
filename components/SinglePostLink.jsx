@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-export const SinglePostLink = ({ title, href, description }) => (
+const SinglePostLink = ({ title, href, description }) => (
   <div className="mb-10">
     <Link href="/posts/[link]" as={`/posts/${href}`}>
       <span className="text-2xl font-medium cursor-pointer duration-300 transition transition-colors  hover:bg-gray-200 hover:text-blue-600">
@@ -22,3 +22,5 @@ export const SinglePostLink = ({ title, href, description }) => (
     </a>
   </div>
 );
+
+export default SinglePostLink;

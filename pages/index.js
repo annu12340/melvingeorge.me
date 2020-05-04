@@ -18,14 +18,8 @@ import path from "path";
 import matter from "gray-matter";
 
 // COMPONENTS
-const Navigation = dynamic(async () => {
-  const module = await import("../components/Navigation/Navigation");
-  return module.Navigation;
-});
-const SinglePostLink = dynamic(async () => {
-  const module = await import("../components/SinglePostLink");
-  return module.SinglePostLink;
-});
+import Navigation from "../components/Navigation/Navigation";
+const SinglePostLink = dynamic(import("../components/SinglePostLink"));
 
 export default function Home({ linksData }) {
   return (

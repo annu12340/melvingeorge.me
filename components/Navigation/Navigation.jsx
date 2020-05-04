@@ -1,10 +1,9 @@
-import dynamic from "next/dynamic";
 import Link from "next/link";
 
 // COMPONENTS
-const NavigationItems = dynamic(import("./NavigationItems"));
+import NavigationItems from "./NavigationItems";
 
-export const Navigation = () => (
+const Navigation = () => (
   <nav className="pt-8">
     <div className="flex justify-between">
       <Link href="/">
@@ -21,3 +20,5 @@ export const Navigation = () => (
     </div>
   </nav>
 );
+
+export default Navigation;

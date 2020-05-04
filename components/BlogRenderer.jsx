@@ -5,7 +5,7 @@ import { NextSeo, BlogJsonLd } from "next-seo";
 
 // COMPONENTS
 import BlogNavigation from "./Navigation/BlogNavigation";
-const ImageLoaderUtil = dynamic(import("./Utils/ImageLoaderUtil"));
+import ImageLoaderUtil from "./Utils/ImageLoaderUtil";
 const CodeBlockLoaderUtil = dynamic(import("./Utils/CodeBlockLoaderUtil"));
 
 const BlogRenderer = ({ metadeta, content }) => {
