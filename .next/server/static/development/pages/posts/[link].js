@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -535,7 +535,7 @@ webpackContext.id = "./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {srcSet:"/_next/static/images/main-640-403e5d7b21f2c506610ee0ec0be6a036.jpg"+" 640w",images:[{path:"/_next/static/images/main-640-403e5d7b21f2c506610ee0ec0be6a036.jpg",width:640,height:425}],src:"/_next/static/images/main-640-403e5d7b21f2c506610ee0ec0be6a036.jpg",toString:function(){return "/_next/static/images/main-640-403e5d7b21f2c506610ee0ec0be6a036.jpg"},placeholder: undefined,width:640,height:425};
+module.exports = {srcSet:"/_next/static/images/main-640-95d6fb835505f17234781ee9659e1093.jpg"+" 640w",images:[{path:"/_next/static/images/main-640-95d6fb835505f17234781ee9659e1093.jpg",width:640,height:1190}],src:"/_next/static/images/main-640-95d6fb835505f17234781ee9659e1093.jpg",toString:function(){return "/_next/static/images/main-640-95d6fb835505f17234781ee9659e1093.jpg"},placeholder: undefined,width:640,height:1190};
 
 /***/ }),
 
@@ -546,7 +546,7 @@ module.exports = {srcSet:"/_next/static/images/main-640-403e5d7b21f2c506610ee0ec
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {srcSet:"/_next/static/images/main-280-e163a23f52b07cb01221870b3764fa1c.jpg"+" 280w",images:[{path:"/_next/static/images/main-280-e163a23f52b07cb01221870b3764fa1c.jpg",width:280,height:150}],src:"/_next/static/images/main-280-e163a23f52b07cb01221870b3764fa1c.jpg",toString:function(){return "/_next/static/images/main-280-e163a23f52b07cb01221870b3764fa1c.jpg"},placeholder: undefined,width:280,height:150};
+module.exports = {srcSet:"/_next/static/images/main-640-3dd18cd4082f9feb0be353caa3dcbb5c.jpg"+" 640w",images:[{path:"/_next/static/images/main-640-3dd18cd4082f9feb0be353caa3dcbb5c.jpg",width:640,height:481}],src:"/_next/static/images/main-640-3dd18cd4082f9feb0be353caa3dcbb5c.jpg",toString:function(){return "/_next/static/images/main-640-3dd18cd4082f9feb0be353caa3dcbb5c.jpg"},placeholder: undefined,width:640,height:481};
 
 /***/ }),
 
@@ -2602,7 +2602,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*************************************!*\
   !*** multi ./pages/posts/[link].js ***!
   \*************************************/
