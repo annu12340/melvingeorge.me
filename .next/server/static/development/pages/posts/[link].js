@@ -132,7 +132,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Navigation_BlogNavigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Navigation/BlogNavigation */ "./components/Navigation/BlogNavigation.jsx");
 /* harmony import */ var _Utils_ImageLoaderUtil__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Utils/ImageLoaderUtil */ "./components/Utils/ImageLoaderUtil.jsx");
-/* harmony import */ var _Utils_CodeBlockUtil__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Utils/CodeBlockUtil */ "./components/Utils/CodeBlockUtil.jsx");
+/* harmony import */ var _Utils_CodeBlockLoaderUtil__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Utils/CodeBlockLoaderUtil */ "./components/Utils/CodeBlockLoaderUtil.jsx");
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/BlogRenderer.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -221,7 +221,7 @@ const BlogRenderer = ({
     source: content,
     renderers: {
       image: _Utils_ImageLoaderUtil__WEBPACK_IMPORTED_MODULE_4__["default"].bind(null, metadeta.link),
-      code: _Utils_CodeBlockUtil__WEBPACK_IMPORTED_MODULE_5__["default"]
+      code: _Utils_CodeBlockLoaderUtil__WEBPACK_IMPORTED_MODULE_5__["default"]
     },
     className: "blog",
     __self: undefined,
@@ -468,10 +468,10 @@ const NavigationItems = () => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a
 
 /***/ }),
 
-/***/ "./components/Utils/CodeBlockUtil.jsx":
-/*!********************************************!*\
-  !*** ./components/Utils/CodeBlockUtil.jsx ***!
-  \********************************************/
+/***/ "./components/Utils/CodeBlockLoaderUtil.jsx":
+/*!**************************************************!*\
+  !*** ./components/Utils/CodeBlockLoaderUtil.jsx ***!
+  \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -483,7 +483,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_syntax_highlighter___WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_syntax_highlighter___WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_syntax_highlighter_dist_cjs_styles_prism__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-syntax-highlighter/dist/cjs/styles/prism */ "react-syntax-highlighter/dist/cjs/styles/prism");
 /* harmony import */ var react_syntax_highlighter_dist_cjs_styles_prism__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_syntax_highlighter_dist_cjs_styles_prism__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/Utils/CodeBlockUtil.jsx";
+var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/Utils/CodeBlockLoaderUtil.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -538,16 +538,17 @@ const ImageLoaderUtil = (link, {
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
 
   const {
-    src,
     trace
   } = __webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/.*$?e9c1")(`./${link}/${source}`);
+
+  const src = __webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/.*$?67bc")(`./${link}/${source}`);
 
   return __jsx("p", {
     className: "relative",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 9,
       columnNumber: 5
     }
   }, __jsx("a", {
@@ -557,19 +558,21 @@ const ImageLoaderUtil = (link, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 10,
       columnNumber: 7
     }
   }, __jsx(framer_motion__WEBPACK_IMPORTED_MODULE_1__["AnimatePresence"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
+      lineNumber: 11,
       columnNumber: 9
     }
-  }, __jsx(framer_motion__WEBPACK_IMPORTED_MODULE_1__["motion"].picture, {
-    key: src,
+  }, __jsx(framer_motion__WEBPACK_IMPORTED_MODULE_1__["motion"].img, {
     className: "w-full top-0 left-0 absolute",
+    src: src,
+    alt: altText,
+    key: src,
     initial: {
       opacity: 0
     },
@@ -583,41 +586,14 @@ const ImageLoaderUtil = (link, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 12,
       columnNumber: 11
     }
-  }, __jsx("source", {
-    srcSet: __webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/.*$?67bc")(`./${link}/${source}`),
-    type: "image/webp",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 13
-    }
-  }), __jsx("source", {
-    srcSet: src,
-    type: "image/jpeg",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 13
-    }
-  }), __jsx("img", {
-    src: src,
-    alt: altText,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28,
-      columnNumber: 13
-    }
-  })), __jsx(framer_motion__WEBPACK_IMPORTED_MODULE_1__["motion"].img, {
-    key: trace,
+  }), __jsx(framer_motion__WEBPACK_IMPORTED_MODULE_1__["motion"].img, {
     className: "w-full",
     src: trace,
     alt: altText,
+    key: trace,
     initial: {
       opacity: 1
     },
@@ -630,7 +606,7 @@ const ImageLoaderUtil = (link, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 23,
       columnNumber: 11
     }
   }))));

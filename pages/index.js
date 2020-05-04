@@ -9,18 +9,19 @@ import {
 
 // MODULES
 import styles from "../styles/index/Index.module.css";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
 // COMPONENTS
 import { Navigation } from "../components/Navigation/Navigation";
-import { SinglePostLink } from "../components/SinglePostLink/SinglePostLink";
+import { SinglePostLink } from "../components/SinglePostLink";
 
 export default function Home({ linksData }) {
   return (
     <>
+      <NextSeo title={"HOME"} />
       <header className={`${styles.bgHero} z-0 pb-12`}>
         {/* <!-- Header Container --> */}
         <div className="container max-w-screen-md mx-auto px-4">
@@ -76,7 +77,7 @@ export default function Home({ linksData }) {
               <div className={`${styles.heroImg} block lg:hidden`} />
               <img
                 className="hidden lg:block order-first md:order-last w-full z-0"
-                src={require("../public/me.png")}
+                src={require("../public/me.png?webp")}
                 alt="Picture of Melvin george"
               />
             </div>

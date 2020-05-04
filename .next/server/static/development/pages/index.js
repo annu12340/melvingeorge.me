@@ -259,10 +259,10 @@ const NavigationItems = () => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a
 
 /***/ }),
 
-/***/ "./components/SinglePostLink/SinglePostLink.jsx":
-/*!******************************************************!*\
-  !*** ./components/SinglePostLink/SinglePostLink.jsx ***!
-  \******************************************************/
+/***/ "./components/SinglePostLink.jsx":
+/*!***************************************!*\
+  !*** ./components/SinglePostLink.jsx ***!
+  \***************************************/
 /*! exports provided: SinglePostLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -277,7 +277,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "@fortawesome/free-solid-svg-icons");
 /* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/SinglePostLink/SinglePostLink.jsx";
+var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/SinglePostLink.jsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2302,8 +2302,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _styles_index_Index_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/index/Index.module.css */ "./styles/index/Index.module.css");
 /* harmony import */ var _styles_index_Index_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_index_Index_module_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next-seo */ "next-seo");
+/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! fs */ "fs");
 /* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var path__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! path */ "path");
@@ -2311,7 +2311,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gray_matter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! gray-matter */ "gray-matter");
 /* harmony import */ var gray_matter__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(gray_matter__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _components_Navigation_Navigation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Navigation/Navigation */ "./components/Navigation/Navigation.jsx");
-/* harmony import */ var _components_SinglePostLink_SinglePostLink__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/SinglePostLink/SinglePostLink */ "./components/SinglePostLink/SinglePostLink.jsx");
+/* harmony import */ var _components_SinglePostLink__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/SinglePostLink */ "./components/SinglePostLink.jsx");
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -2330,12 +2330,20 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 function Home({
   linksData
 }) {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("header", {
-    className: `${_styles_index_Index_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.bgHero} z-0 pb-12`,
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_4__["NextSeo"], {
+    title: "HOME",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24,
+      columnNumber: 7
+    }
+  }), __jsx("header", {
+    className: `${_styles_index_Index_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.bgHero} z-0 pb-12`,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
       columnNumber: 7
     }
   }, __jsx("div", {
@@ -2343,14 +2351,14 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 27,
       columnNumber: 9
     }
   }, __jsx(_components_Navigation_Navigation__WEBPACK_IMPORTED_MODULE_8__["Navigation"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 29,
       columnNumber: 11
     }
   }), __jsx("section", {
@@ -2358,7 +2366,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 31,
       columnNumber: 11
     }
   }, __jsx("div", {
@@ -2366,7 +2374,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 13
     }
   }, __jsx("p", {
@@ -2374,7 +2382,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 34,
       columnNumber: 15
     }
   }, "Hi, I'm Melvin George. I help the world by building quality software."), __jsx("p", {
@@ -2382,7 +2390,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 38,
       columnNumber: 15
     }
   }, __jsx("a", {
@@ -2391,7 +2399,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38,
+      lineNumber: 39,
       columnNumber: 17
     }
   }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__["FontAwesomeIcon"], {
@@ -2401,7 +2409,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39,
+      lineNumber: 40,
       columnNumber: 19
     }
   })), "\xA0\xA0\xA0", __jsx("a", {
@@ -2410,7 +2418,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 47,
       columnNumber: 17
     }
   }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__["FontAwesomeIcon"], {
@@ -2420,7 +2428,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 51,
       columnNumber: 19
     }
   })), "\xA0\xA0\xA0", __jsx("a", {
@@ -2429,7 +2437,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 58,
       columnNumber: 17
     }
   }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__["FontAwesomeIcon"], {
@@ -2439,7 +2447,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 59,
       columnNumber: 19
     }
   })), "\xA0\xA0\xA0", __jsx("a", {
@@ -2448,7 +2456,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
+      lineNumber: 66,
       columnNumber: 17
     }
   }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__["FontAwesomeIcon"], {
@@ -2458,7 +2466,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
+      lineNumber: 67,
       columnNumber: 19
     }
   })))), __jsx("div", {
@@ -2466,7 +2474,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 76,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -2474,17 +2482,17 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 77,
       columnNumber: 15
     }
   }), __jsx("img", {
     className: "hidden lg:block order-first md:order-last w-full z-0",
-    src: __webpack_require__(/*! ../public/me.png */ "./public/me.png"),
+    src: __webpack_require__(/*! ../public/me.png?webp */ "./public/me.png?webp"),
     alt: "Picture of Melvin george",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77,
+      lineNumber: 78,
       columnNumber: 15
     }
   }))))), __jsx("main", {
@@ -2492,7 +2500,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87,
+      lineNumber: 88,
       columnNumber: 7
     }
   }, __jsx("h1", {
@@ -2500,10 +2508,10 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88,
+      lineNumber: 89,
       columnNumber: 9
     }
-  }, "Blog"), linksData && linksData.length <= 0 ? null : linksData.map(linkData => __jsx(_components_SinglePostLink_SinglePostLink__WEBPACK_IMPORTED_MODULE_9__["SinglePostLink"], {
+  }, "Blog"), linksData && linksData.length <= 0 ? null : linksData.map(linkData => __jsx(_components_SinglePostLink__WEBPACK_IMPORTED_MODULE_9__["SinglePostLink"], {
     title: linkData.title,
     key: linkData.href,
     href: linkData.href,
@@ -2511,7 +2519,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92,
+      lineNumber: 93,
       columnNumber: 15
     }
   }))));
@@ -2553,14 +2561,14 @@ async function getStaticProps() {
 
 /***/ }),
 
-/***/ "./public/me.png":
-/*!***********************!*\
-  !*** ./public/me.png ***!
-  \***********************/
+/***/ "./public/me.png?webp":
+/*!****************************!*\
+  !*** ./public/me.png?webp ***!
+  \****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/_next/static/images/me-a2fc70f0eaf881c36506d50e31128c21.png";
+module.exports = "/_next/static/images/me-d2ece8a7fbcb208da976edc8ebbb9c9a.png.webp";
 
 /***/ }),
 
@@ -2646,14 +2654,14 @@ module.exports = require("gray-matter");
 
 /***/ }),
 
-/***/ "next/head":
-/*!****************************!*\
-  !*** external "next/head" ***!
-  \****************************/
+/***/ "next-seo":
+/*!***************************!*\
+  !*** external "next-seo" ***!
+  \***************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("next/head");
+module.exports = require("next-seo");
 
 /***/ }),
 

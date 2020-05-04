@@ -4,7 +4,7 @@ import { NextSeo, BlogJsonLd } from "next-seo";
 // COMPONENTS
 import BlogNavigation from "./Navigation/BlogNavigation";
 import ImageLoaderUtil from "./Utils/ImageLoaderUtil";
-import CodeBlockUtil from "./Utils/CodeBlockUtil";
+import CodeBlockLoaderUtil from "./Utils/CodeBlockLoaderUtil";
 
 const BlogRenderer = ({ metadeta, content }) => {
   return (
@@ -60,7 +60,7 @@ const BlogRenderer = ({ metadeta, content }) => {
             source={content}
             renderers={{
               image: ImageLoaderUtil.bind(null, metadeta.link),
-              code: CodeBlockUtil,
+              code: CodeBlockLoaderUtil,
             }}
             className="blog"
           />

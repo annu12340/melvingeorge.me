@@ -93,17 +93,17 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Seo/default-seo.config.js":
-/*!**********************************************!*\
-  !*** ./components/Seo/default-seo.config.js ***!
-  \**********************************************/
+/***/ "./default-seo.config.js":
+/*!*******************************!*\
+  !*** ./default-seo.config.js ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  title: "Blog Of MELVIN GEORGE",
+  titleTemplate: "%s | MELVIN GEORGE",
   description: "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
   additionalMetaTags: [{
     name: "keywords",
@@ -111,7 +111,7 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     name: "image",
     property: "og:image",
-    content: `https://melvingeorge.me${__webpack_require__(/*! ../../public/metame.png?resize&size=600 */ "./public/metame.png?resize&size=600")}`
+    content: `https://melvingeorge.me${__webpack_require__(/*! ./public/metame.png?resize&size=600 */ "./public/metame.png?resize&size=600")}`
   }, {
     name: "author",
     content: "MELVIN GEORGE"
@@ -120,7 +120,7 @@ __webpack_require__.r(__webpack_exports__);
     title: "MELVIN GEORGE",
     description: "Hi, I'm Melvin George. Come check out my blog to see more of my software developments",
     images: [{
-      url: `https://melvingeorge.me${__webpack_require__(/*! ../../public/metame.png?resize&size=600 */ "./public/metame.png?resize&size=600")}`
+      url: `https://melvingeorge.me${__webpack_require__(/*! ./public/metame.png?resize&size=600 */ "./public/metame.png?resize&size=600")}`
     }],
     type: "website",
     locale: "en_IE",
@@ -155,7 +155,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next-seo */ "next-seo");
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_Seo_default_seo_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Seo/default-seo.config */ "./components/Seo/default-seo.config.js");
+/* harmony import */ var _default_seo_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../default-seo.config */ "./default-seo.config.js");
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -169,7 +169,7 @@ function App({
   Component,
   pageProps
 }) {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_2__["DefaultSeo"], _extends({}, _components_Seo_default_seo_config__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_2__["DefaultSeo"], _extends({}, _default_seo_config__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,

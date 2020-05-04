@@ -1,5 +1,5 @@
 export default {
-  title: "Blog Of MELVIN GEORGE",
+  titleTemplate: "%s | MELVIN GEORGE",
   description:
     "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
   additionalMetaTags: [
@@ -10,7 +10,7 @@ export default {
     {
       name: "image",
       property: "og:image",
-      content: `https://melvingeorge.me${require("../../public/metame.png?resize&size=600")}`,
+      content: `https://melvingeorge.me${require("./public/metame.png?resize&size=600")}`,
     },
     {
       name: "author",
@@ -23,7 +23,7 @@ export default {
       "Hi, I'm Melvin George. Come check out my blog to see more of my software developments",
     images: [
       {
-        url: `https://melvingeorge.me${require("../../public/metame.png?resize&size=600")}`,
+        url: `https://melvingeorge.me${require("./public/metame.png?resize&size=600")}`,
       },
     ],
     type: "website",
