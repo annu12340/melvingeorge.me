@@ -12,10 +12,7 @@ const BlogNavigation = () => (
       <Link href="/">
         <div className="flex flex-row justify-center items-center">
           <div className={styles.heroImg} />
-          <a
-            className="transition transition-colors duration-300 hover:text-blue-800 text-blue-500 text-lg tracking-wider cursor-pointer ml-4"
-            alt="Home Page Link"
-          >
+          <a className="transition transition-colors duration-300 hover:text-blue-800 text-blue-500 text-lg tracking-wider cursor-pointer ml-4">
             Melvin George
           </a>
         </div>

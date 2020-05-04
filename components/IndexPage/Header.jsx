@@ -28,11 +28,7 @@ const Header = () => (
             software.
           </p>
           <p className="pt-2 text-left text-blue-300">
-            <a
-              href="https://www.github.com/melvin2016"
-              alt="Github Icon"
-              target="blank"
-            >
+            <a href="https://www.github.com/melvin2016" target="blank">
               <FontAwesomeIcon
                 className="transition transition-colors duration-300 hover:text-gray-900"
                 icon={faGithub}
@@ -40,11 +36,7 @@ const Header = () => (
               />
             </a>
             &nbsp;&nbsp;&nbsp;
-            <a
-              href="https://mozillians.org/en-US/u/melvin2016/"
-              alt="Mozillian Icon"
-              target="blank"
-            >
+            <a href="https://mozillians.org/en-US/u/melvin2016/" target="blank">
               <FontAwesomeIcon
                 className="transition transition-colors duration-300 hover:text-orange-500"
                 icon={faFirefoxBrowser}
@@ -52,11 +44,7 @@ const Header = () => (
               />
             </a>
             &nbsp;&nbsp;&nbsp;
-            <a
-              href="https://www.facebook.com/alkitj10"
-              alt="Facebook Icon"
-              target="blank"
-            >
+            <a href="https://www.facebook.com/alkitj10" target="blank">
               <FontAwesomeIcon
                 className="transition transition-colors duration-300 hover:text-blue-700"
                 icon={faFacebook}
@@ -64,11 +52,7 @@ const Header = () => (
               />
             </a>
             &nbsp;&nbsp;&nbsp;
-            <a
-              href="https://www.twitter.com/melvin2016_"
-              alt="Twitter Icon"
-              target="blank"
-            >
+            <a href="https://www.twitter.com/melvin2016_" target="blank">
               <FontAwesomeIcon
                 className="transition transition-colors duration-300 hover:text-blue-400"
                 icon={faTwitter}

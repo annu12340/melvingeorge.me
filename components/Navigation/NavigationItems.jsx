@@ -4,7 +4,6 @@ const NavigationItems = () => (
       <a
         className="cursor-pointer transition transition-colors duration-300 hover:text-blue-900 hover:bg-gray-400 p-2 rounded-sm"
         href=""
-        alt="Blog Page"
       >
         Blog
       </a>
@@ -13,7 +12,6 @@ const NavigationItems = () => (
       <a
         className="cursor-pointer transition transition-colors duration-300 hover:text-blue-900 hover:bg-gray-400 p-2 rounded-sm"
         href=""
-        alt="Projects Page"
       >
         Projects
       </a>
@@ -22,7 +20,6 @@ const NavigationItems = () => (
       <a
         className="cursor-pointer transition transition-colors duration-300 hover:text-blue-900 hover:bg-gray-400 p-2 rounded-sm"
         href=""
-        alt="About Page"
       >
         About
       </a>
