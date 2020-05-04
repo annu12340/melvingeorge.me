@@ -7,7 +7,7 @@ import path from "path";
 import matter from "gray-matter";
 
 // COMPONENTS
-import BlogRenderer from "../../components/PostsPage/BlogRenderer";
+const BlogRenderer = dynamic(import("../../components/PostsPage/BlogRenderer"));
 const GoBackButton = dynamic(import("../../components/Utils/GoBackButton"));
 
 export default ({ frontMatter: metadata, content }) => (

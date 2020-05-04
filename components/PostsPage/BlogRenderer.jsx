@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown/with-html";
 // COMPONENTS
 import BlogSEO from "./BlogSEO";
 import BlogNavigation from "../Navigation/BlogNavigation";
-const ImageLoaderUtil = dynamic(import("../Utils/ImageLoaderUtil"));
+import ImageLoaderUtil from "../Utils/ImageLoaderUtil";
 const CodeBlockLoaderUtil = dynamic(import("../Utils/CodeBlockLoaderUtil"));
 
 const BlogRenderer = ({ metadata, content }) => {
