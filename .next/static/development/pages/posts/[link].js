@@ -1,152 +1,5 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/posts/[link].js"],{
 
-/***/ "./components/BlogRenderer.jsx":
-/*!*************************************!*\
-  !*** ./components/BlogRenderer.jsx ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/dynamic */ "./node_modules/next/dist/next-server/lib/dynamic.js");
-/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-markdown/with-html */ "./node_modules/react-markdown/with-html.js");
-/* harmony import */ var react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next-seo */ "./node_modules/next-seo/lib/index.js");
-/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _Navigation_BlogNavigation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Navigation/BlogNavigation */ "./components/Navigation/BlogNavigation.jsx");
-/* harmony import */ var _Utils_ImageLoaderUtil__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Utils/ImageLoaderUtil */ "./components/Utils/ImageLoaderUtil.jsx");
-
-
-var _this = undefined,
-    _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/BlogRenderer.jsx";
-
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-// MODULES
-
-
- // COMPONENTS
-
-
-
-var CodeBlockLoaderUtil = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(function () {
-  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./Utils/CodeBlockLoaderUtil */ "./components/Utils/CodeBlockLoaderUtil.jsx"));
-}, {
-  loadableGenerated: {
-    webpack: function webpack() {
-      return [/*require.resolve*/(/*! ./Utils/CodeBlockLoaderUtil */ "./components/Utils/CodeBlockLoaderUtil.jsx")];
-    },
-    modules: ["./Utils/CodeBlockLoaderUtil"]
-  }
-});
-
-var BlogRenderer = function BlogRenderer(_ref) {
-  var metadeta = _ref.metadeta,
-      content = _ref.content;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_4__["NextSeo"], {
-    title: metadeta.title,
-    description: metadeta.description,
-    additionalMetaTags: [{
-      name: "keywords",
-      content: metadeta.keywords
-    }, {
-      name: "image",
-      property: "og:image",
-      content: "https://melvingeorge.me".concat(__webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$")("./".concat(metadeta.link, "/main.jpg")))
-    }],
-    openGraph: {
-      url: "https://melvingeorge.me/posts/".concat(metadeta.link),
-      title: metadeta.title,
-      description: metadeta.description,
-      type: "article",
-      site_name: "MELVIN GEORGE Blog",
-      images: [{
-        url: "https://melvingeorge.me".concat(__webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$")("./".concat(metadeta.link, "/main.jpg")))
-      }]
-    },
-    twitter: {
-      handle: "@melvin2016_",
-      site: "@melvin2016_",
-      cardType: "summary_large_image"
-    },
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 7
-    }
-  }), __jsx(next_seo__WEBPACK_IMPORTED_MODULE_4__["BlogJsonLd"], {
-    url: "https://melvingeorge.me/posts/".concat(metadeta.link),
-    title: metadeta.title,
-    images: ["https://melvingeorge.me".concat(__webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$")("./".concat(metadeta.link, "/main.jpg")))],
-    datePublished: new Date(metadeta.date).toISOString(),
-    dateModified: new Date(metadeta.date).toISOString(),
-    authorName: "MELVIN GEORGE",
-    description: metadeta.description,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46,
-      columnNumber: 7
-    }
-  }), __jsx(_Navigation_BlogNavigation__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57,
-      columnNumber: 7
-    }
-  }), __jsx("div", {
-    className: "relative container max-w-screen-md mx-auto px-4 py-10 bg-gray-100 h-auto min-h-screen rounded",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58,
-      columnNumber: 7
-    }
-  }, __jsx("article", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59,
-      columnNumber: 9
-    }
-  }, __jsx(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    escapeHtml: false,
-    source: content,
-    renderers: {
-      image: function image(props) {
-        return __jsx(_Utils_ImageLoaderUtil__WEBPACK_IMPORTED_MODULE_6__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-          link: metadeta.link,
-          __self: _this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 65,
-            columnNumber: 24
-          }
-        }));
-      },
-      code: CodeBlockLoaderUtil
-    },
-    className: "blog",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60,
-      columnNumber: 11
-    }
-  }))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (BlogRenderer);
-
-/***/ }),
-
 /***/ "./components/Navigation/BlogNavigation.jsx":
 /*!**************************************************!*\
   !*** ./components/Navigation/BlogNavigation.jsx ***!
@@ -322,6 +175,190 @@ var NavigationItems = function NavigationItems() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (NavigationItems);
+
+/***/ }),
+
+/***/ "./components/PostsPage/BlogRenderer.jsx":
+/*!***********************************************!*\
+  !*** ./components/PostsPage/BlogRenderer.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/dynamic */ "./node_modules/next/dist/next-server/lib/dynamic.js");
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-markdown/with-html */ "./node_modules/react-markdown/with-html.js");
+/* harmony import */ var react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _BlogSeo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./BlogSeo */ "./components/PostsPage/BlogSeo.jsx");
+/* harmony import */ var _Navigation_BlogNavigation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Navigation/BlogNavigation */ "./components/Navigation/BlogNavigation.jsx");
+/* harmony import */ var _Utils_ImageLoaderUtil__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Utils/ImageLoaderUtil */ "./components/Utils/ImageLoaderUtil.jsx");
+
+
+var _this = undefined,
+    _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/PostsPage/BlogRenderer.jsx";
+
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+// MODULES
+
+ // COMPONENTS
+
+
+
+
+var CodeBlockLoaderUtil = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(function () {
+  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../Utils/CodeBlockLoaderUtil */ "./components/Utils/CodeBlockLoaderUtil.jsx"));
+}, {
+  loadableGenerated: {
+    webpack: function webpack() {
+      return [/*require.resolve*/(/*! ../Utils/CodeBlockLoaderUtil */ "./components/Utils/CodeBlockLoaderUtil.jsx")];
+    },
+    modules: ["../Utils/CodeBlockLoaderUtil"]
+  }
+});
+
+var BlogRenderer = function BlogRenderer(_ref) {
+  var metadata = _ref.metadata,
+      content = _ref.content;
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx(_BlogSeo__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    metadata: metadata,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 7
+    }
+  }), __jsx(_Navigation_BlogNavigation__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 7
+    }
+  }), __jsx("div", {
+    className: "relative container max-w-screen-md mx-auto px-4 py-10 bg-gray-100 h-auto min-h-screen rounded",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 7
+    }
+  }, __jsx("article", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }, __jsx(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    escapeHtml: false,
+    source: content,
+    renderers: {
+      image: function image(props) {
+        return __jsx(_Utils_ImageLoaderUtil__WEBPACK_IMPORTED_MODULE_6__["default"], Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+          link: metadata.link,
+          __self: _this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23,
+            columnNumber: 24
+          }
+        }));
+      },
+      code: CodeBlockLoaderUtil
+    },
+    className: "blog",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 11
+    }
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BlogRenderer);
+
+/***/ }),
+
+/***/ "./components/PostsPage/BlogSeo.jsx":
+/*!******************************************!*\
+  !*** ./components/PostsPage/BlogSeo.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-seo */ "./node_modules/next-seo/lib/index.js");
+/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_1__);
+var _this = undefined,
+    _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/PostsPage/BlogSeo.jsx";
+
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+// MODULES
+
+
+var BlogSEO = function BlogSEO(_ref) {
+  var metadata = _ref.metadata;
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_1__["NextSeo"], {
+    title: metadata.title,
+    description: metadata.description,
+    additionalMetaTags: [{
+      name: "keywords",
+      content: metadata.keywords
+    }, {
+      name: "image",
+      property: "og:image",
+      content: "https://melvingeorge.me".concat(__webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$")("./".concat(metadata.link, "/main.jpg")))
+    }],
+    openGraph: {
+      url: "https://melvingeorge.me/posts/".concat(metadata.link),
+      title: metadata.title,
+      description: metadata.description,
+      type: "article",
+      site_name: "MELVIN GEORGE Blog",
+      images: [{
+        url: "https://melvingeorge.me".concat(__webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$")("./".concat(metadata.link, "/main.jpg")))
+      }]
+    },
+    twitter: {
+      handle: "@melvin2016_",
+      site: "@melvin2016_",
+      cardType: "summary_large_image"
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 5
+    }
+  }), __jsx(next_seo__WEBPACK_IMPORTED_MODULE_1__["BlogJsonLd"], {
+    url: "https://melvingeorge.me/posts/".concat(metadata.link),
+    title: metadata.title,
+    images: ["https://melvingeorge.me".concat(__webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$")("./".concat(metadata.link, "/main.jpg")))],
+    datePublished: new Date(metadata.date).toISOString(),
+    dateModified: new Date(metadata.date).toISOString(),
+    authorName: "MELVIN GEORGE",
+    description: metadata.description,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38,
+      columnNumber: 5
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BlogSEO);
 
 /***/ }),
 
@@ -11593,7 +11630,7 @@ exports.EVENTS = {
     They should probably be removed eventually.
 */
 __export(__webpack_require__(/*! ./FeedHandler */ "./node_modules/html-to-react/node_modules/htmlparser2/lib/FeedHandler.js"));
-__export(__webpack_require__(/*! ./WritableStream */ 2));
+__export(__webpack_require__(/*! ./WritableStream */ 4));
 __export(__webpack_require__(/*! ./CollectingHandler */ "./node_modules/html-to-react/node_modules/htmlparser2/lib/CollectingHandler.js"));
 var DomUtils = __importStar(__webpack_require__(/*! domutils */ "./node_modules/html-to-react/node_modules/domutils/lib/index.js"));
 exports.DomUtils = DomUtils;
@@ -32037,7 +32074,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dynamic */ "./node_modules/next/dist/next-server/lib/dynamic.js");
 /* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_BlogRenderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/BlogRenderer */ "./components/BlogRenderer.jsx");
+/* harmony import */ var _components_PostsPage_BlogRenderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/PostsPage/BlogRenderer */ "./components/PostsPage/BlogRenderer.jsx");
 var _this = undefined,
     _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/posts/[link].js";
 
@@ -32050,21 +32087,21 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // COMPONENTS
 
 var GoBackButton = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(function () {
-  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../../components/GoBackButton */ "./components/GoBackButton.jsx"));
+  return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../../components/Utils/GoBackButton */ "./components/Utils/GoBackButton.jsx"));
 }, {
   loadableGenerated: {
     webpack: function webpack() {
-      return [/*require.resolve*/(/*! ../../components/GoBackButton */ "./components/GoBackButton.jsx")];
+      return [/*require.resolve*/(/*! ../../components/Utils/GoBackButton */ "./components/Utils/GoBackButton.jsx")];
     },
-    modules: ["../../components/GoBackButton"]
+    modules: ["../../components/Utils/GoBackButton"]
   }
 });
 var __N_SSG = true;
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var metadata = _ref.frontMatter,
       content = _ref.content;
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_BlogRenderer__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    metadeta: metadata,
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_PostsPage_BlogRenderer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    metadata: metadata,
     content: content,
     __self: _this,
     __source: {
@@ -32156,7 +32193,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!****************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fposts%2F%5Blink%5D&absolutePagePath=%2FUsers%2Fmelvingeorge%2FPROJECTS%2Fongoing%2FmyBlog%2FmyBlogBackend%2Fpages%2Fposts%2F%5Blink%5D.js ***!
   \****************************************************************************************************************************************************************************************/
@@ -32168,7 +32205,7 @@ module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fposts%
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /*!**********************************!*\
   !*** ./WritableStream (ignored) ***!
   \**********************************/
@@ -32190,5 +32227,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=[link].js.map

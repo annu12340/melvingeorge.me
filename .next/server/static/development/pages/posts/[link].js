@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -145,148 +145,6 @@ module.exports = require("next/dist/next-server/lib/router-context.js");
 /***/ (function(module, exports) {
 
 module.exports = require("next/dist/next-server/lib/utils.js");
-
-/***/ }),
-
-/***/ "./components/BlogRenderer.jsx":
-/*!*************************************!*\
-  !*** ./components/BlogRenderer.jsx ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dynamic */ "next/dynamic");
-/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_markdown_with_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-markdown/with-html */ "react-markdown/with-html");
-/* harmony import */ var react_markdown_with_html__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next-seo */ "next-seo");
-/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Navigation_BlogNavigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Navigation/BlogNavigation */ "./components/Navigation/BlogNavigation.jsx");
-/* harmony import */ var _Utils_ImageLoaderUtil__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Utils/ImageLoaderUtil */ "./components/Utils/ImageLoaderUtil.jsx");
-var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/BlogRenderer.jsx";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-// MODULES
-
-
- // COMPONENTS
-
-
-
-const CodeBlockLoaderUtil = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./Utils/CodeBlockLoaderUtil */ "./components/Utils/CodeBlockLoaderUtil.jsx")), {
-  loadableGenerated: {
-    webpack: () => [/*require.resolve*/(/*! ./Utils/CodeBlockLoaderUtil */ "./components/Utils/CodeBlockLoaderUtil.jsx")],
-    modules: ["./Utils/CodeBlockLoaderUtil"]
-  }
-});
-
-const BlogRenderer = ({
-  metadeta,
-  content
-}) => {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_3__["NextSeo"], {
-    title: metadeta.title,
-    description: metadeta.description,
-    additionalMetaTags: [{
-      name: "keywords",
-      content: metadeta.keywords
-    }, {
-      name: "image",
-      property: "og:image",
-      content: `https://melvingeorge.me${__webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$")(`./${metadeta.link}/main.jpg`)}`
-    }],
-    openGraph: {
-      url: `https://melvingeorge.me/posts/${metadeta.link}`,
-      title: metadeta.title,
-      description: metadeta.description,
-      type: "article",
-      site_name: "MELVIN GEORGE Blog",
-      images: [{
-        url: `https://melvingeorge.me${__webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$")(`./${metadeta.link}/main.jpg`)}`
-      }]
-    },
-    twitter: {
-      handle: "@melvin2016_",
-      site: "@melvin2016_",
-      cardType: "summary_large_image"
-    },
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 7
-    }
-  }), __jsx(next_seo__WEBPACK_IMPORTED_MODULE_3__["BlogJsonLd"], {
-    url: `https://melvingeorge.me/posts/${metadeta.link}`,
-    title: metadeta.title,
-    images: [`https://melvingeorge.me${__webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$")(`./${metadeta.link}/main.jpg`)}`],
-    datePublished: new Date(metadeta.date).toISOString(),
-    dateModified: new Date(metadeta.date).toISOString(),
-    authorName: "MELVIN GEORGE",
-    description: metadeta.description,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46,
-      columnNumber: 7
-    }
-  }), __jsx(_Navigation_BlogNavigation__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57,
-      columnNumber: 7
-    }
-  }), __jsx("div", {
-    className: "relative container max-w-screen-md mx-auto px-4 py-10 bg-gray-100 h-auto min-h-screen rounded",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58,
-      columnNumber: 7
-    }
-  }, __jsx("article", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59,
-      columnNumber: 9
-    }
-  }, __jsx(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    escapeHtml: false,
-    source: content,
-    renderers: {
-      image: props => {
-        return __jsx(_Utils_ImageLoaderUtil__WEBPACK_IMPORTED_MODULE_5__["default"], _extends({}, props, {
-          link: metadeta.link,
-          __self: undefined,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 65,
-            columnNumber: 24
-          }
-        }));
-      },
-      code: CodeBlockLoaderUtil
-    },
-    className: "blog",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60,
-      columnNumber: 11
-    }
-  }))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (BlogRenderer);
 
 /***/ }),
 
@@ -457,6 +315,182 @@ const NavigationItems = () => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a
 }, "About")));
 
 /* harmony default export */ __webpack_exports__["default"] = (NavigationItems);
+
+/***/ }),
+
+/***/ "./components/PostsPage/BlogRenderer.jsx":
+/*!***********************************************!*\
+  !*** ./components/PostsPage/BlogRenderer.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dynamic */ "next/dynamic");
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_markdown_with_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-markdown/with-html */ "react-markdown/with-html");
+/* harmony import */ var react_markdown_with_html__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _BlogSeo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./BlogSeo */ "./components/PostsPage/BlogSeo.jsx");
+/* harmony import */ var _Navigation_BlogNavigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Navigation/BlogNavigation */ "./components/Navigation/BlogNavigation.jsx");
+/* harmony import */ var _Utils_ImageLoaderUtil__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Utils/ImageLoaderUtil */ "./components/Utils/ImageLoaderUtil.jsx");
+var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/PostsPage/BlogRenderer.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+// MODULES
+
+ // COMPONENTS
+
+
+
+
+const CodeBlockLoaderUtil = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../Utils/CodeBlockLoaderUtil */ "./components/Utils/CodeBlockLoaderUtil.jsx")), {
+  loadableGenerated: {
+    webpack: () => [/*require.resolve*/(/*! ../Utils/CodeBlockLoaderUtil */ "./components/Utils/CodeBlockLoaderUtil.jsx")],
+    modules: ["../Utils/CodeBlockLoaderUtil"]
+  }
+});
+
+const BlogRenderer = ({
+  metadata,
+  content
+}) => {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_BlogSeo__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    metadata: metadata,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 7
+    }
+  }), __jsx(_Navigation_BlogNavigation__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 7
+    }
+  }), __jsx("div", {
+    className: "relative container max-w-screen-md mx-auto px-4 py-10 bg-gray-100 h-auto min-h-screen rounded",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 7
+    }
+  }, __jsx("article", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }, __jsx(react_markdown_with_html__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    escapeHtml: false,
+    source: content,
+    renderers: {
+      image: props => {
+        return __jsx(_Utils_ImageLoaderUtil__WEBPACK_IMPORTED_MODULE_5__["default"], _extends({}, props, {
+          link: metadata.link,
+          __self: undefined,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23,
+            columnNumber: 24
+          }
+        }));
+      },
+      code: CodeBlockLoaderUtil
+    },
+    className: "blog",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 11
+    }
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BlogRenderer);
+
+/***/ }),
+
+/***/ "./components/PostsPage/BlogSeo.jsx":
+/*!******************************************!*\
+  !*** ./components/PostsPage/BlogSeo.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-seo */ "next-seo");
+/* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/PostsPage/BlogSeo.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+// MODULES
+
+
+const BlogSEO = ({
+  metadata
+}) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_1__["NextSeo"], {
+  title: metadata.title,
+  description: metadata.description,
+  additionalMetaTags: [{
+    name: "keywords",
+    content: metadata.keywords
+  }, {
+    name: "image",
+    property: "og:image",
+    content: `https://melvingeorge.me${__webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$")(`./${metadata.link}/main.jpg`)}`
+  }],
+  openGraph: {
+    url: `https://melvingeorge.me/posts/${metadata.link}`,
+    title: metadata.title,
+    description: metadata.description,
+    type: "article",
+    site_name: "MELVIN GEORGE Blog",
+    images: [{
+      url: `https://melvingeorge.me${__webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$")(`./${metadata.link}/main.jpg`)}`
+    }]
+  },
+  twitter: {
+    handle: "@melvin2016_",
+    site: "@melvin2016_",
+    cardType: "summary_large_image"
+  },
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6,
+    columnNumber: 5
+  }
+}), __jsx(next_seo__WEBPACK_IMPORTED_MODULE_1__["BlogJsonLd"], {
+  url: `https://melvingeorge.me/posts/${metadata.link}`,
+  title: metadata.title,
+  images: [`https://melvingeorge.me${__webpack_require__("./content/assets sync recursive ^\\.\\/.*\\/main\\.jpg$")(`./${metadata.link}/main.jpg`)}`],
+  datePublished: new Date(metadata.date).toISOString(),
+  dateModified: new Date(metadata.date).toISOString(),
+  authorName: "MELVIN GEORGE",
+  description: metadata.description,
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 38,
+    columnNumber: 5
+  }
+}));
+
+/* harmony default export */ __webpack_exports__["default"] = (BlogSEO);
 
 /***/ }),
 
@@ -2837,7 +2871,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var path__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var gray_matter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gray-matter */ "gray-matter");
 /* harmony import */ var gray_matter__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(gray_matter__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_BlogRenderer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/BlogRenderer */ "./components/BlogRenderer.jsx");
+/* harmony import */ var _components_PostsPage_BlogRenderer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/PostsPage/BlogRenderer */ "./components/PostsPage/BlogRenderer.jsx");
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/posts/[link].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -2856,17 +2890,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  // COMPONENTS
 
 
-const GoBackButton = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../../components/GoBackButton */ "./components/GoBackButton.jsx")), {
+const GoBackButton = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../../components/Utils/GoBackButton */ "./components/Utils/GoBackButton.jsx")), {
   loadableGenerated: {
-    webpack: () => [/*require.resolve*/(/*! ../../components/GoBackButton */ "./components/GoBackButton.jsx")],
-    modules: ["../../components/GoBackButton"]
+    webpack: () => [/*require.resolve*/(/*! ../../components/Utils/GoBackButton */ "./components/Utils/GoBackButton.jsx")],
+    modules: ["../../components/Utils/GoBackButton"]
   }
 });
 /* harmony default export */ __webpack_exports__["default"] = (({
   frontMatter: metadata,
   content
-}) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_BlogRenderer__WEBPACK_IMPORTED_MODULE_5__["default"], {
-  metadeta: metadata,
+}) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_components_PostsPage_BlogRenderer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  metadata: metadata,
   content: content,
   __self: undefined,
   __source: {
@@ -2943,7 +2977,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!*************************************!*\
   !*** multi ./pages/posts/[link].js ***!
   \*************************************/

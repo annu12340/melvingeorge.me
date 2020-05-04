@@ -13,8 +13,10 @@ export default function Home({ linksData }) {
     <>
       {/* SEO */}
       <NextSeo title={"HOME"} />
+
       {/* Header Section */}
       <Header />
+
       {/* Main Section */}
       <Main linksData={linksData} />
     </>

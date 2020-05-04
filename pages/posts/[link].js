@@ -7,12 +7,12 @@ import path from "path";
 import matter from "gray-matter";
 
 // COMPONENTS
-import BlogRenderer from "../../components/BlogRenderer";
-const GoBackButton = dynamic(import("../../components/GoBackButton"));
+import BlogRenderer from "../../components/PostsPage/BlogRenderer";
+const GoBackButton = dynamic(import("../../components/Utils/GoBackButton"));
 
 export default ({ frontMatter: metadata, content }) => (
   <>
-    <BlogRenderer metadeta={metadata} content={content} />
+    <BlogRenderer metadata={metadata} content={content} />
     <GoBackButton />
   </>
 );
