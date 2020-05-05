@@ -13248,8 +13248,8 @@ var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pa
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // MODULES
+ // COMPONENTS
 
-// COMPONENTS
 
 
 var __N_SSG = true;
@@ -13260,14 +13260,14 @@ function Home(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 12,
       columnNumber: 7
     }
   }), __jsx(_components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 15,
       columnNumber: 7
     }
   }), __jsx(_components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -13275,7 +13275,7 @@ function Home(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 18,
       columnNumber: 7
     }
   }));
@@ -13355,7 +13355,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 1:
 /*!*********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmelvingeorge%2FPROJECTS%2Fongoing%2FmyBlog%2FmyBlogBackend%2Fpages%2Findex.js ***!
   \*********************************************************************************************************************************************************/
@@ -13378,5 +13378,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

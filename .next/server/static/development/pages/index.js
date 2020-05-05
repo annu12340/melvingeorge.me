@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2487,18 +2487,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-seo */ "next-seo");
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! fs */ "fs");
-/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! path */ "path");
-/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/IndexPage/Header */ "./components/IndexPage/Header.jsx");
-/* harmony import */ var _components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx");
+/* harmony import */ var _components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/IndexPage/Header */ "./components/IndexPage/Header.jsx");
+/* harmony import */ var _components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx");
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // MODULES
-
-
  // COMPONENTS
 
 
@@ -2511,33 +2505,37 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 12,
       columnNumber: 7
     }
-  }), __jsx(_components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), __jsx(_components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 15,
       columnNumber: 7
     }
-  }), __jsx(_components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }), __jsx(_components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
     linksData: linksData,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 18,
       columnNumber: 7
     }
   }));
 }
 async function getStaticProps() {
+  const fs = __webpack_require__(/*! fs */ "fs");
+
+  const path = __webpack_require__(/*! path */ "path");
+
   const matter = __webpack_require__(/*! gray-matter */ "gray-matter");
 
-  const filesString = fs__WEBPACK_IMPORTED_MODULE_2___default.a.readdirSync(path__WEBPACK_IMPORTED_MODULE_3___default.a.join("content", "posts/")).toString();
+  const filesString = fs.readdirSync(path.join("content", "posts/")).toString();
   const linksArray = filesString.split(",");
   const linksData = linksArray.map(link => {
-    const post = fs__WEBPACK_IMPORTED_MODULE_2___default.a.readFileSync(path__WEBPACK_IMPORTED_MODULE_3___default.a.join("content", "posts/", link)).toString();
+    const post = fs.readFileSync(path.join("content", "posts/", link)).toString();
     const {
       data
     } = matter(post);
@@ -2596,7 +2594,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

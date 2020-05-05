@@ -6,6 +6,9 @@ module.exports = withPlugins(
       optimizedImages,
       {
         optimizeImagesInDev: true,
+        imageTrace: {
+          color: "#CBD5E0",
+        },
       },
     ],
   ],
