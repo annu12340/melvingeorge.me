@@ -916,26 +916,36 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
         lineNumber: 12,
         columnNumber: 9
       }
-    }), __jsx("body", {
-      className: "bg-gray-100 text-base",
+    }, __jsx("link", {
+      rel: "icon",
+      type: "image/x-icon",
+      href: "/favicon.ico",
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 13,
+        columnNumber: 11
+      }
+    })), __jsx("body", {
+      className: "bg-gray-100 text-base",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15,
         columnNumber: 9
       }
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14,
+        lineNumber: 16,
         columnNumber: 11
       }
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15,
+        lineNumber: 17,
         columnNumber: 11
       }
     })));
