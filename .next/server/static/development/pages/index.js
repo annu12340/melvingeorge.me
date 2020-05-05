@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -359,7 +359,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // MODULES
  // COMPONENTS
 
-const SinglePostLink = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx")), {
+const SinglePostLink = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx")), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(/*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx")],
     modules: ["./SinglePostLink"]
@@ -2491,15 +2491,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! path */ "path");
 /* harmony import */ var path__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var gray_matter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gray-matter */ "gray-matter");
-/* harmony import */ var gray_matter__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(gray_matter__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/IndexPage/Header */ "./components/IndexPage/Header.jsx");
-/* harmony import */ var _components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx");
+/* harmony import */ var _components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/IndexPage/Header */ "./components/IndexPage/Header.jsx");
+/* harmony import */ var _components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx");
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // MODULES
-
 
 
  // COMPONENTS
@@ -2514,34 +2511,36 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 13,
       columnNumber: 7
     }
-  }), __jsx(_components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }), __jsx(_components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 16,
       columnNumber: 7
     }
-  }), __jsx(_components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), __jsx(_components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_5__["default"], {
     linksData: linksData,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 19,
       columnNumber: 7
     }
   }));
 }
 async function getStaticProps() {
+  const matter = __webpack_require__(/*! gray-matter */ "gray-matter");
+
   const filesString = fs__WEBPACK_IMPORTED_MODULE_2___default.a.readdirSync(path__WEBPACK_IMPORTED_MODULE_3___default.a.join("content", "posts/")).toString();
   const linksArray = filesString.split(",");
   const linksData = linksArray.map(link => {
     const post = fs__WEBPACK_IMPORTED_MODULE_2___default.a.readFileSync(path__WEBPACK_IMPORTED_MODULE_3___default.a.join("content", "posts/", link)).toString();
     const {
       data
-    } = gray_matter__WEBPACK_IMPORTED_MODULE_4___default()(post);
+    } = matter(post);
     const title = data.title;
     const href = link.replace(".md", "");
     const description = data.description;
@@ -2597,7 +2596,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

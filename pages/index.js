@@ -1,8 +1,5 @@
 // MODULES
 import { NextSeo } from "next-seo";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 
 // COMPONENTS
 import Header from "../components/IndexPage/Header";
@@ -24,6 +21,10 @@ export default function Home({ linksData }) {
 }
 
 export async function getStaticProps() {
+  const fs = require("fs");
+  const path = require("path");
+  const matter = require("gray-matter");
+
   const filesString = fs.readdirSync(path.join("content", "posts/")).toString();
   const linksArray = filesString.split(",");
 

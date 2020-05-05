@@ -2,9 +2,6 @@
 
 // MODULES
 import dynamic from "next/dynamic";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 
 // COMPONENTS
 import BlogRenderer from "../../components/PostsPage/BlogRenderer";
@@ -18,6 +15,8 @@ export default ({ frontMatter: metadata, content }) => (
 );
 
 export async function getStaticPaths() {
+  const fs = require("fs");
+  const path = require("path");
   const filesString = fs.readdirSync(path.join("content", "posts/")).toString();
   const linksArray = filesString.split(",");
   const params = linksArray.map((link) => ({
@@ -33,6 +32,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  const fs = require("fs");
+  const path = require("path");
+  const matter = require("gray-matter");
   // Get File and get YAML data from markdown
   const post = fs
     .readFileSync(path.join("content", "posts/", `${params.link}.md`))

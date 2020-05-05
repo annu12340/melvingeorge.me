@@ -1,6 +1,7 @@
-import "../styles/global.css";
 import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
 import DefaultSeoConfig from "../default-seo.config";
+import "../styles/global.css";
+
 export default function App({ Component, pageProps }) {
   return (
     <>

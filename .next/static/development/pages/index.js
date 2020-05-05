@@ -216,7 +216,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // COMPONENTS
 
 var SinglePostLink = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(function () {
-  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx"));
+  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx"));
 }, {
   loadableGenerated: {
     webpack: function webpack() {
@@ -13260,14 +13260,14 @@ function Home(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 13,
       columnNumber: 7
     }
   }), __jsx(_components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 16,
       columnNumber: 7
     }
   }), __jsx(_components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -13275,7 +13275,7 @@ function Home(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 19,
       columnNumber: 7
     }
   }));
@@ -13355,7 +13355,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 4:
 /*!*********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmelvingeorge%2FPROJECTS%2Fongoing%2FmyBlog%2FmyBlogBackend%2Fpages%2Findex.js ***!
   \*********************************************************************************************************************************************************/
@@ -13378,5 +13378,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[4,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
