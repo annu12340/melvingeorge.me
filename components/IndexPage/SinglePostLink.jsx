@@ -1,5 +1,8 @@
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+const FontAwesomeIcon = dynamic(
+  async () => (await import("@fortawesome/react-fontawesome")).FontAwesomeIcon
+);
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const SinglePostLink = ({ title, href, description }) => (
   <div className="mb-10">
