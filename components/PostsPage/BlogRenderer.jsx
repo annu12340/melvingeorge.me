@@ -1,12 +1,12 @@
 // MODULES
 import dynamic from "next/dynamic";
-import ReactMarkdown from "react-markdown/with-html";
+const ReactMarkdown = dynamic(import("react-markdown/with-html"));
 
 // COMPONENTS
-import BlogSEO from "./BlogSEO";
-import BlogNavigation from "../Navigation/BlogNavigation";
 import ImageLoaderUtil from "../Utils/ImageLoaderUtil";
+import BlogNavigation from "../Navigation/BlogNavigation";
 const CodeBlockLoaderUtil = dynamic(import("../Utils/CodeBlockLoaderUtil"));
+const BlogSEO = dynamic(import("./BlogSEO"));
 
 const BlogRenderer = ({ metadata, content }) => {
   return (
