@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -325,6 +325,8 @@ const Header = () => __jsx("header", {
     columnNumber: 11
   }
 }), __jsx("img", {
+  width: "640",
+  height: "360",
   className: "hidden lg:block order-first md:order-last w-full z-0",
   src: __webpack_require__(/*! ../../public/me.png?webp */ "./public/me.png?webp"),
   alt: "Picture of Melvin george",
@@ -359,7 +361,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // MODULES
  // COMPONENTS
 
-const SinglePostLink = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx")), {
+const SinglePostLink = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx")), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(/*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx")],
     modules: ["./SinglePostLink"]
@@ -2594,7 +2596,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

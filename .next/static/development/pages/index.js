@@ -178,6 +178,8 @@ var Header = function Header() {
       columnNumber: 11
     }
   }), __jsx("img", {
+    width: "640",
+    height: "360",
     className: "hidden lg:block order-first md:order-last w-full z-0",
     src: __webpack_require__(/*! ../../public/me.png?webp */ "./public/me.png?webp"),
     alt: "Picture of Melvin george",
@@ -216,7 +218,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // COMPONENTS
 
 var SinglePostLink = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(function () {
-  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx"));
+  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx"));
 }, {
   loadableGenerated: {
     webpack: function webpack() {
@@ -13355,7 +13357,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 1:
 /*!*********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmelvingeorge%2FPROJECTS%2Fongoing%2FmyBlog%2FmyBlogBackend%2Fpages%2Findex.js ***!
   \*********************************************************************************************************************************************************/
@@ -13378,5 +13380,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

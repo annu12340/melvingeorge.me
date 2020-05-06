@@ -65,6 +65,8 @@ const Header = () => (
         <div className="order-first lg:order-last">
           <div className={`${styles.heroImg} block lg:hidden`} />
           <img
+            width="640"
+            height="360"
             className="hidden lg:block order-first md:order-last w-full z-0"
             src={require("../../public/me.png?webp")}
             alt="Picture of Melvin george"

@@ -917,7 +917,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
         columnNumber: 9
       }
     }, __jsx("link", {
-      rel: "icon",
+      rel: "shortcut icon",
       type: "image/x-icon",
       href: "/favicon.ico",
       __self: this,
