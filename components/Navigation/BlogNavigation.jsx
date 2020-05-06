@@ -1,11 +1,13 @@
+// MODULES
 import dynamic from "next/dynamic";
-import Link from "next/link";
+const Link = dynamic(import("next/link"));
 
 // CSS
 import styles from "../../styles/BlogLayout/blogLayout.module.css";
 
 // COMPONENTS
 const NavigationItems = dynamic(import("./NavigationItems"));
+const MobileNavigation = dynamic(import("./MobileNavigation"));
 
 const BlogNavigation = () => (
   <div className="bg-gray-100">
@@ -18,10 +20,11 @@ const BlogNavigation = () => (
           </a>
         </div>
       </Link>
-      <ul className="text-blue-500 text-lg hidden md:block my-8 flex-row justify-center items-center align-middle ">
+      <ul className="text-blue-500 text-lg hidden md:block pt-8">
         <NavigationItems />
       </ul>
     </nav>
+    <MobileNavigation />
   </div>
 );
 

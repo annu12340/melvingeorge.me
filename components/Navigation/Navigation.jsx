@@ -1,5 +1,6 @@
+// MODULES
 import dynamic from "next/dynamic";
-import Link from "next/link";
+const Link = dynamic(import("next/link"));
 
 // COMPONENTS
 const NavigationItems = dynamic(import("./NavigationItems"));
@@ -12,7 +13,7 @@ const Navigation = () => (
           Melvin George
         </a>
       </Link>
-      <ul className="text-blue-500 text-lg hidden lg:block">
+      <ul className="text-blue-500 text-lg hidden md:block">
         <NavigationItems />
       </ul>
     </div>
