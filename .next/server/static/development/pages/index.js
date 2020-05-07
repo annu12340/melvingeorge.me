@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -180,7 +180,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // COMPONENTS
 
 
-const MobileNavigation = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../Navigation/MobileNavigation */ "./components/Navigation/MobileNavigation.jsx")), {
+const MobileNavigation = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../Navigation/MobileNavigation */ "./components/Navigation/MobileNavigation.jsx")), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(/*! ../Navigation/MobileNavigation */ "./components/Navigation/MobileNavigation.jsx")],
     modules: ["../Navigation/MobileNavigation"]
@@ -378,7 +378,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // MODULES
  // COMPONENTS
 
-const SinglePostLink = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx")), {
+const SinglePostLink = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx")), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(/*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx")],
     modules: ["./SinglePostLink"]
@@ -438,14 +438,14 @@ var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/co
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // MODULES
 
-const Link = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.t.bind(null, /*! next/link */ "./node_modules/next/link.js", 7)), {
+const Link = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.t.bind(null, /*! next/link */ "./node_modules/next/link.js", 7)), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(/*! next/link */ "./node_modules/next/link.js")],
     modules: ["next/link"]
   }
 }); // COMPONENTS
 
-const NavigationItems = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./NavigationItems */ "./components/Navigation/NavigationItems.jsx")), {
+const NavigationItems = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ./NavigationItems */ "./components/Navigation/NavigationItems.jsx")), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(/*! ./NavigationItems */ "./components/Navigation/NavigationItems.jsx")],
     modules: ["./NavigationItems"]
@@ -505,6 +505,25 @@ const Navigation = () => __jsx("nav", {
 
 /***/ }),
 
+/***/ "./context/NavigationContext.js":
+/*!**************************************!*\
+  !*** ./context/NavigationContext.js ***!
+  \**************************************/
+/*! exports provided: activeTabContext, setActiveTabContext */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "activeTabContext", function() { return activeTabContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setActiveTabContext", function() { return setActiveTabContext; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+const activeTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+const setActiveTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -522,30 +541,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/IndexPage/Header */ "./components/IndexPage/Header.jsx");
 /* harmony import */ var _components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx");
+/* harmony import */ var _context_NavigationContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../context/NavigationContext */ "./context/NavigationContext.js");
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // MODULES
+
  // COMPONENTS
 
+
+ // CONTEXT
 
 
 function Home({
   linksData
 }) {
+  const setActiveTab = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_NavigationContext__WEBPACK_IMPORTED_MODULE_4__["setActiveTabContext"]);
+  setActiveTab("");
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_1__["NextSeo"], {
     title: "HOME",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 18,
       columnNumber: 7
     }
   }), __jsx(_components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 21,
       columnNumber: 7
     }
   }), __jsx(_components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -553,7 +578,7 @@ function Home({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 24,
       columnNumber: 7
     }
   }));
@@ -627,7 +652,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

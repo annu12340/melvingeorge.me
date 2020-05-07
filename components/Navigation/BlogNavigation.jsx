@@ -1,13 +1,12 @@
 // MODULES
-import dynamic from "next/dynamic";
-const Link = dynamic(import("next/link"));
+import Link from "next/link";
 
 // CSS
 import styles from "../../styles/BlogLayout/blogLayout.module.css";
 
 // COMPONENTS
-const NavigationItems = dynamic(import("./NavigationItems"));
-const MobileNavigation = dynamic(import("./MobileNavigation"));
+import NavigationItems from "./NavigationItems";
+import MobileNavigation from "./MobileNavigation";
 
 const BlogNavigation = () => (
   <div className="bg-gray-100">

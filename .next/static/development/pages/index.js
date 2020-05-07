@@ -33,7 +33,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var MobileNavigation = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(function () {
-  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../Navigation/MobileNavigation */ "./components/Navigation/MobileNavigation.jsx"));
+  return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../Navigation/MobileNavigation */ "./components/Navigation/MobileNavigation.jsx"));
 }, {
   loadableGenerated: {
     webpack: function webpack() {
@@ -308,7 +308,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // MODULES
 
 var Link = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(function () {
-  return __webpack_require__.e(/*! import() */ 13).then(__webpack_require__.t.bind(null, /*! next/link */ "./node_modules/next/link.js", 7));
+  return __webpack_require__.e(/*! import() */ 10).then(__webpack_require__.t.bind(null, /*! next/link */ "./node_modules/next/link.js", 7));
 }, {
   loadableGenerated: {
     webpack: function webpack() {
@@ -319,7 +319,7 @@ var Link = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(function () {
 }); // COMPONENTS
 
 var NavigationItems = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(function () {
-  return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ./NavigationItems */ "./components/Navigation/NavigationItems.jsx"));
+  return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ./NavigationItems */ "./components/Navigation/NavigationItems.jsx"));
 }, {
   loadableGenerated: {
     webpack: function webpack() {
@@ -381,6 +381,25 @@ var Navigation = function Navigation() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navigation);
+
+/***/ }),
+
+/***/ "./context/NavigationContext.js":
+/*!**************************************!*\
+  !*** ./context/NavigationContext.js ***!
+  \**************************************/
+/*! exports provided: activeTabContext, setActiveTabContext */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "activeTabContext", function() { return activeTabContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setActiveTabContext", function() { return setActiveTabContext; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var activeTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+var setActiveTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
 
 /***/ }),
 
@@ -9787,30 +9806,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/IndexPage/Header */ "./components/IndexPage/Header.jsx");
 /* harmony import */ var _components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx");
+/* harmony import */ var _context_NavigationContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../context/NavigationContext */ "./context/NavigationContext.js");
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 // MODULES
+
  // COMPONENTS
 
+
+ // CONTEXT
 
 
 var __N_SSG = true;
 function Home(_ref) {
   var linksData = _ref.linksData;
+  var setActiveTab = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_NavigationContext__WEBPACK_IMPORTED_MODULE_4__["setActiveTabContext"]);
+  setActiveTab("");
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_1__["NextSeo"], {
     title: "HOME",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 18,
       columnNumber: 7
     }
   }), __jsx(_components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 21,
       columnNumber: 7
     }
   }), __jsx(_components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -9818,7 +9843,7 @@ function Home(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 24,
       columnNumber: 7
     }
   }));
@@ -9898,7 +9923,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fmelvingeorge%2FPROJECTS%2Fongoing%2FmyBlog%2FmyBlogBackend%2Fpages%2Findex.js ***!
   \*********************************************************************************************************************************************************/
@@ -9921,5 +9946,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
