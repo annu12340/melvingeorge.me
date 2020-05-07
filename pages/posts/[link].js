@@ -1,18 +1,25 @@
 /* PATH => /posts/<ID_NUMBER> */
 
 // MODULES
-import dynamic from "next/dynamic";
+import { useContext } from "react";
 
 // COMPONENTS
 import BlogRenderer from "../../components/PostsPage/BlogRenderer";
-const GoBackButton = dynamic(import("../../components/Utils/GoBackButton"));
+import GoBackButton from "../../components/Utils/GoBackButton";
 
-export default ({ frontMatter: metadata, content }) => (
-  <>
-    <BlogRenderer metadata={metadata} content={content} />
-    <GoBackButton />
-  </>
-);
+// CONTEXT
+import { setActiveTabContext } from "../../context/NavigationContext";
+
+export default ({ frontMatter: metadata, content }) => {
+  const setActiveTab = useContext(setActiveTabContext);
+  setActiveTab("blog");
+  return (
+    <>
+      <BlogRenderer metadata={metadata} content={content} />
+      <GoBackButton />
+    </>
+  );
+};
 
 export async function getStaticPaths() {
   const fs = require("fs");

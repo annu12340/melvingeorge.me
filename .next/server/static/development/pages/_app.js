@@ -93,6 +93,25 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./context/NavigationContext.js":
+/*!**************************************!*\
+  !*** ./context/NavigationContext.js ***!
+  \**************************************/
+/*! exports provided: activeTabContext, setActiveTabContext */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "activeTabContext", function() { return activeTabContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setActiveTabContext", function() { return setActiveTabContext; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+const activeTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+const setActiveTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+
+/***/ }),
+
 /***/ "./default-seo.config.js":
 /*!*******************************!*\
   !*** ./default-seo.config.js ***!
@@ -154,8 +173,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-seo */ "next-seo");
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _default_seo_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../default-seo.config */ "./default-seo.config.js");
-/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/global.css */ "./styles/global.css");
-/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _context_NavigationContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/NavigationContext */ "./context/NavigationContext.js");
+/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/global.css */ "./styles/global.css");
+/* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/_app.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -165,15 +185,22 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
+
+
 function App({
   Component,
   pageProps
 }) {
+  // Active Tab Global State
+  const {
+    0: activeTab,
+    1: setActiveTab
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_1__["DefaultSeo"], _extends({}, _default_seo_config__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 16,
       columnNumber: 7
     }
   })), __jsx(next_seo__WEBPACK_IMPORTED_MODULE_1__["SocialProfileJsonLd"], {
@@ -184,17 +211,33 @@ function App({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 17,
       columnNumber: 7
     }
-  }), __jsx(Component, _extends({}, pageProps, {
+  }), __jsx(_context_NavigationContext__WEBPACK_IMPORTED_MODULE_3__["activeTabContext"].Provider, {
+    value: activeTab,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 28,
       columnNumber: 7
     }
-  })));
+  }, __jsx(_context_NavigationContext__WEBPACK_IMPORTED_MODULE_3__["setActiveTabContext"].Provider, {
+    value: setActiveTab,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 9
+    }
+  }, __jsx(Component, _extends({}, pageProps, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 11
+    }
+  })))));
 }
 
 /***/ }),

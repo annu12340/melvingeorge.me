@@ -1,11 +1,18 @@
 // MODULES
+import dynamic from "next/dynamic";
+import { useContext } from "react";
 import { NextSeo } from "next-seo";
 
 // COMPONENTS
-import Header from "../components/IndexPage/Header";
-import Main from "../components/IndexPage/Main";
+const Header = dynamic(import("../components/IndexPage/Header"));
+const Main = dynamic(import("../components/IndexPage/Main"));
+
+// CONTEXT
+import { setActiveTabContext } from "../context/NavigationContext";
 
 export default function Home({ linksData }) {
+  const setActiveTab = useContext(setActiveTabContext);
+  setActiveTab("");
   return (
     <>
       {/* SEO */}

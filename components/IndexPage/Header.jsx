@@ -1,5 +1,4 @@
 // MODULES
-import dynamic from "next/dynamic";
 
 // CSS
 import styles from "../../styles/Header.module.css";
@@ -15,7 +14,7 @@ import {
 
 // COMPONENTS
 import Navigation from "../Navigation/Navigation";
-const MobileNavigation = dynamic(import("../Navigation/MobileNavigation"));
+import MobileNavigation from "../Navigation/MobileNavigation";
 
 const Header = () => (
   <header className={`${styles.bgHero} z-0 pb-12`}>

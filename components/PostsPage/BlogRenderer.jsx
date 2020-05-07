@@ -5,8 +5,8 @@ const ReactMarkdown = dynamic(import("react-markdown/with-html"));
 // COMPONENTS
 import ImageLoaderUtil from "../Utils/ImageLoaderUtil";
 import BlogNavigation from "../Navigation/BlogNavigation";
-const CodeBlockLoaderUtil = dynamic(import("../Utils/CodeBlockLoaderUtil"));
-const BlogSEO = dynamic(import("./BlogSEO"));
+import BlogSEO from "./BlogSEO";
+import CodeBlockLoaderUtil from "../Utils/CodeBlockLoaderUtil";
 
 const BlogRenderer = ({ metadata, content }) => {
   return (
