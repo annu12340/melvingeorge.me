@@ -1,8 +1,0 @@
-.heroImg {
-  width: 60px;
-  height: 60px;
-  margin: 15px auto;
-  border-radius: 50%;
-  background: url("../../public/me.png?webp") 1px / cover no-repeat #bee3f8;
-  background-repeat: no-repeat;
-}
