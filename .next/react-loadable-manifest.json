@@ -1555,14 +1555,14 @@
     {
       "id": "KV6L",
       "name": "./components/Navigation/MobileNavigation.jsx",
-      "file": "static/chunks/18.f76113dd1f8df48e0488.js",
-      "publicPath": "static/chunks/18.f76113dd1f8df48e0488.js"
+      "file": "static/chunks/18.82a3052d25647db672f9.js",
+      "publicPath": "static/chunks/18.82a3052d25647db672f9.js"
     },
     {
       "id": "o0o1",
       "name": "./node_modules/@babel/runtime/regenerator/index.js",
-      "file": "static/chunks/18.f76113dd1f8df48e0488.js",
-      "publicPath": "static/chunks/18.f76113dd1f8df48e0488.js"
+      "file": "static/chunks/18.82a3052d25647db672f9.js",
+      "publicPath": "static/chunks/18.82a3052d25647db672f9.js"
     }
   ],
   "./NavigationItems": [
