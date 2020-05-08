@@ -36,6 +36,7 @@ const Header = () => (
                   className="transition transition-colors duration-300 hover:text-gray-900"
                   icon={faGithub}
                   size="2x"
+                  width="16"
                 />
               </a>
               &nbsp;&nbsp;&nbsp;
@@ -47,6 +48,7 @@ const Header = () => (
                   className="transition transition-colors duration-300 hover:text-orange-500"
                   icon={faFirefoxBrowser}
                   size="2x"
+                  width="16"
                 />
               </a>
               &nbsp;&nbsp;&nbsp;
@@ -55,6 +57,7 @@ const Header = () => (
                   className="transition transition-colors duration-300 hover:text-blue-700"
                   icon={faFacebook}
                   size="2x"
+                  width="16"
                 />
               </a>
               &nbsp;&nbsp;&nbsp;
@@ -63,6 +66,7 @@ const Header = () => (
                   className="transition transition-colors duration-300 hover:text-blue-400"
                   icon={faTwitter}
                   size="2x"
+                  width="16"
                 />
               </a>
             </p>

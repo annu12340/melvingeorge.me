@@ -12,7 +12,8 @@ const SinglePostLink = ({ title, href, description }) => (
     <a href="" className="inline-block cursor-pointer text-blue-500 mt-1">
       <Link href="/posts/[link]" as={`/posts/${href}`}>
         <span className="font-light text-xl">
-          Read <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
+          Read{" "}
+          <FontAwesomeIcon icon={faArrowRight} width="16"></FontAwesomeIcon>
         </span>
       </Link>
     </a>
