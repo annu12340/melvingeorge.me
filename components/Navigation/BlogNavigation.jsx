@@ -1,9 +1,10 @@
 // MODULES
+import dynamic from "next/dynamic";
 import Link from "next/link";
 
 // COMPONENTS
-import NavigationItems from "./NavigationItems";
-import MobileNavigation from "./MobileNavigation";
+const NavigationItems = dynamic(() => import("./NavigationItems"));
+const MobileNavigation = dynamic(() => import("./MobileNavigation"));
 
 const BlogNavigation = () => (
   <>
@@ -21,7 +22,9 @@ const BlogNavigation = () => (
           <NavigationItems />
         </ul>
       </nav>
-      <MobileNavigation />
+      <div className="md:hidden">
+        <MobileNavigation />
+      </div>
     </div>
     <style jsx>{`
       .heroImg {

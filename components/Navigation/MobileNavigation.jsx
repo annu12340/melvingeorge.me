@@ -37,7 +37,7 @@ const MobileNavigation = () => {
   return (
     <>
       <div
-        className="absolute top-0 right-0 z-50 py-8 px-4 md:hidden cursor-pointer text-lg"
+        className="absolute top-0 right-0 z-50 py-8 px-4 cursor-pointer text-lg"
         onClick={() => setMenuOpen(!menuOpen)}
       >
         {menuOpen ? (
