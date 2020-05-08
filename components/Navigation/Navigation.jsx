@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 
 // COMPONENTS
-const NavigationItems = dynamic(import("./NavigationItems"));
+const NavigationItems = dynamic(() => import("./NavigationItems"));
 
 const Navigation = () => (
   <nav className="pt-8">
