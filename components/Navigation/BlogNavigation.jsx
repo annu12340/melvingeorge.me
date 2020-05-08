@@ -22,9 +22,7 @@ const BlogNavigation = () => (
           <NavigationItems />
         </ul>
       </nav>
-      <div className="md:hidden">
-        <MobileNavigation />
-      </div>
+      <MobileNavigation />
     </div>
     <style jsx>{`
       .heroImg {

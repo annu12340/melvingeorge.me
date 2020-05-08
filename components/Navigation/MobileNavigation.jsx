@@ -37,18 +37,18 @@ const MobileNavigation = () => {
   return (
     <>
       <div
-        className="absolute top-0 right-0 z-50 py-8 px-4 cursor-pointer text-lg"
+        className="absolute top-0 right-0 z-50 py-8 px-4 cursor-pointer text-lg md:hidden"
         onClick={() => setMenuOpen(!menuOpen)}
       >
         {menuOpen ? (
           <a className="text-gray-200 transition transition-all duration-300 tracking-wider">
             CLOSE
-            <FontAwesomeIcon className="ml-2" icon={faTimes} />
+            <FontAwesomeIcon className="ml-2" icon={faTimes} width="16" />
           </a>
         ) : (
           <a className="text-blue-400 transition transition-all duration-300 text-blue-500 tracking-wider">
             MENU
-            <FontAwesomeIcon className="ml-2" icon={faBars} />
+            <FontAwesomeIcon className="ml-2" icon={faBars} width="16" />
           </a>
         )}
       </div>
