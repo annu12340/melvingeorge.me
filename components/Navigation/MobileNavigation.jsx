@@ -1,9 +1,12 @@
 // MODULES
+import dynamic from "next/dynamic";
 import { useContext, useState } from "react";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+const FontAwesomeIcon = dynamic(
+  async () => (await import("@fortawesome/react-fontawesome")).FontAwesomeIcon
+);
 
 // CONTEXT
 import {

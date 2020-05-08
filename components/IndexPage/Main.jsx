@@ -1,7 +1,8 @@
 // MODULES
+import dynamic from "next/dynamic";
 
 // COMPONENTS
-import SinglePostLink from "./SinglePostLink";
+const SinglePostLink = dynamic(import("./SinglePostLink"));
 
 const Main = ({ linksData }) => (
   <main className="z-0 relative container max-w-screen-md mx-auto px-4 md:px-20 md:-mt-8 lg:-mt-12 py-10 mb-12 md:shadow-lg md:rounded-lg bg-white">
