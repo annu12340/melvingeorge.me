@@ -1555,14 +1555,14 @@
     {
       "id": "KV6L",
       "name": "./components/Navigation/MobileNavigation.jsx",
-      "file": "static/chunks/18.82a3052d25647db672f9.js",
-      "publicPath": "static/chunks/18.82a3052d25647db672f9.js"
+      "file": "static/chunks/18.f106aad3f2e8b267542c.js",
+      "publicPath": "static/chunks/18.f106aad3f2e8b267542c.js"
     },
     {
       "id": "o0o1",
       "name": "./node_modules/@babel/runtime/regenerator/index.js",
-      "file": "static/chunks/18.82a3052d25647db672f9.js",
-      "publicPath": "static/chunks/18.82a3052d25647db672f9.js"
+      "file": "static/chunks/18.f106aad3f2e8b267542c.js",
+      "publicPath": "static/chunks/18.f106aad3f2e8b267542c.js"
     }
   ],
   "./NavigationItems": [
@@ -1901,8 +1901,8 @@
     {
       "id": "G+xz",
       "name": "./components/IndexPage/SinglePostLink.jsx",
-      "file": "static/chunks/19.91098f57d78a8c994865.js",
-      "publicPath": "static/chunks/19.91098f57d78a8c994865.js"
+      "file": "static/chunks/19.48fe322061fe18a04eb1.js",
+      "publicPath": "static/chunks/19.48fe322061fe18a04eb1.js"
     }
   ],
   "@fortawesome/react-fontawesome": [
