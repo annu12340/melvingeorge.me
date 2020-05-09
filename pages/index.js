@@ -1,11 +1,10 @@
 // MODULES
 import { useContext } from "react";
-import { NextSeo } from "next-seo";
 
 // COMPONENTS
 import Header from "../components/IndexPage/Header";
 import Main from "../components/IndexPage/Main";
-
+import { NextSeo } from "next-seo";
 // CONTEXT
 import { setActiveTabContext } from "../context/NavigationContext";
 
