@@ -1,5 +1,75 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
+/***/ "./components/IndexPage/Main.jsx":
+/*!***************************************!*\
+  !*** ./components/IndexPage/Main.jsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dynamic */ "./node_modules/next/dist/next-server/lib/dynamic.js");
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_1__);
+var _this = undefined,
+    _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/IndexPage/Main.jsx";
+
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+// MODULES
+ // COMPONENTS
+
+var SinglePostLink = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(function () {
+  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx"));
+}, {
+  loadableGenerated: {
+    webpack: function webpack() {
+      return [/*require.resolve*/(/*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx")];
+    },
+    modules: ["./SinglePostLink"]
+  }
+});
+
+var Main = function Main(_ref) {
+  var linksData = _ref.linksData;
+  return __jsx("main", {
+    className: "z-0 relative container max-w-screen-md mx-auto px-4 md:px-20 md:-mt-8 lg:-mt-12 py-10 mb-12 md:shadow-lg md:rounded-lg bg-white",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 3
+    }
+  }, __jsx("h1", {
+    className: "text-2xl mb-10 font-semibold text-gray-800",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 5
+    }
+  }, "Blog"), linksData && linksData.length <= 0 ? null : linksData.map(function (linkData) {
+    return __jsx(SinglePostLink, {
+      title: linkData.title,
+      key: linkData.href,
+      href: linkData.href,
+      description: linkData.description,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13,
+        columnNumber: 11
+      }
+    });
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Main);
+
+/***/ }),
+
 /***/ "./context/NavigationContext.js":
 /*!**************************************!*\
   !*** ./context/NavigationContext.js ***!
@@ -2093,7 +2163,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next-seo */ "./node_modules/next-seo/lib/index.js");
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _context_NavigationContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/NavigationContext */ "./context/NavigationContext.js");
+/* harmony import */ var _components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx");
+/* harmony import */ var _context_NavigationContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../context/NavigationContext */ "./context/NavigationContext.js");
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -2103,31 +2174,15 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // COMPONENTS
 
 var Header = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(function () {
-  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../components/IndexPage/Header */ "./components/IndexPage/Header.jsx"));
-}, {
-  loadableGenerated: {
-    webpack: function webpack() {
-      return [/*require.resolve*/(/*! ../components/IndexPage/Header */ "./components/IndexPage/Header.jsx")];
-    },
-    modules: ["../components/IndexPage/Header"]
-  }
-});
-var Main = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(function () {
-  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx"));
-}, {
-  loadableGenerated: {
-    webpack: function webpack() {
-      return [/*require.resolve*/(/*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx")];
-    },
-    modules: ["../components/IndexPage/Main"]
-  }
-}); // CONTEXT
+  return "../components/IndexPage/Header";
+}, {});
+ // CONTEXT
 
 
 var __N_SSG = true;
 function Home(_ref) {
   var linksData = _ref.linksData;
-  var setActiveTab = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_NavigationContext__WEBPACK_IMPORTED_MODULE_3__["setActiveTabContext"]);
+  var setActiveTab = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_NavigationContext__WEBPACK_IMPORTED_MODULE_4__["setActiveTabContext"]);
   setActiveTab("");
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_2__["NextSeo"], {
     title: "HOME",
@@ -2144,7 +2199,7 @@ function Home(_ref) {
       lineNumber: 22,
       columnNumber: 7
     }
-  }), __jsx(Main, {
+  }), __jsx(_components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
     linksData: linksData,
     __self: this,
     __source: {

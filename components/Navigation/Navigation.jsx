@@ -1,6 +1,6 @@
 // MODULES
 import dynamic from "next/dynamic";
-import Link from "next/link";
+const Link = dynamic(() => import("next/link"));
 
 // COMPONENTS
 const NavigationItems = dynamic(() => import("./NavigationItems"));

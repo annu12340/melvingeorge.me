@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { useContext, useState } from "react";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 
-import Link from "next/link";
+const Link = dynamic(() => import("next/link"));
 const FontAwesomeIcon = dynamic(
   async () => (await import("@fortawesome/react-fontawesome")).FontAwesomeIcon
 );

@@ -1,6 +1,7 @@
 // MODULES
+import dynamic from "next/dynamic";
 import { useContext } from "react";
-import Link from "next/link";
+const Link = dynamic(() => import("next/link"));
 
 // CONTEXT
 import {

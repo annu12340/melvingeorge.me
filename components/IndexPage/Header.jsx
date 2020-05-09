@@ -3,16 +3,19 @@ import dynamic from "next/dynamic";
 const FontAwesomeIcon = dynamic(
   async () => (await import("@fortawesome/react-fontawesome")).FontAwesomeIcon
 );
+
+// COMPONENTS
+const Navigation = dynamic(() => import("../Navigation/Navigation"));
+const MobileNavigation = dynamic(() =>
+  import("../Navigation/MobileNavigation")
+);
+
 import {
   faGithub,
   faFacebook,
   faTwitter,
   faFirefoxBrowser,
 } from "@fortawesome/free-brands-svg-icons";
-
-// COMPONENTS
-import Navigation from "../Navigation/Navigation";
-import MobileNavigation from "../Navigation/MobileNavigation";
 
 const Header = () => (
   <>

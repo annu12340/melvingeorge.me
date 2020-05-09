@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -145,6 +145,67 @@ module.exports = require("next/dist/next-server/lib/router-context.js");
 /***/ (function(module, exports) {
 
 module.exports = require("next/dist/next-server/lib/utils.js");
+
+/***/ }),
+
+/***/ "./components/IndexPage/Main.jsx":
+/*!***************************************!*\
+  !*** ./components/IndexPage/Main.jsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/dynamic */ "next/dynamic");
+/* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/components/IndexPage/Main.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+// MODULES
+ // COMPONENTS
+
+const SinglePostLink = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx")), {
+  loadableGenerated: {
+    webpack: () => [/*require.resolve*/(/*! ./SinglePostLink */ "./components/IndexPage/SinglePostLink.jsx")],
+    modules: ["./SinglePostLink"]
+  }
+});
+
+const Main = ({
+  linksData
+}) => __jsx("main", {
+  className: "z-0 relative container max-w-screen-md mx-auto px-4 md:px-20 md:-mt-8 lg:-mt-12 py-10 mb-12 md:shadow-lg md:rounded-lg bg-white",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 8,
+    columnNumber: 3
+  }
+}, __jsx("h1", {
+  className: "text-2xl mb-10 font-semibold text-gray-800",
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 9,
+    columnNumber: 5
+  }
+}, "Blog"), linksData && linksData.length <= 0 ? null : linksData.map(linkData => __jsx(SinglePostLink, {
+  title: linkData.title,
+  key: linkData.href,
+  href: linkData.href,
+  description: linkData.description,
+  __self: undefined,
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13,
+    columnNumber: 11
+  }
+})));
+
+/* harmony default export */ __webpack_exports__["default"] = (Main);
 
 /***/ }),
 
@@ -184,7 +245,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_dynamic__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_dynamic__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next-seo */ "next-seo");
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _context_NavigationContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/NavigationContext */ "./context/NavigationContext.js");
+/* harmony import */ var _components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx");
+/* harmony import */ var _context_NavigationContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../context/NavigationContext */ "./context/NavigationContext.js");
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -193,24 +255,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
  // COMPONENTS
 
-const Header = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../components/IndexPage/Header */ "./components/IndexPage/Header.jsx")), {
-  loadableGenerated: {
-    webpack: () => [/*require.resolve*/(/*! ../components/IndexPage/Header */ "./components/IndexPage/Header.jsx")],
-    modules: ["../components/IndexPage/Header"]
-  }
-});
-const Main = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx")), {
-  loadableGenerated: {
-    webpack: () => [/*require.resolve*/(/*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx")],
-    modules: ["../components/IndexPage/Main"]
-  }
-}); // CONTEXT
+const Header = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => "../components/IndexPage/Header", {});
+ // CONTEXT
 
 
 function Home({
   linksData
 }) {
-  const setActiveTab = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_NavigationContext__WEBPACK_IMPORTED_MODULE_3__["setActiveTabContext"]);
+  const setActiveTab = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_NavigationContext__WEBPACK_IMPORTED_MODULE_4__["setActiveTabContext"]);
   setActiveTab("");
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_2__["NextSeo"], {
     title: "HOME",
@@ -227,7 +279,7 @@ function Home({
       lineNumber: 22,
       columnNumber: 7
     }
-  }), __jsx(Main, {
+  }), __jsx(_components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
     linksData: linksData,
     __self: this,
     __source: {
@@ -280,7 +332,7 @@ async function getStaticProps() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -289,17 +341,6 @@ async function getStaticProps() {
 
 module.exports = __webpack_require__(/*! /Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/index.js */"./pages/index.js");
 
-
-/***/ }),
-
-/***/ "@fortawesome/free-brands-svg-icons":
-/*!*****************************************************!*\
-  !*** external "@fortawesome/free-brands-svg-icons" ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@fortawesome/free-brands-svg-icons");
 
 /***/ }),
 
