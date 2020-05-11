@@ -93,22 +93,83 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./context/NavigationContext.js":
-/*!**************************************!*\
-  !*** ./context/NavigationContext.js ***!
-  \**************************************/
-/*! exports provided: activeTabContext, setActiveTabContext */
+/***/ "./context/ActiveTab.jsx":
+/*!*******************************!*\
+  !*** ./context/ActiveTab.jsx ***!
+  \*******************************/
+/*! exports provided: ActiveTabProvider, ActiveTabContext, SetActiveTabContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "activeTabContext", function() { return activeTabContext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setActiveTabContext", function() { return setActiveTabContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActiveTabProvider", function() { return ActiveTabProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActiveTabContext", function() { return ActiveTabContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetActiveTabContext", function() { return SetActiveTabContext; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/context/ActiveTab.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-const activeTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
-const setActiveTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+const initalTab = {
+  tab: ""
+};
+const ActiveTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(initalTab);
+const SetActiveTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "":
+      return {
+        tab: ""
+      };
+
+    case "blog":
+      return {
+        tab: "blog"
+      };
+
+    case "projects":
+      return {
+        tab: "projects"
+      };
+
+    case "about":
+      return {
+        tab: "about"
+      };
+
+    default:
+      return;
+  }
+};
+
+const ActiveTabProvider = ({
+  children
+}) => {
+  const {
+    0: state,
+    1: dispatch
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(reducer, initalTab);
+  return __jsx(ActiveTabContext.Provider, {
+    value: state,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 5
+    }
+  }, __jsx(SetActiveTabContext.Provider, {
+    value: dispatch,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 7
+    }
+  }, children));
+};
+
+
 
 /***/ }),
 
@@ -167,13 +228,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return App; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-seo */ "next-seo");
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _default_seo_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../default-seo.config */ "./default-seo.config.js");
-/* harmony import */ var _context_NavigationContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/NavigationContext */ "./context/NavigationContext.js");
+/* harmony import */ var _context_ActiveTab__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/ActiveTab */ "./context/ActiveTab.jsx");
 /* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/global.css */ "./styles/global.css");
 /* harmony import */ var _styles_global_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_global_css__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/_app.js";
@@ -187,20 +247,15 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
-function App({
+const App = ({
   Component,
   pageProps
-}) {
-  // Active Tab Global State
-  const {
-    0: activeTab,
-    1: setActiveTab
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
+}) => {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_1__["DefaultSeo"], _extends({}, _default_seo_config__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 9,
       columnNumber: 7
     }
   })), __jsx(next_seo__WEBPACK_IMPORTED_MODULE_1__["SocialProfileJsonLd"], {
@@ -208,37 +263,30 @@ function App({
     name: "MELVIN GEORGE",
     url: "http://melvingeorge.me/",
     sameAs: ["https://www.facebook.com/alkitj10", "https://github.com/melvin2016", "https://www.linkedin.com/in/melvin2016/", "https://twitter.com/melvin2016_"],
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 10,
       columnNumber: 7
     }
-  }), __jsx(_context_NavigationContext__WEBPACK_IMPORTED_MODULE_3__["activeTabContext"].Provider, {
-    value: activeTab,
-    __self: this,
+  }), __jsx(_context_ActiveTab__WEBPACK_IMPORTED_MODULE_3__["ActiveTabProvider"], {
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 21,
       columnNumber: 7
-    }
-  }, __jsx(_context_NavigationContext__WEBPACK_IMPORTED_MODULE_3__["setActiveTabContext"].Provider, {
-    value: setActiveTab,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 9
     }
   }, __jsx(Component, _extends({}, pageProps, {
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
-      columnNumber: 11
+      lineNumber: 22,
+      columnNumber: 9
     }
-  })))));
-}
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (App);
 
 /***/ }),
 

@@ -121,7 +121,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -178,7 +178,7 @@ const FontAwesomeIcon = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(asyn
   }
 }); // COMPONENTS
 
-const Navigation = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(() => __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../Navigation/Navigation */ "./components/Navigation/Navigation.jsx")), {
+const Navigation = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(() => __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ../Navigation/Navigation */ "./components/Navigation/Navigation.jsx")), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(/*! ../Navigation/Navigation */ "./components/Navigation/Navigation.jsx")],
     modules: ["../Navigation/Navigation"]
@@ -449,7 +449,7 @@ var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/co
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-const Link = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.t.bind(null, /*! next/link */ "./node_modules/next/link.js", 7)), {
+const Link = next_dynamic__WEBPACK_IMPORTED_MODULE_1___default()(() => __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.t.bind(null, /*! next/link */ "./node_modules/next/link.js", 7)), {
   loadableGenerated: {
     webpack: () => [/*require.resolve*/(/*! next/link */ "./node_modules/next/link.js")],
     modules: ["next/link"]
@@ -541,22 +541,83 @@ const SinglePostLink = ({
 
 /***/ }),
 
-/***/ "./context/NavigationContext.js":
-/*!**************************************!*\
-  !*** ./context/NavigationContext.js ***!
-  \**************************************/
-/*! exports provided: activeTabContext, setActiveTabContext */
+/***/ "./context/ActiveTab.jsx":
+/*!*******************************!*\
+  !*** ./context/ActiveTab.jsx ***!
+  \*******************************/
+/*! exports provided: ActiveTabProvider, ActiveTabContext, SetActiveTabContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "activeTabContext", function() { return activeTabContext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setActiveTabContext", function() { return setActiveTabContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActiveTabProvider", function() { return ActiveTabProvider; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActiveTabContext", function() { return ActiveTabContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetActiveTabContext", function() { return SetActiveTabContext; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/context/ActiveTab.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-const activeTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
-const setActiveTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+const initalTab = {
+  tab: ""
+};
+const ActiveTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(initalTab);
+const SetActiveTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "":
+      return {
+        tab: ""
+      };
+
+    case "blog":
+      return {
+        tab: "blog"
+      };
+
+    case "projects":
+      return {
+        tab: "projects"
+      };
+
+    case "about":
+      return {
+        tab: "about"
+      };
+
+    default:
+      return;
+  }
+};
+
+const ActiveTabProvider = ({
+  children
+}) => {
+  const {
+    0: state,
+    1: dispatch
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(reducer, initalTab);
+  return __jsx(ActiveTabContext.Provider, {
+    value: state,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 5
+    }
+  }, __jsx(SetActiveTabContext.Provider, {
+    value: dispatch,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 7
+    }
+  }, children));
+};
+
+
 
 /***/ }),
 
@@ -564,12 +625,11 @@ const setActiveTabContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createC
 /*!************************!*\
   !*** ./pages/index.js ***!
   \************************/
-/*! exports provided: default, getStaticProps */
+/*! exports provided: getStaticProps, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -577,7 +637,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/IndexPage/Main */ "./components/IndexPage/Main.jsx");
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next-seo */ "next-seo");
 /* harmony import */ var next_seo__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_seo__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _context_NavigationContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../context/NavigationContext */ "./context/NavigationContext.js");
+/* harmony import */ var _context_ActiveTab__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../context/ActiveTab */ "./context/ActiveTab.jsx");
 var _jsxFileName = "/Users/melvingeorge/PROJECTS/ongoing/myBlog/myBlogBackend/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -589,36 +649,42 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
  // CONTEXT
 
 
-function Home({
+
+const Home = ({
   linksData
-}) {
-  const setActiveTab = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_NavigationContext__WEBPACK_IMPORTED_MODULE_4__["setActiveTabContext"]);
-  setActiveTab("");
+}) => {
+  const dispatchActiveTab = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context_ActiveTab__WEBPACK_IMPORTED_MODULE_4__["SetActiveTabContext"]); // This thing cause a fuc**** error that i dont know how how to fix :(
+  // Even if this is an error it works as of now
+
+  dispatchActiveTab({
+    type: ""
+  });
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_seo__WEBPACK_IMPORTED_MODULE_3__["NextSeo"], {
     title: "HOME",
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 19,
       columnNumber: 7
     }
   }), __jsx(_components_IndexPage_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 22,
       columnNumber: 7
     }
   }), __jsx(_components_IndexPage_Main__WEBPACK_IMPORTED_MODULE_2__["default"], {
     linksData: linksData,
-    __self: this,
+    __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 25,
       columnNumber: 7
     }
   }));
-}
+};
+
 async function getStaticProps() {
   const fs = __webpack_require__(/*! fs */ "fs");
 
@@ -659,6 +725,7 @@ async function getStaticProps() {
     }
   };
 }
+/* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
@@ -673,7 +740,7 @@ module.exports = "/_next/static/images/me-d2ece8a7fbcb208da976edc8ebbb9c9a.png.w
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

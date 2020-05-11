@@ -9,10 +9,7 @@ const FontAwesomeIcon = dynamic(
 );
 
 // CONTEXT
-import {
-  activeTabContext,
-  setActiveTabContext,
-} from "../../context/NavigationContext";
+import { ActiveTabContext, SetActiveTabContext } from "../../context/ActiveTab";
 
 const MobileNavigation = () => {
   // All tabs
@@ -22,13 +19,13 @@ const MobileNavigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Active tab
-  const activeTab = useContext(activeTabContext);
-  const setActiveTab = useContext(setActiveTabContext);
+  const activeTab = useContext(ActiveTabContext);
+  const dispatchActiveTab = useContext(SetActiveTabContext);
 
   // Tab click handler
   const tabHandler = (tabName) => {
     setMenuOpen(!menuOpen);
-    setActiveTab(tabName);
+    dispatchActiveTab({ type: tabName });
   };
 
   // Active tab style
@@ -61,7 +58,9 @@ const MobileNavigation = () => {
                   <Link href={`/${tab.toLowerCase()}`} key={tab}>
                     <a
                       className={`cursor-pointer block mb-12 transition transition-colors duration-300 hover:text-gray-900 tracking-normal ${
-                        tab.toLowerCase() === activeTab ? activeTabStyle : ""
+                        tab.toLowerCase() === activeTab.tab
+                          ? activeTabStyle
+                          : ""
                       }`}
                       onClick={() => tabHandler(tab.toLowerCase())}
                     >

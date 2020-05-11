@@ -6,11 +6,13 @@ import Header from "../components/IndexPage/Header";
 import Main from "../components/IndexPage/Main";
 import { NextSeo } from "next-seo";
 // CONTEXT
-import { setActiveTabContext } from "../context/NavigationContext";
+import { SetActiveTabContext } from "../context/ActiveTab";
 
-export default function Home({ linksData }) {
-  const setActiveTab = useContext(setActiveTabContext);
-  setActiveTab("");
+const Home = ({ linksData }) => {
+  const dispatchActiveTab = useContext(SetActiveTabContext);
+  // This thing cause a fuc**** error that i dont know how how to fix :(
+  // Even if this is an error it works as of now
+  dispatchActiveTab({ type: "" });
   return (
     <>
       {/* SEO */}
@@ -23,7 +25,7 @@ export default function Home({ linksData }) {
       <Main linksData={linksData} />
     </>
   );
-}
+};
 
 export async function getStaticProps() {
   const fs = require("fs");
@@ -69,3 +71,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+export default Home;

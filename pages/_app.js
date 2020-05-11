@@ -1,16 +1,9 @@
-import { useState } from "react";
 import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
 import DefaultSeoConfig from "../default-seo.config";
-import {
-  activeTabContext,
-  setActiveTabContext,
-} from "../context/NavigationContext";
+import { ActiveTabProvider } from "../context/ActiveTab";
 import "../styles/global.css";
 
-export default function App({ Component, pageProps }) {
-  // Active Tab Global State
-  const [activeTab, setActiveTab] = useState("");
-
+const App = ({ Component, pageProps }) => {
   return (
     <>
       <DefaultSeo {...DefaultSeoConfig}></DefaultSeo>
@@ -25,11 +18,11 @@ export default function App({ Component, pageProps }) {
           "https://twitter.com/melvin2016_",
         ]}
       />
-      <activeTabContext.Provider value={activeTab}>
-        <setActiveTabContext.Provider value={setActiveTab}>
-          <Component {...pageProps} />
-        </setActiveTabContext.Provider>
-      </activeTabContext.Provider>
+      <ActiveTabProvider>
+        <Component {...pageProps} />
+      </ActiveTabProvider>
     </>
   );
-}
+};
+
+export default App;
