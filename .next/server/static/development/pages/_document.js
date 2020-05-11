@@ -926,26 +926,53 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
         lineNumber: 13,
         columnNumber: 11
       }
-    })), __jsx("body", {
-      className: "bg-gray-100 text-base",
+    }), __jsx("link", {
+      rel: "manifest",
+      href: "/manifest.json",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14,
+        columnNumber: 11
+      }
+    }), __jsx("link", {
+      rel: "apple-touch-icon",
+      href: "/logo-96x96.png",
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 15,
-        columnNumber: 9
+        columnNumber: 11
       }
-    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
+    }), __jsx("meta", {
+      name: "apple-mobile-web-app-status-bar",
+      content: "#90cdf4",
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 16,
         columnNumber: 11
       }
+    })), __jsx("body", {
+      className: "bg-gray-100 text-base",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18,
+        columnNumber: 9
+      }
+    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19,
+        columnNumber: 11
+      }
     }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17,
+        lineNumber: 20,
         columnNumber: 11
       }
     })));
