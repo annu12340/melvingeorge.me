@@ -4,18 +4,15 @@ import { useContext } from "react";
 const Link = dynamic(() => import("next/link"));
 
 // CONTEXT
-import {
-  activeTabContext,
-  setActiveTabContext,
-} from "../../context/NavigationContext";
+import { ActiveTabContext, SetActiveTabContext } from "../../context/ActiveTab";
 
 const NavigationItems = () => {
   // All tabs
   const tabs = ["Blog", "Projects", "About"];
 
   // Active tab
-  const activeTab = useContext(activeTabContext);
-  const setActiveTab = useContext(setActiveTabContext);
+  const activeTab = useContext(ActiveTabContext);
+  const dispatchActiveTab = useContext(SetActiveTabContext);
 
   // Active tab style
   const activeTabStyle = "bg-gray-400 text-blue-900";
@@ -30,10 +27,10 @@ const NavigationItems = () => {
               <Link href={`/${tab.toLowerCase()}`}>
                 <a
                   className={`cursor-pointer transition transition-colors duration-300 hover:text-blue-900 hover:bg-gray-400 p-2 rounded-sm ${
-                    tab.toLowerCase() === activeTab ? activeTabStyle : ""
+                    tab.toLowerCase() === activeTab.tab ? activeTabStyle : ""
                   }`}
                   href=""
-                  onClick={() => setActiveTab(tab.toLowerCase())}
+                  onClick={() => dispatchActiveTab({ type: tab.toLowerCase() })}
                 >
                   {tab}
                 </a>

@@ -8,11 +8,13 @@ import BlogRenderer from "../../components/PostsPage/BlogRenderer";
 import GoBackButton from "../../components/Utils/GoBackButton";
 
 // CONTEXT
-import { setActiveTabContext } from "../../context/NavigationContext";
+import { SetActiveTabContext } from "../../context/ActiveTab";
 
-export default ({ frontMatter: metadata, content }) => {
-  const setActiveTab = useContext(setActiveTabContext);
-  setActiveTab("blog");
+const Post = ({ frontMatter: metadata, content }) => {
+  const dispatchActiveTab = useContext(SetActiveTabContext);
+  // This thing cause a fuc**** error that i dont know how how to fix :(
+  // Even if this is an error it works as of now
+  dispatchActiveTab({ type: "blog" });
   return (
     <>
       <BlogRenderer metadata={metadata} content={content} />
@@ -68,3 +70,5 @@ export async function getStaticProps({ params }) {
     },
   };
 }
+
+export default Post;
