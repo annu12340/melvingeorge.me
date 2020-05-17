@@ -1,8 +1,7 @@
 import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
 import DefaultSeoConfig from "../default-seo.config";
-import { ActiveTabProvider } from "../context/ActiveTab";
+import { ActiveTabProvider, ActiveTabContext } from "../context/ActiveTab";
 import "../styles/global.css";
-import Navigation from "../components/Navigation/Navigation";
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -20,7 +19,6 @@ const App = ({ Component, pageProps }) => {
         ]}
       />
       <ActiveTabProvider>
-        <Navigation isIndex={false} />
         <Component {...pageProps} />
       </ActiveTabProvider>
     </>
