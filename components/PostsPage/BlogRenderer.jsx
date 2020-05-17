@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 const ReactMarkdown = dynamic(() => import("react-markdown/with-html"));
 
 // COMPONENTS
-const ImageLoaderUtil = dynamic(() => import("../Utils/ImageLoaderUtil"));
+import ImageLoaderUtil from "../Utils/ImageLoaderUtil";
 import BlogSEO from "./BlogSEO";
 const CodeBlockLoaderUtil = dynamic(() =>
   import("../Utils/CodeBlockLoaderUtil")
