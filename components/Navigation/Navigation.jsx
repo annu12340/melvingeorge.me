@@ -1,5 +1,4 @@
 // MODULES
-import { useContext } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
@@ -7,12 +6,7 @@ import Link from "next/link";
 const NavigationItems = dynamic(() => import("./NavigationItems"));
 const MobileNavigation = dynamic(() => import("./MobileNavigation"));
 
-// CONTEXT
-import { ActiveTabContext } from "../../context/ActiveTab";
-
-const Navigation = () => {
-  const activeTab = useContext(ActiveTabContext);
-  const isIndex = activeTab.tab === "" ? true : false;
+const Navigation = ({ isIndex }) => {
   return (
     <>
       <div className={`${isIndex ? "bgHero" : ""}`}>

@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import Navigation from "../components/Navigation/Navigation";
 
 const initalTab = { tab: "" };
 
@@ -25,6 +26,7 @@ const ActiveTabProvider = ({ children }) => {
   return (
     <ActiveTabContext.Provider value={state}>
       <SetActiveTabContext.Provider value={dispatch}>
+        <Navigation isIndex={state.tab === "" ? true : false} />
         {children}
       </SetActiveTabContext.Provider>
     </ActiveTabContext.Provider>
