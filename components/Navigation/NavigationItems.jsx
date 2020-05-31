@@ -8,7 +8,7 @@ import { ActiveTabContext, SetActiveTabContext } from "../../context/ActiveTab";
 
 const NavigationItems = () => {
   // All tabs
-  const tabs = ["Blog", "Projects", "About"];
+  const tabs = ["Blog", "About"];
 
   // Active tab
   const activeTab = useContext(ActiveTabContext);

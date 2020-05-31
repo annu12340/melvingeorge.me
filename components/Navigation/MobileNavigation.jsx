@@ -13,7 +13,7 @@ import { ActiveTabContext, SetActiveTabContext } from "../../context/ActiveTab";
 
 const MobileNavigation = () => {
   // All tabs
-  const tabs = ["Blog", "Projects", "About"];
+  const tabs = ["Blog", "About"];
 
   // Navigation button state
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,7 +29,7 @@ const MobileNavigation = () => {
   };
 
   // Active tab style
-  const activeTabStyle = "bg-gray-900 opacity-75 rounded shadow-lg";
+  const activeTabStyle = "bg-gray-900 opacity-75 rounded shadow-lg px-2";
 
   return (
     <>
