@@ -8,7 +8,8 @@ module.exports = withPlugins(
       {
         optimizeImagesInDev: true,
         imageTrace: {
-          color: "#CBD5E0",
+          color: "#4299e1",
+          alphaMax: 2,
         },
       },
     ],
