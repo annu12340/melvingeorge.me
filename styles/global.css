@@ -2,6 +2,10 @@
 @tailwind base;
 @tailwind components;
 
+.about a {
+  @apply border-b-2 border-blue-500 text-blue-700;
+}
+
 .blog h1 {
   @apply text-blue-700 text-4xl text-center;
 }
