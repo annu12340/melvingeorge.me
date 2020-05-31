@@ -4,7 +4,7 @@ import ImageLoader from "../Utils/ImageLoaderUtil";
 
 const Card = ({ title, description, href }) => {
   return (
-    <Link href={`/blog/${href}`}>
+    <Link href="/blog/[link]" as={`/blog/${href}`}>
       <div className="p-6 bg-white shadow-sm rounded cursor-pointer group">
         <h1 className="text-2xl my-4 tracking-wide text-center font-medium">
           {title}
