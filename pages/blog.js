@@ -13,9 +13,11 @@ const Blog = ({ linksData }) => {
       <NextSeo title={"Blog"} />
 
       {/* Main content */}
-      <main className="container max-w-screen-lg px-10 mx-auto mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <main className="container max-w-screen-lg px-10 mx-auto mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4">
         {linksData.length > 0 ? (
-          linksData.map((linkData) => <Card {...linkData} />)
+          linksData.map((linkData) => (
+            <Card key={linkData.href} {...linkData} />
+          ))
         ) : (
           <p>It's empty here</p>
         )}
