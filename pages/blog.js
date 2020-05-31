@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import Card from "../components/BlogPage/Card";
+import dynamic from "next/dynamic";
+const Card = dynamic(() => import("../components/BlogPage/Card"));
 import { SetActiveTabContext } from "../context/ActiveTab";
 import { NextSeo } from "next-seo";
 
