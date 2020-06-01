@@ -42,7 +42,7 @@ export async function getStaticProps() {
     const { data } = matter(post);
 
     const title = data.title;
-    const href = link.replace(".md", "");
+    const href = link.replace(".mdx", "");
     const description = data.description;
     const date = data.date;
 
