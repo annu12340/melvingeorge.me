@@ -12,7 +12,7 @@ const Card = ({ title, description, href }) => {
         <ImageLoader
           link={href}
           alt={`Banner picture of ${title} blog`}
-          src="main.png"
+          src="main.jpg"
         />
         <p className="tracking-wide my-4 leading-relaxed text-lg italic transition transition-colors duration-300 group-hover:text-blue-600">
           {description}
