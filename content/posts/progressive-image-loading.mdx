@@ -1,0 +1,387 @@
+---
+title: Progressive image loading in reactjs
+description: Create supercool image loading effect using SVG trace
+keywords: progressive image loading
+author: MELVIN GEORGE
+date: 2020-06-01
+---
+
+![banner image](main.png)
+
+## Contents
+
+- [Install Package](#install-package)
+- [Adding Webpack Config](#adding-webpack-config)
+- [Writing the Image Loader Component](#writing-image-loader-component)
+- [Logic behind rendering images](#logic-behind-rendering-images)
+- [Adding CSS to Image loader](#adding-css-to-image-loader)
+- [Import anywhere and use it](#import-anywhere-and-use-it)
+- [Github Repo of this Code](#github-repo-link)
+
+## <a name="install-package"></a> Install package
+
+Run in the terminal :
+
+```bash
+npm install --save-dev image-trace-loader
+```
+
+## <a name="adding-webpack-config"></a> Adding Webpack config
+
+Nothing serious to do! Chill 🥶
+
+We just need to add `image-trace-loader` to our Webpack config which will help in loading the different image extensions.
+
+### <a name="if-you-are-using-create-react-app-"></a> If you are using `create-react-app` :
+
+Then we need to use an additional command called the `eject` command to get our webpack config.
+
+Run in terminal to eject :
+
+```bash
+npm run eject
+```
+
+You can now see a folder structure which looks like this:
+
+![Folder structure](folder-structure.png "Folder Structure")
+
+Go to `config` folder and open `webpack.config.js`
+
+Now we need to find the rules for image extensions which is already defined in this configuration file.
+
+For that we can use `Ctrl + F` to open finder in the editor and seach for `png`.
+
+There's only one reference to `png` in the entire file so it becomes easy for us.
+
+Now you will see some rules already defined for image extensions which looks like this:
+
+<p style="font-weight: 800; color: #718096;">webpack.config.js</p>
+
+```javascript
+// predefined rules for images
+{
+  test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+  loader: require.resolve('url-loader'),
+  options: {
+    limit: imageInlineSizeLimit,
+    name: 'static/media/[name].[hash:8].[ext]',
+  },
+}
+```
+
+Remove the old object and add this object there:
+
+<p style="font-weight: 800; color: #718096;">webpack.config.js</p>
+
+```javascript
+{
+  test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+  use: [
+    // adding image-trace-loader
+    {
+      loader: "image-trace-loader",
+    },
+    {
+      loader: "url-loader",
+      options: {
+        limit: imageInlineSizeLimit,
+        name: "static/media/[name].[hash:8].[ext]",
+      },
+    },
+  ],
+}
+```
+
+Note that we added the :
+
+```javascript
+{
+  loader: "image-trace-loader",
+},
+```
+
+An important thing to note here is that we are adding the `image-trace-loader` to work together with `url-loader`.
+
+Thats all! 🤓
+
+### <a name="if-you-are-using-custom-webpack-configuration-"></a> If you are using custom webpack configuration :
+
+Add this to config for webpack to recognize image extensions:
+
+<p style="font-weight: 800; color: #718096;">webpack.config.js</p>
+
+```javascript
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.(gif|png|jpe?g)$/i,
+        use: [
+          {
+            loader: "image-trace-loader",
+          },
+        ],
+      },
+    ],
+  },
+};
+```
+
+Wonderful! 🥳
+
+## <a name="writing-image-loader-component"></a> Writing the Image Loader Component
+
+- Create a component called `ImageLoader`.
+
+```javascript
+import React, { useState } from "react";
+
+const ImageLoader = () => {};
+
+export default ImageLoader;
+```
+
+- Make a state for the images so that we can trigger loading state or loaded state and show appropriate images - initially set to `false`.
+
+```javascript
+import React, { useState } from "react";
+
+const ImageLoader = () => {
+  // state of images
+  const [imageLoaded, setImageLoaded] = useState(false);
+};
+
+export default ImageLoader;
+```
+
+- Define props for the component called `source` and `alt`.
+
+```javascript
+import React, { useState } from "react";
+
+// Props: source, alt
+const ImageLoader = ({ source, alt }) => {
+  // state of images
+  const [imageLoaded, setImageLoaded] = useState(false);
+};
+
+export default ImageLoader;
+```
+
+- We need to import the image using the `require` function and pass it the value of prop `source`.
+
+- This gives us two urls of images:
+
+  `src` - the real image url
+
+  `trace` - the svg trace image url ( used to show when image is loading )
+
+```javascript
+import React, { useState } from "react";
+
+// Props: source, alt
+const ImageLoader = ({ source, alt }) => {
+  // state of images
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  // src image and trace image url
+  const { src, trace } = require(`./${source}`);
+};
+
+export default ImageLoader;
+```
+
+## <a name="logic-behind-rendering-images"></a> Logic behind rendering images
+
+- Ideally we want the both images to be stacked only then we would be able to show the loading image (svg trace image) when image is loading
+
+```javascript
+import React, { useState } from "react";
+
+// Props: source, alt
+const ImageLoader = ({ source, alt }) => {
+  // state of images
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  // src image and trace image url
+  const { src, trace } = require(`./${source}`);
+
+  // render code
+  return (
+    <div>
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        style={{
+          opacity: imageLoaded ? "1" : "0",
+        }}
+        onLoad={() => setImageLoaded(true)}
+      />
+
+      <img
+        style={{
+          opacity: imageLoaded ? "0" : "1",
+        }}
+        src={trace}
+        alt={alt}
+      />
+    </div>
+  );
+};
+
+export default ImageLoader;
+```
+
+In the above code, we see `onLoad` event in the first `img` tag. This will be called when the original image is fully loaded and rendered. Here we need to set the state of `imageLoaded` state to `true`.
+
+Both the image tags has the style attributes. When the state is changed from `false` to `true` the original image opacity will be set to `1` from `0` and opacity of trace image will be set to `0` from `1`.
+
+This is because we want the trace image to disappear and show the original image when its loaded.
+
+## <a name="adding-css-to-image-loader"></a> Adding CSS to Image loader
+
+This the css we need to use to make it work.
+
+<p style="font-weight: 800; color: #718096;">ImageLoader.css</p>
+
+```css
+.imageLoader {
+  height: 50vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+.imageLoader img {
+  height: 100%;
+}
+
+.imageLoader .realImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-property: background-color, border-color, color, fill, stroke,
+    opacity, box-shadow, transform;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+```
+
+lets import this css file into our `ImageLoader` component.
+
+```javascript
+import React, { useState } from "react";
+import "./ImageLoader.css";
+
+const ImageLoader = ({ source, alt }) => {
+  .
+  .
+  .
+}
+```
+
+Here we need to understand 2 things,
+
+- `.imageLoader` class
+- `.realImg` class
+
+### `.imageLoader` class :
+
+if you look closely you can see that we have defined
+
+```css
+position: relative;
+```
+
+in our class.
+
+This class is added to the wrapper of the 2 image tags. So that wrapper is now considered as the starting point of 2 img tags.
+
+lets add this class to our wrapper now.
+
+```javascript
+// render code
+return (
+  // add .imageLoader class
+  // to wrapper
+  <div className="imageLoader">
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      style={{
+        opacity: imageLoaded ? "1" : "0",
+      }}
+      onLoad={() => setImageLoaded(true)}
+    />
+
+    <img
+      style={{
+        opacity: imageLoaded ? "0" : "1",
+      }}
+      src={trace}
+      alt={alt}
+    />
+  </div>
+);
+```
+
+### `.realImg` class :
+
+here we have,
+
+```css
+position: absolute;
+top: 0;
+left: 0;
+```
+
+defined. We need to add this class to our original img tag.
+
+this makes sure that our original image starts rendering from top-left region relative to the wrapper.
+
+lets add it now.
+
+```javascript
+// render code
+return (
+  // add .imageLoader class
+  // to wrapper
+  <div className="imageLoader">
+    // add .realImg class here
+    <img
+      className="realImg"
+      src={src}
+      alt={alt}
+      loading="lazy"
+      style={{
+        opacity: imageLoaded ? "1" : "0",
+      }}
+      onLoad={() => setImageLoaded(true)}
+    />
+    <img
+      style={{
+        opacity: imageLoaded ? "0" : "1",
+      }}
+      src={trace}
+      alt={alt}
+    />
+  </div>
+);
+```
+
+🙌🏻 Wonderfull! You just made a cool image loader.
+
+## <a name="import-anywhere-and-use-it"></a> Import anywhere and use it
+
+```javascript
+import ImageLoader from "./ImageLoader";
+
+const App = () => <ImageLoader source="img.jpg" alt="An image" />;
+
+export default App;
+```
+
+### <a name="github-repo-link" href="https://github.com/melvin2016/progressive-image-loading" target="blank"> Github Repo of this Code </a>
