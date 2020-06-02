@@ -23,7 +23,7 @@ const Navigation = ({ isIndex }) => {
               </a>
             </div>
           </Link>
-          <ul className="text-blue-700 text-lg hidden md:block pt-8">
+          <ul className="text-blue-500 text-lg hidden md:block pt-8">
             <NavigationItems />
           </ul>
         </nav>
