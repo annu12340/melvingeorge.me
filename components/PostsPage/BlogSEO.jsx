@@ -30,8 +30,8 @@ const BlogSEO = ({ metadata }) => (
         ],
       }}
       twitter={{
-        handle: "@melvin2016_",
-        site: "@melvin2016_",
+        handle: "@developer_369",
+        site: "@developer_369",
         cardType: "summary_large_image",
       }}
     />
