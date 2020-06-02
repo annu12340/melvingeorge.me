@@ -18,7 +18,7 @@ const BlogSEO = ({ metadata }) => (
         },
       ]}
       openGraph={{
-        url: `https://melvingeorge.me/posts/${metadata.link}`,
+        url: `https://melvingeorge.me/blog/${metadata.link}`,
         title: metadata.title,
         description: metadata.description,
         type: "article",
@@ -36,7 +36,7 @@ const BlogSEO = ({ metadata }) => (
       }}
     />
     <BlogJsonLd
-      url={`https://melvingeorge.me/posts/${metadata.link}`}
+      url={`https://melvingeorge.me/blog/${metadata.link}`}
       title={metadata.title}
       images={[
         `https://melvingeorge.me${require(`../../content/assets/${metadata.link}/meta.jpg?resize&size=1200`)}`,
