@@ -43,7 +43,7 @@ const MobileNavigation = () => {
             <FontAwesomeIcon className="ml-2" icon={faTimes} width="0" />
           </a>
         ) : (
-          <a className="text-blue-400 transition transition-all duration-300 text-blue-500 tracking-wider">
+          <a className="text-blue-500 transition transition-all duration-300 text-blue-500 tracking-wider">
             MENU
             <FontAwesomeIcon className="ml-2" icon={faBars} width="0" />
           </a>
