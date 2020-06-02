@@ -5,6 +5,7 @@ const ReactMarkdown = dynamic(() => import("react-markdown/with-html"));
 // COMPONENTS
 const ImageLoaderUtil = dynamic(() => import("../Utils/ImageLoaderUtil"));
 import BlogSEO from "./BlogSEO";
+import Sharer from "./Sharer";
 const CodeBlockLoaderUtil = dynamic(() =>
   import("../Utils/CodeBlockLoaderUtil")
 );
@@ -25,6 +26,11 @@ const BlogRenderer = ({ metadata, content }) => {
               code: CodeBlockLoaderUtil,
             }}
             className="blog"
+          />
+          <Sharer
+            link={metadata.link}
+            title={metadata.title}
+            keywords={metadata.keywords}
           />
         </article>
       </div>
