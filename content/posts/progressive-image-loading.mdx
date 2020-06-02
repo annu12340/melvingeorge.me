@@ -1,6 +1,6 @@
 ---
 title: Progressive image loading in reactjs
-description: Create supercool image loading effect using SVG trace
+description: Create a supercool image loading effect using SVG trace
 keywords: progressive-image-loading,javascript,reactjs,image-trace-loader
 author: MELVIN GEORGE
 date: 2020-06-01
@@ -48,9 +48,9 @@ You can now see a folder structure which looks like this:
 
 Go to `config` folder and open `webpack.config.js`
 
-Now we need to find the rules for image extensions which is already defined in this configuration file.
+Now we need to find the rules for image extensions that are already defined in this configuration file.
 
-For that we can use `Ctrl + F` to open finder in the editor and seach for `png`.
+For that, we can use `Ctrl + F` to open finder in the editor and search for `png`.
 
 There's only one reference to `png` in the entire file so it becomes easy for us.
 
@@ -103,7 +103,7 @@ Note that we added the :
 
 An important thing to note here is that we are adding the `image-trace-loader` to work together with `url-loader`.
 
-Thats all! 🤓
+That's all! 🤓
 
 ### <a name="if-you-are-using-custom-webpack-configuration-"></a> If you are using custom webpack configuration :
 
@@ -171,11 +171,11 @@ export default ImageLoader;
 
 - We need to import the image using the `require` function and pass it the value of prop `source`.
 
-- This gives us two urls of images:
+- This gives us two URLs of images:
 
   `src` - the real image url
 
-  `trace` - the svg trace image url ( used to show when image is loading )
+  `trace` - the SVG trace image url ( used to show when the image is loading )
 
 ```javascript
 import React, { useState } from "react";
@@ -194,7 +194,7 @@ export default ImageLoader;
 
 ## <a name="logic-behind-rendering-images"></a> Logic behind rendering images
 
-- Ideally we want the both images to be stacked only then we would be able to show the loading image (svg trace image) when image is loading
+- Ideally, we want both images to be stacked only then we would be able to show the loading image (SVG trace image) when the image is loading
 
 ```javascript
 import React, { useState } from "react";
@@ -234,15 +234,15 @@ const ImageLoader = ({ source, alt }) => {
 export default ImageLoader;
 ```
 
-In the above code, we see `onLoad` event in the first `img` tag. This will be called when the original image is fully loaded and rendered. Here we need to set the state of `imageLoaded` state to `true`.
+In the above code, we see the `onLoad` event in the first `img` tag. This will be called when the original image is fully loaded and rendered. Here we need to set the state of `imageLoaded` state to `true`.
 
-Both the image tags has the style attributes. When the state is changed from `false` to `true` the original image opacity will be set to `1` from `0` and opacity of trace image will be set to `0` from `1`.
+Both the image tags have the style attributes. When the state is changed from `false` to `true` the original image opacity will be set to `1` from `0` and the opacity of trace image will be set to `0` from `1`.
 
-This is because we want the trace image to disappear and show the original image when its loaded.
+This is because we want the trace image to disappear and show the original image when it's loaded.
 
 ## <a name="adding-css-to-image-loader"></a> Adding CSS to Image loader
 
-This the css we need to use to make it work.
+This the CSS we need to use to make it work.
 
 <p style="font-weight: 800; color: #718096;">ImageLoader.css</p>
 
@@ -269,7 +269,7 @@ This the css we need to use to make it work.
 }
 ```
 
-lets import this css file into our `ImageLoader` component.
+let's import this CSS file into our `ImageLoader` component.
 
 ```javascript
 import React, { useState } from "react";
@@ -299,7 +299,7 @@ in our class.
 
 This class is added to the wrapper of the 2 image tags. So that wrapper is now considered as the starting point of 2 img tags.
 
-lets add this class to our wrapper now.
+let's add this class to our wrapper now.
 
 ```javascript
 // render code
@@ -340,9 +340,9 @@ left: 0;
 
 defined.
 
-We need to add this class to our original img tag. This makes sure that our original image starts rendering from top-left region relative to the wrapper.
+We need to add this class to our original img tag. This makes sure that our original image starts rendering from the top-left region relative to the wrapper.
 
-lets add it now.
+let's add it now.
 
 ```javascript
 // render code
