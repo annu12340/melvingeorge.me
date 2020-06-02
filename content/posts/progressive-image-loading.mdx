@@ -12,7 +12,7 @@ date: 2020-06-01
 
 - [Install Package](#install-package)
 - [Adding Webpack Config](#adding-webpack-config)
-- [Writing the Image Loader Component](#writing-image-loader-component)
+- [Writing the Image Loader Component](#writing-the-image-loader)
 - [Logic behind rendering images](#logic-behind-rendering-images)
 - [Adding CSS to Image loader](#adding-css-to-image-loader)
 - [Import anywhere and use it](#import-anywhere-and-use-it)
@@ -32,7 +32,7 @@ Nothing serious to do! Chill 🥶
 
 We just need to add `image-trace-loader` to our Webpack config which will help in loading the different image extensions.
 
-### <a name="if-you-are-using-create-react-app-"></a> If you are using `create-react-app` :
+### If you are using `create-react-app` :
 
 Then we need to use an additional command called the `eject` command to get our webpack config.
 
@@ -56,8 +56,6 @@ There's only one reference to `png` in the entire file so it becomes easy for us
 
 Now you will see some rules already defined for image extensions which looks like this:
 
-<p style="font-weight: 800; color: #718096;">webpack.config.js</p>
-
 ```javascript
 // predefined rules for images
 {
@@ -71,8 +69,6 @@ Now you will see some rules already defined for image extensions which looks lik
 ```
 
 Remove the old object and add this object there:
-
-<p style="font-weight: 800; color: #718096;">webpack.config.js</p>
 
 ```javascript
 {
@@ -105,11 +101,9 @@ An important thing to note here is that we are adding the `image-trace-loader` t
 
 That's all! 🤓
 
-### <a name="if-you-are-using-custom-webpack-configuration-"></a> If you are using custom webpack configuration :
+### If you are using custom webpack configuration :
 
 Add this to config for webpack to recognize image extensions:
-
-<p style="font-weight: 800; color: #718096;">webpack.config.js</p>
 
 ```javascript
 module.exports = {
@@ -130,7 +124,7 @@ module.exports = {
 
 Wonderful! 🥳
 
-## <a name="writing-image-loader-component"></a> Writing the Image Loader Component
+## <a name="writing-the-image-loader"></a>Writing the Image Loader Component
 
 - Create a component called `ImageLoader`.
 
@@ -192,7 +186,7 @@ const ImageLoader = ({ source, alt }) => {
 export default ImageLoader;
 ```
 
-## <a name="logic-behind-rendering-images"></a> Logic behind rendering images
+## <a name="logic-behind-rendering-images"></a>Logic behind rendering images
 
 - Ideally, we want both images to be stacked only then we would be able to show the loading image (SVG trace image) when the image is loading
 
@@ -240,11 +234,9 @@ Both the image tags have the style attributes. When the state is changed from `f
 
 This is because we want the trace image to disappear and show the original image when it's loaded.
 
-## <a name="adding-css-to-image-loader"></a> Adding CSS to Image loader
+## <a name="adding-css-to-image-loader"></a>Adding CSS to Image loader
 
 This the CSS we need to use to make it work.
-
-<p style="font-weight: 800; color: #718096;">ImageLoader.css</p>
 
 ```css
 .imageLoader {
