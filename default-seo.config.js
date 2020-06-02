@@ -5,7 +5,8 @@ export default {
   additionalMetaTags: [
     {
       name: "keywords",
-      content: "blog,melvin george,article,developer,javascript,reactjs",
+      content:
+        "blog,melvin george,article,developer,javascript,reactjs,melvingeorge.me,developer_369",
     },
     {
       name: "image",
