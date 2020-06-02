@@ -30,7 +30,7 @@ export async function getStaticPaths() {
   const linksArray = filesString.split(",");
   const params = linksArray.map((link) => ({
     params: {
-      link: link.replace(".md", ""),
+      link: link.replace(".mdx", ""),
     },
   }));
 
@@ -46,7 +46,7 @@ export async function getStaticProps({ params }) {
   const matter = require("gray-matter");
   // Get File and get YAML data from markdown
   const post = fs
-    .readFileSync(path.join("content", "posts/", `${params.link}.md`))
+    .readFileSync(path.join("content", "posts/", `${params.link}.mdx`))
     .toString();
   const { data, content } = matter(post);
 

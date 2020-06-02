@@ -6,9 +6,14 @@
   @apply border-b-2 border-blue-500 text-blue-700;
 }
 
+.blog h3 {
+  @apply text-blue-700 text-2xl mt-4;
+}
+
 .blog h1 {
   @apply text-blue-700 text-4xl text-center;
 }
+
 .blog h2 {
   @apply text-blue-700 text-2xl inline-block mt-10 mb-6 border-b-2 border-blue-700;
 }
@@ -29,7 +34,7 @@
   @apply py-3 ml-10 text-lg tracking-wide;
 }
 .blog li {
-  @apply list-disc;
+  @apply list-disc py-2;
 }
 
 .blog .date {
