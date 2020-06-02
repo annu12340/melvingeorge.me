@@ -5,7 +5,9 @@
 .about a {
   @apply border-b-2 border-blue-500 text-blue-700;
 }
-
+.blog code {
+  @apply bg-gray-300 px-1 m-1;
+}
 .blog h3 {
   @apply text-blue-700 text-2xl mt-4;
 }
