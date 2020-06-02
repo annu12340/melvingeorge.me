@@ -26,7 +26,7 @@ const NavigationItems = () => {
             >
               <Link href={`/${tab.toLowerCase()}`}>
                 <a
-                  className={`cursor-pointer transition transition-colors duration-300 hover:text-blue-900 hover:bg-gray-400 p-2 rounded-sm ${
+                  className={`cursor-pointer transition transition-colors duration-300 hover:text-blue-800 hover:bg-gray-400 p-2 rounded-sm ${
                     tab.toLowerCase() === activeTab.tab ? activeTabStyle : ""
                   }`}
                   href=""
