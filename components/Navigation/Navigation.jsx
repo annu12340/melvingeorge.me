@@ -15,7 +15,7 @@ const Navigation = ({ isIndex }) => {
             <div className="flex flex-row justify-center items-center">
               {!isIndex ? <div className="heroImg" /> : null}
               <a
-                className={`transition transition-colors duration-300 hover:text-blue-800 text-blue-700 text-lg tracking-wider cursor-pointer ${
+                className={`transition transition-colors duration-300 hover:text-blue-800 text-blue-500 text-lg tracking-wider cursor-pointer ${
                   isIndex ? "pt-8" : "ml-4"
                 }`}
               >
