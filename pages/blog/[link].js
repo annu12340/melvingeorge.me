@@ -26,8 +26,41 @@ const Post = ({ frontMatter: metadata, content }) => {
 export async function getStaticPaths() {
   const fs = require("fs");
   const path = require("path");
+  const matter = require("gray-matter");
+  const nodeHtmlToImage = require("node-html-to-image");
+
   const filesString = fs.readdirSync(path.join("content", "posts/")).toString();
   const linksArray = filesString.split(",");
+  console.log(linksArray);
+
+  linksArray.forEach((link) => {
+    // Get File and get YAML data from markdown
+    const post = fs
+      .readFileSync(path.join("content", "posts/", `${link}`))
+      .toString();
+    const { data } = matter(post);
+
+    // my image
+    const image = fs.readFileSync(path.join("public/me.png"));
+    const base64Image = new Buffer.from(image).toString("base64");
+    const dataURI = "data:image/jpeg;base64," + base64Image;
+
+    // save meta image
+    nodeHtmlToImage({
+      output: path.join(
+        "content",
+        "assets",
+        link.replace(".mdx", ""),
+        "meta.jpg"
+      ),
+      html: fs.readFileSync(path.join("meta", "metaImage.html"), "utf8"),
+      content: {
+        title: data.title,
+        imageSource: dataURI,
+      },
+    }).then(() => console.log("The image was created successfully!"));
+  });
+
   const params = linksArray.map((link) => ({
     params: {
       link: link.replace(".mdx", ""),
