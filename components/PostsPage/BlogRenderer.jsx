@@ -6,7 +6,9 @@ const ReactMarkdown = dynamic(() => import("react-markdown/with-html"));
 const ImageLoaderUtil = dynamic(() => import("../Utils/ImageLoaderUtil"));
 import BlogSEO from "./BlogSEO";
 import Sharer from "./Sharer";
-import CodeBlockLoaderUtil from "../Utils/CodeBlockLoaderUtil";
+const CodeBlockLoaderUtil = dynamic(() =>
+  import("../Utils/CodeBlockLoaderUtil")
+);
 
 const BlogRenderer = ({ metadata, content }) => {
   return (
