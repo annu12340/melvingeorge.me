@@ -1,0 +1,167 @@
+---
+title: Static site generation in Nextjs using getStaticProps() function
+description: Simple explanation on how to use getStaticProps() function in nextjs.
+keywords: next js get static props,javascript,reactjs,nextjs,getStaticProps()
+author: MELVIN GEORGE
+date: 2020-06-04
+---
+
+![banner image](main.png)
+
+## Contents
+
+- [What is static site generation?](#what-is-static-site-generation)
+- [Using the `getStaticProps()` function](#using-the-getstaticprops)
+
+## <a name="what-is-static-site-generation"></a> What is static site generation?
+
+Just like the word static, it means not changing. 🧘‍♂️
+
+Benefits include:
+
+- Better SEO 🕶
+- Performance 🚀
+- Can be hosted in CDN 🌍
+- Doesn't need to have JavaScript to run (mostly HTML) ⚙️
+- Very fewer things to parse from server to client 🌬
+
+So why do we need a static site?
+
+Let's take an example of a landing page for a company, a landing page doesn't need any type of dynamic content such as pulling data from different API's and showing it according to their users.
+
+A user who accesses a landing page of a company needs to see what that company is about, its main feature, achievements, etc, which are all static things.
+
+The second example is this blog, this blog is statically generated from markdown files. Its main purpose is to provide information to you. It doesn't change or pull data from different APIs.
+
+Dynamic sites include websites like Facebook, Twitter, etc, which changes content according to their users.
+
+So let's dive in! 🏊‍♀️
+
+## Static site generation in nextjs
+
+To make better use of Static site generation in Nextjs, let's understand `getStaticProps()` function.
+
+### <a name="using-the-getstaticprops"></a> Using the `getStaticProps()` function:
+
+This function is added to a Nextjs `page` so that it fetches data at build time.
+
+First of all, let's make a simple Nextjs page called `todos.js` inside our `pages` folder.
+
+```javascript
+// Todos.js Page
+const Todos = () => {
+  return <h1>Todos</h1>;
+};
+
+export default Todos;
+```
+
+let's add the `getStaticProps()` function.
+
+```javascript
+const Todos = () => {
+  return <h1>Todos</h1>;
+};
+
+export default Todos;
+
+// add getStaticProps() function
+export async function getStaticProps() {}
+```
+
+The `getStaticProps()` function gives props needed for the component `Todos` to render things when Nextjs builds the page.
+
+Note that we added the `async` keyword, this is needed so that Nextjs knows to prerender our `Todos` page at build time.
+
+let's write some code inside the `getStaticProps()` function.
+
+```javascript
+const Todos = () => {
+
+.
+.
+.
+
+// add getStaticProps() function
+export async function getStaticProps(){
+
+    // Get todo list from an API
+    // or from anything like a JSON file etc.
+    const todos = await fetch('https://.../todos');
+
+    return {
+        props: {
+            todos
+        }
+    }
+}
+```
+
+- We can get our todo list data from an API endpoint or anything like JSON file etc.
+- We should return the `todos` array within the `props` object like this
+
+```javascript
+return {
+  props: {
+    todos,
+  },
+};
+```
+
+Now let's complete our `Todos` render code.
+
+```javascript
+const Todos = ({ todos }) => {
+  // render code
+  return (
+    <div>
+      <h1>Todos</h1>
+      <ul>
+        {todos.length > 0 ? todos.map((todo) => <li>{todo}</li>) : "No todos"}
+      </ul>
+    </div>
+  );
+};
+
+export default Todos;
+
+// add getStaticProps() function
+export async function getStaticProps() {
+  // Get todo list from an API
+  const todos = await fetch("https://.../todos");
+
+  return {
+    props: {
+      todos,
+    },
+  };
+}
+```
+
+Let's break down our render logic.
+
+```javascript
+// render code
+return (
+  <div>
+    <h1>Todos</h1>
+    <ul>
+      {todos.length > 0 ? todos.map((todo) => <li>{todo}</li>) : "No todos"}
+    </ul>
+  </div>
+);
+```
+
+We are just mapping over our `todos` array we received as a `prop` and rendering each `todo` from the array inside an unordered list using the `map()` function in JavaScript.
+
+The `todos` prop is returned from `getStaticProps()` function.
+
+Now if you inspect element your webpage, you can see this:
+
+![Static site generation](static.png "Static site generation")
+
+Wonderful! You just made your page static 🤓.
+
+This helps in SEO.
+
+### Feel free to share if you found this useful 😃.
