@@ -1,4 +1,4 @@
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter/";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 const CodeBlockUtil = ({ language, value }) => {
