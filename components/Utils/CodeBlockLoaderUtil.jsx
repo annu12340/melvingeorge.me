@@ -1,5 +1,8 @@
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter/";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia as style } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
+
+SyntaxHighlighter.registerLanguage("jsx", jsx);
 
 const CodeBlockUtil = ({ language, value }) => {
   return (
