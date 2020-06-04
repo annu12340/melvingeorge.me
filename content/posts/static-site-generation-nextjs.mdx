@@ -24,15 +24,17 @@ So why do we need a static site?
 
 Let's take an example of a landing page for a company, a landing page doesn't need any type of dynamic content such as pulling data from different API's and showing it according to their users.
 
-A user who accesses a landing page for a company needs to see what that company is about, its main feature, achievements, etc, which are all static things.
+A user who accesses a landing page of a company needs to see what that company is about, its main feature, achievements, etc, which are all static things.
 
 The second example is this blog, this blog is statically generated from markdown files. Its main purpose is to provide information to you. It doesn't change or pull data from different APIs.
+
+Dynamic sites include websites like Facebook, Twitter, etc, which changes content according to their users.
 
 So let's dive in! 🏊‍♀️
 
 ## Static site generation in nextjs
 
-To make better use of Static site generation let's understand `getStaticProps()` functions.
+To make better use of Static site generation in Nextjs, let's understand `getStaticProps()` function.
 
 ### Using the `getStaticProps()` function:
 
@@ -64,9 +66,9 @@ export async function getStaticProps() {}
 
 The `getStaticProps()` function gives props needed for the component `Todos` to render things when Nextjs builds the page.
 
-Note that we added the `async` keyword, this is needed so that Nextjs knows to prerender our `Todos` page.
+Note that we added the `async` keyword, this is needed so that Nextjs knows to prerender our `Todos` page at build time.
 
-let's write some code in `getStaticProps()`.
+let's write some code inside the `getStaticProps()` function.
 
 ```javascript
 const Todos = () => {
@@ -79,6 +81,7 @@ const Todos = () => {
 export async function getStaticProps(){
 
     // Get todo list from an API
+    // or from anything like a JSON file etc.
     const todos = await fetch('https://.../todos');
 
     return {
@@ -89,7 +92,7 @@ export async function getStaticProps(){
 }
 ```
 
-- We can pull our todo list from an API endpoint or anything like JSON file etc.
+- We can get our todo list data from an API endpoint or anything like JSON file etc.
 - We should return the `todos` array within the `props` object like this
 
 ```javascript
@@ -144,7 +147,7 @@ return (
 );
 ```
 
-We are just mapping over our `todos` array we received as a `prop` and rendering each `todo` from the array inside an unordered list.
+We are just mapping over our `todos` array we received as a `prop` and rendering each `todo` from the array inside an unordered list using the `map()` function in JavaScript.
 
 The `todos` prop is returned from `getStaticProps()` function.
 
@@ -152,8 +155,8 @@ Now if you inspect element your webpage, you can see this:
 
 ![Static site generation](static.png "Static site generation")
 
-No more dynamic rendering. This helps in SEO a lot.
+Wonderful! You just made your page static 🤓.
 
-Wonderful! You just made your page static 🤓
+This helps in SEO.
 
 ### Feel free to share if you found this useful 😃.
