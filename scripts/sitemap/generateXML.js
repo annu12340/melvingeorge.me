@@ -13,4 +13,4 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
   )}
 </urlset>`;
 
-fs.writeFileSync("out/sitemap.xml", sitemapXml);
+fs.writeFileSync("out/sitemap_blogs.xml", sitemapXml);
