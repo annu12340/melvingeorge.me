@@ -15,7 +15,7 @@ const App = ({ Component, pageProps }) => {
           "https://www.facebook.com/alkitj10",
           "https://github.com/melvin2016",
           "https://www.linkedin.com/in/melvin2016/",
-          "https://twitter.com/melvin2016_",
+          "https://twitter.com/developer_369",
         ]}
       />
       <ActiveTabProvider>
