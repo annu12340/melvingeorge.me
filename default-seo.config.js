@@ -2,6 +2,7 @@ export default {
   titleTemplate: "%s | MELVIN GEORGE",
   description:
     "Hi, I'm Melvin George. I help the world by building quality software. Come check out my blog to see more of software development posts",
+  canonical: "https://melvingeorge.me",
   additionalMetaTags: [
     {
       name: "keywords",
