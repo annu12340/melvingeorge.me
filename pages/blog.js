@@ -11,7 +11,7 @@ const Blog = ({ linksData }) => {
   return (
     <>
       {/* SEO */}
-      <NextSeo title={"Blog"} />
+      <NextSeo title={"Blog"} canonical="https://melvingeorge.me/blog" />
 
       {/* Main content */}
       <main className="container max-w-screen-lg px-10 mx-auto mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4">

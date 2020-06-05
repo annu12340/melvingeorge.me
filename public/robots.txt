@@ -1,2 +1,5 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://melvingeorge.me/sitemap_main.xml
+Sitemap: https://melvingeorge.me/sitemap_blogs.xml

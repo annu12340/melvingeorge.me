@@ -6,6 +6,7 @@ const BlogSEO = ({ metadata }) => (
     <NextSeo
       title={metadata.title}
       description={metadata.description}
+      canonical={`https://melvingeorge.me/blog/${metadata.link}`}
       additionalMetaTags={[
         {
           name: "keywords",
