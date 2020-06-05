@@ -13,7 +13,7 @@ module.exports = withPlugins(
         },
       },
     ],
-    [nextOffline],
+    [nextOffline, { offlineGoogleAnalytics: true }],
   ],
   {
     devIndicators: {
