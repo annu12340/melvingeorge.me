@@ -1,0 +1,244 @@
+---
+title: How to make your Nextjs app into a progressive web app
+description: Step by step tutorial on how to make your Nextjs app into a progressive web application
+keywords: how to,progressive web app,javascript,nextjs,reactjs,nextjs into progressive web app
+author: MELVIN GEORGE
+date: 2020-06-06
+---
+
+![banner image](main.jpg)
+
+## Contents
+
+- [What is a PWA (Progressive Web app)?](#progressive-web-app)
+- [Make a `manifest.json` file](#make-manifest)
+- [Add `manifest.json` to Nextjs app](#add-manifest)
+- [Adding a service worker](#add-service-worker)
+- [Github Repo of this code](#github-repo)
+
+## <a name="progressive-web-app"></a> What is a PWA (Progressive Web app)?
+
+Let's think it like this way,
+It is a website but with some feature of a native mobile application:
+
+- It will work offline
+- Install like a native mobile application
+- A Native application like experience
+- It increases your web-app performance
+- It caches most of the content so you won't have to fetch for most common things every time
+- Increases your chance of being indexed by google search engines
+- More secure
+
+and many more.
+
+## <a name="make-manifest"></a> Make a `manifest.json` file
+
+- Go to the `public` directory inside of your Nextjs application.
+- Create a file called `manifest.json`
+
+```json
+{
+  "name": "<YOUR_APP_NAME>",
+  "short_name": "<YOUR_APP_SHORT_NAME>",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#90cdf4",
+  "theme_color": "#90cdf4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/logo-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/logo-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/logo-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/logo-152x152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/logo-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/logo-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "/logo-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
+```
+
+- `name`: application main name
+- `short_name`: application short name
+- `start_url`: the preferred URL that should be loaded when the user launches your web application
+- `display`: if given `standalone`, then web-app will be shown in a separate window
+- `background_color`: defines a placeholder background color for the application page to display before its stylesheet is loaded.
+- `theme_color`: defines the default theme color for the application.
+- `orientation` - defines the orientation of your application in the device.
+- `icons`- an array of different `sizes` of your application logo, its `type` and its `src` (source) to tell where to fetch the icon.
+
+### Note:
+
+There is a cool[ Web app manifest generator](https://app-manifest.firebaseapp.com/) for this 😃.
+
+## <a name="add-manifest"></a> Add `manifest.json` to Nextjs app
+
+Link your `manifest.json` file to your Nextjs app `head` tag.
+
+```html
+<!-- link manifest.json -->
+<link rel="manifest" href="/manifest.json" />
+<!-- this sets the color of url bar  -->
+<meta name="theme-color" content="#90cdf4" />
+```
+
+Now if you go to `Devtools` then clicking on the `Application` tab and then `Manifest` tab you can see all the fields are now generated, which shows that our `manifest.json` is valid now.
+
+![Manifest](manifest.png)
+
+Nice 🎊
+
+### Note:
+
+To make this work on apple based smartphones you need to add this additionally.
+
+```html
+<!-- this sets logo in Apple smatphones. -->
+<link rel="apple-touch-icon" href="/logo-96x96.png" />
+<!-- this sets the color of url bar in Apple smatphones -->
+<meta name="apple-mobile-web-app-status-bar" content="#90cdf4" />
+```
+
+## <a name="add-service-worker"></a> Adding a service worker
+
+First, let's install a package called `next-offline`
+
+```bash
+yarn add -D next-offline
+```
+
+### Add the `next-offline` package to Nextjs config
+
+Create a file called `next.config.js` in the root of your project directory.
+
+Then add this piece of code,
+
+```javascript
+const withOffline = require("next-offline");
+
+// your next.js configs
+const nextConfig = {};
+
+module.exports = withOffline(nextConfig);
+```
+
+### Make a server to route requests:
+
+Run in terminal
+
+```bash
+yarn add -D express
+```
+
+After that create `server.js` file to route your `/service-worker.js` file like this:
+
+```javascript
+const express = require("express");
+const path = require("path");
+const next = require("next");
+
+const dev = process.env.NODE_ENV !== "production";
+const app = next({ dev });
+const handle = app.getRequestHandler();
+
+app
+  .prepare()
+  .then(() => {
+    const server = express();
+
+    // requests to /service-worker.js
+    server.get(
+      "/service-worker.js",
+      express.static(path.join(__dirname, ".next"))
+    );
+
+    // all other requests
+    server.get("*", (req, res) => {
+      return handle(req, res);
+    });
+    server.listen(3000, (err) => {
+      if (err) throw err;
+      console.log("> Ready on http://localhost:3000");
+    });
+  })
+  .catch((ex) => {
+    console.error(ex.stack);
+    process.exit(1);
+  });
+```
+
+This tells the server to fetch `/service-worker.js` from `.next` and let all other requests be handled by Nextjs itself.
+
+### Add a `scripts` command to `package.json` file:
+
+```json
+"scripts":{
+  "server": "yarn build && NODE_ENV=production node server.js",
+}
+```
+
+like this.
+
+### Note:
+
+The Service worker will be enabled only on production mode and not in development mode.
+
+### Check your service worker
+
+Run in terminal:
+
+```bash
+yarn server
+```
+
+Go to `localhost:3000`.
+
+Go to `Devtools` > `Application` tab > `Service Worker`.
+
+![Service Worker](serviceworker.png)
+
+You can see that our service worker is now activated and running.
+
+### Check PWA with Lighthouse
+
+Go to `Devtools` > `Lighthouse` tab (or `Audit` tab) > `Generate Report`.
+
+![Generate Report](generatereport.png)
+
+![progressive Web Application](pwa.png)
+
+We made our Nextjs app into a progressive web application 😃🎊.
+
+### <a name="github-repo"></a> [Github Repo of this code](https://github.com/melvin2016/nextjs-pwa-blog)
