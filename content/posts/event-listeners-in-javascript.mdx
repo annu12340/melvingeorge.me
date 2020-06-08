@@ -1,0 +1,65 @@
+---
+title: How to add event listeners to HTML elements using JavaScript?
+description: Event listeners listen for specific events happening on HTML DOM elements
+keywords: event listeners in javascript,javascript,events,getElementById,click event
+author: MELVIN GEORGE
+date: 2020-06-09
+---
+
+Event listeners listen for specific events happening on HTML DOM elements.
+
+---
+
+Consider a login button like this.
+
+```html
+<button id="loginButton">Login</button>
+```
+
+We need to trigger some action when user clicks on this button.
+
+To achieve that we need to add a `click` event listener to it.
+
+First, let's get a reference to our login button in javascript using `getElementById()` function.
+
+```javascript
+// Get a reference to the login button using the id attribute.
+const loginButton = document.getElementById("loginButton");
+```
+
+Now lets add the `click` event listener using `addEventListener()` function.
+
+```javascript
+// Get a reference to the login button using the id attribute.
+const loginButton = document.getElementById("loginButton");
+
+// Adding the click event listener.
+loginButton.addEventListener("click", function () {
+  // You can add you own logic here
+  // Eg: We can send our user details to server
+  alert("Logging in..");
+  sendUserDetailsToServer();
+});
+```
+
+The `addEventListener()` function takes:
+
+- the event name as the first argument
+- function to invoke as the second argument
+
+In our case `click` is the first argument and a function that sends user details to the server as the second argument, this function will be triggered when the user clicks on the button.
+
+There are many types of event you can add to HTML DOM elements such as:
+
+- `click`
+- `keydown`
+- `keypress`
+- `load`
+- `focus`
+- `blur`
+
+[and many more.](https://www.w3schools.com/jsref/dom_obj_event.asp)
+
+### Feel free to share if you found this useful 😃.
+
+---

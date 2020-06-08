@@ -64,7 +64,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       content: `# ${data.title}
-      \n<p className="date">${formattedDate}<p>
+      \n<p className="date">Published ${formattedDate}<p>
       \n${content}`,
       frontMatter,
     },

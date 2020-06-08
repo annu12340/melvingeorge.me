@@ -6,11 +6,11 @@
   @apply border-b-2 border-blue-500 text-blue-700;
 }
 .blog code {
-  @apply bg-gray-300 px-1 m-1;
+  @apply bg-gray-300 px-1 box-content rounded inline-block;
 }
 
 .blog h1 {
-  @apply text-blue-700 text-4xl text-center;
+  @apply text-blue-600 text-3xl text-left;
 }
 
 .blog h2 {
@@ -19,6 +19,10 @@
 
 .blog h3 {
   @apply text-blue-700 text-lg mt-8 mb-4;
+}
+
+.blog p {
+  @apply text-base my-4 font-normal text-gray-800;
 }
 
 @screen lg {
@@ -32,10 +36,18 @@
   .blog h3 {
     @apply text-xl;
   }
-}
 
-.blog p {
-  @apply text-lg tracking-wide leading-relaxed my-4 font-normal;
+  .blog p {
+    @apply text-lg;
+  }
+
+  .blog li {
+    @apply text-lg;
+  }
+
+  .blog code {
+    @apply my-1 box-content inline-block;
+  }
 }
 
 .blog a {
@@ -43,18 +55,18 @@
 }
 
 .blog a:hover {
-  @apply bg-blue-200;
+  @apply bg-blue-200 underline transition transition-all duration-200;
 }
 
 .blog ul {
-  @apply my-4 pl-6  text-lg tracking-wide;
+  @apply my-4 pl-6  text-base;
 }
 .blog li {
-  @apply list-disc my-2;
+  @apply list-disc my-2 text-gray-900;
 }
 
 .blog .date {
-  @apply text-gray-700 text-sm italic mb-10 mt-1 text-center;
+  @apply text-gray-700 text-sm mb-10 mt-1 text-left;
 }
 
 .blog img {
