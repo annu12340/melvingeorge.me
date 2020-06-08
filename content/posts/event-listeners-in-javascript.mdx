@@ -20,14 +20,14 @@ We need to trigger some action when user clicks on this button.
 
 To achieve that we need to add a `click` event listener to it.
 
-First, let's get a reference to our login button in javascript using `getElementById()` function.
+First, let's get a reference to the login button in javascript using the `getElementById()` function.
 
 ```javascript
 // Get a reference to the login button using the id attribute.
 const loginButton = document.getElementById("loginButton");
 ```
 
-Now lets add the `click` event listener using `addEventListener()` function.
+Now let's attach the `click` event listener to the login button using the `addEventListener()` function.
 
 ```javascript
 // Get a reference to the login button using the id attribute.
@@ -42,12 +42,12 @@ loginButton.addEventListener("click", function () {
 });
 ```
 
-The `addEventListener()` function takes:
+The `addEventListener()` function takes 2 arguments:
 
 - the event name as the first argument
 - function to invoke as the second argument
 
-In our case `click` is the first argument and a function that sends user details to the server as the second argument, this function will be triggered when the user clicks on the button.
+In our case `click` is the event name (first argument) and a function that sends user details to the server as the second argument, this function will be triggered when the user clicks on the button.
 
 There are many types of event you can add to HTML DOM elements such as:
 
