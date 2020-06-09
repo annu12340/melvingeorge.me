@@ -1,0 +1,111 @@
+---
+title: How to trigger events programmatically in JavaScript?
+description: Trigger events programmatically using dispatchEvent method in JavaScript
+keywords: trigger events in javascript, javascript,
+author: MELVIN GEORGE
+date: 2020-06-10
+---
+
+Events can be programmatically triggered using the `dispatchEvent` method in an HTML DOM element.
+
+---
+
+Events are useful as it makes an application react according to the interaction by a user.
+
+Events can be triggered by a user or programmatically in JavaScript.
+
+Programmatically triggering events on an element is common in modern web applications.
+
+_Example: Trigger a verification event programmatically to check an OTP entered by a user._
+
+## dispatchEvent() method
+
+The `dispatchevent()` method is called on a HTML DOM element.
+
+It takes an `Event` object as its argument.
+
+```javascript
+const button = document.getElementById("button");
+
+button.addEventListener("click", () => {
+  alert("button clicked!");
+});
+
+// dispatchEvent() method:
+// Will invoke the click listener
+// attached to the button element programatically
+
+// This will be triggered as soon as code runs
+// and an alert is shown to the screen
+button.dispatchEvent(new Event("click"));
+```
+
+## Case Study - OTP receiver
+
+Assume we have an input element to enter OTP.
+
+![OTP PAGE](dispatch-event-otp.png)
+
+We need to verify the OTP entered by the user as soon as the length of the text is equal to 6 digits.
+
+If you note that we don't have a submit button as we are going to automatically submit this.
+
+Let's quickly write the code for that. 🏃‍♀️
+
+```javascript
+// Get reference of input element.
+const OTP = document.getElementById("otp");
+
+// Add custom checkOTP event to input element.
+OTP.addEventListener("checkOTP", (e) => {
+  // You can verify OTP here
+  alert("Your OTP" + e.target.value + "Verified");
+});
+
+// Add input event
+// This will get called whenever there is
+// a text entered into input element.
+OTP.addEventListener("input", (e) => {
+  if (e.target.value.length >= 6) {
+    const checkOTP = new Event("checkOTP");
+    OTP.dispatchEvent(checkOTP);
+  }
+});
+```
+
+- **Let us understand each code block**
+
+```javascript
+OTP.addEventListener("checkOTP", (e) => {
+  // Add OTP verification logic here
+  alert("Your OTP" + e.target.value + "Verified");
+});
+```
+
+- The `checkOTP` event checks if the OTP entered by the user is valid or not. We can do the verification check for OTP in the function body of the `checkOTP` event.
+
+```javascript
+OTP.addEventListener("input", (e) => {
+  if (e.target.value.length >= 6) {
+    const checkOTP = new Event("checkOTP");
+    OTP.dispatchEvent(checkOTP);
+  }
+});
+```
+
+- The `input` event is invoked whenever the user enters the text into the input field.
+
+- It first checks to see if the length of the text is greater than or equal to 6. If false, it returns.
+
+- If true, then it creates a new `Event` object called `checkOTP` for which we have already attached a listener to the `OTP` element.
+
+- The `checkOTP` `Event` object is then passed to
+  the `dispatchEvent()` function and finally invoking the `checkOTP` listener programmatically.
+
+## Output
+
+![OTP UI](final-render.gif)
+
+### Feel free to share if you found this useful 😃.
+
+---
