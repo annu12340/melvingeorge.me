@@ -8,7 +8,9 @@ const CodeBlockUtil = ({ language, value }) => {
       style={style}
       customStyle={{
         lineHeight: "0.75",
-        fontSize: ".9em",
+        fontSize: ".83em",
+        paddingTop: "25px",
+        paddingBottom: "25px",
       }}
     >
       {value}
