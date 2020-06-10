@@ -1,0 +1,50 @@
+---
+title: How to round decimals numbers in JavaScript?
+description: Learn how to round decimal numbers in Javascript
+keywords: round decimal numbers javascript,toFixed function,javascript,decimals numbers,floats,numbers
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-11
+---
+
+Decimal numbers can be rounded using the `toFixed()` function.
+
+---
+
+Let's say you have a decimal number like this.
+
+```javascript
+const number = 467.8945645672283838;
+```
+
+You can round the number to 2 decimal places by providing `2` as the argument to `toFixed` function.
+
+```javascript
+const number = 467.8945645672283838;
+number.toFixed(2); // 467.89 - Only 2 numbers after decimal point is returned.
+```
+
+- Argument `2` passed to `toFixed` function is _optional_.
+
+- If you don't give the `toFixed()` function any argument, only the integer part of the number is returned without the decimal part.
+
+```javascript
+const number = 467.8945645672283838;
+number.toFixed(); // 467 - No decimal part
+```
+
+### Important Note:
+
+- The `toFixed` function always returns string type and not a number type.
+- You may need to convert it to a number type before you can do some numerical calculation with it.
+- A string can be converted to a number using `Number()` function.
+
+```javascript
+const number = 467.8945645672283838;
+const roundedNumberString = number.toFixed(2); // returns string type
+const roundedNumber = Number(roundedNumberString); // converted to number type
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
