@@ -45,12 +45,14 @@ export async function getStaticProps() {
     const href = link.replace(".mdx", "");
     const description = data.description;
     const date = data.date;
+    const tagName = data.category;
 
     return {
       title,
       href,
       description,
       date,
+      tagName,
     };
   });
 
