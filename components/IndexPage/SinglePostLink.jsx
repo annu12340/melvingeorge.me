@@ -6,7 +6,7 @@ const FontAwesomeIcon = dynamic(
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Tag from "../Tag/Tag";
 const SinglePostLink = ({ title, href, description, tagName }) => (
-  <div className="mb-16 shadow p-4 rounded">
+  <div className="mb-16">
     <Link href="/blog/[link]" as={`/blog/${href}`}>
       <span
         className="text-2xl font-medium cursor-pointer duration-300 transition transition-colors  hover:bg-gray-200 hover:text-blue-600"
