@@ -11,6 +11,8 @@ const CodeBlockUtil = ({ language, value }) => {
         fontSize: ".83em",
         paddingTop: "25px",
         paddingBottom: "25px",
+        marginTop: "35px",
+        marginBottom: "35px",
       }}
     >
       {value}
