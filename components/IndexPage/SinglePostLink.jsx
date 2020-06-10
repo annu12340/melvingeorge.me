@@ -4,7 +4,7 @@ const FontAwesomeIcon = dynamic(
   async () => (await import("@fortawesome/react-fontawesome")).FontAwesomeIcon,
 );
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import Tag from "../Tag/Tag";
+const Tag = dynamic(() => import("../Tag/Tag"));
 const SinglePostLink = ({ title, href, description, tagName }) => (
   <div className="mb-16">
     <Link href="/blog/[link]" as={`/blog/${href}`}>
