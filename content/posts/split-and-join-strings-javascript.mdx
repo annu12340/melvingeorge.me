@@ -1,0 +1,60 @@
+---
+title: How to split and join strings in JavaScript?
+description: Learn the usage of split and join methods in JavaScript
+keywords: split method in javascript, join method in javascript, javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-12
+---
+
+The `split()` method splits a large string into an array of strings and the `join()` method joins an array of elements into a string.
+
+---
+
+## `split` method
+
+```javascript
+const str = "How are you ?";
+```
+
+Let's say you have a string like this. Let's separate this string using the `split` string method.
+
+The `split` method takes a separator as an argument.
+
+```javascript
+const str = "How are you ?";
+
+str.split(" "); // Result: ["How","are","you","?"]
+```
+
+- The `split` method separates the strings when it encounters the separating string, in this case, a blank space.
+- It returns an array of strings.
+- This is a string only method.
+
+## `join` method
+
+```javascript
+const nameArray = ["John", "Helen", "Roy", "Lily"];
+```
+
+The elements of `nameArray` can be joined using the `join` method.
+
+```javascript
+const nameArray = ["John", "Helen", "Roy", "Lily"];
+nameArray.join(); // Result: John,Helen,Roy,Lily
+```
+
+- If nothing is provided as an argument into the `join` method, it uses `,` (comma) as the default separator.
+- It returns a string.
+- This is an array only method.
+
+Let's now use `-` as a separator in the `join` method and see the result.
+
+```javascript
+const nameArray = ["John", "Helen", "Roy", "Lily"];
+nameArray.join("-"); // Result: John-Helen-Roy-Lily
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
