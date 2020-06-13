@@ -1,0 +1,48 @@
+---
+title: How to replace part of a string with another string in JavaScript?
+description: Learn the usage of replace string method in JavaScript
+keywords: replace method,replace string with another string in javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-13
+---
+
+We can use the `replace` string method to replace a string with another string in JavaScript.
+
+---
+
+Consider this string.
+
+```javascript
+const greeting = "Hi, Friend";
+```
+
+Let's replace the string `Hi` to `Hello`.
+
+```javascript
+const greeting = "Hi, Friend";
+
+// replacing string Hi to Hello
+greeting.replace("Hi", "Hello"); // Result: Hello, friend
+```
+
+- The method accepts the string to replace as the first argument.
+- And the string to be replaced with as the second argument.
+- It returns a string with the replaced string.
+- The method also accepts [Regular expression](https://www.w3schools.com/jsref/jsref_obj_regexp.asp) as the first argument.
+- It is a string only method.
+
+### Using regular expression
+
+We can also replace all the occurrences of a specific word in a string using a regular expression.
+
+```javascript
+const favoriteLine = "Blue has 3 Blue bottles";
+
+// all occurences of Blue will be replaced by Green
+str.replace(/blue/gi, "Green"); // Result: Green has 3 Green bottles
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
