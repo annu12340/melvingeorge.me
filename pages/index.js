@@ -67,9 +67,13 @@ export async function getStaticProps() {
     return link;
   });
 
+  const filteredLinksData = linksData.filter((_, index) => {
+    return index <= 15;
+  });
+
   return {
     props: {
-      linksData,
+      linksData: filteredLinksData,
     },
   };
 }

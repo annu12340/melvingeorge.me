@@ -1,5 +1,6 @@
 // COMPONENTS
 import SinglePostLink from "./SinglePostLink";
+import Link from "next/link";
 
 const Main = ({ linksData }) => (
   <main
@@ -15,6 +16,11 @@ const Main = ({ linksData }) => (
         tagName={linkData.tagName}
       />
     ))}
+    <Link href="/blog">
+      <a className="font-light text-xl text-blue-500">
+        Read more articles &#8594;
+      </a>
+    </Link>
   </main>
 );
 
