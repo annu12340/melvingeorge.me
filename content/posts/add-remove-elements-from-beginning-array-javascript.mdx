@@ -1,0 +1,60 @@
+---
+title: How to add and remove elements from the beginning of an array in JavaScript?
+description: Learn how to use the shift and unshift array methods in JavaScript.
+keywords: event listeners in javascript,javascript,events,getElementById,click event
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-14
+---
+
+The `unshit` array method adds an element to the beginning of an array and the `shift` method removes the first element from an array.
+
+---
+
+## Adding elements to the beginning of the array
+
+Consider this array of names.
+
+```javascript
+const names = ["John", "Lily", "Helen", "Roy"];
+```
+
+How can we add another name `Michael` to the beginning of this array?
+
+We can use the `unshift` array method here to achieve this.
+
+```javascript
+const names = ["John", "Lily", "Helen", "Roy"];
+
+// add elements to the beginning
+const newLength = names.unshift("Michael"); // Result: ["Michael", "John", "Lily", "Helen", "Roy"]
+```
+
+- The `unshift` method adds an element to the beginning of an array.
+- It accepts the item to be added as the argument
+- It returns the new length of an array
+
+## Removing elements from the beginning of an array
+
+Let's consider our old array with `Michael` added.
+
+```javascript
+const names = ["Michael", "John", "Lily", "Helen", "Roy"];
+```
+
+Now we no longer need `Michael` and want to remove it.
+
+We could use the `shift` array method to acheive this.
+
+```javascript
+const names = ["Michael", "John", "Lily", "Helen", "Roy"];
+const newArray = names.shift();
+```
+
+- The `shift` method removes the first element on an array.
+- It didn't accept any arguments
+- It returns the removed item
+
+### Feel free to share if you found this useful 😃.
+
+---
