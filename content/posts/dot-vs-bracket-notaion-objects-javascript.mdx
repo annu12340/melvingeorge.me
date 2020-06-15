@@ -1,0 +1,83 @@
+---
+title: Dot vs Bracket object notation in Javascript
+description: Difference between dot and bracket object notation in JavaScript
+keywords: dot vs bracket javascript,dot object notation in javascript,bracket object notation in javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-15
+---
+
+Consider this object,
+
+```javascript
+const Person = {
+  name: "John",
+  age: 23,
+  email: "john@example.com",
+};
+```
+
+We can access this object's properties using the dot notation and bracket notation.
+
+## Dot Notation - `.`
+
+Let's access the `name` property on the `Person` object.
+
+```javascript
+const Person = {
+  name: "John",
+  age: 23,
+  email: "john@example.com",
+};
+
+// using dot notation
+const personName = Person.name; // Result: John
+```
+
+- Properties can be accessed using the `.` after the object's name followed by the property name you need to access.
+- It most common way of retrieving property from an object.
+
+## Bracket Notation - `[]`
+
+We can use our old object `Person`.
+
+```javascript
+const Person = {
+  name: "John",
+  age: 23,
+  email: "john@example.com",
+};
+
+// using bracket notation
+const personName = Person["name"]; // Result: John
+```
+
+- Properties can be accessed using `[]` after the object's name followed by the property name inside the bracket.
+
+### Why do we need bracket notation if we have dot notation?
+
+- Bracket notation helps in getting computed value.
+
+Consider this object,
+
+```javascript
+// defining new variable with value age
+const propertyName = "age";
+
+const Person = {
+  name: "John",
+  age: 23,
+  email: "john@example.com",
+};
+
+// access object property by passing variable value
+Person[propertyName]; // Result: 23
+```
+
+Here the `Person` Object is given variable `propertyName` inside the bracket. JavaScript checks the value of the variable and puts that value into the bracket and then returns the property value from the object.
+
+Bracket notation is useful when working with dynamic data.
+
+### Feel free to share if you found this useful 😃.
+
+---
