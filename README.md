@@ -1,6 +1,4 @@
-# Full backend of: MELVIN GEORGE's blog
+# Backend/Frontend: MELVIN GEORGE's blog
 
 - Runtime: Node.js
 - Frameworks: Express.js - Next.js
-- Database: MongoDB
-- Data parsing: GraphQL
