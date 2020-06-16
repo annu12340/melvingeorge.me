@@ -1,0 +1,106 @@
+---
+title: Different ways to create objects in JavaScript
+description: Learn how to create objects using constructor functions, literals, create(), etc
+keywords: object literals,constructor function in javascript,object constructor,create method in javascript, javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-16
+---
+
+![By Deva Darshan on Unsplash](main.jpg)
+
+---
+
+Objects are a way of holding related data and code.
+
+---
+
+## Using Objects literals
+
+Objects can be created using literals.
+
+To create an object literal define a variable and assign it with curly braces `{}`.
+
+```javascript
+// object literal
+const Person = {};
+```
+
+You can also add properties and functions to the `Person` object.
+
+Let's add `name` property and `sayHello` function to the `Person` object.
+
+```javascript
+const Person = {
+  name: "John",
+  sayHello: function () {
+    console.log("Hey, How are you?");
+  },
+};
+```
+
+## Using Constructor Functions
+
+Objects can be created using constructor functions.
+
+```javascript
+// constructor function
+const Person = function () {
+  name = this.name;
+  age = this.age;
+};
+```
+
+Here we have a function called `Person`, these are called constructor functions.
+
+Now let's make an object from this constructor function.
+
+```javascript
+const Person = function (name, age) {
+  name = this.name;
+  age = this.age;
+};
+
+// making object from constructor function
+const John = new Person("John", "23"); // Result: { name: "John", age: "23"}
+
+const Lily = new Person("Lily", "20"); // Result: {name: "Lily", age: "20"}
+```
+
+- To create new objects from a constructor function we have to use the `new` keyword followed by the constructor function name.
+- Constructor functions are the blueprint on how to make an object
+- Names of constructor function start with a capital letter, in this case, `Person`.
+- Constructor functions accept parameters to make objects with data, in our case we have parameters `name` and `age` which is then assigned to name and age variables inside the function.
+- The `this` keyword refers to the created object itself. In our case, we made objects `John` and `Lily`.
+
+## The `Object()` constructor
+
+We can create objects using `Object()` constructor function.
+
+```javascript
+// using Object()
+const John = new Object({
+  name: "John",
+  age: "23",
+});
+
+// Result: {name: "John", age: "23"}
+```
+
+- If it is not provided with any parameters it creates an empty object.
+
+## The `create()` method
+
+Let's say you want to create another object from our `John` Object.
+
+Here we can use the `create()` method available on the `Object`.
+
+```javascript
+const anotherPerson = Object.create(John);
+```
+
+Now we have all the properties and methods which were available to `John` Object in our new object.
+
+### Feel free to share if you found this useful 😃.
+
+---
