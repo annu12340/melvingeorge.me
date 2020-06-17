@@ -1,0 +1,87 @@
+---
+title: How to remove properties or methods from an object in JavaScript?
+description: Learn how to remove properties and methods from objects in JavaScript
+keywords: delete operator,remove,remove properties,remove methods,object,properties,methods,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-17
+---
+
+Properties and methods from an object can be deleted using the `delete` operator
+
+---
+
+We know that we can add properties and methods to an object using the `.` or the `[]` notation.
+
+To delete, there are not any methods in the `Object()` constructor function.
+
+We have to use the `delete` operator.
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 23,
+  bio: "I'm a human",
+};
+```
+
+Let's now remove the `bio` property from `John` object.
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 23,
+  bio: "I'm a human",
+};
+
+// delete bio property
+delete John.bio;
+
+/*
+
+Result:
+--------
+
+{
+    name: "John Doe", 
+    age: 23, 
+}
+
+*/
+```
+
+You have to write the `delete` keyword followed by the property you want to remove.
+
+This applies to remove methods from an object.
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 23,
+  bio: "I'm a human",
+  sayHello: () => {
+    console.log("Hello!");
+  },
+};
+
+// delete sayHello function
+delete John.sayHello;
+
+/*
+
+Result:
+--------
+
+{
+    name: "John Doe", 
+    age: 23, 
+    bio: "I'm a human"
+}
+
+
+*/
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
