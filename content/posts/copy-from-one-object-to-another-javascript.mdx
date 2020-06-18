@@ -1,0 +1,78 @@
+---
+title: How to copy properties and methods from one object to another object in JavaScript?
+description: Learn how to use the Object.assign() method to copy properties and methods from one object to another object in JavaScript
+keywords: Object.assign,object,copy objects,method,copy properties and methods,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-18
+---
+
+Properties and methods can be copied from one object to another object using the `Object.assign()` method.
+
+---
+
+Let's say you have 2 objects `obj1` and `obj2`.
+
+```javascript
+const obj1 = { name: "Object 1" };
+
+const obj2 = { bio: "This is my bio" };
+```
+
+We can copy the properties and methods from `obj2` to `obj1` using the `Object.assign()` method.
+
+```javascript
+const obj1 = { name: "Object 1" };
+
+const obj2 = { bio: "This is my bio" };
+
+// Copy from obj2 to obj1
+Object.assign(obj1, obj2);
+
+/*
+
+obj1 - Result:
+--------------
+
+{
+    name: "Object 1",
+    bio: "This is my bio"
+}
+
+*/
+```
+
+- The method takes 2 parameters.
+- The first parameter is the target object.
+- The second parameter is the source object in which you want the contents to be copied.
+- The method returns the target object.
+
+### If the target object has the same property name as the source object it will be overridden.
+
+```javascript
+const obj1 = { name: "Object 1", age: 23 };
+
+const obj2 = { bio: "This is my bio", age: 34 };
+
+// Copy from obj2 to obj1
+Object.assign(obj1, obj2);
+
+/*
+
+obj1 - Result:
+--------------
+
+{
+    name: "Object 1", 
+    age: 34, 
+    bio: "This is my bio"
+}
+
+*/
+```
+
+The property `age: 23` in `obj1` is overridden by the property `age: 34` in `obj2`.
+
+### Feel free to share if you found this useful 😃.
+
+---
