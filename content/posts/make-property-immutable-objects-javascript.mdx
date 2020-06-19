@@ -1,0 +1,46 @@
+---
+title: How to make a property or a method in an object immutable in JavaScript?
+description: Learn how to make properties and methods in objects immutable in JavaScript
+keywords: Object.defineProperty,make properties and methods immutable,objects,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-19
+---
+
+Let's say you have an object called `John`.
+
+```javascript
+const John = {};
+```
+
+Now we can add the `name` property and assign it a value of `John Doe` and also make it a not changing or immutable property.
+
+We can acheive this through the `Object.defineProperty()` static method.
+
+```javascript
+const John = {};
+
+// setting property name: "John Doe"
+// and also making it immutable
+Object.defineProperty(John, "name", {
+  value: "John Doe",
+  writable: false,
+});
+```
+
+The method accepts:
+
+- The object to add the property as the first parameter, in our case `John`.
+- The name of the property you want to add to the object as the second parameter, in our case the `name` property.
+- The third parameter is called descriptor where we are setting the `value` option to the value we want in our `name` property in our case "John Doe" and `writable` property to `false` for making it immutable.
+
+Now if you try to change the value of the `name` in object `John`, It will throw an error in strict mode.
+
+```javascript
+// will throw an error
+John.name = "Lily";
+```
+
+### There are many other options you can set in the descriptor including `writable`, `enumerable`, and `configurable`.
+
+### Check more about these options in [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
