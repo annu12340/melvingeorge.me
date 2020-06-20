@@ -1,0 +1,67 @@
+---
+title: How to loop over properties in objects in JavaScript?
+description: Learn the usage of Object.entries method in JavaScript
+keywords: Object.entries,loop over object in javascript,loop,objects,properties,methods,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-20
+---
+
+Looping over properties and methods can be achieved by combining `for...of` expression and `Object.entries()` method.
+
+---
+
+Let's say you have an object `John` with properties `name` and `age`.
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 23,
+};
+```
+
+Now let's loop over this object.
+
+First, let's convert our object into an array using the `Object.entries()` method.
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 23,
+};
+
+// convert object into an array
+const arr = Object.entries(John);
+```
+
+The `arr` variable now contains the key and value as an inner array in its index positions as shown below.
+
+```javascript
+[
+  ["name", "John Doe"],
+  ["age", 23],
+];
+```
+
+Now you can loop over the array using the `for...of` expression.
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 23,
+};
+
+// convert object into an array
+const arr = Object.entries(John);
+
+// loop over array
+for (let [key, value] of arr) {
+  console.log(key, ":", value);
+}
+```
+
+You can use the array destructuring to get the value when looping over the array.
+
+### Feel free to share if you found this useful 😃.
+
+---
