@@ -1,0 +1,59 @@
+---
+title: How to make an object immutable in JavaScript?
+description: Learn the usage of Object.freeze() method in JavaScript
+keywords: Object.freeze method,make object read only,immutable object,object,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-21
+---
+
+To make an object read only or immutable you can use the `Object.freeze()` method.
+
+---
+
+Consider this object,
+
+```javascript
+const Car = {
+  name: "Audi",
+  year: "2020",
+};
+```
+
+We don't want any more properties to be added to this `Car` object.
+
+Let's use the `Object.freeze()` method to achieve this.
+
+```javascript
+const Car = {
+  name: "Audi",
+  year: "2020",
+};
+
+// make car object immutable
+Object.freeze(Car);
+```
+
+Now if you try to add or change any properties in the `Car` object, it will throw an error in strict mode.
+
+```javascript
+const Car = {
+  name: "Audi",
+  year: "2020",
+};
+
+// make car object immutable
+Object.freeze(Car);
+
+// try to add a new property
+Car.engineType = "BS-VI"; // error in strict mode
+```
+
+- The `Object.freeze()` method accepts the object to make it immutable as the parameter.
+- The method returns the same object which is passed into it.
+- Cannot add or modify any properties and methods after calling the method.
+- It also restricts any modification to the prototype.
+
+### Feel free to share if you found this useful 😃.
+
+---
