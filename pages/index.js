@@ -4,6 +4,7 @@ import { useContext } from "react";
 // COMPONENTS
 import Header from "../components/IndexPage/Header";
 import Main from "../components/IndexPage/Main";
+import Footer from "../components/Footer/Footer";
 import { NextSeo } from "next-seo";
 // CONTEXT
 import { SetActiveTabContext } from "../context/ActiveTab";
