@@ -1,0 +1,47 @@
+---
+title: How to get all property names from an object in JavaScript?
+description: Learn the usage of Object.getOwnPropertyNames() method in JavaScript
+keywords: Object.getOwnPropertyNames method,get all properties from object,properties,methods,object,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-22
+---
+
+Let's consider an object called `John`.
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 32,
+  bio: "John Doe is a great guy",
+};
+```
+
+We can get all the properties in this object using the `Object.getOwnPropertyNames()` method.
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 32,
+  bio: "John Doe is a great guy",
+};
+
+// get all property names
+const arr = Object.getOwnPropertyNames(John);
+
+/*
+
+Result:
+-------
+
+["name", "age", "bio"]
+
+*/
+```
+
+- The `Object.getOwnPropertyNames()` method accepts the object to get all the property names as the parameter.
+- It returns an array containing the property names.
+
+### Feel free to share if you found this useful 😃.
+
+---
