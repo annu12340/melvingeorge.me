@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { SetActiveTabContext } from "../context/ActiveTab";
 import { NextSeo } from "next-seo";
-import Footer from "../components/Footer/Footer";
 
 const About = () => {
   // Set active tab to about page
@@ -45,9 +44,6 @@ const About = () => {
           that are being used by millions of people around the world.
         </p>
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 };

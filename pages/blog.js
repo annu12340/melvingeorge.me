@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 const Card = dynamic(() => import("../components/BlogPage/Card"));
 import { SetActiveTabContext } from "../context/ActiveTab";
 import { NextSeo } from "next-seo";
-import Footer from "../components/Footer/Footer";
 
 const Blog = ({ linksData }) => {
   // Set active tab to blog page
@@ -28,9 +27,6 @@ const Blog = ({ linksData }) => {
             <p>It's empty here</p>
           )}
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </>
   );
 };
