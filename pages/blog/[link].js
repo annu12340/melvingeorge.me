@@ -6,6 +6,7 @@ import { useContext } from "react";
 // COMPONENTS
 import BlogRenderer from "../../components/PostsPage/BlogRenderer";
 import GoBackButton from "../../components/Utils/GoBackButton";
+import Footer from "../../components/Footer/Footer";
 
 // CONTEXT
 import { SetActiveTabContext } from "../../context/ActiveTab";
@@ -19,6 +20,7 @@ const Post = ({ frontMatter: metadata, content }) => {
     <>
       <BlogRenderer metadata={metadata} content={content} />
       <GoBackButton />
+      <Footer />
     </>
   );
 };
