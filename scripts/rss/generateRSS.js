@@ -16,9 +16,10 @@ const rss = `<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
 <link>https://melvingeorge.me/</link>
 </image>
 <atom:link href="https://melvingeorge.me/feed.xml" rel="self" type="application/rss+xml"/>
-${
-  allBlogs.map((blog) =>
-    `<item>
+${allBlogs
+  .map(
+    (blog) =>
+      `<item>
     <title>${blog.title}</title>
     <link>${blog.link}</link>
     <pubDate>${new Date(blog.date).toUTCString()}</pubDate>
@@ -26,7 +27,7 @@ ${
     <description>${blog.description}</description>
 </item>`
   )
-}
+  .join("")}
 </channel>
 </rss>
 `;
