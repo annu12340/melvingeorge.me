@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { SetActiveTabContext } from "../context/ActiveTab";
 import { NextSeo } from "next-seo";
+import Footer from "../components/Footer/Footer";
 
 const About = () => {
   // Set active tab to about page
@@ -21,7 +22,8 @@ const About = () => {
           High School from Fr. Joseph Memorial HSS I went to{" "}
           <a href="https://www.jainuniversity.ac.in/" target="blank">
             Jain University, Bangalore
-          </a>{" "}
+          </a>
+          {" "}
           where I’m currently pursuing my Bachelor’s in Computer Applications
           specializing in Cloud technology and Information security.
         </p>
@@ -29,17 +31,23 @@ const About = () => {
           I’ve written code for{" "}
           <a href="https://www.mozilla.org/en-US/" target="blank">
             Mozilla,
-          </a>{" "}
+          </a>
+          {" "}
           <a href="https://qiskit.org/" target="blank">
             Qiskit,
-          </a>{" "}
+          </a>
+          {" "}
           and an active contributor to many{" "}
           <a href="https://github.com/melvin2016" target="blank">
             frontend open-source projects
-          </a>{" "}
+          </a>
+          {" "}
           that are being used by millions of people around the world.
         </p>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };

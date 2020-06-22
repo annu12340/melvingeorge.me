@@ -20,6 +20,9 @@ const Post = ({ frontMatter: metadata, content }) => {
     <>
       <BlogRenderer metadata={metadata} content={content} />
       <GoBackButton />
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
