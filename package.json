@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "postexport": "node scripts/sitemap/generateXML.js",
+    "postexport": "node scripts/sitemap/generateXML.js && node scripts/rss/generateRSS.js",
     "server": "yarn build && NODE_ENV=production node server.js",
     "server-dev": "NODE_ENV=development node server.js",
     "deploy": "npm run build && npm run export"
