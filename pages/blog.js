@@ -24,7 +24,6 @@ const Blog = ({ linksData }) => {
           <p>It's empty here</p>
         )}
       </main>
-      <Footer />
     </>
   );
 };

@@ -24,9 +24,6 @@ const Home = ({ linksData }) => {
 
       {/* Main Section */}
       <Main linksData={linksData} />
-
-      {/* Footer Section */}
-      <Footer />
     </>
   );
 };
