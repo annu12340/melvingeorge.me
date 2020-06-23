@@ -68,7 +68,7 @@ export async function getStaticProps() {
   });
 
   const filteredLinksData = linksData.filter((_, index) => {
-    return index <= 15;
+    return index <= 29;
   });
 
   return {
