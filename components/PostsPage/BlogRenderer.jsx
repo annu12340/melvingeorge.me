@@ -1,6 +1,6 @@
 // MODULES
 import dynamic from "next/dynamic";
-const ReactMarkdown = dynamic(() => import("react-markdown/with-html"));
+import ReactMarkdown from "react-markdown";
 
 // COMPONENTS
 const ImageLoaderUtil = dynamic(() => import("../Utils/ImageLoaderUtil"));
@@ -12,7 +12,9 @@ const BlogRenderer = ({ metadata, content }) => {
   return (
     <>
       <BlogSEO metadata={metadata} />
-      <div className="relative container max-w-screen-md mx-auto px-4 py-10 bg-gray-100 h-auto min-h-screen rounded">
+      <div
+        className="relative container max-w-screen-md mx-auto px-4 py-10 bg-gray-100 h-auto min-h-screen rounded"
+      >
         <article>
           <ReactMarkdown
             escapeHtml={false}
