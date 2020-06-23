@@ -1,0 +1,62 @@
+---
+title: How to check if a property is present in an object in JavaScript?
+description: Learn the usage of object hasOwnProperty() method in JavaScript
+keywords: obj.hasOwnProperty() method,check if property is present on an object,object,property,method,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-23
+---
+
+Let's say you have an object called `John`.
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 23,
+  salary: 23000,
+};
+```
+
+We can check whether the property `salary` property is present in the object using the `hasOwnProperty()` method available in the prototype chain of the `John` object.
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 23,
+  salary: 23000,
+  sayHello: () => {
+    console.log("Hello!");
+  },
+};
+
+// check if the salary is present in John
+John.hasOwnProperty("salary");
+```
+
+- The method returns `true` if present and `false` if not.
+- Available in the prototype chain of an object.
+
+You can also check if a method is present in the object.
+
+Now let's check if `sayHello` method is present.
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 23,
+  salary: 23000,
+  sayHello: () => {
+    console.log("Hello!");
+  },
+};
+
+// check if the salary is present in John
+John.hasOwnProperty("salary"); // Result: true
+
+// check if sayHello function is present in John
+John.hasOwnProperty("sayHello"); // Result: true
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
