@@ -1,6 +1,17 @@
 import React, { useRef, useEffect } from "react";
 import Markdown from "markdown-to-jsx";
-import hljs from "highlight.js";
+const hljs = require("highlight.js/lib/core");
+hljs.registerLanguage(
+  "javascript",
+  require("highlight.js/lib/languages/javascript")
+);
+hljs.registerLanguage("bash", require("highlight.js/lib/languages/bash"));
+hljs.registerLanguage("json", require("highlight.js/lib/languages/json"));
+hljs.registerLanguage("css", require("highlight.js/lib/languages/css"));
+hljs.registerLanguage(
+  "html",
+  require("highlight.js/lib/languages/vbscript-html")
+);
 import ImageLoaderUtil from "../Utils/ImageLoaderUtil";
 
 export function HighlightedMarkdown({ children, metadata }) {
