@@ -1,0 +1,90 @@
+---
+title: How to inherit properties in JavaScript?
+description: Learn how to inherit properties in vanilla JavaScript
+keywords: inherit,properties,objects,methods,inheriting properties,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-24
+---
+
+Consider a base class (constructor function) called `Vehicle` which we will use to inherit the properties from.
+
+```javascript
+// Vehicle base class
+const Vehicle = function (type, year, numberOfTyres) {
+  this.type = type;
+  this.year = year;
+  this.numberOfTyres = numberOfTyres;
+};
+```
+
+Let's make another class called `Car` and inherit the properties from the `Vehicle` class using the `call()` method available in the `Vehicle` constructor function or class.
+
+```javascript
+// Vehicle base class
+const Vehicle = function (type, year, numberOfTyres) {
+  this.type = type;
+  this.year = year;
+  this.numberOfTyres = numberOfTyres;
+};
+
+// Car class
+const Car = function (name, type, year, numberOfTyres) {
+  // inheriting properties
+  Vehicle.call(this, type, year, numberOfTyres);
+  this.name = name;
+};
+```
+
+The `call()` method available in the `Vehicle` class is used to inherit the properties and methods from the `Vehicle` class.
+
+- The method accepts the context to call the function as the first argument in our case we provided the `this` keyword so that context of the `Vehicle` class is now the `Car` class.
+- The remaining parameters in the `call()` method are supplied to `Vehicle` class to populate its appropriate field, in our case `type`, `year`, and `numberOfTyres` fields.
+
+Now let's make an instance of `Car` using the `new` keyword and supplying required values to it.
+
+```javascript
+// Vehicle base class
+const Vehicle = function (type, year, numberOfTyres) {
+  this.type = type;
+  this.year = year;
+  this.numberOfTyres = numberOfTyres;
+};
+
+// Car
+const Car = function (name, type, year, numberOfTyres) {
+  // inheriting properties
+  Vehicle.call(this, type, year, numberOfTyres);
+  this.name = name;
+};
+
+// Make an instance of Car
+const BMW = new Car("BMW", "car", 2020, 4);
+```
+
+If we look into the contents inside the `BMW` object we can now see all the properties which were defined in the `Vehicle` and `Car` classes
+
+```javascript
+console.log(BMW);
+
+/*
+
+Result:
+-------
+
+{
+    name: "BMW"
+    numberOfTyres: 4
+    type: "car"
+    year: 2020
+}
+
+
+/*
+```
+
+We will be discussing inheriting methods in the next post.
+
+### Feel free to share if you found this useful 😃.
+
+---
