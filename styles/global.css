@@ -5,8 +5,16 @@
 .about a {
   @apply border-b-2 border-blue-500 text-blue-700;
 }
+
+.blog pre {
+  @apply w-full text-sm my-6;
+}
 .blog code {
-  @apply bg-gray-300 px-1 box-content rounded inline-block;
+  @apply bg-gray-300 px-1 rounded;
+}
+.blog pre code {
+  @apply p-3 rounded-sm;
+  background-color: #011627;
 }
 
 .blog h1 {
@@ -43,10 +51,6 @@
 
   .blog li {
     @apply text-lg;
-  }
-
-  .blog code {
-    @apply my-1 box-content inline-block;
   }
 }
 

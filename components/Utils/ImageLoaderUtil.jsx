@@ -8,7 +8,7 @@ const ImageLoaderUtil = ({ alt: altText, src: source, link }) => {
     <p className="relative">
       <a className="cursor-pointer" href={src} target="blank">
         <img
-          className="w-full top-0 left-0 absolute transition transition-all duration-300 ease-out"
+          className="w-full top-0 left-0 absolute transition-all duration-300 ease-out"
           src={src}
           alt={altText}
           loading="lazy"
