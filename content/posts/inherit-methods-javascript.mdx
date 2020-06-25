@@ -1,0 +1,188 @@
+---
+title: How to inherit methods in JavaScript?
+description: Learn how to inherit methods in vanilla JavaScript
+keywords: inherit,methods,objects,inherit methods,properties,inheritance,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-25
+---
+
+We already discussed inheriting properties in a previous post on [How to inherit properties in JavaScript?](https://melvingeorge.me/blog/inherit-properties-javascript)
+
+Today we will be discussing on inheriting methods in JavaScript.
+
+Consider our old class `Vehicle` from our [previous post](https://melvingeorge.me/blog/inherit-properties-javascript).
+
+```javascript
+// Vehicle base class
+const Vehicle = function (type, year, numberOfTyres) {
+  this.type = type;
+  this.year = year;
+  this.numberOfTyres = numberOfTyres;
+};
+```
+
+Let's now add a method called `start()` to the `Vehicle` class.
+
+It is better and a convention to add methods to the prototype chain of the class.
+
+```javascript
+// Vehicle base class
+const Vehicle = function (type, year, numberOfTyres) {
+  this.type = type;
+  this.year = year;
+  this.numberOfTyres = numberOfTyres;
+};
+
+// add a method to the prototype chain
+Vehicle.prototype.start = () => {
+  console.log("Vehicle started");
+};
+```
+
+Ok. Everything is fine till now. 😃
+
+Now, let's make another class called `Car` and inherit all the properties as well as our methods from the `Vehicle` base class.
+
+```javascript
+// Vehicle base class
+const Vehicle = function (type, year, numberOfTyres) {
+  this.type = type;
+  this.year = year;
+  this.numberOfTyres = numberOfTyres;
+};
+
+// add a method to the prototype chain
+Vehicle.prototype.start = () => {
+  console.log("Vehicle started");
+};
+
+// Car class
+const Car = function (name, type, year, numberOfTyres) {
+  Vehicle.call(this, type, year, numberOfTyres);
+  this.name = name;
+};
+```
+
+If you recall from our previous post on [How to inherit properties in JavaScript?](https://melvingeorge.me/blog/inherit-properties-javascript), then you would know that the `Vehicle.call()` is the method used to inherit properties from the `Vehicle` base class.
+
+Let's create an object called `Audi`.
+
+```javascript
+// Vehicle base class
+const Vehicle = function (type, year, numberOfTyres) {
+  this.type = type;
+  this.year = year;
+  this.numberOfTyres = numberOfTyres;
+};
+
+// add a method to the prototype chain
+Vehicle.prototype.start = () => {
+  console.log("Vehicle started");
+};
+
+// Car class
+const Car = function (name, type, year, numberOfTyres) {
+  Vehicle.call(this, type, year, numberOfTyres);
+  this.name = name;
+};
+
+// create object Audi
+const Audi = new Car("Audi", "Car", 2020, 4);
+```
+
+But the problem here is that we cannot invoke the `start()` method which is defined in the `Vehicle` class. It is because the `start()` method is not inherited using the `call()` method from `Vehicle` class. Only properties are inherited.
+
+So, let's inherit the methods.
+
+To inherit methods first we need to point our `Car` class prototype to our `Vehicle` base class prototype.
+
+Currently, the `Car` class prototype is pointing to itself.
+
+We achieve this using the [Object.create()](https://melvingeorge.me/blog/different-ways-to-create-objects-javascript) static method.
+
+## Note: You should this before creating an object from our `Car` class.
+
+```javascript
+// Vehicle base class
+const Vehicle = function (type, year, numberOfTyres) {
+  this.type = type;
+  this.year = year;
+  this.numberOfTyres = numberOfTyres;
+};
+
+// add a method to the prototype chain
+Vehicle.prototype.start = () => {
+  console.log("Vehicle started");
+};
+
+// Car class
+const Car = function (name, type, year, numberOfTyres) {
+  Vehicle.call(this, type, year, numberOfTyres);
+  this.name = name;
+};
+
+// point prototype of Car class to Vehicle class
+Car.prototype = Object.create(Vehicle.prototype);
+
+// create object Audi
+const Audi = new Car("Audi", "Car", 2020, 4);
+```
+
+Ok. One more thing. 🦄
+
+When we changed our prototype of `Car` class to `Vehicle` class prototype, the constructor of Car was also changed in the process.
+
+We need to change it back to the `Car` constructor otherwise it may cause errors in the long run.
+
+Let's achieve this using the [Object.defineProperty](https://melvingeorge.me/blog/make-property-immutable-objects-javascript).
+
+```javascript
+// Vehicle base class
+const Vehicle = function (type, year, numberOfTyres) {
+  this.type = type;
+  this.year = year;
+  this.numberOfTyres = numberOfTyres;
+};
+
+// add a method to the prototype chain
+Vehicle.prototype.start = () => {
+  console.log("Vehicle started");
+};
+
+// Car class
+const Car = function (name, type, year, numberOfTyres) {
+  Vehicle.call(this, type, year, numberOfTyres);
+  this.name = name;
+};
+
+// point prototype of Car class to Vehicle class
+Car.prototype = Object.create(Vehicle.prototype);
+
+// change the constructor back to Car class constructor
+Object.defineProperty(Car.prototype, "constructor", {
+  value: Car,
+  enumerable: false,
+  writable: true,
+});
+
+// create object Audi
+const Audi = new Car("Audi", "Car", 2020, 4);
+```
+
+## Note:
+
+- The `Object.defineProperty()` creates a new value called `constructor` in the `Car` class prototype and put its value to the `Car` class itself, just what we needed.
+
+- Setting the `enumerable` property to `false` helps to avoid it being shown while looping.
+- Setting the `writable` property to `true` makes it mutable.
+
+Now we can invoke the `start()` method from our `Audi` object.
+
+```javascript
+Audi.start(); // Vehicle started
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
