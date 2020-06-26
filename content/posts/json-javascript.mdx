@@ -1,0 +1,105 @@
+---
+title: Working with JSON in JavaScript
+description: Learn how to parse JSON to objects and vice versa in JavaScript
+keywords: JSON,javascript object notation,parse,stringify,JSON.parse,JSON.stringify,objects,json to objects,objects to json,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-26
+---
+
+JSON (aka, JavaScript Object Notation) is a format of transferring data between services, e.g: transferring data between a server and a client. Nowadays JSON is also used to write configuration files for many applications. It is readily available to use in most of the programming languages.
+
+---
+
+Let's discuss 2 methods of JSON available in JavaScript:
+
+- `JSON.parse`
+- `JSON.stringify`
+
+Both these methods are available in the browser (`window` object) as well as in Nodejs (`global` object).
+
+## `JSON.parse()` method
+
+`JSON.parse` is used to convert JSON data into a JavaScript object.
+
+Consider this JSON.
+
+```javascript
+// JSON
+const json = `{
+  "name": "John Doe",
+  "age": 23
+}`;
+```
+
+Let's convert this JSON into a JavaScript object using the `JSON.parse` method.
+
+```javascript
+// JSON
+const json = `{
+  "name": "John Doe",
+  "age": 23
+}`;
+
+// Convert JSON to JavaScript object
+const obj = JSON.parse(json);
+
+/*
+
+Result:
+-------
+
+{
+    age: 23,
+    name: "John Doe"
+}
+
+*/
+```
+
+- The method accepts a valid JSON string.
+
+Yay! 🎊
+
+## `JSON.stringify()` method
+
+`JSON.stringify` is used to convert a JavaScript object into JSON format.
+
+```javascript
+// JavasScript Object
+const obj = {
+  name: "John Doe",
+  age: 23,
+};
+```
+
+Let's convert this object into the `JSON` format.
+
+```javascript
+// JavasScript Object
+const obj = {
+  name: "John Doe",
+  age: 23,
+};
+
+// Convert JavaScript object into JSON
+const json = JSON.stringify(obj);
+
+/*
+
+Result:
+------
+
+{
+    "name":"John Doe",
+    "age":23
+}
+
+*/
+```
+
+- The method accepts a valid JavaScript object.
+
+### Feel free to share if you found this useful 😃.
+
+---
