@@ -18,7 +18,7 @@ module.exports = withPlugins(
       {
         workboxOpts: {
           // Do not precache images
-          exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+          exclude: [/\.(?:png|jpg|jpeg|svg|webp)$/],
           // Ignore all URL parameters.
           ignoreURLParametersMatching: [/.*/],
           dontCacheBustURLsMatching: /.*/,
