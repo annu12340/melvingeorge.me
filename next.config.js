@@ -24,7 +24,7 @@ module.exports = withPlugins(
           dontCacheBustURLsMatching: /.*/,
           runtimeCaching: [
             {
-              urlPattern: /\.(?:png|jpg|jpeg|svg)/,
+              urlPattern: /\.(?:png|jpg|jpeg|svg|webp)/,
               handler: "CacheFirst",
             },
             {
@@ -46,5 +46,5 @@ module.exports = withPlugins(
     devIndicators: {
       autoPrerender: false,
     },
-  }
+  },
 );
