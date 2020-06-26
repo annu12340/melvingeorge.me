@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import dynamic from "next/dynamic";
 import Markdown from "markdown-to-jsx";
 const hljs = require("highlight.js/lib/core");
 hljs.registerLanguage(
@@ -12,8 +13,7 @@ hljs.registerLanguage(
   "html",
   require("highlight.js/lib/languages/vbscript-html")
 );
-import ImageLoaderUtil from "../Utils/ImageLoaderUtil";
-
+const ImageLoaderUtil = dynamic(() => import("../Utils/ImageLoaderUtil"));
 export function HighlightedMarkdown({ children, metadata }) {
   const rootRef = useRef();
 
