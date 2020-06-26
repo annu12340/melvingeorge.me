@@ -13,7 +13,34 @@ module.exports = withPlugins(
         },
       },
     ],
-    [nextOffline],
+    [
+      nextOffline,
+      {
+        workboxOpts: {
+          // Do not precache images
+          exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+          // Ignore all URL parameters.
+          ignoreURLParametersMatching: [/.*/],
+          dontCacheBustURLsMatching: /.*/,
+          runtimeCaching: [
+            {
+              urlPattern: /\.(?:png|jpg|jpeg|svg)/,
+              handler: "CacheFirst",
+            },
+            {
+              urlPattern: /^https?.*/,
+              handler: "NetworkFirst",
+              options: {
+                cacheName: "offlineCache",
+                expiration: {
+                  maxEntries: 200,
+                },
+              },
+            },
+          ],
+        },
+      },
+    ],
   ],
   {
     devIndicators: {
