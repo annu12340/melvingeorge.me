@@ -1,0 +1,121 @@
+---
+title: How to Make a Promise in JavaScript?
+description: Learn how to make promises and work with async data in JavaScript
+keywords: promises,then,catch,method,fetch,async,asynchronous,javascript,callback,callback hell
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-27
+---
+
+![pocket watch picture by Kjartan Einarsson on Unsplash ](main.jpg)
+
+## What is a Promise?
+
+Promises in JavaScript is a way of working with asynchronous processes. Promises don't block other processes and run in the JavaScript's `Event loop`.
+
+## Create a new Promise
+
+To create a `Promise` you have to create a `Promise` object.
+
+```javascript
+// Create a new promise
+const promise = new Promise();
+```
+
+You need to pass a function with 2 parameters to resolve the task and to reject the task to the constructor function.
+
+Now, Let's create the function to run.
+
+```javascript
+// Create a function to run.
+// Let's simulate getting a result
+// after 3 seconds using the setTimeout function
+
+const giveResultAfterThreeSeconds = (resolve, reject) => {
+  // You can also do a fetch request
+  // from a server to get some data.
+
+  setTimeout(() => {
+    resolve("We got the data :) ");
+  }, 3000);
+};
+```
+
+A lot is going on these lines 🤯 Let's understand each step by step. 🧙‍♀️
+
+Here we have a function called `giveResultAfterThreeSeconds` with 2 parameters called `resolve` and `reject`.
+Both these parameters are references to function which can be invoked while running the task.
+
+The `resolve` function is invoked when we got the desired result and the `reject` function is invoked whenever there is an error while running the task.
+
+In the body of the function, we have a `setTimeout` function to simulate waiting for 3 seconds.
+
+After 3 seconds the `resolve` function is called with a value of `We got the data :)`.
+
+We would also be expecting some kind of error happening in the future while running our task, thus we need the `reject` function to invoke it with an error value.
+
+Here we are not using the `reject` function since we don't have the possibility of `setTimeout` function failing.
+
+The `reject` function can be used when getting some data from a server where we have the possibility of getting an error eg: Internal Server Error, Not Found, etc.
+
+Now let's give this function to our promise.
+
+```javascript
+// Create a function to run.
+// Let's simulate getting a result
+// after 3 seconds using the setTimeout function
+
+const giveResultAfterThreeSeconds = (resolve, reject) => {
+  // You can also do a fetch request
+  // from a server to get some data.
+
+  setTimeout(() => {
+    resolve("We got the data :)");
+  }, 3000);
+};
+
+// Create a new promise and pass the function
+const promise = new Promise(giveResultAfterThreeSeconds);
+```
+
+So we defined our function and made a promise. But how do we use it?
+
+To use it we can use the `then`, `catch` methods available in our `promise` object.
+
+```javascript
+// Create a function to run.
+// Let's simulate getting a result
+// after 3 seconds using the setTimeout function
+
+const giveResultAfterThreeSeconds = (resolve, reject) => {
+  // You can also do a fetch request
+  // from a server to get some data.
+
+  setTimeout(() => {
+    resolve("We got the data :)");
+  }, 3000);
+};
+
+// Create a new promise and pass the function
+const promise = new Promise(giveResultAfterThreeSeconds);
+
+// then and catch
+promise
+  .then(
+    (resolvedValue) => {
+      console.log(resolvedValue); //  Result ==> We got the data :)
+    },
+    (rejectedValue) => {
+      console.log(rejectedValue); // will be invoked if there is a rejected value
+    }
+  ) //
+  .catch((rejectedValue) => console.log(errorValue)); // will be invoked if there is a rejected value
+```
+
+- The `then` method is used to get a resolved value as well a rejected value, It accepts 2 callbacks The first callback function refers to the resolved value's callback function and the second refers to the rejected value's if there is one. The `then` method can also be chained.
+
+- The `catch` method is used to receive a rejected value. It accepts a callback function for rejected value and the function is supplied with a value from the `reject` function.
+
+We will be discussing more about `Promises` in future Posts. Well, Its a start.
+
+### Feel free to share if you found this useful 😃.
