@@ -1,7 +1,7 @@
 // ICONS
 import dynamic from "next/dynamic";
 const FontAwesomeIcon = dynamic(
-  async () => (await import("@fortawesome/react-fontawesome")).FontAwesomeIcon
+  async () => (await import("@fortawesome/react-fontawesome")).FontAwesomeIcon,
 );
 
 import {
@@ -17,10 +17,14 @@ const Header = () => (
       {/* <!-- Header Container --> */}
       <div className="container max-w-screen-md mx-auto px-4">
         {/* <!-- Hero section --> */}
-        <section className="flex flex-col items-center justify-center lg:flex-row pt-6">
+        <section
+          className="flex flex-col items-center justify-center lg:flex-row pt-6"
+        >
           {/* <!-- Hero Section: About Text --> */}
           <div className="flex flex-col order-last lg:order-first">
-            <p className="pb-2 text-blue-600 font-normal text-2xl lg:text-3xl leading-normal">
+            <p
+              className="pb-2 text-blue-600 font-normal text-2xl lg:text-3xl leading-normal"
+            >
               Hi, I'm Melvin George. I help the world by building quality
               software.
             </p>
@@ -55,7 +59,7 @@ const Header = () => (
                 />
               </a>
               &nbsp;&nbsp;&nbsp;
-              <a href="https://www.twitter.com/melvin2016_" target="blank">
+              <a href="https://www.twitter.com/developer_369" target="blank">
                 <FontAwesomeIcon
                   className="transition transition-colors duration-300 hover:text-blue-400"
                   icon={faTwitter}
@@ -79,7 +83,8 @@ const Header = () => (
         </section>
       </div>
     </header>
-    <style jsx>{`
+    <style jsx>
+      {`
       .heroImg {
         width: 160px;
         height: 160px;
@@ -89,7 +94,8 @@ const Header = () => (
           no-repeat #bee3f8;
         background-repeat: no-repeat;
       }
-    `}</style>
+    `}
+    </style>
   </>
 );
 
