@@ -8,17 +8,13 @@ module.exports = withPlugins(
       nextOffline,
       {
         workboxOpts: {
+          swDest: "service-worker.js",
           exclude: [
             "react-loadable-manifest.json",
             "build-manifest.json",
             /\.map$/,
             /\.(?:png|jpg|jpeg|svg|webp)$/,
           ],
-          modifyURLPrefix: {
-            "static/": "_next/static/",
-            "public/": "_next/public/",
-          },
-          inlineWorkboxRuntime: true,
           // Ignore all URL parameters.
           ignoreURLParametersMatching: [/.*/],
           dontCacheBustURLsMatching: /.*/,
