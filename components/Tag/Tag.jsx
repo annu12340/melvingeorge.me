@@ -10,6 +10,9 @@ const Tag = ({ name }) => {
     case "Reactjs":
       styleToApply = "bg-black text-blue-400";
       break;
+    case "Resource":
+      styleToApply = "bg-blue-300 text-gray-800";
+      break;
   }
   return (
     <div className={`text-xl px-3 py-1 rounded-sm ${styleToApply}`}>
