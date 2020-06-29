@@ -23,6 +23,7 @@
 
 .blog h2 {
   @apply text-blue-700 text-2xl inline mt-8 mb-4;
+  word-wrap: break-word;
 }
 
 .blog h3 {
