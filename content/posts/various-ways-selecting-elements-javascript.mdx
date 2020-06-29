@@ -1,0 +1,152 @@
+---
+title: Various ways of selecting elements from DOM in JavaScript
+description: Learn the various methods to select elements from Document Object model in JavaScript
+keywords: DOM,document object model,document.querySelector,document.querySelectorAll,document.getElementsByTagName,document.getElementById,document.getElementsByClassName,select elemnts in dom
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-29
+---
+
+![by Danica Tanjutco on Unsplash](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/@danidums" target="blank">
+    Danica Tanjutco
+  </a>
+  on Unsplash
+</p>
+
+There are various ways you can select DOM (Document Object Model) elements in JavaScript:
+
+- [`document.querySelector()`](#document-querySelector)
+- [`document.querySelectorAll()`](#document-querySelectorAll)
+- [`document.getElementsByTagName()`](#document-getElementsByTagName)
+- [`document.getElementById()`](#document-getElementById)
+- [`document.getElementsByClassName()`](#document-getElementsByClassName)
+
+are some of the commonly used methods.
+
+## <a name="document-querySelector"></a> `document.querySelector()`
+
+The `document.querySelector()` method is used to select the first matching element using the CSS selectors.
+
+Consider this html,
+
+```html
+<div>
+  <h1 class="myBigHeader">Hello EveryBody</h1>
+  <div></div>
+</div>
+```
+
+You can select the `h1` tag using the `myBigHeader` CSS class name.
+
+```javascript
+const header = document.querySelector(".myBigHeader"); // h1 tag selected
+```
+
+You have to put a dot `.` in front of the class name to access it.
+
+### 🎲 NOTE: By using CSS selectors, You can also combine the tag names with the class names for more specificity.
+
+```javascript
+const header = document.querySelector("div .myBigHeader"); // h1 tag selected but more specific
+```
+
+## <a name="document-querySelectorAll"></a> `document.querySelectorAll()`
+
+The `document.querySelectorAll()` method is used to select all elements which have the same CSS selectors.
+
+Consider this html,
+
+```html
+<div>
+  <h1 class="header">My Big Header</h1>
+  <h3 class="header">Another Header</h3>
+</div>
+```
+
+Let's select both the `h1` and `h3` tags.
+
+```javascript
+// both h1 and h3 tags selected
+const headers = document.querySelectorAll(".header");
+
+// returns an array-like object called NodeList
+```
+
+## <a name="document-getElementsByTagName"></a> `document.getElementsByTagName()`
+
+The `document.getElementsByTagName()` method is used to select elements using the tag names only.
+
+Consider this html,
+
+```html
+<div>
+  <h1 class="header">My Big Header</h1>
+  <h3 class="header">Another Header</h3>
+  <h1 class="header">My Second Big Header</h1>
+</div>
+```
+
+Let's select the `h1` tag.
+
+```javascript
+const h1Header = document.getElementsByTagName("h1"); // all the h1 tags selected
+// returns an array like object called HTMLCollection.
+```
+
+### 🎲 NOTE: You can't use the CSS class names here, only tag names are allowed.
+
+## <a name="document-getElementById"></a> `document.getElementById()`
+
+The `document.getElementById()` method is used to select an element using the `id` attribute present in the html element.
+
+Since `id` attributes names are unique across the HTML document, only one element is returned.
+
+Conside this html,
+
+```html
+<div>
+  <p id="myUniqueParagraph">This is a pragragraph tag</p>
+  <div></div>
+</div>
+```
+
+Let's select the paragraph tag using the `id` attribute.
+
+```javascript
+// paragraph tag is selected using the id attribute
+const paragraph = document.getElementById("myUniqueParagraph");
+
+// only the paragraph tag is returned
+```
+
+## <a name="document-getElementsByClassName"></a> `document.getElementsByClassName()`
+
+The `document.getElementsByClassName` method is used to select the html elements using the css classnames.
+
+consider this html,
+
+```html
+<div>
+  <h1 class="header">My Big Header</h1>
+  <h2 class="header">My Another Big Header</h2>
+</div>
+```
+
+We can select all our `header` tags.
+
+```javascript
+// all tags with header class names are selected
+const headers = document.getElementsByClassName("header");
+
+// returns an array like object called HTMLCollection
+```
+
+### 🎲 NOTE: We don't need to put a dot `.` in front of the class name in this method like we did in `document.querySelector()` and `document.querySelectorAll()` methods.
+
+### Feel free to share if you found this useful 😃.
+
+---
