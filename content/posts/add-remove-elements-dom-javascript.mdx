@@ -1,0 +1,101 @@
+---
+title: How to add and remove elements from DOM in JavaScript?
+description: Learn the usage of appendChild and removeChild methods in JavaScript
+keywords: appendChild,removeChild,remove,getElementById,adding and removing elements,dom,document object model,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-06-30
+---
+
+## Contents
+
+- [Adding elements](#adding-elements)
+- [Removing elements](#removing-elements)
+
+## <a name="adding-elements"></a> Adding elements
+
+Let's say you have a heading and a paragraph.
+
+```html
+<div id="section">
+  <h1>My Big Header</h1>
+  <p>Its a paragraph</p>
+</div>
+```
+
+Let's add an extra paragraph inside the `div` tag.
+
+First, You have to get a reference to the `div` tag you want to add the paragraph tag.
+
+We have an `id` attribute associated with the `div` tag so we can use the `document.getElementById()` method to get the reference.
+
+```javascript
+// get reference to the div tag.
+const div = document.getElementById("section");
+```
+
+Now we need to make a paragraph tag and insert some text into it.
+We can insert text to paragraph by assigning the text value to the `textContent` property in the paragraph.
+
+```javascript
+// get reference to the div tag.
+const div = document.getElementById("section");
+
+// make a new paragraph tag.
+const paragraph = document.createElement("p");
+// add some text inside paragraph tag
+paragraph.textContent = "This is another paragraph";
+```
+
+Ok. Now finally we need to add this paragraph inside the `div` tag. We can achieve this using the `appendChild()` method available in `div` and pass the newly created paragraph reference to the method as an argument.
+
+```javascript
+// get reference to the div tag.
+const div = document.getElementById("section");
+
+// make a new paragraph tag.
+const paragraph = document.createElement("p");
+// add some text inside paragraph tag.
+paragraph.textContent = "This is another paragraph";
+
+// add paragrapgh inside div tag.
+div.appendChild(paragraph);
+```
+
+Yay 🥳!!!. We just added our new paragraph.
+
+## <a name="removing-elements"></a> Removing elements
+
+Now you know how to add but how do we delete the elements from DOM.
+
+Removing an element is fairly easy, we can use the `removeChild()` method available in the `div` tag and pass the reference of our paragraph tag.
+
+Or we could use the `remove()` method available in the paragraph element itself.
+
+### 🎲 NOTE: The `remove()` method available in an element is not supported by all browsers and may not work. The recommended way of using is `removeChild()` available in the `div` tag i.e the parent element.
+
+```javascript
+// get reference to the div tag.
+const div = document.getElementById("section");
+
+// make a new paragraph tag.
+const paragraph = document.createElement("p");
+// add some text inside paragraph tag.
+paragraph.textContent = "This is another paragraph";
+
+// add paragrapgh inside div tag.
+div.appendChild(paragraph);
+
+/*------------------------------*/
+
+// remove paragraph from div
+div.removeChild(paragraph);
+
+// OR this
+// but not supported in all the browsers
+paragraph.remove();
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
