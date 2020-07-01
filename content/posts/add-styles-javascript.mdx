@@ -1,0 +1,82 @@
+---
+title: How to add styles using JavaScript?
+description: Learn how to add styles to DOM elements using JavaScript
+keywords: add styles to html elements,add styles to dom,CSS,styles,elements,document object model,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-01
+---
+
+![paint colors](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/@kellitungay" target="blank">
+    Kelli Tungay
+  </a>
+</p>
+
+You can add styles to DOM elements in 2 ways in JavaScript.
+
+- [Adding as inline styles](#add-styles-inline)
+- [Adding as CSS class attributes](#css-class-attributes)
+
+# <a name="add-styles-inline"></a> Adding as inline styles
+
+Consider this HTML,
+
+```html
+<div>
+  <h1 id="header">My Big Header</h1>
+  <p id="paragraph">Hey, Its a small paragraph</p>
+</div>
+```
+
+Let's add an inline style to the `h1` tag now using JavaScript.
+
+First, you need to get a reference to the element you want to add the styles. Then you can add inline styles to the `h1` tag using the `style` property available on the element.
+
+Let's make our the text of `h1` tag to red color.
+
+```javascript
+// get a referenc to h1 tag
+const h1 = document.getElementById("header");
+
+// add inline style: color
+h1.style.color = "red";
+```
+
+Now our `h1` tag color will be changed to red. You can attach any valid CSS style to the `style` property.
+
+![Header text color changed to red](inline-styles-red.png)
+
+And if you inspect the element using chrome dev-tools you can see that the style is added directly to the element using the `style` attribute.
+
+![Styles added directly to header element](inline-styles-directly.png)
+
+### NOTE 🦄🦄 <br/> If you need to attach a style that contains a `-` (dash) like `background-color`, you need to omit `-` and make it into a camel-case `backgroundColor` and then attach it to the style property. <br/> eg: `h1.style.backgroundColor = "blue";`
+
+## <a name="css-class-attributes"></a> Adding as CSS class attributes
+
+Instead of attaching styles directly to the DOM elements, you can attach class names so that syles can be referenced from an external stylesheet.
+
+To achieve that we need to make a class attribute in our `h1` tag and add the CSS class name to it.
+
+To make an attribute you can use the `setAttribute` method available on the `h1` tag element.
+
+The method accepts:
+
+- name of the attribute as the first parameter
+- value of the attribute as the second parameter
+
+```javascript
+// get a referenc to h1 tag
+const h1 = document.getElementById("header");
+
+// add class attribute and add a classname
+h1.setAttribute("class", "colorRed");
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
