@@ -1,0 +1,135 @@
+---
+title: How to fetch data using JavaScript?
+description: Learn how to use the fetch() method to get data using JavaScript.
+keywords: fetch(),fetch method,fetch request,request data,API,request,request data from server,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-02
+---
+
+![a dog with stick](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/photos/Pzu9f6Nby5w" target="blank">
+    Mitchell Orr
+  </a>
+</p>
+
+Most of the time if you have an application, there will be a need to get some data
+from different sources like a server, API endpoint, etc.
+
+Let's say you have an API endpoint `/blogs` from where you need to get all the blogs. The `fetch()` method available in JavaSript helps us to fetch data from this endpoint and it is very easy to do 🦄.
+
+## `fetch()` method
+
+Let's use a free API endpoint [https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts) to get some blog data.
+
+```javascript
+// fetch blogs
+fetch("https://jsonplaceholder.typicode.com/posts");
+```
+
+We are just passing the endpoint to fetch the blog posts to the `fetch()` method.
+
+But wait, we are requesting for data in the endpoint! How are going to get the data? 🤔
+
+To get the data, we need to attach a `then()` method to the `fetch()` method, because fetch methods are asynchronous and only returns a [Promise](https://melvingeorge.me/blog/promises-javascript) if the request is successful or unsuccessful.
+
+Inside the `then()` method we will provide a callback function to process the response or the blog data coming from the server.
+
+Lets add the `then()` method.
+
+```javascript
+// fetch blogs
+fetch("https://jsonplaceholder.typicode.com/posts").then((response) => {
+  /* We need to do some stuffs here */
+});
+```
+
+When we get the response from the API endpoint we are getting something called a `Response` object which is of no use to us because we won't be able to work with that.
+
+So We need to convert the `Response` object into something we can work with, like JSON or a text.
+
+To convert into JSON, there is a method called `json()` available in the response object.
+
+Let's convert the `Response` object into JSON.
+
+```javascript
+// fetch blogs
+fetch("https://jsonplaceholder.typicode.com/posts").then((response) => {
+  // convert it to json and return the promise
+  return response.json();
+});
+```
+
+Since `json()` method also returns a promise lets return that promise and use another `then()` method to really work with the JSON.
+
+```javascript
+// fetch blogs
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then((response) => {
+    // convert it to json and return the promise
+    return response.json();
+  })
+  .then((json) => {
+    // do some fun things with the json we got
+    // eg: show the blogs to the user
+    console.log(json);
+  });
+```
+
+Also, remember to add a `catch()` method at the end of the chain of `then()` methods to catch any errors for unsuccessful requests.
+
+```javascript
+// fetch blogs
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then((response) => {
+    // convert it to json and return the promise
+    return response.json();
+  })
+  .then((json) => {
+    // do some fun things with the json we got
+    // eg: show the blogs to the user
+    console.log(json);
+  })
+  .catch((err) => {
+    // do error handling
+    console.log(err);
+  });
+```
+
+Yay 🤩. We got all the blogs.
+
+Like `json()` you can also use:
+
+- `text()`: for converting it to text
+- `formData()`: getting an form data as an object
+- `blob()`: converting to blob format
+
+## Using fetch in Node.js Environment
+
+As of writing this post, Node.js doesn't support the `fetch()` method out of the box.
+
+So you may need to install a package called `node-fetch` to achieve this.
+
+```bash
+npm install node-fetch --save
+```
+
+Then you need to require it in the files where you need to use the `fetch()` method.
+
+```javascript
+// require node-fetch
+const fetch = require("node-fetch");
+```
+
+Then you can do everything in Node.js just like we did in the browser.
+
+---
+
+This is just a starter on how to request data using `fetch()`, You can also send data using fetch. Let's discuss this in another blog post 😃.
+
+### Feel free to share if you found this useful 😃.
+
+---
