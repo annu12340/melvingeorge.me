@@ -1,0 +1,54 @@
+---
+title: How to check if a child element is present in a parent element in Javascript?
+description: Learn how to use the contains() method available in the DOM elements.
+keywords: check if the child in the parent,child element,parent element,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-03
+---
+
+Conside this HTML,
+
+```html
+<div class="articles">
+  <h1 class="header">A Big Header</h1>
+  <p class="para">Hey, Its A small paragraph</p>
+</div>
+```
+
+How can we check if the `p` tag is a child of the `div` tag? 🤔 Well, there's a way for that in JavaScript. 🧙‍♀️
+
+We can check using the `contains()` method available in the parent element.
+
+First, Let's get a reference to our parent element `div` tag and our child tag `p` tag using their class names.
+
+```javascript
+// get a reference to parent element div tag
+const articlesDiv = document.querySelector(".articles");
+
+// next get a refernce to child element p tag
+const para = document.querySelector(".para");
+```
+
+We got all the references.
+
+Now we need to invoke the method `contains()` available in our parent element and pass the child element reference.
+
+```javascript
+// get a reference to parent element div tag
+const articlesDiv = document.querySelector(".articles");
+
+// next get a refernce to child element p tag
+const para = document.querySelector(".para");
+
+// check if child present in parent element
+const isChildPresent = articlesDiv.contains(para);
+
+console.log(isChildPresent); // true
+```
+
+The method returns boolean `true` if present and `false` if not.
+
+### Feel free to share if you found this useful 😃.
+
+---
