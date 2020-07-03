@@ -15,7 +15,7 @@ const Blog = ({ linksData }) => {
 
       {/* Main content */}
       <main
-        className="container max-w-screen-lg px-10 mx-auto mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4"
+        className="mt-16 mx-auto flex flex-wrap justify-center max-w-6xl"
       >
         {linksData.length > 0
           ? (
