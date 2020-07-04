@@ -1,5 +1,6 @@
 // ICONS
 import dynamic from "next/dynamic";
+import Navigation from "../Navigation/Navigation";
 const FontAwesomeIcon = dynamic(
   async () => (await import("@fortawesome/react-fontawesome")).FontAwesomeIcon,
 );
@@ -12,8 +13,9 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Header = () => (
-  <>
-    <header className="z-0 pb-12 bgHero">
+  <div className="bgHero">
+    <Navigation />
+    <header className="z-0 pb-12 ">
       {/* <!-- Header Container --> */}
       <div className="container max-w-screen-md mx-auto px-4">
         {/* <!-- Hero section --> */}
@@ -98,7 +100,7 @@ const Header = () => (
       }
     `}
     </style>
-  </>
+  </div>
 );
 
 export default Header;
