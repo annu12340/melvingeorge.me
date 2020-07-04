@@ -5,8 +5,10 @@ import ImageLoader from "../Utils/ImageLoaderUtil";
 const Card = ({ title, description, href }) => {
   return (
     <Link href="/blog/[link]" as={`/blog/${href}`}>
-      <div className="p-6 bg-white shadow-sm rounded cursor-pointer group">
-        <h1 className="text-2xl my-4 tracking-wide text-center font-medium">
+      <div
+        className="bg-white shadow-sm rounded cursor-pointer group max-w-xs p-6 flex flex-col  m-6 box-border"
+      >
+        <h1 className="text-2xl my-4 tracking-wide font-medium">
           {title}
         </h1>
         <ImageLoader
@@ -14,7 +16,9 @@ const Card = ({ title, description, href }) => {
           alt={`Banner picture of ${title} blog`}
           src="main.jpg"
         />
-        <p className="tracking-wide my-4 leading-relaxed text-lg italic transition transition-colors duration-300 group-hover:text-blue-600">
+        <p
+          className="tracking-wide my-4 leading-relaxed text-lg transition-colors duration-300 group-hover:text-blue-600"
+        >
           {description}
         </p>
       </div>

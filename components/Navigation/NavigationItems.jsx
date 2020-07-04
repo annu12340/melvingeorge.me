@@ -15,28 +15,28 @@ const NavigationItems = () => {
   const dispatchActiveTab = useContext(SetActiveTabContext);
 
   // Active tab style
-  const activeTabStyle = "bg-gray-400 text-blue-900";
+  const activeTabStyle = "bg-blue-200 text-black-900";
   return (
     <>
       {tabs.length > 0
         ? tabs.map((tab) => (
-            <li
-              className="inline-block tracking-wider ml-6 first:ml-0"
-              key={tab}
-            >
-              <Link href={`/${tab.toLowerCase()}`}>
-                <a
-                  className={`cursor-pointer transition transition-colors duration-300 hover:text-blue-800 hover:bg-gray-400 p-2 rounded-sm ${
-                    tab.toLowerCase() === activeTab.tab ? activeTabStyle : ""
-                  }`}
-                  href=""
-                  onClick={() => dispatchActiveTab({ type: tab.toLowerCase() })}
-                >
-                  {tab}
-                </a>
-              </Link>
-            </li>
-          ))
+          <li
+            className="tracking-wider ml-6 first:ml-0 inline-block"
+            key={tab}
+          >
+            <Link href={`/${tab.toLowerCase()}`}>
+              <a
+                className={`cursor-pointer transition-colors duration-300 hover:text-blue-600 hover:bg-blue-200 p-2 rounded-sm ${
+                  tab.toLowerCase() === activeTab.tab ? activeTabStyle : ""
+                }`}
+                href=""
+                onClick={() => dispatchActiveTab({ type: tab.toLowerCase() })}
+              >
+                {tab}
+              </a>
+            </Link>
+          </li>
+        ))
         : null}
     </>
   );
