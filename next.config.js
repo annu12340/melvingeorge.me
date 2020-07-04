@@ -25,7 +25,7 @@ module.exports = withPlugins(
             },
             {
               urlPattern: /^https?.*/,
-              handler: "NetworkFirst",
+              handler: "CacheFirst",
               options: {
                 cacheName: "offlineCache",
                 expiration: {
@@ -44,6 +44,8 @@ module.exports = withPlugins(
         imageTrace: {
           color: "#4299e1",
           alphaMax: 2,
+          threshold: 34,
+          turnPolicy: "TURNPOLICY_WHITE",
         },
       },
     ],
@@ -52,5 +54,5 @@ module.exports = withPlugins(
     devIndicators: {
       autoPrerender: false,
     },
-  }
+  },
 );

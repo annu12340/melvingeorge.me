@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { SetActiveTabContext } from "../context/ActiveTab";
 import { NextSeo } from "next-seo";
+import Navigation from "../components/Navigation/Navigation";
 
 const About = () => {
   // Set active tab to about page
@@ -11,7 +12,7 @@ const About = () => {
     <>
       {/* SEO */}
       <NextSeo title={"Blog"} canonical="https://melvingeorge.me/about" />
-
+      <Navigation />
       {/* Main content */}
       <main className="container max-w-screen-md mx-auto px-4 mt-20 about">
         <h1 className="text-gray-700 text-4xl mb-6">Hi! I'm Melvin 👋</h1>

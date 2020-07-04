@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 const Card = dynamic(() => import("../components/BlogPage/Card"));
 import { SetActiveTabContext } from "../context/ActiveTab";
 import { NextSeo } from "next-seo";
+import Navigation from "../components/Navigation/Navigation";
 
 const Blog = ({ linksData }) => {
   // Set active tab to blog page
@@ -12,10 +13,10 @@ const Blog = ({ linksData }) => {
     <>
       {/* SEO */}
       <NextSeo title={"Blog"} canonical="https://melvingeorge.me/blog" />
-
+      <Navigation />
       {/* Main content */}
       <main
-        className="container max-w-screen-lg px-10 mx-auto mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-4"
+        className="mt-16 mx-auto flex flex-wrap justify-center max-w-6xl"
       >
         {linksData.length > 0
           ? (
