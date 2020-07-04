@@ -6,40 +6,48 @@ import Link from "next/link";
 const NavigationItems = dynamic(() => import("./NavigationItems"));
 const MobileNavigation = dynamic(() => import("./MobileNavigation"));
 
-const Navigation = ({ isIndex }) => {
+const Navigation = ({ isIndex = false }) => {
   return (
     <>
       <div className={`${isIndex ? "bgHero" : ""}`}>
-        <nav className="flex flex-row justify-between container max-w-screen-md mx-auto px-4">
+        <nav
+          className="flex flex-row justify-between container max-w-screen-md mx-auto px-4 h-24"
+        >
           <Link href="/">
-            <div className="flex flex-row justify-center items-center">
+            <div className="flex flex-row  items-center">
               {!isIndex ? <div className="heroImg" /> : null}
               <a
-                className={`transition transition-colors duration-300 hover:text-blue-800 text-blue-500 text-lg tracking-wider cursor-pointer ${
-                  isIndex ? "pt-8" : "ml-4"
+                className={` transition-colors duration-300 text-black text-lg tracking-wider cursor-pointer ${
+                  isIndex ? "text-white font-medium" : "ml-4"
                 }`}
               >
                 Melvin George
               </a>
             </div>
           </Link>
-          <ul className="text-blue-500 text-lg hidden md:block pt-8">
+          <ul
+            className={`${
+              isIndex ? "text-white font-medium" : "text-black"
+            } text-lg md:block my-auto hidden`}
+          >
             <NavigationItems />
           </ul>
+          <MobileNavigation isIndex={isIndex} />
         </nav>
-        <MobileNavigation />
       </div>
-      <style jsx>{`
+      <style jsx>
+        {`
         .heroImg {
           width: 60px;
           height: 60px;
           margin: 15px auto;
           border-radius: 50%;
-          background: url(${require("../../public/me.png?webp")}) 1px / cover
-            no-repeat #bee3f8;
+          background: url(${require("../../public/me.png?webp")}) -10px / cover
+            no-repeat rgb(241, 241, 241);
           background-repeat: no-repeat;
         }
-      `}</style>
+      `}
+      </style>
     </>
   );
 };
