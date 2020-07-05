@@ -1,978 +1,1974 @@
 {
   "../Utils/ImageLoaderUtil": [
     {
-      "id": "./components/Utils/ImageLoaderUtil.jsx",
-      "name": "./components/Utils/ImageLoaderUtil.jsx",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets sync recursive ^\\.\\/.*$?9fb1",
-      "name": "./content/assets sync recursive ^\\.\\/.*$",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets sync recursive ^\\.\\/.*$?dc29",
-      "name": "./content/assets sync recursive ^\\.\\/.*$",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-remove-elements-dom-javascript/main.jpg?trace",
-      "name": "./content/assets/add-remove-elements-dom-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-remove-elements-dom-javascript/main.jpg?webp",
-      "name": "./content/assets/add-remove-elements-dom-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-remove-elements-dom-javascript/meta.jpg?trace",
-      "name": "./content/assets/add-remove-elements-dom-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-remove-elements-dom-javascript/meta.jpg?webp",
-      "name": "./content/assets/add-remove-elements-dom-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-remove-elements-from-beginning-array-javascript/main.jpg?trace",
-      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-remove-elements-from-beginning-array-javascript/main.jpg?webp",
-      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-remove-elements-from-beginning-array-javascript/meta.jpg?trace",
-      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-remove-elements-from-beginning-array-javascript/meta.jpg?webp",
-      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-styles-javascript/inline-styles-directly.png?trace",
-      "name": "./content/assets/add-styles-javascript/inline-styles-directly.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-styles-javascript/inline-styles-directly.png?webp",
-      "name": "./content/assets/add-styles-javascript/inline-styles-directly.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-styles-javascript/inline-styles-red.png?trace",
-      "name": "./content/assets/add-styles-javascript/inline-styles-red.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-styles-javascript/inline-styles-red.png?webp",
-      "name": "./content/assets/add-styles-javascript/inline-styles-red.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-styles-javascript/main.jpg?trace",
-      "name": "./content/assets/add-styles-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-styles-javascript/main.jpg?webp",
-      "name": "./content/assets/add-styles-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-styles-javascript/meta.jpg?trace",
-      "name": "./content/assets/add-styles-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/add-styles-javascript/meta.jpg?webp",
-      "name": "./content/assets/add-styles-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/check-if-child-in-parent/main.jpg?trace",
-      "name": "./content/assets/check-if-child-in-parent/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/check-if-child-in-parent/main.jpg?webp",
-      "name": "./content/assets/check-if-child-in-parent/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/check-if-child-in-parent/meta.jpg?trace",
-      "name": "./content/assets/check-if-child-in-parent/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/check-if-child-in-parent/meta.jpg?webp",
-      "name": "./content/assets/check-if-child-in-parent/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/check-if-property-object-javascript/main.jpg?trace",
-      "name": "./content/assets/check-if-property-object-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/check-if-property-object-javascript/main.jpg?webp",
-      "name": "./content/assets/check-if-property-object-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/check-if-property-object-javascript/meta.jpg?trace",
-      "name": "./content/assets/check-if-property-object-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/check-if-property-object-javascript/meta.jpg?webp",
-      "name": "./content/assets/check-if-property-object-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/contributing-to-open-source/codetribute-website.png?trace",
-      "name": "./content/assets/contributing-to-open-source/codetribute-website.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/contributing-to-open-source/codetribute-website.png?webp",
-      "name": "./content/assets/contributing-to-open-source/codetribute-website.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/contributing-to-open-source/github-issues.png?trace",
-      "name": "./content/assets/contributing-to-open-source/github-issues.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/contributing-to-open-source/github-issues.png?webp",
-      "name": "./content/assets/contributing-to-open-source/github-issues.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/contributing-to-open-source/good-first-issue.png?trace",
-      "name": "./content/assets/contributing-to-open-source/good-first-issue.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/contributing-to-open-source/good-first-issue.png?webp",
-      "name": "./content/assets/contributing-to-open-source/good-first-issue.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/contributing-to-open-source/main.jpg?trace",
-      "name": "./content/assets/contributing-to-open-source/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/contributing-to-open-source/main.jpg?webp",
-      "name": "./content/assets/contributing-to-open-source/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/contributing-to-open-source/meta.jpg?trace",
-      "name": "./content/assets/contributing-to-open-source/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/contributing-to-open-source/meta.jpg?webp",
-      "name": "./content/assets/contributing-to-open-source/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/copy-from-one-object-to-another-javascript/main.jpg?trace",
-      "name": "./content/assets/copy-from-one-object-to-another-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/copy-from-one-object-to-another-javascript/main.jpg?webp",
-      "name": "./content/assets/copy-from-one-object-to-another-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/copy-from-one-object-to-another-javascript/meta.jpg?trace",
-      "name": "./content/assets/copy-from-one-object-to-another-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/copy-from-one-object-to-another-javascript/meta.jpg?webp",
-      "name": "./content/assets/copy-from-one-object-to-another-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/delete-properties-methods-objects-javascript/main.jpg?trace",
-      "name": "./content/assets/delete-properties-methods-objects-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/delete-properties-methods-objects-javascript/main.jpg?webp",
-      "name": "./content/assets/delete-properties-methods-objects-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/delete-properties-methods-objects-javascript/meta.jpg?trace",
-      "name": "./content/assets/delete-properties-methods-objects-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/delete-properties-methods-objects-javascript/meta.jpg?webp",
-      "name": "./content/assets/delete-properties-methods-objects-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/different-ways-to-create-objects-javascript/main.jpg?trace",
-      "name": "./content/assets/different-ways-to-create-objects-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/different-ways-to-create-objects-javascript/main.jpg?webp",
-      "name": "./content/assets/different-ways-to-create-objects-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/different-ways-to-create-objects-javascript/meta.jpg?trace",
-      "name": "./content/assets/different-ways-to-create-objects-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/different-ways-to-create-objects-javascript/meta.jpg?webp",
-      "name": "./content/assets/different-ways-to-create-objects-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/dot-vs-bracket-notaion-objects-javascript/main.jpg?trace",
-      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/dot-vs-bracket-notaion-objects-javascript/main.jpg?webp",
-      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/dot-vs-bracket-notaion-objects-javascript/meta.jpg?trace",
-      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/dot-vs-bracket-notaion-objects-javascript/meta.jpg?webp",
-      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/event-listeners-in-javascript/main.jpg?trace",
-      "name": "./content/assets/event-listeners-in-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/event-listeners-in-javascript/main.jpg?webp",
-      "name": "./content/assets/event-listeners-in-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/event-listeners-in-javascript/meta.jpg?trace",
-      "name": "./content/assets/event-listeners-in-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/event-listeners-in-javascript/meta.jpg?webp",
-      "name": "./content/assets/event-listeners-in-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/fetch-request-javascript/main.jpg?trace",
-      "name": "./content/assets/fetch-request-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/fetch-request-javascript/main.jpg?webp",
-      "name": "./content/assets/fetch-request-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/fetch-request-javascript/meta.jpg?trace",
-      "name": "./content/assets/fetch-request-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/fetch-request-javascript/meta.jpg?webp",
-      "name": "./content/assets/fetch-request-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/get-all-properties-from-object-javascript/main.jpg?trace",
-      "name": "./content/assets/get-all-properties-from-object-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/get-all-properties-from-object-javascript/main.jpg?webp",
-      "name": "./content/assets/get-all-properties-from-object-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/get-all-properties-from-object-javascript/meta.jpg?trace",
-      "name": "./content/assets/get-all-properties-from-object-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/get-all-properties-from-object-javascript/meta.jpg?webp",
-      "name": "./content/assets/get-all-properties-from-object-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/inherit-methods-javascript/main.jpg?trace",
-      "name": "./content/assets/inherit-methods-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/inherit-methods-javascript/main.jpg?webp",
-      "name": "./content/assets/inherit-methods-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/inherit-methods-javascript/meta.jpg?trace",
-      "name": "./content/assets/inherit-methods-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/inherit-methods-javascript/meta.jpg?webp",
-      "name": "./content/assets/inherit-methods-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/inherit-properties-javascript/main.jpg?trace",
-      "name": "./content/assets/inherit-properties-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/inherit-properties-javascript/main.jpg?webp",
-      "name": "./content/assets/inherit-properties-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/inherit-properties-javascript/meta.jpg?trace",
-      "name": "./content/assets/inherit-properties-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/inherit-properties-javascript/meta.jpg?webp",
-      "name": "./content/assets/inherit-properties-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/json-javascript/main.jpg?trace",
-      "name": "./content/assets/json-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/json-javascript/main.jpg?webp",
-      "name": "./content/assets/json-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/json-javascript/meta.jpg?trace",
-      "name": "./content/assets/json-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/json-javascript/meta.jpg?webp",
-      "name": "./content/assets/json-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/loop-over-properties-methods-objects-javascript/main.jpg?trace",
-      "name": "./content/assets/loop-over-properties-methods-objects-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/loop-over-properties-methods-objects-javascript/main.jpg?webp",
-      "name": "./content/assets/loop-over-properties-methods-objects-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/loop-over-properties-methods-objects-javascript/meta.jpg?trace",
-      "name": "./content/assets/loop-over-properties-methods-objects-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/loop-over-properties-methods-objects-javascript/meta.jpg?webp",
-      "name": "./content/assets/loop-over-properties-methods-objects-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/make-objects-immutable-javascript/main.jpg?trace",
-      "name": "./content/assets/make-objects-immutable-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/make-objects-immutable-javascript/main.jpg?webp",
-      "name": "./content/assets/make-objects-immutable-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/make-objects-immutable-javascript/meta.jpg?trace",
-      "name": "./content/assets/make-objects-immutable-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/make-objects-immutable-javascript/meta.jpg?webp",
-      "name": "./content/assets/make-objects-immutable-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/make-property-immutable-objects-javascript/main.jpg?trace",
-      "name": "./content/assets/make-property-immutable-objects-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/make-property-immutable-objects-javascript/main.jpg?webp",
-      "name": "./content/assets/make-property-immutable-objects-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/make-property-immutable-objects-javascript/meta.jpg?trace",
-      "name": "./content/assets/make-property-immutable-objects-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/make-property-immutable-objects-javascript/meta.jpg?webp",
-      "name": "./content/assets/make-property-immutable-objects-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/nextjs-pwa/generatereport.png?trace",
-      "name": "./content/assets/nextjs-pwa/generatereport.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/nextjs-pwa/generatereport.png?webp",
-      "name": "./content/assets/nextjs-pwa/generatereport.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/nextjs-pwa/main.jpg?trace",
-      "name": "./content/assets/nextjs-pwa/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/nextjs-pwa/main.jpg?webp",
-      "name": "./content/assets/nextjs-pwa/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/nextjs-pwa/manifest.png?trace",
-      "name": "./content/assets/nextjs-pwa/manifest.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/nextjs-pwa/manifest.png?webp",
-      "name": "./content/assets/nextjs-pwa/manifest.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/nextjs-pwa/meta.jpg?trace",
-      "name": "./content/assets/nextjs-pwa/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/nextjs-pwa/meta.jpg?webp",
-      "name": "./content/assets/nextjs-pwa/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/nextjs-pwa/pwa.png?trace",
-      "name": "./content/assets/nextjs-pwa/pwa.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/nextjs-pwa/pwa.png?webp",
-      "name": "./content/assets/nextjs-pwa/pwa.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/nextjs-pwa/serviceworker.png?trace",
-      "name": "./content/assets/nextjs-pwa/serviceworker.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/nextjs-pwa/serviceworker.png?webp",
-      "name": "./content/assets/nextjs-pwa/serviceworker.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/progressive-image-loading/folder-structure.png?trace",
-      "name": "./content/assets/progressive-image-loading/folder-structure.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/progressive-image-loading/folder-structure.png?webp",
-      "name": "./content/assets/progressive-image-loading/folder-structure.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/progressive-image-loading/main.jpg?trace",
-      "name": "./content/assets/progressive-image-loading/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/progressive-image-loading/main.jpg?webp",
-      "name": "./content/assets/progressive-image-loading/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/progressive-image-loading/main.png?trace",
-      "name": "./content/assets/progressive-image-loading/main.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/progressive-image-loading/main.png?webp",
-      "name": "./content/assets/progressive-image-loading/main.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/progressive-image-loading/meta.jpg?trace",
-      "name": "./content/assets/progressive-image-loading/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/progressive-image-loading/meta.jpg?webp",
-      "name": "./content/assets/progressive-image-loading/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/promises-javascript/main.jpg?trace",
-      "name": "./content/assets/promises-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/promises-javascript/main.jpg?webp",
-      "name": "./content/assets/promises-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/promises-javascript/meta.jpg?trace",
-      "name": "./content/assets/promises-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/promises-javascript/meta.jpg?webp",
-      "name": "./content/assets/promises-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/replace-string-with-another-string-javascript/main.jpg?trace",
-      "name": "./content/assets/replace-string-with-another-string-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/replace-string-with-another-string-javascript/main.jpg?webp",
-      "name": "./content/assets/replace-string-with-another-string-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/replace-string-with-another-string-javascript/meta.jpg?trace",
-      "name": "./content/assets/replace-string-with-another-string-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/replace-string-with-another-string-javascript/meta.jpg?webp",
-      "name": "./content/assets/replace-string-with-another-string-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/round-decimals-javascript/main.jpg?trace",
-      "name": "./content/assets/round-decimals-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/round-decimals-javascript/main.jpg?webp",
-      "name": "./content/assets/round-decimals-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/round-decimals-javascript/meta.jpg?trace",
-      "name": "./content/assets/round-decimals-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/round-decimals-javascript/meta.jpg?webp",
-      "name": "./content/assets/round-decimals-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/split-and-join-strings-javascript/main.jpg?trace",
-      "name": "./content/assets/split-and-join-strings-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/split-and-join-strings-javascript/main.jpg?webp",
+      "id": "+36e",
       "name": "./content/assets/split-and-join-strings-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./content/assets/split-and-join-strings-javascript/meta.jpg?trace",
-      "name": "./content/assets/split-and-join-strings-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/split-and-join-strings-javascript/meta.jpg?webp",
-      "name": "./content/assets/split-and-join-strings-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/static-site-generation-nextjs/main.jpg?trace",
-      "name": "./content/assets/static-site-generation-nextjs/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/static-site-generation-nextjs/main.jpg?webp",
-      "name": "./content/assets/static-site-generation-nextjs/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/static-site-generation-nextjs/main.png?trace",
-      "name": "./content/assets/static-site-generation-nextjs/main.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/static-site-generation-nextjs/main.png?webp",
-      "name": "./content/assets/static-site-generation-nextjs/main.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/static-site-generation-nextjs/meta.jpg?trace",
-      "name": "./content/assets/static-site-generation-nextjs/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/static-site-generation-nextjs/meta.jpg?webp",
-      "name": "./content/assets/static-site-generation-nextjs/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/static-site-generation-nextjs/static.png?trace",
-      "name": "./content/assets/static-site-generation-nextjs/static.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/static-site-generation-nextjs/static.png?webp",
-      "name": "./content/assets/static-site-generation-nextjs/static.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/store-persist-data-javascript/main.jpg?trace",
-      "name": "./content/assets/store-persist-data-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/store-persist-data-javascript/main.jpg?webp",
-      "name": "./content/assets/store-persist-data-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/store-persist-data-javascript/meta.jpg?trace",
-      "name": "./content/assets/store-persist-data-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/store-persist-data-javascript/meta.jpg?webp",
-      "name": "./content/assets/store-persist-data-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/trigger-events-programatically-javascript/dispatch-event-otp.png?trace",
-      "name": "./content/assets/trigger-events-programatically-javascript/dispatch-event-otp.png?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/trigger-events-programatically-javascript/dispatch-event-otp.png?webp",
-      "name": "./content/assets/trigger-events-programatically-javascript/dispatch-event-otp.png?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/trigger-events-programatically-javascript/final-render.gif?trace",
-      "name": "./content/assets/trigger-events-programatically-javascript/final-render.gif?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/trigger-events-programatically-javascript/final-render.gif?webp",
-      "name": "./content/assets/trigger-events-programatically-javascript/final-render.gif?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
-    },
-    {
-      "id": "./content/assets/trigger-events-programatically-javascript/main.jpg?trace",
+      "id": "+UGN",
       "name": "./content/assets/trigger-events-programatically-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./content/assets/trigger-events-programatically-javascript/main.jpg?webp",
-      "name": "./content/assets/trigger-events-programatically-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "id": "+Vfi",
+      "name": "./content/assets/make-objects-immutable-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./content/assets/trigger-events-programatically-javascript/meta.jpg?trace",
-      "name": "./content/assets/trigger-events-programatically-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "id": "+lMT",
+      "name": "./content/assets/static-site-generation-nextjs/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./content/assets/trigger-events-programatically-javascript/meta.jpg?webp",
-      "name": "./content/assets/trigger-events-programatically-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "id": "/Icu",
+      "name": "./content/assets/nextjs-pwa/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./content/assets/try-catch-finally/main.jpg?trace",
-      "name": "./content/assets/try-catch-finally/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "id": "1EvM",
+      "name": "./content/assets/loop-over-properties-methods-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./content/assets/try-catch-finally/main.jpg?webp",
-      "name": "./content/assets/try-catch-finally/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "id": "1Ww1",
+      "name": "./content/assets sync recursive ^\\.\\/.*$",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./content/assets/try-catch-finally/meta.jpg?trace",
-      "name": "./content/assets/try-catch-finally/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "id": "1Ww1Y",
+      "name": "./content/assets sync recursive ^\\.\\/.*$",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./content/assets/try-catch-finally/meta.jpg?webp",
+      "id": "1Y2w",
+      "name": "./content/assets/loop-over-properties-methods-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "1mAB",
+      "name": "./content/assets/inherit-methods-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "2C/V",
+      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "2x3k",
+      "name": "./content/assets/json-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "3RPc",
+      "name": "./content/assets/json-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "3d8N",
+      "name": "./content/assets/different-ways-to-create-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "4M5l",
       "name": "./content/assets/try-catch-finally/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./content/assets/various-ways-selecting-elements-javascript/main.jpg?trace",
+      "id": "4OoG",
+      "name": "./content/assets/store-persist-data-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "67RQ",
+      "name": "./content/assets/progressive-image-loading/main.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "6OaN",
+      "name": "./content/assets/add-styles-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "6avB",
+      "name": "./content/assets/inherit-methods-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "6esS",
+      "name": "./content/assets/make-property-immutable-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "6tLM",
+      "name": "./content/assets/event-listeners-in-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "7QNs",
+      "name": "./content/assets/different-ways-to-create-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "8GkZ",
+      "name": "./content/assets/nextjs-pwa/serviceworker.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "8Knv",
+      "name": "./content/assets/trigger-events-programatically-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "9ICe",
+      "name": "./content/assets/replace-string-with-another-string-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "9QKY",
+      "name": "./content/assets/check-if-property-object-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "9TBc",
+      "name": "./content/assets/make-property-immutable-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "9eAe",
+      "name": "./content/assets/promises-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "9p+U",
+      "name": "./content/assets/progressive-image-loading/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "AQIJ",
+      "name": "./content/assets/contributing-to-open-source/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ASvW",
       "name": "./content/assets/various-ways-selecting-elements-javascript/main.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./content/assets/various-ways-selecting-elements-javascript/main.jpg?webp",
-      "name": "./content/assets/various-ways-selecting-elements-javascript/main.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "id": "Aedz",
+      "name": "./content/assets/progressive-image-loading/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./content/assets/various-ways-selecting-elements-javascript/meta.jpg?trace",
-      "name": "./content/assets/various-ways-selecting-elements-javascript/meta.jpg?trace",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "id": "BkUH",
+      "name": "./content/assets/nextjs-pwa/manifest.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./content/assets/various-ways-selecting-elements-javascript/meta.jpg?webp",
+      "id": "CFVw",
+      "name": "./content/assets/store-persist-data-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "CYga",
+      "name": "./content/assets/make-objects-immutable-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "CcwX",
+      "name": "./content/assets/check-if-property-object-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Cx5B",
+      "name": "./content/assets/replace-string-with-another-string-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "De3i",
+      "name": "./content/assets/add-styles-javascript/inline-styles-red.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Do1W",
+      "name": "./content/assets/store-persist-data-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "EYvA",
+      "name": "./content/assets/static-site-generation-nextjs/main.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "GRiP",
+      "name": "./content/assets/promises-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "GrT1",
+      "name": "./content/assets/trigger-events-programatically-javascript/dispatch-event-otp.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "GzVH",
+      "name": "./content/assets/fetch-request-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "HGJF",
+      "name": "./content/assets/split-and-join-strings-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "IPnI",
+      "name": "./content/assets/inherit-properties-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "J7DG",
+      "name": "./content/assets/fetch-request-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "JWfJ",
       "name": "./content/assets/various-ways-selecting-elements-javascript/meta.jpg?webp",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
     },
     {
-      "id": "./node_modules/lazysizes/lazysizes.js",
+      "id": "KG+p",
+      "name": "./content/assets/static-site-generation-nextjs/main.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "KYCa",
+      "name": "./content/assets/add-remove-elements-dom-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "M9KN",
+      "name": "./content/assets/nextjs-pwa/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "MMDm",
+      "name": "./content/assets/replace-string-with-another-string-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "MOR/",
+      "name": "./content/assets/replace-string-with-another-string-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "MQf4",
+      "name": "./content/assets/round-decimals-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "MdS3",
+      "name": "./content/assets/various-ways-selecting-elements-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "MgrA",
+      "name": "./content/assets/add-styles-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Mm/A",
+      "name": "./content/assets/trigger-events-programatically-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Mzyu",
+      "name": "./content/assets/delete-properties-methods-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "N+BB",
+      "name": "./content/assets/nextjs-pwa/serviceworker.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "N3au",
+      "name": "./content/assets/delete-properties-methods-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "N89n",
+      "name": "./content/assets/copy-from-one-object-to-another-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "N9vm",
+      "name": "./content/assets/contributing-to-open-source/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "NNQE",
+      "name": "./content/assets/contributing-to-open-source/codetribute-website.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "NPhy",
+      "name": "./content/assets/progressive-image-loading/main.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "NhOP",
+      "name": "./content/assets/contributing-to-open-source/good-first-issue.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "OLzc",
+      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ObG0",
+      "name": "./content/assets/add-remove-elements-dom-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "OwfQ",
+      "name": "./content/assets/nextjs-pwa/pwa.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "PTZC",
+      "name": "./content/assets/try-catch-finally/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Q1/8",
+      "name": "./content/assets/add-remove-elements-dom-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "QegA",
+      "name": "./content/assets/json-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "QyhF",
+      "name": "./content/assets/static-site-generation-nextjs/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "R0TX",
+      "name": "./content/assets/round-decimals-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "RlCe",
+      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "RnIw",
+      "name": "./content/assets/contributing-to-open-source/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "RrR1",
+      "name": "./content/assets/round-decimals-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "S9OO",
+      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "T0y+",
+      "name": "./content/assets/get-all-properties-from-object-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "UKkw",
+      "name": "./content/assets/event-listeners-in-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "UKvk",
+      "name": "./content/assets/event-listeners-in-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "UOpl",
+      "name": "./content/assets/round-decimals-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "UZDr",
+      "name": "./content/assets/split-and-join-strings-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "V9jp",
+      "name": "./content/assets/copy-from-one-object-to-another-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "VlLc",
+      "name": "./content/assets/nextjs-pwa/manifest.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "VrLr",
+      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "XEKI",
+      "name": "./content/assets/static-site-generation-nextjs/static.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "XLXF",
+      "name": "./content/assets/trigger-events-programatically-javascript/final-render.gif?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "XToE",
+      "name": "./content/assets/various-ways-selecting-elements-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "XUDw",
+      "name": "./components/Utils/ImageLoaderUtil.jsx",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "YWVT",
+      "name": "./content/assets/add-styles-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Z8sR",
+      "name": "./content/assets/promises-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ZWCb",
+      "name": "./content/assets/check-if-child-in-parent/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ZgiD",
+      "name": "./content/assets/contributing-to-open-source/good-first-issue.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Zv07",
+      "name": "./content/assets/trigger-events-programatically-javascript/final-render.gif?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "a5dV",
+      "name": "./content/assets/different-ways-to-create-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "aPGa",
+      "name": "./content/assets/check-if-property-object-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ak2H",
+      "name": "./content/assets/static-site-generation-nextjs/static.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "aqQL",
+      "name": "./content/assets/different-ways-to-create-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "bDXG",
+      "name": "./content/assets/split-and-join-strings-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ba04",
+      "name": "./content/assets/make-property-immutable-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "bhr6",
+      "name": "./content/assets/get-all-properties-from-object-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "cDZl",
+      "name": "./content/assets/loop-over-properties-methods-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "cyCn",
+      "name": "./content/assets/add-styles-javascript/inline-styles-red.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "dKWU",
+      "name": "./content/assets/static-site-generation-nextjs/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "dMw+",
+      "name": "./content/assets/inherit-methods-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "dPU5",
+      "name": "./content/assets/json-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "e9Zq",
+      "name": "./content/assets/progressive-image-loading/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "eLfe",
+      "name": "./content/assets/inherit-methods-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ePFn",
+      "name": "./content/assets/try-catch-finally/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "eaD0",
+      "name": "./content/assets/add-styles-javascript/inline-styles-directly.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "fcm+",
+      "name": "./content/assets/progressive-image-loading/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "g/np",
+      "name": "./content/assets/check-if-child-in-parent/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "gu6J",
+      "name": "./content/assets/delete-properties-methods-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "gxLj",
+      "name": "./content/assets/nextjs-pwa/pwa.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "h4eP",
+      "name": "./content/assets/check-if-property-object-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "jR/y",
+      "name": "./content/assets/trigger-events-programatically-javascript/dispatch-event-otp.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "jYL/",
+      "name": "./content/assets/copy-from-one-object-to-another-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "k7op",
+      "name": "./content/assets/loop-over-properties-methods-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "lEWv",
+      "name": "./content/assets/nextjs-pwa/generatereport.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "lVjC",
+      "name": "./content/assets/make-objects-immutable-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "lZgp",
+      "name": "./content/assets/nextjs-pwa/generatereport.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "lk79",
+      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "m/rO",
+      "name": "./content/assets/delete-properties-methods-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "m3dU",
+      "name": "./content/assets/contributing-to-open-source/codetribute-website.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "mkuV",
+      "name": "./content/assets/promises-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "mp/z",
+      "name": "./content/assets/make-objects-immutable-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "noMl",
+      "name": "./content/assets/progressive-image-loading/folder-structure.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "npeZ",
+      "name": "./content/assets/contributing-to-open-source/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "oAHu",
+      "name": "./content/assets/nextjs-pwa/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "oYf0",
+      "name": "./content/assets/nextjs-pwa/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "odNs",
+      "name": "./content/assets/make-property-immutable-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "otI6",
+      "name": "./content/assets/get-all-properties-from-object-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "pMtV",
+      "name": "./content/assets/try-catch-finally/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "phZz",
+      "name": "./content/assets/inherit-properties-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "pi1Z",
+      "name": "./content/assets/get-all-properties-from-object-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "pofW",
+      "name": "./content/assets/contributing-to-open-source/github-issues.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "qWg/",
+      "name": "./content/assets/contributing-to-open-source/github-issues.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "qiVq",
+      "name": "./content/assets/fetch-request-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "s+lh",
       "name": "./node_modules/lazysizes/lazysizes.js",
-      "file": "static/chunks/5.js",
-      "publicPath": "static/chunks/5.js"
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "sANc",
+      "name": "./content/assets/add-remove-elements-dom-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "srf5",
+      "name": "./content/assets/store-persist-data-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "t5xp",
+      "name": "./content/assets/check-if-child-in-parent/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "tL6l",
+      "name": "./content/assets/fetch-request-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "tkKg",
+      "name": "./content/assets/trigger-events-programatically-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ufs7",
+      "name": "./content/assets/progressive-image-loading/folder-structure.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "uqns",
+      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "v5IR",
+      "name": "./content/assets/inherit-properties-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "wThd",
+      "name": "./content/assets/inherit-properties-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "wVZ/",
+      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "wz3W",
+      "name": "./content/assets/event-listeners-in-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "xFJg",
+      "name": "./content/assets/check-if-child-in-parent/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ycHb",
+      "name": "./content/assets/copy-from-one-object-to-another-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "zAng",
+      "name": "./content/assets/add-styles-javascript/inline-styles-directly.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "zHqq",
+      "name": "./content/assets/static-site-generation-nextjs/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "zm6O",
+      "name": "./content/assets/add-styles-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    }
+  ],
+  "../components/BlogPage/Card": [
+    {
+      "id": "+36e",
+      "name": "./content/assets/split-and-join-strings-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "+UGN",
+      "name": "./content/assets/trigger-events-programatically-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "+Vfi",
+      "name": "./content/assets/make-objects-immutable-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "+lMT",
+      "name": "./content/assets/static-site-generation-nextjs/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "/Icu",
+      "name": "./content/assets/nextjs-pwa/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "1EvM",
+      "name": "./content/assets/loop-over-properties-methods-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "1Ww1",
+      "name": "./content/assets sync recursive ^\\.\\/.*$",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "1Ww1Y",
+      "name": "./content/assets sync recursive ^\\.\\/.*$",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "1Y2w",
+      "name": "./content/assets/loop-over-properties-methods-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "1mAB",
+      "name": "./content/assets/inherit-methods-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "2C/V",
+      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "2x3k",
+      "name": "./content/assets/json-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "3RPc",
+      "name": "./content/assets/json-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "3d8N",
+      "name": "./content/assets/different-ways-to-create-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "4M5l",
+      "name": "./content/assets/try-catch-finally/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "4OoG",
+      "name": "./content/assets/store-persist-data-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "67RQ",
+      "name": "./content/assets/progressive-image-loading/main.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "6OaN",
+      "name": "./content/assets/add-styles-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "6avB",
+      "name": "./content/assets/inherit-methods-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "6esS",
+      "name": "./content/assets/make-property-immutable-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "6tLM",
+      "name": "./content/assets/event-listeners-in-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "7QNs",
+      "name": "./content/assets/different-ways-to-create-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "8GkZ",
+      "name": "./content/assets/nextjs-pwa/serviceworker.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "8Knv",
+      "name": "./content/assets/trigger-events-programatically-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "9ICe",
+      "name": "./content/assets/replace-string-with-another-string-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "9QKY",
+      "name": "./content/assets/check-if-property-object-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "9TBc",
+      "name": "./content/assets/make-property-immutable-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "9eAe",
+      "name": "./content/assets/promises-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "9p+U",
+      "name": "./content/assets/progressive-image-loading/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "AQIJ",
+      "name": "./content/assets/contributing-to-open-source/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ASvW",
+      "name": "./content/assets/various-ways-selecting-elements-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Aedz",
+      "name": "./content/assets/progressive-image-loading/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "BkUH",
+      "name": "./content/assets/nextjs-pwa/manifest.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "CFVw",
+      "name": "./content/assets/store-persist-data-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "CYga",
+      "name": "./content/assets/make-objects-immutable-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "CcwX",
+      "name": "./content/assets/check-if-property-object-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Cx5B",
+      "name": "./content/assets/replace-string-with-another-string-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "De3i",
+      "name": "./content/assets/add-styles-javascript/inline-styles-red.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Do1W",
+      "name": "./content/assets/store-persist-data-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "EYvA",
+      "name": "./content/assets/static-site-generation-nextjs/main.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "GRiP",
+      "name": "./content/assets/promises-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "GrT1",
+      "name": "./content/assets/trigger-events-programatically-javascript/dispatch-event-otp.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "GzVH",
+      "name": "./content/assets/fetch-request-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "HGJF",
+      "name": "./content/assets/split-and-join-strings-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "IPnI",
+      "name": "./content/assets/inherit-properties-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "J7DG",
+      "name": "./content/assets/fetch-request-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "JWfJ",
+      "name": "./content/assets/various-ways-selecting-elements-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "KG+p",
+      "name": "./content/assets/static-site-generation-nextjs/main.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "KYCa",
+      "name": "./content/assets/add-remove-elements-dom-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "M9KN",
+      "name": "./content/assets/nextjs-pwa/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "MMDm",
+      "name": "./content/assets/replace-string-with-another-string-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "MOR/",
+      "name": "./content/assets/replace-string-with-another-string-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "MQf4",
+      "name": "./content/assets/round-decimals-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "MdS3",
+      "name": "./content/assets/various-ways-selecting-elements-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "MgrA",
+      "name": "./content/assets/add-styles-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Mm/A",
+      "name": "./content/assets/trigger-events-programatically-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Mzyu",
+      "name": "./content/assets/delete-properties-methods-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "N+BB",
+      "name": "./content/assets/nextjs-pwa/serviceworker.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "N3au",
+      "name": "./content/assets/delete-properties-methods-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "N89n",
+      "name": "./content/assets/copy-from-one-object-to-another-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "N9vm",
+      "name": "./content/assets/contributing-to-open-source/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "NNQE",
+      "name": "./content/assets/contributing-to-open-source/codetribute-website.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "NPhy",
+      "name": "./content/assets/progressive-image-loading/main.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "NhOP",
+      "name": "./content/assets/contributing-to-open-source/good-first-issue.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "OLzc",
+      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ObG0",
+      "name": "./content/assets/add-remove-elements-dom-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "OwfQ",
+      "name": "./content/assets/nextjs-pwa/pwa.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "PTZC",
+      "name": "./content/assets/try-catch-finally/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Q1/8",
+      "name": "./content/assets/add-remove-elements-dom-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "QegA",
+      "name": "./content/assets/json-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "QyhF",
+      "name": "./content/assets/static-site-generation-nextjs/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "R0TX",
+      "name": "./content/assets/round-decimals-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "RlCe",
+      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "RnIw",
+      "name": "./content/assets/contributing-to-open-source/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "RrR1",
+      "name": "./content/assets/round-decimals-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "S9OO",
+      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "T0y+",
+      "name": "./content/assets/get-all-properties-from-object-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "UKkw",
+      "name": "./content/assets/event-listeners-in-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "UKvk",
+      "name": "./content/assets/event-listeners-in-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "UOpl",
+      "name": "./content/assets/round-decimals-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "UZDr",
+      "name": "./content/assets/split-and-join-strings-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "V9jp",
+      "name": "./content/assets/copy-from-one-object-to-another-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "VlLc",
+      "name": "./content/assets/nextjs-pwa/manifest.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "VrLr",
+      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "XEKI",
+      "name": "./content/assets/static-site-generation-nextjs/static.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "XLXF",
+      "name": "./content/assets/trigger-events-programatically-javascript/final-render.gif?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "XToE",
+      "name": "./content/assets/various-ways-selecting-elements-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "XUDw",
+      "name": "./components/Utils/ImageLoaderUtil.jsx",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "YWVT",
+      "name": "./content/assets/add-styles-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Z8sR",
+      "name": "./content/assets/promises-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ZWCb",
+      "name": "./content/assets/check-if-child-in-parent/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ZgiD",
+      "name": "./content/assets/contributing-to-open-source/good-first-issue.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "Zv07",
+      "name": "./content/assets/trigger-events-programatically-javascript/final-render.gif?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "a5dV",
+      "name": "./content/assets/different-ways-to-create-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "aPGa",
+      "name": "./content/assets/check-if-property-object-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ak2H",
+      "name": "./content/assets/static-site-generation-nextjs/static.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "aqQL",
+      "name": "./content/assets/different-ways-to-create-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "bDXG",
+      "name": "./content/assets/split-and-join-strings-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ba04",
+      "name": "./content/assets/make-property-immutable-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "bhr6",
+      "name": "./content/assets/get-all-properties-from-object-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "cDZl",
+      "name": "./content/assets/loop-over-properties-methods-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "cyCn",
+      "name": "./content/assets/add-styles-javascript/inline-styles-red.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "dKWU",
+      "name": "./content/assets/static-site-generation-nextjs/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "dMw+",
+      "name": "./content/assets/inherit-methods-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "dPU5",
+      "name": "./content/assets/json-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "e9Zq",
+      "name": "./content/assets/progressive-image-loading/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "eLfe",
+      "name": "./content/assets/inherit-methods-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ePFn",
+      "name": "./content/assets/try-catch-finally/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "eaD0",
+      "name": "./content/assets/add-styles-javascript/inline-styles-directly.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "fcm+",
+      "name": "./content/assets/progressive-image-loading/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "g/np",
+      "name": "./content/assets/check-if-child-in-parent/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "gu6J",
+      "name": "./content/assets/delete-properties-methods-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "gxLj",
+      "name": "./content/assets/nextjs-pwa/pwa.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "h4eP",
+      "name": "./content/assets/check-if-property-object-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "jR/y",
+      "name": "./content/assets/trigger-events-programatically-javascript/dispatch-event-otp.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "jYL/",
+      "name": "./content/assets/copy-from-one-object-to-another-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "k7op",
+      "name": "./content/assets/loop-over-properties-methods-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "lEWv",
+      "name": "./content/assets/nextjs-pwa/generatereport.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "lVjC",
+      "name": "./content/assets/make-objects-immutable-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "lZgp",
+      "name": "./content/assets/nextjs-pwa/generatereport.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "lk79",
+      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "m/rO",
+      "name": "./content/assets/delete-properties-methods-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "m3dU",
+      "name": "./content/assets/contributing-to-open-source/codetribute-website.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "mkuV",
+      "name": "./content/assets/promises-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "mp/z",
+      "name": "./content/assets/make-objects-immutable-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "noMl",
+      "name": "./content/assets/progressive-image-loading/folder-structure.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "npeZ",
+      "name": "./content/assets/contributing-to-open-source/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "oAHu",
+      "name": "./content/assets/nextjs-pwa/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "oYf0",
+      "name": "./content/assets/nextjs-pwa/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "odNs",
+      "name": "./content/assets/make-property-immutable-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "otI6",
+      "name": "./content/assets/get-all-properties-from-object-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "pMtV",
+      "name": "./content/assets/try-catch-finally/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "phZz",
+      "name": "./content/assets/inherit-properties-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "pi1Z",
+      "name": "./content/assets/get-all-properties-from-object-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "pofW",
+      "name": "./content/assets/contributing-to-open-source/github-issues.png?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "qWg/",
+      "name": "./content/assets/contributing-to-open-source/github-issues.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "qiVq",
+      "name": "./content/assets/fetch-request-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "s+lh",
+      "name": "./node_modules/lazysizes/lazysizes.js",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "sANc",
+      "name": "./content/assets/add-remove-elements-dom-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "srf5",
+      "name": "./content/assets/store-persist-data-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "t5xp",
+      "name": "./content/assets/check-if-child-in-parent/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "tL6l",
+      "name": "./content/assets/fetch-request-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "tkKg",
+      "name": "./content/assets/trigger-events-programatically-javascript/meta.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ufs7",
+      "name": "./content/assets/progressive-image-loading/folder-structure.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "uqns",
+      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "v5IR",
+      "name": "./content/assets/inherit-properties-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "wThd",
+      "name": "./content/assets/inherit-properties-javascript/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "wVZ/",
+      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "wz3W",
+      "name": "./content/assets/event-listeners-in-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "xFJg",
+      "name": "./content/assets/check-if-child-in-parent/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "ycHb",
+      "name": "./content/assets/copy-from-one-object-to-another-javascript/main.jpg?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "zAng",
+      "name": "./content/assets/add-styles-javascript/inline-styles-directly.png?webp",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "zHqq",
+      "name": "./content/assets/static-site-generation-nextjs/meta.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "zm6O",
+      "name": "./content/assets/add-styles-javascript/main.jpg?trace",
+      "file": "static/chunks/7.77d479571ecef539a8a7.js",
+      "publicPath": "static/chunks/7.77d479571ecef539a8a7.js"
+    },
+    {
+      "id": "MOsI",
+      "name": "./components/BlogPage/Card.jsx",
+      "file": "static/chunks/18.6615ad7bb6ec083887aa.js",
+      "publicPath": "static/chunks/18.6615ad7bb6ec083887aa.js"
     }
   ],
   "./MobileNavigation": [
     {
-      "id": "./components/Navigation/MobileNavigation.jsx",
-      "name": "./components/Navigation/MobileNavigation.jsx",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
+      "id": "wHSu",
+      "name": "./node_modules/@fortawesome/free-solid-svg-icons/index.es.js",
+      "file": "static/chunks/cb1608f2.f09da1e3aba7eed68f4a.js",
+      "publicPath": "static/chunks/cb1608f2.f09da1e3aba7eed68f4a.js"
     },
     {
-      "id": "./node_modules/@babel/runtime/regenerator/index.js",
+      "id": "KV6L",
+      "name": "./components/Navigation/MobileNavigation.jsx",
+      "file": "static/chunks/17.e6f36c63104b8054ac65.js",
+      "publicPath": "static/chunks/17.e6f36c63104b8054ac65.js"
+    },
+    {
+      "id": "o0o1",
       "name": "./node_modules/@babel/runtime/regenerator/index.js",
-      "file": "static/chunks/2.js",
-      "publicPath": "static/chunks/2.js"
+      "file": "static/chunks/17.e6f36c63104b8054ac65.js",
+      "publicPath": "static/chunks/17.e6f36c63104b8054ac65.js"
     }
   ],
   "./NavigationItems": [
     {
-      "id": "./components/Navigation/NavigationItems.jsx",
+      "id": "CQE5",
       "name": "./components/Navigation/NavigationItems.jsx",
-      "file": "static/chunks/4.js",
-      "publicPath": "static/chunks/4.js"
-    }
-  ],
-  "./dev/noop": [
-    {
-      "id": "./node_modules/next/dist/client/dev/noop.js",
-      "name": "./node_modules/next/dist/client/dev/noop.js",
-      "file": "static/chunks/0.js",
-      "publicPath": "static/chunks/0.js"
+      "file": "static/chunks/19.293f61af6fa7c5e491de.js",
+      "publicPath": "static/chunks/19.293f61af6fa7c5e491de.js"
     }
   ],
   "@fortawesome/react-fontawesome": [
     {
-      "id": "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js",
+      "id": "+wdc",
+      "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
+      "file": "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "publicPath": "static/chunks/framework.0912b0a4b4d3d4e300b5.js"
+    },
+    {
+      "id": "16Al",
+      "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
+      "file": "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "publicPath": "static/chunks/framework.0912b0a4b4d3d4e300b5.js"
+    },
+    {
+      "id": "17x9",
+      "name": "./node_modules/prop-types/index.js",
+      "file": "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "publicPath": "static/chunks/framework.0912b0a4b4d3d4e300b5.js"
+    },
+    {
+      "id": "8L3h",
+      "name": "./node_modules/use-subscription/index.js",
+      "file": "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "publicPath": "static/chunks/framework.0912b0a4b4d3d4e300b5.js"
+    },
+    {
+      "id": "QCnb",
+      "name": "./node_modules/scheduler/index.js",
+      "file": "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "publicPath": "static/chunks/framework.0912b0a4b4d3d4e300b5.js"
+    },
+    {
+      "id": "WbBG",
+      "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+      "file": "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "publicPath": "static/chunks/framework.0912b0a4b4d3d4e300b5.js"
+    },
+    {
+      "id": "f/k9",
+      "name": "./node_modules/use-subscription/cjs/use-subscription.production.min.js",
+      "file": "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "publicPath": "static/chunks/framework.0912b0a4b4d3d4e300b5.js"
+    },
+    {
+      "id": "i8i4",
+      "name": "./node_modules/react-dom/index.js",
+      "file": "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "publicPath": "static/chunks/framework.0912b0a4b4d3d4e300b5.js"
+    },
+    {
+      "id": "q1tI",
+      "name": "./node_modules/react/index.js",
+      "file": "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "publicPath": "static/chunks/framework.0912b0a4b4d3d4e300b5.js"
+    },
+    {
+      "id": "viRO",
+      "name": "./node_modules/react/cjs/react.production.min.js",
+      "file": "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "publicPath": "static/chunks/framework.0912b0a4b4d3d4e300b5.js"
+    },
+    {
+      "id": "yl30",
+      "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+      "file": "static/chunks/framework.0912b0a4b4d3d4e300b5.js",
+      "publicPath": "static/chunks/framework.0912b0a4b4d3d4e300b5.js"
+    },
+    {
+      "id": "7O5W",
       "name": "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js",
-      "file": "static/chunks/3.js",
-      "publicPath": "static/chunks/3.js"
+      "file": "static/chunks/5.48096427d3b563609ad5.js",
+      "publicPath": "static/chunks/5.48096427d3b563609ad5.js"
     },
     {
-      "id": "./node_modules/@fortawesome/react-fontawesome/index.es.js",
+      "id": "IP2g",
       "name": "./node_modules/@fortawesome/react-fontawesome/index.es.js",
-      "file": "static/chunks/3.js",
-      "publicPath": "static/chunks/3.js"
+      "file": "static/chunks/5.48096427d3b563609ad5.js",
+      "publicPath": "static/chunks/5.48096427d3b563609ad5.js"
     },
     {
-      "id": "./node_modules/webpack/buildin/global.js",
+      "id": "yLpj",
       "name": "./node_modules/webpack/buildin/global.js",
-      "file": "static/chunks/3.js",
-      "publicPath": "static/chunks/3.js"
+      "file": "static/chunks/5.48096427d3b563609ad5.js",
+      "publicPath": "static/chunks/5.48096427d3b563609ad5.js"
     }
   ]
 }
