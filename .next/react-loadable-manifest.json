@@ -1,0 +1,978 @@
+{
+  "../Utils/ImageLoaderUtil": [
+    {
+      "id": "./components/Utils/ImageLoaderUtil.jsx",
+      "name": "./components/Utils/ImageLoaderUtil.jsx",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets sync recursive ^\\.\\/.*$?9fb1",
+      "name": "./content/assets sync recursive ^\\.\\/.*$",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets sync recursive ^\\.\\/.*$?dc29",
+      "name": "./content/assets sync recursive ^\\.\\/.*$",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-remove-elements-dom-javascript/main.jpg?trace",
+      "name": "./content/assets/add-remove-elements-dom-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-remove-elements-dom-javascript/main.jpg?webp",
+      "name": "./content/assets/add-remove-elements-dom-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-remove-elements-dom-javascript/meta.jpg?trace",
+      "name": "./content/assets/add-remove-elements-dom-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-remove-elements-dom-javascript/meta.jpg?webp",
+      "name": "./content/assets/add-remove-elements-dom-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-remove-elements-from-beginning-array-javascript/main.jpg?trace",
+      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-remove-elements-from-beginning-array-javascript/main.jpg?webp",
+      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-remove-elements-from-beginning-array-javascript/meta.jpg?trace",
+      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-remove-elements-from-beginning-array-javascript/meta.jpg?webp",
+      "name": "./content/assets/add-remove-elements-from-beginning-array-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-styles-javascript/inline-styles-directly.png?trace",
+      "name": "./content/assets/add-styles-javascript/inline-styles-directly.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-styles-javascript/inline-styles-directly.png?webp",
+      "name": "./content/assets/add-styles-javascript/inline-styles-directly.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-styles-javascript/inline-styles-red.png?trace",
+      "name": "./content/assets/add-styles-javascript/inline-styles-red.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-styles-javascript/inline-styles-red.png?webp",
+      "name": "./content/assets/add-styles-javascript/inline-styles-red.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-styles-javascript/main.jpg?trace",
+      "name": "./content/assets/add-styles-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-styles-javascript/main.jpg?webp",
+      "name": "./content/assets/add-styles-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-styles-javascript/meta.jpg?trace",
+      "name": "./content/assets/add-styles-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/add-styles-javascript/meta.jpg?webp",
+      "name": "./content/assets/add-styles-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/check-if-child-in-parent/main.jpg?trace",
+      "name": "./content/assets/check-if-child-in-parent/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/check-if-child-in-parent/main.jpg?webp",
+      "name": "./content/assets/check-if-child-in-parent/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/check-if-child-in-parent/meta.jpg?trace",
+      "name": "./content/assets/check-if-child-in-parent/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/check-if-child-in-parent/meta.jpg?webp",
+      "name": "./content/assets/check-if-child-in-parent/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/check-if-property-object-javascript/main.jpg?trace",
+      "name": "./content/assets/check-if-property-object-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/check-if-property-object-javascript/main.jpg?webp",
+      "name": "./content/assets/check-if-property-object-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/check-if-property-object-javascript/meta.jpg?trace",
+      "name": "./content/assets/check-if-property-object-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/check-if-property-object-javascript/meta.jpg?webp",
+      "name": "./content/assets/check-if-property-object-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/contributing-to-open-source/codetribute-website.png?trace",
+      "name": "./content/assets/contributing-to-open-source/codetribute-website.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/contributing-to-open-source/codetribute-website.png?webp",
+      "name": "./content/assets/contributing-to-open-source/codetribute-website.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/contributing-to-open-source/github-issues.png?trace",
+      "name": "./content/assets/contributing-to-open-source/github-issues.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/contributing-to-open-source/github-issues.png?webp",
+      "name": "./content/assets/contributing-to-open-source/github-issues.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/contributing-to-open-source/good-first-issue.png?trace",
+      "name": "./content/assets/contributing-to-open-source/good-first-issue.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/contributing-to-open-source/good-first-issue.png?webp",
+      "name": "./content/assets/contributing-to-open-source/good-first-issue.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/contributing-to-open-source/main.jpg?trace",
+      "name": "./content/assets/contributing-to-open-source/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/contributing-to-open-source/main.jpg?webp",
+      "name": "./content/assets/contributing-to-open-source/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/contributing-to-open-source/meta.jpg?trace",
+      "name": "./content/assets/contributing-to-open-source/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/contributing-to-open-source/meta.jpg?webp",
+      "name": "./content/assets/contributing-to-open-source/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/copy-from-one-object-to-another-javascript/main.jpg?trace",
+      "name": "./content/assets/copy-from-one-object-to-another-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/copy-from-one-object-to-another-javascript/main.jpg?webp",
+      "name": "./content/assets/copy-from-one-object-to-another-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/copy-from-one-object-to-another-javascript/meta.jpg?trace",
+      "name": "./content/assets/copy-from-one-object-to-another-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/copy-from-one-object-to-another-javascript/meta.jpg?webp",
+      "name": "./content/assets/copy-from-one-object-to-another-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/delete-properties-methods-objects-javascript/main.jpg?trace",
+      "name": "./content/assets/delete-properties-methods-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/delete-properties-methods-objects-javascript/main.jpg?webp",
+      "name": "./content/assets/delete-properties-methods-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/delete-properties-methods-objects-javascript/meta.jpg?trace",
+      "name": "./content/assets/delete-properties-methods-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/delete-properties-methods-objects-javascript/meta.jpg?webp",
+      "name": "./content/assets/delete-properties-methods-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/different-ways-to-create-objects-javascript/main.jpg?trace",
+      "name": "./content/assets/different-ways-to-create-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/different-ways-to-create-objects-javascript/main.jpg?webp",
+      "name": "./content/assets/different-ways-to-create-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/different-ways-to-create-objects-javascript/meta.jpg?trace",
+      "name": "./content/assets/different-ways-to-create-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/different-ways-to-create-objects-javascript/meta.jpg?webp",
+      "name": "./content/assets/different-ways-to-create-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/dot-vs-bracket-notaion-objects-javascript/main.jpg?trace",
+      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/dot-vs-bracket-notaion-objects-javascript/main.jpg?webp",
+      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/dot-vs-bracket-notaion-objects-javascript/meta.jpg?trace",
+      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/dot-vs-bracket-notaion-objects-javascript/meta.jpg?webp",
+      "name": "./content/assets/dot-vs-bracket-notaion-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/event-listeners-in-javascript/main.jpg?trace",
+      "name": "./content/assets/event-listeners-in-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/event-listeners-in-javascript/main.jpg?webp",
+      "name": "./content/assets/event-listeners-in-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/event-listeners-in-javascript/meta.jpg?trace",
+      "name": "./content/assets/event-listeners-in-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/event-listeners-in-javascript/meta.jpg?webp",
+      "name": "./content/assets/event-listeners-in-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/fetch-request-javascript/main.jpg?trace",
+      "name": "./content/assets/fetch-request-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/fetch-request-javascript/main.jpg?webp",
+      "name": "./content/assets/fetch-request-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/fetch-request-javascript/meta.jpg?trace",
+      "name": "./content/assets/fetch-request-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/fetch-request-javascript/meta.jpg?webp",
+      "name": "./content/assets/fetch-request-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/get-all-properties-from-object-javascript/main.jpg?trace",
+      "name": "./content/assets/get-all-properties-from-object-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/get-all-properties-from-object-javascript/main.jpg?webp",
+      "name": "./content/assets/get-all-properties-from-object-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/get-all-properties-from-object-javascript/meta.jpg?trace",
+      "name": "./content/assets/get-all-properties-from-object-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/get-all-properties-from-object-javascript/meta.jpg?webp",
+      "name": "./content/assets/get-all-properties-from-object-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/inherit-methods-javascript/main.jpg?trace",
+      "name": "./content/assets/inherit-methods-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/inherit-methods-javascript/main.jpg?webp",
+      "name": "./content/assets/inherit-methods-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/inherit-methods-javascript/meta.jpg?trace",
+      "name": "./content/assets/inherit-methods-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/inherit-methods-javascript/meta.jpg?webp",
+      "name": "./content/assets/inherit-methods-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/inherit-properties-javascript/main.jpg?trace",
+      "name": "./content/assets/inherit-properties-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/inherit-properties-javascript/main.jpg?webp",
+      "name": "./content/assets/inherit-properties-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/inherit-properties-javascript/meta.jpg?trace",
+      "name": "./content/assets/inherit-properties-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/inherit-properties-javascript/meta.jpg?webp",
+      "name": "./content/assets/inherit-properties-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/json-javascript/main.jpg?trace",
+      "name": "./content/assets/json-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/json-javascript/main.jpg?webp",
+      "name": "./content/assets/json-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/json-javascript/meta.jpg?trace",
+      "name": "./content/assets/json-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/json-javascript/meta.jpg?webp",
+      "name": "./content/assets/json-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/loop-over-properties-methods-objects-javascript/main.jpg?trace",
+      "name": "./content/assets/loop-over-properties-methods-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/loop-over-properties-methods-objects-javascript/main.jpg?webp",
+      "name": "./content/assets/loop-over-properties-methods-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/loop-over-properties-methods-objects-javascript/meta.jpg?trace",
+      "name": "./content/assets/loop-over-properties-methods-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/loop-over-properties-methods-objects-javascript/meta.jpg?webp",
+      "name": "./content/assets/loop-over-properties-methods-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/make-objects-immutable-javascript/main.jpg?trace",
+      "name": "./content/assets/make-objects-immutable-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/make-objects-immutable-javascript/main.jpg?webp",
+      "name": "./content/assets/make-objects-immutable-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/make-objects-immutable-javascript/meta.jpg?trace",
+      "name": "./content/assets/make-objects-immutable-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/make-objects-immutable-javascript/meta.jpg?webp",
+      "name": "./content/assets/make-objects-immutable-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/make-property-immutable-objects-javascript/main.jpg?trace",
+      "name": "./content/assets/make-property-immutable-objects-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/make-property-immutable-objects-javascript/main.jpg?webp",
+      "name": "./content/assets/make-property-immutable-objects-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/make-property-immutable-objects-javascript/meta.jpg?trace",
+      "name": "./content/assets/make-property-immutable-objects-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/make-property-immutable-objects-javascript/meta.jpg?webp",
+      "name": "./content/assets/make-property-immutable-objects-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/nextjs-pwa/generatereport.png?trace",
+      "name": "./content/assets/nextjs-pwa/generatereport.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/nextjs-pwa/generatereport.png?webp",
+      "name": "./content/assets/nextjs-pwa/generatereport.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/nextjs-pwa/main.jpg?trace",
+      "name": "./content/assets/nextjs-pwa/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/nextjs-pwa/main.jpg?webp",
+      "name": "./content/assets/nextjs-pwa/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/nextjs-pwa/manifest.png?trace",
+      "name": "./content/assets/nextjs-pwa/manifest.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/nextjs-pwa/manifest.png?webp",
+      "name": "./content/assets/nextjs-pwa/manifest.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/nextjs-pwa/meta.jpg?trace",
+      "name": "./content/assets/nextjs-pwa/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/nextjs-pwa/meta.jpg?webp",
+      "name": "./content/assets/nextjs-pwa/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/nextjs-pwa/pwa.png?trace",
+      "name": "./content/assets/nextjs-pwa/pwa.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/nextjs-pwa/pwa.png?webp",
+      "name": "./content/assets/nextjs-pwa/pwa.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/nextjs-pwa/serviceworker.png?trace",
+      "name": "./content/assets/nextjs-pwa/serviceworker.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/nextjs-pwa/serviceworker.png?webp",
+      "name": "./content/assets/nextjs-pwa/serviceworker.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/progressive-image-loading/folder-structure.png?trace",
+      "name": "./content/assets/progressive-image-loading/folder-structure.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/progressive-image-loading/folder-structure.png?webp",
+      "name": "./content/assets/progressive-image-loading/folder-structure.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/progressive-image-loading/main.jpg?trace",
+      "name": "./content/assets/progressive-image-loading/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/progressive-image-loading/main.jpg?webp",
+      "name": "./content/assets/progressive-image-loading/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/progressive-image-loading/main.png?trace",
+      "name": "./content/assets/progressive-image-loading/main.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/progressive-image-loading/main.png?webp",
+      "name": "./content/assets/progressive-image-loading/main.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/progressive-image-loading/meta.jpg?trace",
+      "name": "./content/assets/progressive-image-loading/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/progressive-image-loading/meta.jpg?webp",
+      "name": "./content/assets/progressive-image-loading/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/promises-javascript/main.jpg?trace",
+      "name": "./content/assets/promises-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/promises-javascript/main.jpg?webp",
+      "name": "./content/assets/promises-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/promises-javascript/meta.jpg?trace",
+      "name": "./content/assets/promises-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/promises-javascript/meta.jpg?webp",
+      "name": "./content/assets/promises-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/replace-string-with-another-string-javascript/main.jpg?trace",
+      "name": "./content/assets/replace-string-with-another-string-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/replace-string-with-another-string-javascript/main.jpg?webp",
+      "name": "./content/assets/replace-string-with-another-string-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/replace-string-with-another-string-javascript/meta.jpg?trace",
+      "name": "./content/assets/replace-string-with-another-string-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/replace-string-with-another-string-javascript/meta.jpg?webp",
+      "name": "./content/assets/replace-string-with-another-string-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/round-decimals-javascript/main.jpg?trace",
+      "name": "./content/assets/round-decimals-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/round-decimals-javascript/main.jpg?webp",
+      "name": "./content/assets/round-decimals-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/round-decimals-javascript/meta.jpg?trace",
+      "name": "./content/assets/round-decimals-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/round-decimals-javascript/meta.jpg?webp",
+      "name": "./content/assets/round-decimals-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/split-and-join-strings-javascript/main.jpg?trace",
+      "name": "./content/assets/split-and-join-strings-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/split-and-join-strings-javascript/main.jpg?webp",
+      "name": "./content/assets/split-and-join-strings-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/split-and-join-strings-javascript/meta.jpg?trace",
+      "name": "./content/assets/split-and-join-strings-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/split-and-join-strings-javascript/meta.jpg?webp",
+      "name": "./content/assets/split-and-join-strings-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/static-site-generation-nextjs/main.jpg?trace",
+      "name": "./content/assets/static-site-generation-nextjs/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/static-site-generation-nextjs/main.jpg?webp",
+      "name": "./content/assets/static-site-generation-nextjs/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/static-site-generation-nextjs/main.png?trace",
+      "name": "./content/assets/static-site-generation-nextjs/main.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/static-site-generation-nextjs/main.png?webp",
+      "name": "./content/assets/static-site-generation-nextjs/main.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/static-site-generation-nextjs/meta.jpg?trace",
+      "name": "./content/assets/static-site-generation-nextjs/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/static-site-generation-nextjs/meta.jpg?webp",
+      "name": "./content/assets/static-site-generation-nextjs/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/static-site-generation-nextjs/static.png?trace",
+      "name": "./content/assets/static-site-generation-nextjs/static.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/static-site-generation-nextjs/static.png?webp",
+      "name": "./content/assets/static-site-generation-nextjs/static.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/store-persist-data-javascript/main.jpg?trace",
+      "name": "./content/assets/store-persist-data-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/store-persist-data-javascript/main.jpg?webp",
+      "name": "./content/assets/store-persist-data-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/store-persist-data-javascript/meta.jpg?trace",
+      "name": "./content/assets/store-persist-data-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/store-persist-data-javascript/meta.jpg?webp",
+      "name": "./content/assets/store-persist-data-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/trigger-events-programatically-javascript/dispatch-event-otp.png?trace",
+      "name": "./content/assets/trigger-events-programatically-javascript/dispatch-event-otp.png?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/trigger-events-programatically-javascript/dispatch-event-otp.png?webp",
+      "name": "./content/assets/trigger-events-programatically-javascript/dispatch-event-otp.png?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/trigger-events-programatically-javascript/final-render.gif?trace",
+      "name": "./content/assets/trigger-events-programatically-javascript/final-render.gif?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/trigger-events-programatically-javascript/final-render.gif?webp",
+      "name": "./content/assets/trigger-events-programatically-javascript/final-render.gif?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/trigger-events-programatically-javascript/main.jpg?trace",
+      "name": "./content/assets/trigger-events-programatically-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/trigger-events-programatically-javascript/main.jpg?webp",
+      "name": "./content/assets/trigger-events-programatically-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/trigger-events-programatically-javascript/meta.jpg?trace",
+      "name": "./content/assets/trigger-events-programatically-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/trigger-events-programatically-javascript/meta.jpg?webp",
+      "name": "./content/assets/trigger-events-programatically-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/try-catch-finally/main.jpg?trace",
+      "name": "./content/assets/try-catch-finally/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/try-catch-finally/main.jpg?webp",
+      "name": "./content/assets/try-catch-finally/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/try-catch-finally/meta.jpg?trace",
+      "name": "./content/assets/try-catch-finally/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/try-catch-finally/meta.jpg?webp",
+      "name": "./content/assets/try-catch-finally/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/various-ways-selecting-elements-javascript/main.jpg?trace",
+      "name": "./content/assets/various-ways-selecting-elements-javascript/main.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/various-ways-selecting-elements-javascript/main.jpg?webp",
+      "name": "./content/assets/various-ways-selecting-elements-javascript/main.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/various-ways-selecting-elements-javascript/meta.jpg?trace",
+      "name": "./content/assets/various-ways-selecting-elements-javascript/meta.jpg?trace",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./content/assets/various-ways-selecting-elements-javascript/meta.jpg?webp",
+      "name": "./content/assets/various-ways-selecting-elements-javascript/meta.jpg?webp",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    },
+    {
+      "id": "./node_modules/lazysizes/lazysizes.js",
+      "name": "./node_modules/lazysizes/lazysizes.js",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    }
+  ],
+  "./MobileNavigation": [
+    {
+      "id": "./components/Navigation/MobileNavigation.jsx",
+      "name": "./components/Navigation/MobileNavigation.jsx",
+      "file": "static/chunks/2.js",
+      "publicPath": "static/chunks/2.js"
+    },
+    {
+      "id": "./node_modules/@babel/runtime/regenerator/index.js",
+      "name": "./node_modules/@babel/runtime/regenerator/index.js",
+      "file": "static/chunks/2.js",
+      "publicPath": "static/chunks/2.js"
+    }
+  ],
+  "./NavigationItems": [
+    {
+      "id": "./components/Navigation/NavigationItems.jsx",
+      "name": "./components/Navigation/NavigationItems.jsx",
+      "file": "static/chunks/4.js",
+      "publicPath": "static/chunks/4.js"
+    }
+  ],
+  "./dev/noop": [
+    {
+      "id": "./node_modules/next/dist/client/dev/noop.js",
+      "name": "./node_modules/next/dist/client/dev/noop.js",
+      "file": "static/chunks/0.js",
+      "publicPath": "static/chunks/0.js"
+    }
+  ],
+  "@fortawesome/react-fontawesome": [
+    {
+      "id": "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js",
+      "name": "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js",
+      "file": "static/chunks/3.js",
+      "publicPath": "static/chunks/3.js"
+    },
+    {
+      "id": "./node_modules/@fortawesome/react-fontawesome/index.es.js",
+      "name": "./node_modules/@fortawesome/react-fontawesome/index.es.js",
+      "file": "static/chunks/3.js",
+      "publicPath": "static/chunks/3.js"
+    },
+    {
+      "id": "./node_modules/webpack/buildin/global.js",
+      "name": "./node_modules/webpack/buildin/global.js",
+      "file": "static/chunks/3.js",
+      "publicPath": "static/chunks/3.js"
+    }
+  ]
+}
