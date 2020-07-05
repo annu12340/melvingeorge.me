@@ -1,0 +1,113 @@
+---
+title: try, catch and finally in JavaScript
+description: Learn how to handle errors gracefully in JavaScript
+keywords: try-catch,finally,errors in javascript,catching errors,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-05
+---
+
+![man in blue jersey shirt catching a ball](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/photos/2VH0ymGTpCI" target="blank">
+    John Torcasio
+  </a>
+</p>
+
+Writing an error-prone application is good for better user experience and conversion rates of our applications.
+
+But this is not the case, in reality 😟, often the application may fail to load or error out due to various reasons. Gracefully handling these errors makes the application smooth and is good for better user experience instead to just error out the whole application making it unusable.
+
+Javascript provides `try`...`catch`, and `finally` to work with errors which may happen at runtime.
+
+## the `try` ... `catch` statement
+
+Let's consider a scenario where we ask the user if his/her age is 18 years so that we can provide access to features on the application.
+
+```javascript
+// get age input from user
+const age = getUserAge();
+```
+
+after getting the age input we need to check whether the entered age is 18 years.
+
+```javascript
+// get age input from user
+const age = getUserAge();
+
+if (age >= 18) {
+  console.log("Access Granted ✅");
+} else {
+  // do error handling
+}
+```
+
+In the `else` block we need to throw an error with the message `Access Denied 🚫`.
+
+We can use the `throw` keyword and `Error` class to throw an error. The `Error` class accepts a `string` as the definition of the error happened.
+
+```javascript
+// get age input from user
+const age = getUserAge();
+
+if (age >= 18) {
+  console.log("Access Granted ✅");
+} else {
+  // do error handling
+  throw new Error("Access Denied 🚫");
+}
+```
+
+Let's now wrap our `if`...`else` block in a `try`... `catch` block.
+
+```javascript
+// get age input from user
+const age = getUserAge();
+
+// wrap in try catch
+try {
+  if (age >= 18) {
+    console.log("Access Granted ✅");
+  } else {
+    // do error handling
+    throw new Error("Access Denied 🚫");
+  }
+} catch (e) {
+  // dsiplay error to user
+  console.log(e.message); // Access Denied 🚫
+}
+```
+
+If an error is thrown in runtime the `catch` catches it and is supplied an `Error` object. The error message we provided will be available in the `message` property on the `Error` object.
+
+## The `finally` statement
+
+The `finally` statement is added to the end of the `try`...`catch` statement. The block of code inside `finally` will be run regardless of `try`...`catch` statement.
+
+```javascript
+// get age input from user
+const age = getUserAge();
+
+// wrap in try catch
+try {
+  if (age >= 18) {
+    console.log("Access Granted ✅");
+  } else {
+    // do error handling
+    throw new Error("Access Denied 🚫");
+  }
+} catch (e) {
+  // dsiplay error to user
+  console.log(e.message); // Access Denied 🚫
+} finally {
+  // will be executed regardless of try...catch
+  console.log("This block of code will be executed anyway. 🤓");
+  // execute some cleanup code
+}
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
