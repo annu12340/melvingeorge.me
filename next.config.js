@@ -15,9 +15,7 @@ module.exports = withPlugins(
             /\.map$/,
             /\.(?:png|jpg|jpeg|svg|webp)$/,
           ],
-          // Ignore all URL parameters.
-          ignoreURLParametersMatching: [/.*/],
-          dontCacheBustURLsMatching: /.*/,
+          inlineWorkboxRuntime: true,
           runtimeCaching: [
             {
               urlPattern: /\.(?:png|jpg|jpeg|svg|webp)/,
