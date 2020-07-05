@@ -25,7 +25,7 @@ module.exports = withPlugins(
             },
             {
               urlPattern: /^https?.*/,
-              handler: "StaleWhileRevalidate",
+              handler: "NetworkFirst",
               options: {
                 cacheName: "offlineCache",
                 expiration: {
@@ -54,5 +54,5 @@ module.exports = withPlugins(
     devIndicators: {
       autoPrerender: false,
     },
-  },
+  }
 );
