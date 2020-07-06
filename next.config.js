@@ -44,7 +44,7 @@ module.exports = withPlugins(
         imageTrace: {
           color: "#4299e1",
           alphaMax: 2,
-          threshold: 34,
+          threshold: 88,
           turnPolicy: "TURNPOLICY_WHITE",
         },
       },
