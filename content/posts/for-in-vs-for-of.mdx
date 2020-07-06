@@ -1,0 +1,89 @@
+---
+title: The for...in vs for...of statement in JavaScript
+description: Learn the differences between for...in vs for...of statements in JavaScript
+keywords: for...in vs for...of,for in,for of,iterating,looping objects,looping arrays,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-06
+---
+
+![spiraling stairs](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/photos/u2d0BPZFXOY" target="blank">
+    Tine Ivanič
+  </a>
+</p>
+
+## `for...in` statement
+
+The `for...in` statement is used to loop over object enumerable properties.
+
+Let's consider an object called `john` with `name` and `age` fields
+
+```javascript
+// object
+const john = {
+  name: "John Doe",
+  age: 23,
+};
+
+// loop over object
+for (let key in john) {
+  console.log(key); // Result: "name", "age"
+}
+```
+
+If we loop over an array it will loop over the index value since the arrays are objects in their underlying nature.
+
+```javascript
+// array
+const john = ["John Doe", 23];
+
+// loop over array
+for (let key in john) {
+  console.log(key); // Result: "0" , "1"
+}
+```
+
+## `for...of` statement
+
+These are a little different from the `for...in` statement.
+
+The `for...of` statement is used to loop over the values of iterable objects only which includes Arrays, Maps, etc.
+
+The `for...of` statement gives out the values instead of indexes.
+
+If we try to loop over objects it will return an error.
+
+Let's try to loop over an object using the `for...of` statement.
+
+```javascript
+// object
+const john = {
+  name: "John Doe",
+  age: 23,
+};
+
+// loop over object
+for (let key of john) {
+  console.log(key); // Error
+}
+```
+
+Now let's loop over an array
+
+```javascript
+// array
+const john = ["John Doe", 23];
+
+// loop over array values
+for (let value of john) {
+  console.log(value); // Result: "John Doe" , 23
+}
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
