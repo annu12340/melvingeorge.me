@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
       {/* SEO */}
-      <NextSeo title={"Blog"} canonical="https://melvingeorge.me/about" />
+      <NextSeo title={"About"} canonical="https://melvingeorge.me/about" />
       <Navigation />
       {/* Main content */}
       <main className="container max-w-screen-md mx-auto px-4 mt-20 about">
