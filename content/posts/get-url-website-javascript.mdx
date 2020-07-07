@@ -1,0 +1,84 @@
+---
+title: How to get the URL of a webpage using JavaScript?
+description: Learn how to get the origin, pathname, query, etc of an URL in JavaScript
+keywords: get origin url in javascript,origin,pathname,full url,query,search,protocol,http,https,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-07
+---
+
+![direction boards](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/photos/C7B-ExXpOIE" target="blank">
+    Javier Allegue Barros
+  </a>
+</p>
+
+Suppose we are in a webpage with the URL of `https://dummywebsite.com/blog?page=1`.
+
+## To get full URL
+
+To get the full URL of the current webpage programmatically in Javascript, you can use the `URL` property available in the `document` object.
+
+```javascript
+// get full url
+const fullURL = document.URL;
+
+console.log(fullURL); // https://dummywebsite.com/blog?page=1
+```
+
+## To get only the origin URL
+
+To get only the origin URL i.e, the main URL.
+
+you can use the `location.origin` property in the `document` object.
+
+```javascript
+// get only origin url
+const origin = document.location.origin;
+
+console.log(origin); // https://dummywebsite.com
+```
+
+## To get the pathname
+
+To get the pathname of URL i.e, url coming after the main URL.
+
+You can use the `location.pathname` property in the `document` object.
+
+```javascript
+// get pathname of url
+const pathname = document.location.pathname;
+
+console.log(pathname); // /blog
+```
+
+## To get the query used in URL
+
+To get the query term used in the URL, you can use the `location.search` in the `document` object.
+
+```javascript
+// get query term
+const query = document.location.search;
+
+console.log(query); // ?page=1
+```
+
+If no query, it will return `""`, a blank string.
+
+## To get the protocol used in the URL
+
+You can use the `location.protocol` in the `document` object.
+
+```javascript
+// get the protocol used
+const protocol = document.location.protocol;
+
+console.log(protocol); // https:
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
