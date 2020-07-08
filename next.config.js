@@ -43,8 +43,8 @@ module.exports = withPlugins(
         optimizeImagesInDev: true,
         imageTrace: {
           color: "#4299e1",
-          alphaMax: 2,
-          threshold: 88,
+          alphaMax: 8,
+          threshold: 128,
           turnPolicy: "TURNPOLICY_WHITE",
         },
       },
