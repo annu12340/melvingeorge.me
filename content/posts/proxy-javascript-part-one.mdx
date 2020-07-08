@@ -1,0 +1,158 @@
+---
+title: How to work with Proxy in JavaScript - Part 1
+description: Learn how to intercept the operations on an object using a proxy in JavaScript
+keywords: proxy,handler,trap,set,get,proxies in javascript,intercept,validation objects,objects,javascript,
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-08
+---
+
+![cctv cameras watching surroundings](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/photos/oQD9uq4Rd4I" target="blank">
+    Michał Jakubowski
+  </a>
+</p>
+
+`Proxy` in JavaScript is a way of intercepting the operations on objects. It acts like a middleware where you can do validation, add custom logic, add extra content, etc. to an object.
+
+`Proxy` is a new ES6 addition to JavaScript.
+
+So lets' now look at the basics of `Proxy`. 😃
+
+Let's define a new object called `John` with properties `name` and `mob`.
+
+```javascript
+// john object
+const john = {
+  name: "",
+  mob: null,
+};
+```
+
+Now, let's add a proxy to the `john` object to intercept the operations.
+
+```javascript
+// john object
+const john = {
+  name: "",
+  mob: null,
+};
+
+// proxy
+const johnProxy = new Proxy(john, {});
+```
+
+The `Proxy` constructor accepts:
+
+- a target object in our case `john` object where we want to add proxy as the first parameter
+- a handler to set some functions called `traps` to do some operations when adding values and getting values.
+
+So let's define our handler object now.
+
+```javascript
+// john object
+const john = {
+  name: "",
+  mob: null,
+};
+
+// proxy
+const johnProxy = new Proxy(john, {
+  set: function (obj, property, value) {
+    // custom logic
+  },
+  get: function (obj, property) {
+    // custom logic
+  },
+});
+```
+
+The handler object has two callback functions called `set` and `get`, which will be invoked whenever we add a property or get a value of property respectively.
+
+- The `set` function is supplied with the target object which is the original object as the first argument, property name as the second argument, and value of the key as the third argument.
+- The `get` function is supplied with the target object as the first argument and property name as the second argument.
+
+## The `set` function
+
+Now Let's add some validation to the `mob` property in the `set` function.
+
+```javascript
+// john object
+const john = {
+  name: "",
+  mob: null,
+};
+
+// proxy
+const johnProxy = new Proxy(john, {
+  set: function (obj, property, value) {
+    // check if mob length is equal to 10 numbers
+    // otherwise throw an error
+    if (property === "mob" && value.toString().length !== 10) {
+      throw new Error("Mobile Number Invalid 🚫");
+    }
+    // If everything's okay then add the value to john object
+    obj[property] = value;
+  },
+  get: function (obj, property) {
+    // custom logic
+  },
+});
+```
+
+In the if block we are checking whether the property accessed by the user is `mob` and if the length of the mob is equal to 10 digits.
+
+If the property is `mob` and the length is not equal to 10 digits will throw an error saying `Mobile Number Invalid 🚫`. Otherwise, it will add the value to the `mob` property, just what we are doing with this line of code.
+
+```javascript
+// If everything's okay then add the value to john object
+obj[property] = value;
+```
+
+Now try to add a number less than or greater than 10 digits, it will throw an error to console.
+
+### ☢️ Note: After making a proxy object, adding properties should be to the proxy object itself and not to the original object for the validation to work.
+
+```javascript
+// john object
+const john = {
+  name: "",
+  mob: null,
+};
+
+// proxy
+const johnProxy = new Proxy(john, {
+  set: function (obj, property, value) {
+    // check if mob length is equal to 10 numbers
+    // otherwise throw an error
+    if (property === "mob" && value.toString().length !== 10) {
+      throw new Error("Mobile Number Invalid 🚫");
+    }
+    // If everything's okay then add the value to john object
+    obj[property] = value;
+  },
+  get: function (obj, property) {
+    // custom logic
+  },
+});
+
+// adding properties to the proxy object
+
+johnProxy.mob = 34567895432; // Error: Mobile Number Invalid 🚫
+
+johnProxy.mob = 8075457642; // no error
+johnProxy.name = "John Doe";
+```
+
+### ✅ Note: Another cool thing is that now if we check the contents of the `john` object, you can see the value we added even though we added the property directly to the proxy object.
+
+So we added validation in our `set` function.
+
+Whew 😅. That's a lot. Let's define our `get` function in the next blog post ✌️.
+
+### Feel free to share if you found this useful 😃.
+
+---
