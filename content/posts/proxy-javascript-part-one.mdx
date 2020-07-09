@@ -75,7 +75,7 @@ The handler object has two callback functions called `set` and `get`, which will
 - The `set` function is supplied with the target object which is the original object as the first argument, property name as the second argument, and value of the key as the third argument.
 - The `get` function is supplied with the target object as the first argument and property name as the second argument.
 
-## The `set` function
+## The `set` trap function
 
 Now Let's add some validation to the `mob` property in the `set` function.
 
@@ -151,7 +151,7 @@ johnProxy.name = "John Doe";
 
 So we added validation in our `set` function.
 
-Whew 😅. That's a lot. Let's define our `get` function in the next blog post ✌️.
+Whew 😅. That's a lot. Let's define our `get` function in the next [blog post](https://melvingeorge.me/blog/proxy-javascript-part-two) ✌️.
 
 ### Feel free to share if you found this useful 😃.
 
