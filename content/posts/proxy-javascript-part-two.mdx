@@ -1,0 +1,115 @@
+---
+title: How to work with Proxy in JavaScript - Part 2
+description: Learn how to intercept the operations on an object using a proxy in JavaScript
+keywords: proxy,handler,trap,set,get,proxies in javascript,intercept,validation objects,objects,javascript,
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-09
+---
+
+![cctv cameras watching surroundings](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/photos/xJc--frJbuw" target="blank">
+    Siarhei Horbach
+  </a>
+</p>
+
+In the last blog on [How to work with Proxy in JavaScript - Part 1](https://melvingeorge.me/blog/proxy-javascript-part-one), we were discussing how to make a proxy, handler, and set a trap function called `set`.
+
+Let's now discuss another trap function called `get`.
+
+If you recall from our last example, we have `john` object with a `set` trap function defined on its `Proxy`.
+
+```javascript
+// john object
+const john = {
+  name: "",
+  mob: null,
+};
+
+// proxy
+const johnProxy = new Proxy(john, {
+  set: function (obj, property, value) {
+    // check if mob length is equal to 10 numbers
+    // otherwise throw an error
+    if (property === "mob" && value.toString().length !== 10) {
+      throw new Error("Mobile Number Invalid 🚫");
+    }
+    // If everything's okay then add the value to john object
+    obj[property] = value;
+  },
+  get: function (obj, property) {
+    // custom logic
+  },
+});
+
+// adding properties to the proxy object
+
+johnProxy.mob = 8075457642; // no error
+johnProxy.name = "John Doe"; // no error
+
+console.log(john);
+```
+
+## The `get` trap function
+
+The `get` trap functions are invoked or called whenever the user is trying to access a property from the `johnProxy` object.
+
+Let's add functionality to the `get` trap function where we will add an extra string `Hello` to the `name` property value when accessed by the user.
+
+```javascript
+// john object
+const john = {
+  name: "",
+  mob: null,
+};
+
+// proxy
+const johnProxy = new Proxy(john, {
+  set: function (obj, property, value) {
+    // check if mob length is equal to 10 numbers
+    // otherwise throw an error
+    if (property === "mob" && value.toString().length !== 10) {
+      throw new Error("Mobile Number Invalid 🚫");
+    }
+    // If everything's okay then add the value to john object
+    obj[property] = value;
+  },
+  get: function (obj, property) {
+    // adding extra Hello to name property
+    if (property !== "name") {
+      return obj[property];
+    }
+    // adding extra Hello to name
+    return `Hello ${obj[property]}`;
+  },
+});
+
+// adding properties to the proxy object
+
+johnProxy.mob = 8075457642; // no error
+johnProxy.name = "John Doe"; // no error
+```
+
+In the `get` function, it checks to see if the property accessed is the `name` or not, if it the `name` property it will add Hello string to it when accessed.
+
+```javascript
+// adding extra Hello to name property
+if (obj[property] !== "name") {
+  return obj[property];
+}
+// adding extra Hello to name
+return `Hello ${obj[property]}`;
+```
+
+Now if you try to access the `name` property from `johnProxy` object, you will see `Hello John Doe`.
+
+```javascript
+console.log(johnProxy.name);
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
