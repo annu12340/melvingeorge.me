@@ -25,8 +25,9 @@ module.exports = withPlugins(
             },
             {
               urlPattern: /^https?.*/,
-              handler: "StaleWhileRevalidate",
+              handler: "NetworkFirst",
               options: {
+                networkTimeoutSeconds: 4,
                 cacheName: "offlineCache",
                 expiration: {
                   maxEntries: 200,
