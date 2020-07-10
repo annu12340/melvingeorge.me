@@ -1,0 +1,60 @@
+---
+title: How to send analytics data to the server before the user leaves using JavaScript
+description: Learn how to use the sendBeacon() method to send analytics and diagnostics data to a server in JavaScript
+keywords: sendBeacon(),send analytics to the server,send data before user leaves,navigator.sendBeacon() method,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-10
+---
+
+![analytics dashboard in a laptop](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/photos/JKUTrJ4vK00" target="blank">
+    Luke Chesser
+  </a>
+</p>
+
+Often we may need to send some analytics to the server before a user leaves a webpage. So the first thing that comes to your mind would be to use `fetch` or `XHR` (XML Http Request) API before document unloads i.e before the user leaves.
+
+```javascript
+// when document unloads
+// or when user leaves
+window.addEventListener("unload", ()=>{
+    // send data to /analytics api endpoint in server
+    fetch('/analytics',{
+        method: 'post',
+        body: analyticsData
+    })
+        .then(()=> console.log("✅ Success: User analytics send"));
+        .catch(()=>console.log("🚨 Error: User analytics not send"));
+})
+```
+
+But this fetch request is ignored by the browser most of the time even though this is an asynchronous request to improve load times of the next page.
+
+This is where the `navigator.sendBeacon()` method comes into the play.
+
+```javascript
+// when document unloads
+// or when user leaves
+window.addEventListener("unload", () => {
+  //send data to /analytics api endpoint in server
+  // using navigator.sendBeacon() method
+  navigator.sendBeacon("/analytics", analyticsData);
+});
+```
+
+The `navigator.sendBeacon()` method:
+
+- returns boolean `true` if the browser queues data for transfer and `false` if not.
+- requires the API endpoint to send data as the first argument.
+- requires the analytics data to be sent to the server as the second argument.
+- It is an asynchronous request and doesn't need a response and is guaranteed to run.
+- doesn't block the loading of the next page.
+- much simpler than `fetch` and `XHR` API.
+
+### Feel free to share if you found this useful 😃.
+
+---
