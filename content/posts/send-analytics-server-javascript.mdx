@@ -21,7 +21,7 @@ Often we may need to send some analytics to the server before a user leaves a we
 ```javascript
 // when document unloads
 // or when user leaves
-window.addEventListener("unload", ()=>{
+window.addEventListener("unload", () => {
     // send data to /analytics api endpoint in server
     fetch('/analytics',{
         method: 'post',
