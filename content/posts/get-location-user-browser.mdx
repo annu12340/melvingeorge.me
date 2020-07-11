@@ -1,0 +1,134 @@
+---
+title: How to get the user's current location on the browser using JavaScript
+description: Learn how to get the user's static position and realtime position on browser using JavaScript
+keywords: navigator,geolocation,GPS,get current location of user in browser,getCurrentPosition,watchPosition,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-11
+---
+
+![map in an iphone](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/photos/-pXb1oC7-SA" target="blank">
+    Markus Spiske
+  </a>
+</p>
+
+To get the current location of the user you can use the `geolocation` API available in the `navigator` object in the browser global context.
+
+Let's get the longitude and latitude of our user.
+
+```javascript
+// first, check if geolocation is supported in the browser
+if (!navigator.geolocation) {
+  alert("Geolocation is not supported in this browser.");
+}
+```
+
+It checks to see if the `geolocation` API is present in the browser.
+
+If it is supported we need to get the user's current position i.e latitude and longitude.
+
+## Get Current Position
+
+We can get it using a method called `getCurrentPosition()` on the geolocation API.
+
+```javascript
+// first, check if geolocation is supported in the browser
+if (!navigator.geolocation) {
+  alert("Geolocation is not supported in this browser.");
+} else {
+  // get user's currnt position
+  navigator.geolocation.getCurrentPosition();
+}
+```
+
+The `getCurrentPosition()` method requires:
+
+- a mandatory success callback as the first argument and is supplied `GeolocationPosition` object with the information on the current position.
+- an optional error callback as the second argument and is supplied `GeolocationPositionError` object with the information on the error occurred.
+
+Let's now make both the success and error callback.
+
+```javascript
+// first, check if geolocation is supported in the browser
+if (!navigator.geolocation) {
+  alert("Geolocation is not supported in this browser.");
+} else {
+  // 🚀 get user's currnt position
+  navigator.geolocation.getCurrentPosition(
+    // 💚 success callback, mandatory
+    (position) => {
+      // do cool stuff with the location
+      console.log(position.coords);
+
+      // inside the coords property you can find the
+      // latitude and logitude property 🌎
+      console.log("Latitude", position.coords.latitude);
+      console.log("Longitude", position.coords.longitude);
+    },
+    // 🚨 error callback, optional
+    (error) => {
+      // display error
+      console.log(error);
+    }
+  );
+}
+```
+
+The `longitude` and `latitude` properties are available on the `coords` property in the `GeolocationPosition` object.
+
+Optionally, you can add a third argument of options to enable high accuracy, etc.
+
+## Get Realtime Position
+
+We now know how to get the user's current position but what if the user's position changes every time and we want to track that.
+
+Ther's a way for that too.
+
+You need to use the `watchPosition()` method instead of the `getCurrentPosition()` method avalibale on the geolocation API.
+
+```javascript
+// first, check if geolocation is supported in the browser
+if (!navigator.geolocation) {
+  alert("Geolocation is not supported in this browser.");
+} else {
+  // 🚀 get user's realtime position
+  navigator.geolocation.watchPosition(
+    // ✅   success callback, mandatory
+    (position) => {
+      // do cool stuff with the location
+      console.log(position.coords);
+
+      // inside the coords property you can find the
+      // latitude and logitude property 🌎
+      console.log("Latitude", position.coords.latitude);
+      console.log("Longitude", position.coords.longitude);
+    },
+    // 🚨 error callback, optional
+    (error) => {
+      // display error
+      console.log(error);
+    },
+    // ⚙️ options object, optional
+    {
+      timeout: 1000,
+    }
+  );
+}
+```
+
+It has the same callback requirements as the `getCurrentPosition()` method.
+
+- a mandatory success callback as the first argument and is supplied `GeolocationPosition` object with the information on the current position.
+- an optional error callback as the second argument and is supplied `GeolocationPositionError` object with the information on the error occurred.
+
+Optionally, you can add a third argument of `options` to set the timeout for getting the location of the user.
+
+### 🦄 NOTE: You can use the `geolocation` API if the browser content is secure i.e, using HTTPS protocol.
+
+### Feel free to share if you found this useful 😃.
+
+---
