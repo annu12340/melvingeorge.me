@@ -1,0 +1,109 @@
+---
+title: How to add fullscreen functionality to your website using JavaScript?
+description: Learn how to add fullscreen functionality using requestFullscreen() method in  JavaScript
+keywords: fullscreen,fullscreen in browser,document.documentElement.requestFullscreen(),requestFullscreen(),javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-12
+---
+
+![a black desktop screen](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/photos/183F_vNaN8A" target="blank">
+    Nicolas Gonzalez
+  </a>
+</p>
+
+To make your browser fullscreen is fairly easy in JavaScript. 🚀
+
+Let's look at it now.
+
+To activate fullscreen you need to use the `requestFullscreen()` method available in the `document.documentElement` object.
+
+```javascript
+document.documentElement.requestFullscreen(); // fullscreen API
+```
+
+But First, we need to check if the screen is already fullscreen and also make a function to toggle fullscreen.
+
+We can check it through the `document.fullscreen` property, it will return boolean `true` if the screen is fullscreen and `false` if not.
+
+```javascript
+// fullscreen function
+function makeFullScreen() {
+  if (!document.fullscreen) {
+    // if the screen is not full
+    // then request for fullscreen
+    document.documentElement.requestFullscreen(); // fullscreen API
+  }
+}
+```
+
+Another problem with this is you can't just toggle the fullscreen programmatically, it needs a user interaction otherwise it will throw an error if we try to make it fullscreen automatically without user interaction.
+
+So let's add a `spacebar` `keypress` event listener to our `document` i.e to the browser window so that when we press on spacebar it will make the browser into fullscreen mode.
+
+```javascript
+// fullscreen function
+function makeFullScreen() {
+  if (!document.fullscreen) {
+    // if the screen is not full
+    // then request for fullscreen
+    document.documentElement.requestFullscreen(); // fullscreen API
+  }
+}
+
+// add event listener to document
+document.addEventListener("keypress", (e) => {
+  // key code for spacebar : 32
+  if (e.keyCode === 32) {
+    makeFullScreen();
+  }
+});
+```
+
+The keyCode for `spacebar` is `32`.
+
+Now if we pressed spacebar it will go into fullscreen mode.
+
+Yay !!! 🎊
+
+Now if you try to press the spacebar again to get out from fullscreen mode it won't work because we haven't added the functionality yet. 🚨
+
+So let's add an `else` block to the `if` statement block.
+
+To quit fullscreen mode we can use the `exitFullscreen()` method available in the `document` object.
+
+Let's add it now.
+
+```javascript
+// fullscreen function
+function makeFullScreen() {
+  if (!document.fullscreen) {
+    // if the screen is not full
+    // then request for fullscreen
+    document.documentElement.requestFullscreen(); // fullscreen API
+  } else {
+    // if screen in fullscreen mode
+    // quit fullscreen
+    document.exitFullscreen();
+  }
+}
+
+// add event listener to document
+document.addEventListener("keypress", (e) => {
+  if (e.keyCode === 32) {
+    makeFullScreen();
+  }
+});
+```
+
+You just added a fullscreen functionality to the webpage.
+
+You are a ninja 🥋.
+
+### Feel free to share if you found this useful 😃.
+
+---
