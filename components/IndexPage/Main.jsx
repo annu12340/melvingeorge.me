@@ -16,7 +16,7 @@ const Main = ({ linksData }) => (
         tagName={linkData.tagName}
       />
     ))}
-    <Link href="/blog">
+    <Link href="/blog" passHref>
       <a className="font-light text-xl text-blue-500">
         Read more articles &#8594;
       </a>
