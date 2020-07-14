@@ -1,0 +1,69 @@
+---
+title: Differences between alert, prompt and confirm methods in JavaScript
+description: Learn how to use alert, prompt and confirm methods and their various use cases in JavaScript
+keywords: alert,prompt,confirm,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-14
+---
+
+![a piece of paper hanging on a string](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/photos/mdADGzyXCVE" target="blank">
+    Kelly Sikkema
+  </a>
+</p>
+
+## `alert()` method
+
+The `alert()` method is used to show some quick alerts like warnings, errors, or information.
+
+```javascript
+alert("This is a warning! 🚫"); // alert shown
+```
+
+The method accepts a string as the argument to be shown to the user.
+
+The alert will open as a modal like this.
+
+![alert dialog shown in screen](alert_screenshot.png)
+
+## `prompt()` method
+
+The `prompt()` method is used to take input from the user.
+
+```javascript
+// get age using prompt method
+const age = prompt("What is your age", 18);
+
+console.log(age);
+```
+
+The method accepts a string as the first argument which is shown to the user and a placeholder value as the second argument.
+
+![prompt dialog shown in screen](prompt_screenshot.png)
+
+The method returns the value user entered if OK is pressed and `null` if cancel, is pressed.
+
+## `confirm()` method
+
+The `confirm()` method is used to ask the user about a condition. eg: `Do you want to continue?`.
+
+```javascript
+// ask user a condition
+const continue = confirm("Do you want to continue?");
+
+console.log(continue);
+```
+
+![confirm dialog shown in screen](confirm_screenshot.png)
+
+The method accepts a string as a parameter to be shown to the user.
+
+If the user pressed `OK` the method will return boolean `true` and `false` if not.
+
+### Feel free to share if you found this useful 😃.
+
+---
