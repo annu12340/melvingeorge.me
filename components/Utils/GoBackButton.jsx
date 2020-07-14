@@ -11,7 +11,7 @@ const GoBackButton = () => (
       className="fixed inline-block px-3 py-2 shadow-md bg-gray-700 rounded-full text-gray-100 mr-5 mb-5 bottom-0 right-0 opacity-75 duration-200 hover:opacity-100"
     >
       <FontAwesomeIcon icon={faArrowLeft} size="1x" width="0"></FontAwesomeIcon>
-      <span className="hidden md:inline">Go Back</span>
+      <span className="hidden md:inline">&nbsp;Go Back</span>
     </a>
   </Link>
 );
