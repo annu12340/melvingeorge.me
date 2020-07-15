@@ -1,0 +1,73 @@
+---
+title: An Easy and better way to check for null and undefined values in JavaScript
+description: Learn how to use the ?? or the Nullish coalescing operator to check for null and undefined values in JavaScript
+keywords: Nullish coalescing operator ,check for null values,check for undefined values,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-15
+---
+
+![stones placed on top of each other in beach area](main.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/photos/H4u8efrEcVo" target="blank">
+    Laya Clode
+  </a>
+</p>
+
+In many cases, we have `null` or `undefined` values in our variables. We can conditionally show other relevant value using the new `??` (Nullish coalescing) operator instead of just showing `null` or `undefined` values.
+
+Consider these variables `name` with the value of `null` and `age` with the value of `23`.
+
+```javascript
+// name and age variables
+let name = null;
+let age = 23;
+```
+
+Now if we try to view the values using the console.log() method it would show `null` and `23` in the console.
+
+```javascript
+// name and age variables
+let name = null;
+let age = 23;
+
+console.log(name, age);
+```
+
+But we don't want an unpredictable behavior like that.
+
+Let's now remove that unpredictable behavior using the `??` operator.
+
+```javascript
+// name and age variables
+let name = null;
+let age = 23;
+
+// using ?? operator
+console.log(name ?? "Anonymous", age ?? "Age not defined");
+```
+
+Now if we try to view the variables we can see that when showing the `name` variable it shows `Anonymous` and for the `age` variable it shows the number 23.
+
+This is what the `??` operator does.
+
+### It checks if a variable has `null` or `undefined` values and if it does contain those values it doesn't take that value and gives it what comes after the `??` operator. In our case `Anonymous` value.
+
+Now if you try to change the `age` value to `undefined`.
+
+it will show,
+
+```
+Anonymous
+Age not defined
+```
+
+### 🚨 NOTE: The `??` operator only checks if values are `null` or `undefined`. It doesn't check for boolean values `true`, `false` `1` or `0`. To check for boolean values you may need to use the `||` (`OR` operator) or `&&` (AND operator).
+
+### ⚠️ NOTE: This operator is a new addition to JavaScript. You may need to use polyfills to work with older browsers.
+
+### Feel free to share if you found this useful 😃.
+
+---
