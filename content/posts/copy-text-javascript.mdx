@@ -1,0 +1,73 @@
+---
+title: How to copy text using JavaScript?
+description: Learn how to implement copy text funtionality using JavaScript
+keywords: copy text javascript,copy,text,javascript,browser,document.execCommand('copy')
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-16
+---
+
+To copy/paste text programmatically using javascript, you need to use the `document.execCommand('copy')` method.
+
+Let's study this with an example.
+
+Considet this HTML,
+
+```html
+<input id="copyInput" type="text" /> <button id="copyButton">Copy Text</button>
+```
+
+with an input tag and a button to copy text from the input.
+
+Now let's write the javascript for this.
+
+We need to get a reference to both the input and button tags first.
+
+```javascript
+// get reference to both
+// input tag and button tag
+const input = document.getElementById("copyInput");
+const copyBtn = document.getElementById("copyButton");
+```
+
+Then we need to add a click event listener so that when the user clicks on the button it will copy the text from the input tag.
+
+```javascript
+// get reference to both
+// input tag and button tag
+const input = document.getElementById("copyInput");
+const copyBtn = document.getElementById("copyButton");
+
+// atttach click event listenter to button tag
+button.addEventListener("click", () => {
+  // do the copyting of text here
+});
+```
+
+Now for the computer to copy we need to select the text inside the input tag and then execute the `document.execCommand('copy')` method.
+
+```javascript
+// get reference to both
+// input tag and button tag
+const input = document.getElementById("copyInput");
+const copyBtn = document.getElementById("copyButton");
+
+// atttach click event listenter to button tag
+button.addEventListener("click", () => {
+  /* do the copyting of text here */
+
+  // first select the text inside the input tag
+  input.select();
+  input.setSelectionRange(0, 99999); // polyfill for mobile devices
+
+  // execute the copy method
+  document.execCommand("copy");
+
+  // optional ==> after copying change the button text to Copied!
+  copyBtn.textContent = "Copied!";
+});
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
