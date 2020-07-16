@@ -7,17 +7,17 @@ author: MELVIN GEORGE
 date: 2020-07-16
 ---
 
-To copy/paste text programmatically using javascript, you need to use the `document.execCommand('copy')` method.
+To copy text programmatically using javascript, you need to use the `document.execCommand('copy')` method.
 
 Let's study this with an example.
 
-Considet this HTML,
+Consider this HTML,
 
 ```html
 <input id="copyInput" type="text" /> <button id="copyButton">Copy Text</button>
 ```
 
-with an input tag and a button to copy text from the input.
+with an input tag and a button to copy text from the input tag.
 
 Now let's write the javascript for this.
 
@@ -40,11 +40,11 @@ const copyBtn = document.getElementById("copyButton");
 
 // atttach click event listenter to button tag
 button.addEventListener("click", () => {
-  // do the copyting of text here
+  // do the copying of text here
 });
 ```
 
-Now for the computer to copy we need to select the text inside the input tag and then execute the `document.execCommand('copy')` method.
+Now for the computer to copy we need to select the text inside the input tag first and then execute the `document.execCommand('copy')` method.
 
 ```javascript
 // get reference to both
@@ -54,7 +54,7 @@ const copyBtn = document.getElementById("copyButton");
 
 // atttach click event listenter to button tag
 button.addEventListener("click", () => {
-  /* do the copyting of text here */
+  /* do the copying of text here */
 
   // first select the text inside the input tag
   input.select();
