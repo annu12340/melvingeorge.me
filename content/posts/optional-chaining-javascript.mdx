@@ -1,0 +1,147 @@
+---
+title: Optional chaining in JavaScript
+description: Learn how to use optional chaining operator (?.) to check for properties, methods, etc in JavaScript
+keywords: optional chaining in javascript,?. operator, check for properties, check for methods, javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-17
+---
+
+Optional chaining operator (?.) is a new addition in JavaScript where it helps to checks if a property, method etc is present or not.
+
+Let's look at an example to get to know more.
+
+Let's create an object called `John` with the properties `name` and `age`.
+
+```javascript
+// John object
+const John = {
+  name: "John Doe",
+  age: 23,
+};
+```
+
+Now, what if we tried to access a property called `address` which is not in the `John` object. Yeah, you're right it will show `undefined`.
+
+But that's OK-ish? Because at least this can be checked with an if statement like this.
+
+```javascript
+// John object
+const John = {
+  name: "John Doe",
+  age: 23,
+};
+
+// this checking is ok for now
+if (John.address) {
+  console.log(John.address);
+} else {
+  console.log("Address property is not defined");
+}
+```
+
+But oftentimes programmers in JavaScript tend to access more properties inside the `address` property and this makes things worse 😟. Because now JavaScript will throw a huge error instead of `Address property is not defined`.
+
+Let's try to access another property called `street` inside the `address` property.
+
+Try executing this code now,
+
+```javascript
+// John object
+const John = {
+  name: "John Doe",
+  age: 23,
+};
+
+// this will throw an error 🚫
+// since the address property is not defined
+// and we are tring to access another property of street
+// inside the address property which itself is undefined 🚨
+if (John.address.street) {
+  console.log(John.address.street);
+} else {
+  console.log("Address property is not defined");
+}
+```
+
+That's where the use of the newly introduced `?.` optional chaining operator comes in.
+
+The `?.` operator will check if the property is present and returns property if present and returns `undefined` if it is not present.
+
+The `?.` operator is added after a property name that we want to check for.
+
+eg: `John.address?.street`
+
+Let's look at it now,
+
+```javascript
+// John object
+const John = {
+  name: "John Doe",
+  age: 23,
+};
+
+// the ?. operator will check for the presence of property
+// here, the  else statement will be executed
+// instead of throwing an error
+if (John.address?.street) {
+  console.log(John.address.street);
+} else {
+  console.log("Address property is not defined");
+}
+```
+
+Before optional chaining operator programmers used to do this kind of checks with the `&&` (AND) operator like this.
+
+```javascript
+// John object
+const John = {
+  name: "John Doe",
+  age: 23,
+};
+
+// using AND operator
+// instead of ?. operator
+if (John && John.address && John.address.street) {
+  console.log(John.address.street);
+} else {
+  console.log("Address property is not defined");
+}
+```
+
+The `?.` operator can also be used to check for methods present in an object.
+
+Suppose you are trying to call a method called `sayHello` which is not defined in the `John` object.
+
+```javascript
+// John object
+const John = {
+  name: "John Doe",
+  age: 23,
+};
+
+// call sayHello() method
+// which is not defined
+John.sayHello();
+```
+
+It will throw an error saying `TypeError: John.sayHello is not a function`.
+
+Let's check it with `?.` operator.
+
+```javascript
+// John object
+const John = {
+  name: "John Doe",
+  age: 23,
+};
+
+// call sayHello() method
+// but now checking with ?. operator
+// and the method is not called ✅
+John.sayHello?.();
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
