@@ -1,0 +1,109 @@
+---
+title: Symbol type in JavaScript - Part 1
+description: Learn how to use the Symbol datatype in JavaScript
+keywords: Symbol datatype,ES6 datatype,Symbol in javascript,javascript,part 1,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-18
+---
+
+A `Symbol` in javascript is a unique identifier and primitive datatype just like `Number`, `String`, `Boolean` primitive datatypes.
+
+This was added to the ES6 version of JavaScript.
+
+So why do we even need this new datatype `Symbol`?.
+
+To answer that question let me tell you one problem, modern web applications work with the help of third-party libraries whether it may be for the animation of content, managing state of applications, rendering of content, etc.
+
+So with that comes the problem of naming conflicts among these third-party libraries.
+
+To solve that we could use the `Symbol` datatype.
+
+Consider this object from a third-party library.
+
+```javascript
+// third party library object
+const thirdPartyLibraryObject = {
+  name: "example",
+};
+```
+
+Now if I wanted to add the same property called `name` i could just add that using the `.` (dot operator). But the problem is that we will be overriding actual `name` property in `thirdPartyLibraryObject` instead of adding a new property to it.
+
+```javascript
+// third party library object
+const thirdPartyLibraryObject = {
+  name: "example",
+};
+
+// name is overidden
+thirdPartyLibraryObject.name = "example2";
+
+console.log(thirdPartyLibraryObject); // example 2
+```
+
+So, let's make a new symbol `name` .
+
+```javascript
+// third party library object
+const thirdPartyLibraryObject = {
+  name: "example",
+};
+
+// create a name Symbol
+const name = Symbol("name");
+```
+
+- Here we created the `name` `Symbol` using the `Symbol()` factory function.
+- Parameter `name` supplied to `Symbol()` factory function is optional, this is for debugging purposes and code readability other than that it doesn't do any good.
+- A unique value is internally created by calling the `Symbol()` factory function.
+
+Now Let's add the `name` symbol to `thirdPartyLibraryObject`.
+
+```javascript
+// third party library object
+const thirdPartyLibraryObject = {
+  name: "example",
+};
+
+// create a name Symbol
+const name = Symbol("name");
+
+// add name symbol to object
+thirdPartyLibraryObject[name] = "example 2";
+```
+
+- To add value and attach the symbol we need to use the `[]` (bracket operator) followed by the value we want to add to the symbol like this.
+
+```javascript
+// add name symbol to object
+thirdPartyLibraryObject[name] = "example 2";
+```
+
+## NOTE: Pass the reference of the symbol `name` and don't put the `name` variable inside quotes. If you put the name in quotes you would be overwriting the actual name property.
+
+Now if you look into `thirdPartyLibraryObject`, you can see that there are 2 properties like this.
+
+```javascript
+{
+    name: "example",
+    Symbol(name): "example 2"
+}
+```
+
+Okay. Now how do we access this unique symbol `name` from the object `thirdPartyLibraryObject`.
+
+We can use the `[]` (bracket operator) to access the value of the Symbol `name` like this.
+
+```javascript
+// access the name symbol value
+const symbolName = thirdPartyLibraryObject[name];
+```
+
+## NOTE: Pass the symbol reference inside the bracket operator and don't put it inside the quotes.
+
+We will be discussing more about the `Symbol` datatype in the next blog post. Well, this is a start 🤓.
+
+### Feel free to share if you found this useful 😃.
+
+---
