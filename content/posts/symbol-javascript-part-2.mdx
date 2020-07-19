@@ -1,0 +1,73 @@
+---
+title: Symbol type in JavaScript - Part 2
+description: Learn how to use the Symbol datatype in JavaScript
+keywords: Symbol datatype,ES6 datatype,Symbol in javascript,javascript,part 1,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-19
+---
+
+We looked at the very basics of `Symbol` datatype in Javascript in our [previous blog post](https://melvingeorge.me/blog/symbol-javascript-part-1).
+
+There we have discussed how to add the `Symbol` datatype to an object and reading the value of the `Symbol`.
+
+## Symbol Literal
+
+Just like we added a `Symbol` using the bracket notation to an object we can add `Symbol` directly to an object.
+
+We need to use the `[]` (bracket) notation inside the object like this.
+
+```javascript
+// create a symbol
+const id = Symbol("id");
+
+// an object
+const obj = {
+  id: 23,
+  [id]: 23,
+};
+```
+
+### NOTE: Don't put the symbol `id` inside quotes, pass the reference of the created symbol.
+
+## Not shown by `for...in` loop
+
+The Symbols on an object will not be shown in a `for...in` loop.
+
+```javascript
+// create a symbol
+const id = Symbol("id");
+
+// an object
+const obj = {
+  id: 23,
+  [id]: 23,
+};
+
+// for...in loop
+for (let prop in obj) {
+  console.log(prop, obj[prop]); // Symbol types are not shown
+}
+```
+
+Now, if you want to know if any `Symbol` types are present you can use the `Object.getOwnPropertySymbols()` method.
+
+```javascript
+// create a symbol
+const id = Symbol("id");
+
+// an object
+const obj = {
+  id: 23,
+  [id]: 23,
+};
+
+// get all symbols present in an object
+const symbols = Object.getOwnPropertySymbols(obj);
+
+console.log(symbols);
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
