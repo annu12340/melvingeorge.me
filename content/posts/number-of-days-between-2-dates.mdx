@@ -1,0 +1,65 @@
+---
+title: Calculate the number of days between 2 dates in JavaScript
+description: Learn how to calculate the number of days between 2 dates in JavaScript
+keywords: calculate the number of days,2 dates,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-20
+---
+
+## Calculate the number of days between 2 dates
+
+Consider this 2 dates,
+
+```javascript
+// 2 dates
+const date1 = new Date("September 03, 1998");
+const date2 = new Date(); // will return current date
+```
+
+You can also provide the date in `MM/DD/YYYY` format also into the `Date()` constructor function.
+
+To find the number of the days between any 2 dates, we need to rely on some calculations as javascript itself doesn't provide any methods to do that.
+
+First, we need to get the milliseconds between these 2 dates.
+
+```javascript
+// 2 dates
+const date1 = new Date("September 03, 1998");
+const date2 = new Date(); // will return current date
+
+// get milliseconds
+const millisecondsBetween2Dates = Math.abs(date2 - date1);
+```
+
+We are using the `Math.abs()` to get the absolute value so that it deals with negative values also.
+
+Secondly, we need to get the number of days using these milliseconds.
+
+```javascript
+// 2 dates
+const date1 = new Date("September 03, 1998");
+const date2 = new Date(); // will return current date
+
+// get milliseconds
+const millisecondsBetween2Dates = Math.abs(date2 - date1);
+
+// get number of days
+const numberOfDays = Math.ceil(
+  millisecondsBetween2Dates / (1000 * 60 * 60 * 24)
+);
+
+console.log(numberOfDays);
+```
+
+We are using the `Math.ceil()` to round to the next largest integer.
+
+To convert it into the days we are dividing it with `1000 (milliseconds)* 60 (seconds) * 60 (minutes) * 24 (hours)`.
+
+NOTE: `1 second is 1000 milliseconds.`
+
+We are dividing the total milliseconds with 1000
+
+### Feel free to share if you found this useful 😃.
+
+---
