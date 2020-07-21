@@ -1,0 +1,67 @@
+---
+title: Convert objects to string in JavaScript
+description: Learn how to convert objects to strings by overwriting the toString() method in JavaScript
+keywords: objects to strings,tostring method,convert an object to a string,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-21
+---
+
+To convert an object to string in JavaScript you need to overwrite the default `toString()` method in any object.
+
+All the objects in JavaScript have a default `toString()` method defined.
+
+But that doesn't do any good for us.
+
+Let's say we have an object `John` with `name` and `age` properties.
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 23,
+};
+
+alert(John); // [object Object] 😟 Not good.
+```
+
+Because when we try to `alert(John)` it will show `[object Object]`. That's not useful for anything. But what if don't want to return `[object Object]` but return just the `name` property instead.
+
+Well we can do that by overwriting the `toString()` method and returning the `name` property in the `John` object like this,
+
+```javascript
+const John = {
+  name: "John Doe",
+  age: 23,
+  toString: function () {
+    return this.name;
+  },
+};
+
+// only name property is returned
+alert(John); // John Doe
+
+// If we try to call the default toString() method
+// console.log(John) will return ==> [object Object] which is not useful at all
+// Since we have overwrote the default toString() method it will return ==> John Doe
+console.log(John.toString()); // John Doe
+```
+
+In the `alert()` method ,if you try to execute the code it will show `John Doe`. Yes, JavaScript internally calls the `toString()` method when `alert()` is called.
+
+In the second case if we didn't overwrite the default `toString()` method in The `John` object it will return `[object Object]` which is not useful at all, Now we have a useful `toString()` method which returns the `name` property.
+
+Now, Try executing `console.log(John.toString())` without defining a `toString()` method in `John` object and observe the result like this.
+
+```javascript
+// No toString() method defined
+const John = {
+  name: "John Doe",
+  age: 23,
+};
+
+console.log(John.toString()); // [object Object]   ,😟 Not useful
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
