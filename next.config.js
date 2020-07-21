@@ -43,10 +43,7 @@ module.exports = withPlugins(
       {
         optimizeImagesInDev: true,
         imageTrace: {
-          color: "#4299e1",
-          alphaMax: 8,
-          threshold: 128,
-          turnPolicy: "TURNPOLICY_WHITE",
+          color: "#E2E8F0",
         },
       },
     ],
@@ -55,5 +52,5 @@ module.exports = withPlugins(
     devIndicators: {
       autoPrerender: false,
     },
-  },
+  }
 );

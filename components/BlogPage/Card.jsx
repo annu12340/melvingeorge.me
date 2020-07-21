@@ -1,24 +1,19 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
-import ImageLoader from "../Utils/ImageLoaderUtil";
+const ImageLoader = dynamic(() => import("../Utils/ImageLoaderUtil"));
 
 const Card = ({ title, description, href }) => {
   return (
     <Link href="/blog/[link]" as={`/blog/${href}`}>
-      <div
-        className="bg-white shadow-sm rounded cursor-pointer group max-w-xs p-6 flex flex-col  m-6 box-border"
-      >
-        <h1 className="text-2xl my-4 tracking-wide font-medium">
-          {title}
-        </h1>
+      <div className="bg-white shadow-sm rounded cursor-pointer group max-w-xs p-6 flex flex-col  m-6 box-border">
+        <h1 className="text-2xl my-4 tracking-wide font-medium">{title}</h1>
         <ImageLoader
           link={href}
           alt={`Banner picture of ${title} blog`}
           src="main.jpg"
         />
-        <p
-          className="tracking-wide my-4 leading-relaxed text-lg transition-colors duration-300 group-hover:text-blue-600"
-        >
+        <p className="tracking-wide my-4 leading-relaxed text-lg transition-colors duration-300 group-hover:text-blue-600">
           {description}
         </p>
       </div>
