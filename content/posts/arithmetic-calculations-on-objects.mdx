@@ -1,0 +1,106 @@
+---
+title: How to do arithmetic calculations with objects?
+description: Learn how to use the valueOf() method to do arithmetic calculations with objects
+keywords: valueOf method,addition,subtraction,division,multiplication,arithmetic calculation with 2 objects,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-22
+---
+
+To do arithmetic calculations such as addition, subtraction, multiplication, division, etc you need to overwrite the default `valueOf()` method in the object.
+
+Consider 2 objects `John` and `Lily` with `name` and `salary` properties defined in it.
+
+```javascript
+// 2 objects
+const John = {
+  name: "John Doe",
+  salary: 23000,
+};
+const Lily = {
+  name: "Lily Rose",
+  salary: 45000,
+};
+```
+
+What would you think if we try to add these 2 objects together?
+Let's find out.
+
+```javascript
+// 2 objects
+const John = {
+  name: "John Doe",
+  salary: 23000,
+};
+const Lily = {
+  name: "Lily Rose",
+  salary: 45000,
+};
+
+// add 2 objects together
+console.log(John + Lily); // ==> [object Object][object Object] 😟
+```
+
+Well, we would get something like this, `[object Object][object Object]`.
+Not useful at all.
+
+We can make this useful by overwriting the default `valueOf()` method in `John` and `Lily` objects, because when doing an arithmetic calculation (+, -, \*, /) with objects JavaScript internally calls `valueOf()` method.
+
+So let's define the method in both the objects.
+
+```javascript
+// 2 objects
+const John = {
+  name: "John Doe",
+  salary: 23000,
+  valueOf: function () {
+    return this.salary;
+  },
+};
+const Lily = {
+  name: "Lily Rose",
+  salary: 45000,
+  valueOf: function () {
+    return this.salary;
+  },
+};
+
+// add 2 objects together
+console.log(John + Lily); // ==> 68000 😃
+
+// calculate 500 + John
+console.log(500 + John); // ==> 23500
+```
+
+In the `valueOf()` method we are returning the `salary` property value so that when we do numerical calculations with the objects the calculated value of both the salary is returned instead of `[object Object][object Object]`.
+
+Useful! Right? 😃
+
+This also depends on the context you are using to calculate.
+
+Consider adding a string `Hello` to `John` object.
+
+```javascript
+// 2 objects
+const John = {
+  name: "John Doe",
+  salary: 23000,
+  valueOf: function () {
+    return this.salary;
+  },
+};
+const Lily = {
+  name: "Lily Rose",
+  salary: 45000,
+  valueOf: function () {
+    return this.salary;
+  },
+};
+
+// add Hello with John
+console.log("Hello" + John); // ==> Hello23000
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
