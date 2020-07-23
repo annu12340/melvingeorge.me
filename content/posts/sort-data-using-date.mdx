@@ -1,0 +1,120 @@
+---
+title: How to sort data using the date in JavaScript?
+description: Learn how to sort data using date values in JavaScript
+keywords: sort blogs using dates,sort data using dates,sort method,dates,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-23
+---
+
+Let's consider an array of blogs with `publishedDate` property.
+
+```javascript
+// array of blogs
+const blogs = [
+  {
+    title: "How to get started with Open Source",
+    publishedDate: "04 May, 2020",
+  },
+  {
+    title: "JavaScript is the best!",
+    publishedDate: "23 September, 2019",
+  },
+  {
+    title: "I Love this World",
+    publishedDate: "03 January, 2020",
+  },
+];
+
+// loop through the array and show the blog posts
+blogs.forEach((blog) => {
+  console.log(`Blog Title: ${blog.title}\nPublished: ${blog.publishedDate}`);
+});
+```
+
+As you can see when you loop through the blogs we are not showing the blogs in any sorted manner.
+
+```
+/* OUTPUT -- NOT SORTED 😟 */
+
+Blog Title: How to get started with Open Source
+Published: 04 May, 2020
+
+Blog Title: JavaScript is the best!
+Published: 23 September, 2019
+
+Blog Title: I Love this World
+Published: 03 January, 2020
+```
+
+But we don't need this behavior.
+We need the blog posts to appear so that the latest blogs come first.
+
+So let's sort the blog posts using the `publishedDate` property.
+
+To sort the blog we can use the `sort()` method available in our `blogs` array.
+
+```javascript
+// array of blogs
+const blogs = [
+  {
+    title: "How to get started with Open Source",
+    publishedDate: "04 May, 2020",
+  },
+  {
+    title: "JavaScript is the best!",
+    publishedDate: "23 September, 2019",
+  },
+  {
+    title: "I Love this World",
+    publishedDate: "03 January, 2020",
+  },
+];
+
+// sort blogs
+blogs.sort((firstBlog, secondBlog) => {
+  return new Date(secondBlog.publishedDate) - new Date(firstBlog.publishedDate);
+});
+
+// loop through the array and show the blog posts
+blogs.forEach((blog) => {
+  console.log(`Blog Title: ${blog.title}\nPublished: ${blog.publishedDate}`);
+});
+```
+
+```
+/* OUTPUT -- SORTED 😃 */
+
+Blog Title: How to get started with Open Source
+Published: 04 May, 2020
+
+Blog Title: I Love this World
+Published: 03 January, 2020
+
+Blog Title: JavaScript is the best!
+Published: 23 September, 2019
+
+```
+
+Let's understand this piece of code to sort the blogs.
+
+```javascript
+// sort blogs
+blogs.sort((firstBlog, secondBlog) => {
+  return new Date(secondBlog.publishedDate) - new Date(firstBlog.publishedDate);
+});
+```
+
+In the `sort()` method we are passing a function to let it know how to sort our blogs.
+
+We are passing the `publishedDate` value into a `Date()` constructor function to know the milliseconds elapsed after January 01, 1970, 00:00:00 UTC.
+
+We need our blogs to be sorted in a descending manner so that the newly published blogs comes as the first element of an array and old blog to be in the last. This is because when looping to show the blogs we want the first blog to be shown at the top of the list.
+
+That is why we are returning the difference of `secondBlog` and `firstBlog` so that the `sort()` method knows to sort in a descending fashion.
+
+If we don't want the blogs to be sorted in a descending fashion but in an ascending fashion we need to return the difference of `firstBlog` and `secondBlog`.
+
+### Feel free to share if you found this useful 😃.
+
+---
