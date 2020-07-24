@@ -1,0 +1,150 @@
+---
+title: Introduction to Set in JavaScript
+description: Learn how to work with the set collection in JavaScript
+keywords: set in javascript,set,new set(),javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-24
+---
+
+Set is a way of storing unique values in JavaScript.
+
+We can create a Set collection using the `new Set()` constructor function.
+
+```javascript
+// new set
+const set = new Set();
+```
+
+Okay. We know what a set is!
+
+But what's the use of it? Let's discuss this.
+
+Consider this array with a lot of names in which some of the names are repeated.
+
+```javascript
+// array with repeated names
+const namesArr = [
+  "John",
+  "Rose",
+  "Jack",
+  "John",
+  "Lily",
+  "Lily",
+  "Jack",
+  "Rose",
+  "Lily",
+];
+```
+
+as you can see from the array many of the names are repeated, but we just want the names of people who are in the array and we don't care if they are repeated.
+
+That's where we will use the Set collection.
+
+we can pass the `namesArr` into our Set constructor function and it will contain only values once and not contain the duplicate or repeated values.
+
+```javascript
+// array with repeated names
+const namesArr = [
+  "John",
+  "Rose",
+  "Jack",
+  "John",
+  "Lily",
+  "Lily",
+  "Jack",
+  "Rose",
+  "Lily",
+];
+
+// set
+const namesSet = new Set(namesArr);
+
+console.log(namesSet); // {"John", "Rose", "Jack", "Lily"}
+```
+
+- To add more items to set we can use the `add()` method in the `namesSet`.
+
+```javascript
+const namesArr = ["John", "Rose"];
+
+// set
+const namesSet = new Set(namesArr);
+
+// add Roy's name
+namesSet.add("Roy");
+
+// Roy's name added to set
+console.log(namesSet); // {"John", "Rose", "Roy"}
+```
+
+If Roy's name is already in the set. It won't be added.
+
+- To delete a value from the set we can use the `delete()` method.
+
+```javascript
+const namesArr = ["John", "Rose"];
+
+// set
+const namesSet = new Set(namesArr);
+
+// delete John's name
+namesSet.delete("John");
+
+// John's name is deleted from set
+console.log(namesSet); // {"Rose"}
+```
+
+- We can check if the value is present in the set using the `has()` method. the method returns boolean `true` if present and `false` if not.
+
+```javascript
+const namesArr = ["John", "Rose"];
+
+// set
+const namesSet = new Set(namesArr);
+
+// check if Rose is present
+const isPresent = namesSet.has("Rose");
+
+console.log(isPresent); // true
+```
+
+- To clear all the values from the set we can use the `clear()` method.
+
+```javascript
+const namesArr = ["John", "Rose"];
+
+// set
+const namesSet = new Set(namesArr);
+
+// clear all values
+namesSet.clear();
+
+console.log(namesSet); // {}
+```
+
+- To get the length or the size of the set we can use the `size` property available in the `namesSet`.
+
+```javascript
+const namesArr = ["John", "Rose"];
+
+// set
+const namesSet = new Set(namesArr);
+
+console.log(namesSet.size); // 2
+```
+
+- the type of the `namesSet` is `object` since the underlying type used to create a set is the `object` type.
+
+```javascript
+const namesArr = ["John", "Rose"];
+
+// set
+const namesSet = new Set(namesArr);
+
+console.log(typeof namesSet); // object
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
