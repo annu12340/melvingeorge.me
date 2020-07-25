@@ -1,0 +1,91 @@
+---
+title: Set in JavaScript - Part 2
+description: Learn more about the set collection in JavaScript
+keywords: set in javascript,set,new set(),looping over set,convert set to an array,pass object to set,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-25
+---
+
+We have looked at the basics of Set in JavaScript including creating a new set, adding a new element, deleting an element, clearing all elements, and checking if an element is present in a set In the [last blog post](https://melvingeorge.me/blog/introduction-to-set-javascript).
+
+Now let's look at more operations we can do with Set in JavaScript.
+
+## Loop over Set in JavaScript
+
+To loop over a Set collection we can use the `forEach()` method available in set or use a `for..of` statement.
+
+```javascript
+// arr
+const arr = [1, 2, 3, 4];
+
+// convert to set
+const set = new Set(arr);
+
+// loop over the new set
+// using the forEach() method
+set.forEach((element) => {
+  console.log(element);
+});
+
+// loop over the new set
+// using the for...of statement
+for (let element of set) {
+  console.log(element);
+}
+```
+
+## Convert Set to an Array
+
+To convert a Set collection into an Array we can use the `Array.from()` method or use the spread operator `...` .
+
+```javascript
+// arr
+const arr = [1, 2, 3, 4];
+
+// convert to set
+const set = new Set(arr);
+
+// using Array.from()
+let arrFromSet = Array.from(set);
+
+// using the spread operator
+arrFromSet = [...set];
+
+console.log(arrFromSet); // [1,2,3,4]
+```
+
+## Caveats with Set in JavaScript
+
+- You can't pass an object when creating a set with `new Set()` constructor function as it accepts only iterable and since the `object` type is not iterable it will throw an error.
+
+```javascript
+// obj
+const obj = {
+  name: "John Doe",
+};
+
+// make a set from the object
+const set = new Set(obj); // error
+```
+
+But you can pass an object after the creation of an empty Set using the `add()` method available in the set.
+
+```javascript
+// obj
+const obj = {
+  name: "John Doe",
+};
+
+// make an empty set
+const set = new Set();
+
+// add object to the set using the add() method
+set.add(obj);
+
+console.log(set);
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
