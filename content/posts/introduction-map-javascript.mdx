@@ -1,0 +1,170 @@
+---
+title: Introduction to Map in JavaScript
+description: Learn how to work with the map collection in JavaScript
+keywords: map in javascript,map,new map(),javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-26
+---
+
+A map is a collection in JavaScript to store values in a key-value format.
+
+You may think the object does the same job for us. What impact does Map collection make?
+
+In a map collection, the key can be any type whereas in objects the keys can be of `string` type only.
+
+To make a map collection we can use the `new Map()` constructor function.
+
+```javascript
+// create a new map
+let map = new Map();
+```
+
+## Add value to map
+
+To add a key-value pair to Map you can use the `set()` method available in the newly created `map` object.
+The key of the value is passed as the first argument and the value as the second argument.
+
+```javascript
+// create a new map
+let map = new Map();
+
+// add a key-value pair
+map.set("name", "John Doe");
+```
+
+That's not the cool part. As said above we can add any type as the key to the map.
+
+Let's add a `number` and `boolean` type as the key to the map.
+
+```javascript
+// create a new map
+let map = new Map();
+
+// add a key-value pair
+map.set("name", "John Doe"); // string type as the key
+
+map.set(true, "its true"); // boolean type as the key
+
+map.set(1, 234); // number type as the key
+```
+
+We can even set an `object` type as the key.
+
+```javascript
+// create a new map
+let map = new Map();
+
+// an object
+let John = {
+  name: "John Doe",
+};
+
+// setting object as the key
+map.set(John, 20000);
+```
+
+## Get a value from the map
+
+To get a value from the map you can use the `get()` method available in the `map` object.
+The method accepts the key of the value as an argument and it returns the value of the key.
+
+```javascript
+// create a new map
+let map = new Map();
+
+// add a key-value pair
+map.set("name", "John Doe");
+map.set(true, "its true");
+
+// get name value
+map.get("name"); // John Doe
+map.get(true); // its true
+```
+
+## Check if a key is present in a map collection
+
+To check if a key is present in a map you can use the `has()` method available in the `map` object.
+The method accepts the key as an argument and returns boolean `true` if present and `false` if not.
+
+```javascript
+// create a new map
+let map = new Map();
+
+// add a key-value pair
+map.set("name", "John Doe");
+map.set(true, "its true");
+
+// check if a key is present in map
+map.has("name"); // true
+map.has(true); // true
+```
+
+## Delete a key from the map
+
+To delete a key from the map we can use the `delete()` method available in the `map` object.
+The method accepts the key to be removed as an argument.
+
+```javascript
+// create a new map
+let map = new Map();
+
+// add a key-value pair
+map.set("name", "John Doe");
+map.set(true, "its true");
+
+// delete a key
+map.delete("name"); // "name" key is removed
+```
+
+## Remove every element from Map
+
+To remove every element from a map you can use the `clear()` method available in the `map` object.
+
+```javascript
+// create a new map
+let map = new Map();
+
+// add a key-value pair
+map.set("name", "John Doe");
+map.set(true, "its true");
+
+// remove every elements
+map.clear();
+```
+
+## Get size of a map collection
+
+To get the full length or size of a map collection you can use the `size` property available in the `map` object.
+
+```javascript
+// create a new map
+let map = new Map();
+
+// add a key-value pair
+map.set("name", "John Doe");
+map.set(true, "its true");
+
+// get length or size of map
+console.log(map.size); // 2
+```
+
+## Type of a map collection
+
+The type of map collection is `object`.
+
+```javascript
+// create a new map
+let map = new Map();
+
+// add a key-value pair
+map.set("name", "John Doe");
+map.set(true, "its true");
+
+// get length or size of map
+console.log(typeof map); // object
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
