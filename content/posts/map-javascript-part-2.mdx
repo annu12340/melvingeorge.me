@@ -1,0 +1,234 @@
+---
+title: Map in JavaScript - Part 2
+description: Learn how to work with the map collection in JavaScript
+keywords: map in javascript,map,new map(),javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-27
+---
+
+We have looked at the basics of Map in JavaScript including creating a new map, adding a new element, deleting an element, clearing all elements, and checking if an element is present in a map In the [last blog post](https://melvingeorge.me/blog/introduction-map-javascript).
+
+Now let's look at more operations we can do with Map in JavaScript.
+
+## Loop over Map in JavaScript
+
+To loop over the map in javascript we can use the `forEach()` method or the `for..of` statement.
+
+Since the map has a key and a corresponding value the programmer can loop over the key or the value using these methods:
+
+- To loop over only the keys we can use the `keys()` method available in a `map` object with the `for...of` statement.
+  This works because `keys()` method returns an iterable for keys.
+
+```javascript
+// create a map
+const map = new Map();
+
+// add elements to map
+map.set("John", "John Doe");
+map.set(true, "true");
+
+// loop over only the keys in map
+for (let key of map.keys()) {
+  console.log(key);
+}
+
+/*
+
+OUTPUT
+======
+
+John
+true
+
+*/
+```
+
+- To loop over only the values we can use the `values()` method in a `map` object with the `for...of` statement.
+  The method returns an iterable for values.
+
+```javascript
+// create a map
+const map = new Map();
+
+// add elements to map
+map.set("John", "John Doe");
+map.set(true, "true");
+
+// loop over only the values in map
+for (let value of map.values()) {
+  console.log(value);
+}
+
+/*
+
+OUTPUT
+======
+
+John Doe
+true
+
+*/
+```
+
+- To loop over both key keys and values at the same time we can use the `entries()` method available in the `map` object.
+  The method returns an iterable of the form `[key, value]`.
+
+```javascript
+// create a map
+const map = new Map();
+
+// add elements to map
+map.set("John", "John Doe");
+map.set(true, "true");
+
+// loop over all entries in map
+for (let entry of map.entries()) {
+  console.log(entry);
+}
+
+/*
+
+OUTPUT
+======
+
+["John", "John Doe"]
+[true, "true"]
+
+*/
+```
+
+You don't have to use the `entries()` method available in the `map` object. You can simply use the map object in the `for..of` statement without any method like this,
+
+```javascript
+// create a map
+const map = new Map();
+
+// add elements to map
+map.set("John", "John Doe");
+map.set(true, "true");
+
+// loop over all entries in map
+// same as using the map.entries()
+for (let entry of map) {
+  console.log(entry);
+}
+
+/*
+
+OUTPUT
+======
+
+["John", "John Doe"]
+[true, "true"]
+
+*/
+```
+
+- Another way to loop over a map is to use the `forEach()` method available in the `map` object.
+
+```javascript
+// create a map
+const map = new Map();
+
+// add elements to map
+map.set("John", "John Doe");
+map.set(true, "true");
+
+// loop over the elements
+map.forEach((key, value) => {
+  console.log(`${key}: ${value}`);
+});
+
+/*
+
+OUTPUT
+======
+
+John Doe: John
+true: true
+
+*/
+```
+
+As you can see from all the looping strategies the looping goes in the same order as they were inserted to the map collection. Map collection preserves the order which we cannot guarantee with an `object`.
+
+## Convert an object to a map
+
+To convert an object to a map we can use the `Object.entries()` method while creating a new map collection.
+
+Since the map constructor function accepts key/value pair in [key, value] format.
+
+```javascript
+// create new map using the constructor function
+// passing key/value pair in [key, value] format
+const map = new Map([
+  ["John", "John Doe"],
+  [true, 1],
+]);
+```
+
+If we have an object like this,
+
+```javascript
+// an object
+const john = {
+  name: "John Doe",
+  age: 23,
+  isEmployed: true,
+};
+```
+
+We can convert this object into `[key, value]` format using the `Object.entries()` method.
+
+```javascript
+// an object
+const john = {
+  name: "John Doe",
+  age: 23,
+  isEmployed: true,
+};
+
+// convert to [key, value] format
+const johnEntries = Object.entries(john);
+```
+
+Then we can pass the `johnEntries` to the Map constructor function.
+
+```javascript
+// an object
+const john = {
+  name: "John Doe",
+  age: 23,
+  isEmployed: true,
+};
+
+// convert to [key, value] format
+const johnEntries = Object.entries(john);
+
+// make a map from object using johnEntries
+const map = new Map(johnEntries);
+
+console.log(map); // {"name" => "John Doe", "age" => 23, "isEmployed" => true}
+```
+
+## Convert a map to an object
+
+To convert a map to an object we can use the `Object.fromEntries()` method and pass the map object to it.
+
+```javascript
+// create a map
+const map = new Map([
+  ["John", "John Doe"],
+  [true, 1],
+]);
+
+// convert map to an object
+const mapObj = Object.fromEntries(map);
+
+console.log(mapObj);
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
