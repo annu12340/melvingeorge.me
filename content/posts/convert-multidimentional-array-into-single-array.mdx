@@ -1,0 +1,54 @@
+---
+title: How to convert a multidimensional array into a single array
+description: Learn how to use the flat() method available in the array to convert a nested array into a single array.
+keywords: flat method,convert multidimensional into a single array,flatten array,convert the nested array into a single array, javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-28
+---
+
+To convert a multidimensional or nested array into a single array or flatten the array we can use the `flat()` method available in the array.
+
+Suppose you have a nested array like this,
+
+```javascript
+// nested array
+let arr = ["John Doe", ["Lily Rose", 23]];
+```
+
+Let's convert this array into a single array using the `flat()` method available in the array.
+
+```javascript
+// nested array
+let arr = ["John Doe", ["Lily Rose", 23]];
+
+// convert nested array into single array
+let convertedArr = arr.flat();
+
+console.log(convertedArr); // ["John Doe", "Lily Rose", 23]
+```
+
+By default, `arr.flat()` method only converts nested arrays up to 1 level deep.
+
+What if we have nested arrays which are 3 levels deep like this,
+
+```javascript
+// nested array with 3 levels
+let arr = ["John Doe", ["Lily Rose", ["salary", ["baseSalary", 23000]]]];
+```
+
+For this to convert into a single array we can pass the depth to which we want to convert the array as an argument to the `flat()` method.
+
+```javascript
+// nested array with 3 levels
+let arr = ["John Doe", ["Lily Rose", ["salary", ["baseSalary", 23000]]]];
+
+// converted nested array into single array which is 3 levels deep
+let convertedArr = arr.flat(3);
+
+console.log(convertedArr); // ["John Doe", "Lily Rose", "salary", "baseSalary", 23000]
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
