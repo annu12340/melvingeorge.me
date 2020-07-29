@@ -1,0 +1,113 @@
+---
+title: The flatMap() array method in JavaScript
+description: Learn how to use the flatMap() array method in JavaScript
+keywords: flatMap method,map and flatten array,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-29
+---
+
+The `flatMap()` is an array method and is used to do some operation before converting a multidimementional array into a single array.
+
+Suppose we have an array of sentences like this,
+
+```javascript
+// an array of sentences
+let arr = [
+  "Hello, How are you?",
+  "Harry is a good man",
+  "Hey, John",
+  "I'm Fine",
+];
+```
+
+What if we want to split all the words by spaces?
+
+We can do that using the `map()` and `split()` methods like this.
+
+```javascript
+// an array of sentences
+let arr = [
+  "Hello, How are you?",
+  "Harry is a good man",
+  "Hey, John",
+  "I'm Fine",
+];
+
+// loop through every elements using map
+// and then split each array element by space
+let newArr = arr.map((element) => {
+  return element.split(" ");
+});
+
+console.log(newArr);
+```
+
+Now if we look into the array, we can see something like this,
+
+```
+[
+    ["Hello,", "How", "are", "you?"],
+    ["Harry", "is", "a", "good", "man"],
+    ["Hey,", "John"],
+    ["I'am", "Fine"]
+]
+```
+
+Here we have all the words in a nested array. But we never wanted our words to be in a nested array.
+The `split()` method inside the `map()` method always returns every element inside a nested array, That's a problem for us.
+
+That's where the `flatMap()` method comes to help us.
+
+The `flatMap()` method first maps through every element in an array and then converts every nested array elements into a single non-dimensional array.
+
+Let's try what we did before with the `flatMap()` array method.
+
+```javascript
+// an array of sentences
+let arr = [
+  "Hello, How are you?",
+  "Harry is a good man",
+  "Hey, John",
+  "I'm Fine",
+];
+
+// flatMap() method first maps through every element
+// and then converts nested array into single array
+let newArr = arr.flatMap((element) => {
+  return element.split(" ");
+});
+
+console.log(newArr);
+```
+
+This is the output,
+
+```
+// everything in a single array
+[
+    "Hello,",
+     "How",
+     "are",
+     "you?",
+     "Harry",
+     "is",
+    "a",
+    "good",
+    "man",
+    "Hey,",
+    "John",
+    "I'am",
+    "Fine"
+]
+```
+
+The `flatMap()` method accepts a callback function and passes the current element which is getting looped.
+
+This code is more elegant and readable than our previous code.
+
+The `flatMap()` does the job of mapping through the array first and then converts a nested array into a single array.
+
+### Feel free to share if you found this useful 😃.
+
+---
