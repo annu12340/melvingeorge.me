@@ -1,0 +1,191 @@
+---
+title: Getters and Setters for objects in JavaScript
+description: Learn how to make getters and setters for objects in JavaScript
+keywords: setters and getter,setters,getters,computed properties,objects,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-30
+---
+
+Getters and setters in objects feel like real properties but it's not real properties but a computed property.
+
+First, Let me tell what a getter in the object is.
+
+Consider this object `John`,
+
+```javascript
+// John Object
+const John = {
+  firstName: "John",
+  lastname: "Doe",
+  baseSalary: 23000,
+  allowance: 3000,
+};
+```
+
+So this is a good old object with properties `firstName`, `lastname`, `baseSalary`, and `allowance`.
+
+What if we need another property called `grossSalary` which is the total of `baseSalary` and `allowance` in the object `John`, but without defining an actual property on the `John` object.
+
+So that we can get the value of `grossSalary` by calling `John.grossSalary`.
+
+Here, we can use the concept of a getter in an object.
+
+To make a getter in the object you need to use the `get` keyword followed by the property name that we can call in the object.
+
+let's make a getter called `grossSalary`.
+
+```javascript
+// John Object
+const John = {
+  firstName: "John",
+  lastname: "Doe",
+  baseSalary: 23000,
+  allowance: 3000,
+  // getter grossSalary
+  // this returns baseSalary + allowance
+  get grossSalary() {
+    return this.baseSalary + this.allowance;
+  },
+};
+```
+
+Now if you try to call `John.grossSalary` it returns the value by adding the `baseSalary` property and `allowance` property.
+
+```javascript
+// John Object
+const John = {
+  firstName: "John",
+  lastname: "Doe",
+  baseSalary: 23000,
+  allowance: 3000,
+  // getter grossSalary
+  // this returns baseSalary + allowance
+  get grossSalary() {
+    return this.baseSalary + this.allowance;
+  },
+};
+
+// get grossSalary
+// just like calling a regular property
+console.log(John.grossSalary);
+```
+
+This is why it is also called as computed properties. Because the `grossSalary` is not a property but a computed property of `baseSalary` property and `allowance` property.
+
+Yeah! 🚀 We made a Getter.
+
+Now, let's understand what a setter in an object is.
+
+Just from the word itself, it means it's used to set a property value.
+
+To make a setter in an object you need to use the `set` keyword followed by the property name that we can call in the object.
+
+Let's define a setter called `fullName`.
+
+```javascript
+// John Object
+const John = {
+  firstName: "John",
+  lastname: "Doe",
+  baseSalary: 23000,
+  allowance: 3000,
+  // getter grossSalary
+  // this returns baseSalary + allowance
+  get grossSalary() {
+    return this.baseSalary + this.allowance;
+  },
+
+  // setter fullName
+  // this sets the value for both the firstName and lastName property
+  set fullName(fullName) {
+    // we are splitting the fullname by space
+    // split method returns an array
+    const namesArr = fullName.split(" ");
+    this.firstName = namesArr[0];
+    this.lastName = namesArr[1];
+  },
+};
+```
+
+We have defined a setter called `fullName` which sets the value for `firstName` and `lastName` properties by splitting up the full name value by a space `" "`.
+
+So lets set a value for `fullName` property.
+
+```javascript
+// John Object
+const John = {
+  firstName: "John",
+  lastname: "Doe",
+  baseSalary: 23000,
+  allowance: 3000,
+  // getter grossSalary
+  // this returns baseSalary + allowance
+  get grossSalary() {
+    return this.baseSalary + this.allowance;
+  },
+
+  // setter fullName
+  // this sets the value for both the firstName and lastName property
+  set fullName(fullName) {
+    // we are splitting the fullname by space
+    // split method returns an array
+    const namesArr = fullName.split(" ");
+    this.firstName = namesArr[0];
+    this.lastName = namesArr[1];
+  },
+};
+
+// lets set value for fullName
+// which actually sets value for firstName and lastName property
+John.fullName = "Lily Rose";
+
+// see the contents of John object
+console.log(John);
+```
+
+Now if you look into the contents of `John` object you can see that the `firstName` and `lastName` properties values are changed.
+
+A bit of quick advice to you is that if you are making a setter it's better to make a getter for it.
+
+Let's make a getter for `fullName` property.
+
+```javascript
+// John Object
+const John = {
+  firstName: "John",
+  lastname: "Doe",
+  baseSalary: 23000,
+  allowance: 3000,
+  // getter grossSalary
+  // this returns baseSalary + allowance
+  get grossSalary() {
+    return this.baseSalary + this.allowance;
+  },
+
+  // setter fullName
+  // this sets the value for both the firstName and lastName property
+  set fullName(fullName) {
+    // we are splitting the fullname by space
+    // split method returns an array
+    const namesArr = fullName.split(" ");
+    this.firstName = namesArr[0];
+    this.lastName = namesArr[1];
+  },
+
+  // getter fullName
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+};
+
+// lets set value for fullName
+// which actually sets value for firstName and lastName property
+John.fullName = "Lily Rose";
+
+console.log(John.fullName);
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
