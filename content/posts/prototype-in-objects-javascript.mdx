@@ -1,0 +1,87 @@
+---
+title: What is [[Prototype]] in JavaScript?
+description: Understand how the prototypal inheritance works in JavaScript
+keywords: prototype in javascript,prototypal Inheritance,[[prototype]] hidden property,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-07-31
+---
+
+Most of the time when programming in JavaScript we may want to extend or inherit the properties and methods of another object to one object.
+
+This is done using prototypal inheritance in JavaScript.
+
+Let me explain, suppose you have two objects `user` and `admin`
+
+```javascript
+// admin object
+let admin = {
+  userlevel: "admin",
+  shutdownSystem: () => {
+    console.log("Shutting down system");
+  },
+};
+
+// a user object
+let user = {
+  name: "John Doe",
+};
+```
+
+How do we make our `user` object get or inherit the methods and properties of the `admin` object?
+
+We can do this using a property called `__proto__`.
+
+```javascript
+// admin object
+let admin = {
+  userlevel: "admin",
+  shutdownSystem: () => {
+    console.log("Shutting down system");
+  },
+};
+
+// a user object
+// inherit properties and method using the __proto__ property
+let user = {
+  name: "John Doe",
+  __proto__: admin,
+};
+```
+
+Now try to get the properties or invoke the methods in the `admin` object using the `user` object.
+
+```javascript
+// admin object
+let admin = {
+  userlevel: "admin",
+  shutdownSystem: () => {
+    console.log("Shutting down system");
+  },
+};
+
+// a user object
+// inherit properties and method using the __proto__ setter property
+let user = {
+  name: "John Doe",
+  __proto__: admin,
+};
+
+// accessing userlevel property of admin object from user object
+console.log(user.userlevel); // ==> admin
+
+// invoke or call shutdownSystem() method of admin object from user object
+user.shutdownSystem(); // ==> Shutting down system
+```
+
+As you can see we have successfully inherited all the properties and methods of `admin` object to the `user` object using the `__proto__` property.
+
+The `__proto__` is a setter and a getter for the `[[Prototype]]` hidden property. See this to understand what [setter and getter properties](https://melvingeorge.me/blog/getters-and-setters-javascript) are.
+
+The `[[Prototype]]` is a hidden and internal property of every object. It can be of value `null` or references to other objects. When we set the `__proto__` value to another object, we are setting the value for `[[Prototype]]` hidden property.
+
+When there is no function or method defined in the object we are calling it. The JavaScript looks for these methods and properties through this `[[Prototype]]` hidden property internally.
+
+### Feel free to share if you found this useful 😃.
+
+---
