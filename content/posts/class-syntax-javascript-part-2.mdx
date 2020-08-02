@@ -1,0 +1,131 @@
+---
+title: Class syntax in JavaScript - Part 2
+description: Learn how to use new ES6 class syntax in JavaScript
+keywords: class in javascript,methods in class,type of class,getters and setters in class,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-02
+---
+
+In the last blog post, we discussed the [basics of class syntax in JavaScript](https://melvingeorge.me/blog/class-syntax-basics-JavaScript).
+
+Today we will be discussing some of the nitty-gritty details on classes in JavaScript.
+
+We know how to make a class, constructor functions, and to make properties and methods in a class.
+
+But now a big question you have in mind would be how is classes different from the old constructor functions? Or is it just [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar)?
+
+No classes are not just a Syntactic sugar. Because the language checks if you have defined a class or a constructor function in many places.
+
+The first evidence is you need to call the class with the `new` keyword for making objects out of it otherwise it will throw or show an error. For constructor function, we can call these without `new` keyword and no objects will be made and no errors are shown.
+
+## Type of a class
+
+Class in javascript is of type `function`.
+
+You can check it like this,
+
+```javascript
+// create a class
+class User {
+  sayHello() {
+    console.log("Hello, guys");
+  }
+}
+
+// check type of class
+console.log(typeof User); // function
+```
+
+## Methods are not enumerable in a class by default
+
+Methods in objects will not show up in `for...in` looping statement. Since they are not enumerable in classes.
+
+```javascript
+// create a class
+class User {
+  constructor() {
+    this.category = "User";
+    this.isAdmin = false;
+  }
+  sayHello() {
+    console.log("Hello, guys");
+  }
+}
+
+// new object from User class
+const John = new User();
+
+// loop using for...in statement
+for (let properties in John) {
+  console.log(properties); // only properties are looped not methods
+}
+```
+
+Methods are automatically added to the prototype chain instead of getting added to the object directly.
+
+## Class can be defined as an expression
+
+Classes can also be written as an expression
+
+```javascript
+// class an an expression
+const User = class {
+  constructor() {
+    this.category = "User";
+    this.isAdmin = false;
+  }
+
+  sayHello() {
+    console.log("Hello, guys");
+  }
+};
+```
+
+Or,
+
+```javascript
+// class an an expression
+const User = class UserClass {
+  constructor() {
+    this.category = "User";
+    this.isAdmin = false;
+  }
+
+  sayHello() {
+    console.log("Hello, guys");
+  }
+};
+```
+
+## Getters and setters in Class
+
+We can also define [getters and setters](https://melvingeorge.me/blog/getters-and-setters-javascript) in class,
+
+```javascript
+// class an an expression
+const User = class UserClass {
+  constructor() {
+    this.category = "User";
+    this.isAdmin = false;
+  }
+
+  sayHello() {
+    console.log("Hello, guys");
+  }
+
+  // getter for virtual property name
+  set name(name) {
+    this._name = name;
+  }
+
+  // setter for virtual property name
+  get name() {
+    return this._name;
+  }
+};
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
