@@ -1,0 +1,165 @@
+---
+title: How to inherit properties and methods using class in JavaScript
+description: Learn how to inherit properties and methods using the class syntax in JavaScript
+keywords: extends keyword,extends class,inherit properties and methods,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-03
+---
+
+To inherit properties and methods from one class to another we need to use the `extends` keyword.
+
+Let's consider 2 classes, a base class `User` and a class `Admin` which inherits properties and methods from the `User` class.
+
+You may ask why are we inheriting from `User` to `Admin` and not `Admin` to `User` because every admin is a user at the end and every admin should have every base functionalities of a user.
+
+This is how you should logically map objects in any programming language.
+
+```javascript
+// base class
+class User {
+  constructor(name) {
+    // properties
+    this.name = name;
+    this.category = "User";
+  }
+
+  // method
+  getName() {
+    return this.name;
+  }
+}
+
+// inheriting class
+class Admin {
+  // shutdownSystem() should be implemented in Admin class
+  // because only admin should have the ability to turn off
+  // a system in an organization
+  shutdownSystem() {
+    console.log("Shutting down the system");
+  }
+}
+```
+
+Now we have defined a base class and an inheriting class, But currently, we are not telling to get all the properties and methods from the `User` class to `Admin` class. For that, we need to use the `extends` keyword followed by the name of the class we want to inherit the properties and methods from the base class like this,
+
+```javascript
+// base class
+class User {
+  constructor(name) {
+    // properties
+    this.name = name;
+    this.category = "User";
+  }
+
+  // method
+  getName() {
+    return this.name;
+  }
+}
+
+// inheriting class
+// using extends keyword
+class Admin extends User {
+  // shutdownSystem() should be implemented in Admin class
+  // because only admin should have the ability to turn off
+  // a system in an organization
+  shutdownSystem() {
+    console.log("Shutting down the system");
+  }
+}
+```
+
+Now we have successfully inherited all the properties and methods from `User` to the `Admin` class.
+
+Now let's create an object of `Admin` class.
+
+```javascript
+// base class
+class User {
+  constructor(name) {
+    // properties
+    this.name = name;
+    this.category = "User";
+  }
+
+  // method
+  getName() {
+    return this.name;
+  }
+}
+
+// inheriting class
+// using extends keyword
+class Admin extends User {}
+  // shutdownSystem() should be implemented in Admin class
+  // because only admin should have the ability to turn off
+  // a system in an organization
+  shutdownSystem() {
+    console.log("Shutting down the system");
+  }
+}
+
+// create an object of Admin class
+const John = new Admin("John Doe");
+```
+
+Yay! But wait? How can we pass the `"John Doe"` as an argument to the `Admin` class when we need to pass it to the `User` class.
+
+Yes! That's the power of `extends` keyword the arguments are passed automatically to the base class on the order you have defined the parameters in the base class.
+
+But if you have a constructor method in the `Admin` class itself the arguments are passed to the constructor method of `Admin` class and not to the `User` base class constructor method and you need to call the `super()` method which passes the arguments to the base class otherwise it will throw an error.
+
+```javascript
+// base class
+class User {
+  constructor(name) {
+    // properties
+    this.name = name;
+    this.category = "User";
+  }
+
+  // method
+  getName() {
+    return this.name;
+  }
+}
+
+// inheriting class
+// using extends keyword
+class Admin extends User {
+  // constructor method
+  constructor(name, age) {
+    // mandatory to pass arguments to the base class
+    super(name);
+    this.age = age;
+  }
+
+  // shutdownSystem() should be implemented in Admin class
+  // because only admin should have the ability to turn off
+  // a system in an organization
+  shutdownSystem() {
+    console.log("Shutting down the system");
+  }
+}
+
+// create an object of Admin class
+const John = new Admin("John Doe", 23);
+
+// view the contents of John object
+console.log(John);
+```
+
+```
+// OUTPUT
+
+{
+  age: 23,
+  category: "User",
+  name: "John Doe"
+}
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
