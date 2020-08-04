@@ -1,0 +1,118 @@
+---
+title: Static methods in JavaScript
+description: Learn how to make and understand static methods in a class or constructor function in JavaScript
+keywords: static methods,class static methods,constructor function static methods,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-04
+---
+
+Static methods are those methods which are directly attached to a class or a constructor function rather than being a method on an object.
+
+Static methods are common to every object since they are attached directly to a class or constructor function
+
+Let's understand,
+
+```javascript
+// create a class
+class User {
+  constructor() {
+    // property name
+    this.name = "User";
+  }
+
+  // method sayHello()
+  sayHello() {
+    console.log("Hey, I'm a user");
+  }
+}
+```
+
+Here we have created a class `User` with a property `name` and a method `sayHello()`.
+
+We haven't created a static method yet.
+
+To create a static method we have to use the `static` method in class syntax.
+
+```javascript
+// create a class
+class User {
+  constructor() {
+    // property name
+    this.name = "User";
+  }
+  // static method
+  static iStandAlone() {
+    console.log("I can be called without creating an instance of a class");
+  }
+
+  // method sayHello()
+  sayHello() {
+    console.log("Hey, I'm a user");
+  }
+}
+```
+
+Since static methods are directly attached to a class and not on the instances of a class, we can call the static methods without making an instance of a class ( or object of a class).
+
+You can static methods by using the class name followed by a dot `.` and static method name like this `User.iStandAlone()`
+
+```javascript
+// create a class
+class User {
+  constructor() {
+    // property name
+    this.name = "User";
+  }
+  // static method
+  static iStandAlone() {
+    console.log(
+      "I can be called without creating an instance or object of a class"
+    );
+  }
+
+  // method sayHello()
+  sayHello() {
+    console.log("Hey, I'm a user");
+  }
+}
+
+// iStandAlone() method can be called
+// without craeting an instance or object of a class
+User.iStandAlone();
+```
+
+In constructor function, static methods are made by attaching a function directly to it like this,
+
+```javascript
+// constructor function
+const User = function () {
+  // property name
+  this.name = "User";
+};
+
+// method sayHello()
+// attached to prototype chain
+User.prototype.sayHello = () => {
+  console.log("Hey, I'm a user");
+};
+
+// attach iStandAlone() method
+// directly to constructor function
+// not on prototype chain
+User.iStandAlone = function () {
+  console.log(
+    "I can be called without creating an instance or object of a class"
+  );
+};
+
+User.iStandAlone();
+```
+
+Now you may ask why do we even need static methods in a class.
+
+The answer to that is if you want to create utility functions for objects or instances you make out of a class, declaring those methods as static methods is a good object-oriented approach.
+
+### Feel free to share if you found this useful 😃.
+
+---
