@@ -1,0 +1,124 @@
+---
+title: Static properties in JavaScript
+description: Learn how to make and understand static properties in a class or constructor function in JavaScript
+keywords: static property,class static property,constructor function static property,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-05
+---
+
+In the last post, we have discussed the concept of [static methods in JavaScript](https://melvingeorge.me/blog/static-methods-javascript).
+
+Let's now look at static properties in JavaScript.
+
+Static properties are those properties that are directly attached to the class or a constructor function just like static methods.
+
+To declare a static property you have to declare those propeties with the keyword `static` like this,
+
+```javascript
+class User {
+  constructor(name) {
+    // instance property
+    this.name = name;
+  }
+
+  // static property
+  static counter = 0;
+
+  // instance method
+  sayMyName() {
+    console.log(`Hello, ${this.name}`);
+  }
+}
+```
+
+Or to make a static property in a constructor function you can add the property directly to the constructor function using the dot `.` notation like this,
+
+```javascript
+const User = function (name) {
+  // instance property
+  this.name = name;
+};
+
+// instance method
+User.prototype.sayMyName = function () {
+  console.log(`Hello, ${this.name}`);
+};
+
+// static property attached directly
+// to constructor function
+User.counter = 0;
+```
+
+Now let's use this counter static property to count the number of times our class or constructor function `User` is used to initialize objects, to achieve that we need to increment the value of `counter` static property in the constructor method in class `User` and inside the body of constructor function `User`.
+
+In class syntax,
+
+```javascript
+class User {
+  constructor(name) {
+    // instance property
+    this.name = name;
+
+    // increment static counter property
+    // when the class User is used initialised objects
+    User.counter++;
+  }
+
+  // static property
+  static counter = 0;
+
+  // instance method
+  sayMyName() {
+    console.log(`Hello, ${this.name}`);
+  }
+}
+
+// create four objects from User class
+const john = new User("John Doe");
+const lily = new User("Lily Rose");
+const roy = new User("Roy Jose");
+const michael = new User("Michael Bob");
+
+// check the counter
+console.log(User.counter); // 4
+```
+
+Or when using a constructor function,
+
+```javascript
+const User = function (name) {
+  // instance property
+  this.name = name;
+
+  // increment static counter property
+  // when the class User is initialised
+  User.counter++;
+};
+
+// instance method
+User.prototype.sayMyName = function () {
+  console.log(`Hello, ${this.name}`);
+};
+
+// static property attached directly
+// to constructor function
+User.counter = 0;
+
+// create four objects from User class
+const john = new User("John Doe");
+const lily = new User("Lily Rose");
+const roy = new User("Roy Jose");
+const michael = new User("Michael Bob");
+
+// check the counter
+console.log(User.counter); // 4
+```
+
+Now if you check the `counter` static property value by using the dot `.` notation, you see the value is changed to `4` from `0`.
+
+Also if you check the contents of `john`, `lily` .. objects the static properties will not be shown since they are directly attached to a class and is common to all the objects of the same class.
+
+### Feel free to share if you found this useful 😃.
+
+---
