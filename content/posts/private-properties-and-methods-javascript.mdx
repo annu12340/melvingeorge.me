@@ -1,0 +1,65 @@
+---
+title: Private properties and methods in JavaScript
+description: Learn how to make properties and methods private in JavaScript
+keywords: private javascript,private,private properties,private methods,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-06
+---
+
+Private properties and methods are those which can be accessed only in the class.
+
+These properties and methods are not inherited.
+
+**To make a property or a method in a class private, you need to use the `#` symbol before the property name or method name.**
+
+### ⚠️ NOTE: Private property and methods is a new addition to JavaScript. Use with caution.
+
+```javascript
+class User {
+  // private property
+  #category = "User";
+
+  // public property
+  isAlive = true;
+
+  // private method
+  #checkUserAlive() {
+    return isAlive;
+  }
+}
+```
+
+Here you can see that we added a special symbol `#` to the property `category` and method `checkUserAlive()` method.
+
+Now if you try to access the private property or method outside the class it will throw an error.
+
+```javascript
+class User {
+  // private property
+  #category = "User";
+
+  // public property
+  isAlive = true;
+
+  // private method
+  #checkUserAlive() {
+    return isAlive;
+  }
+}
+
+// create a object
+const john = new User();
+
+// try to access private property category
+console.log(john.#category); // error
+
+// try to call checkUserAlive() private method
+console.log(john.#checkUserAlive()); // error
+```
+
+You can only use the private properties and methods for usage within the class only.
+
+### Feel free to share if you found this useful 😃.
+
+---

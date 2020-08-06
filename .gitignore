@@ -1,6 +1,7 @@
 # build output
 dist
 .next
+out
 
 # dependencies
 node_modules
@@ -27,3 +28,6 @@ test/**/next-env.d.ts
 
 # example output
 examples/**/out
+
+# Local Netlify folder
+.netlify
