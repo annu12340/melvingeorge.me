@@ -1,0 +1,83 @@
+---
+title: How to extend built-in types in JavaScript?
+description: Learn how to make a new type by inheriting the properties and methods of built-in types in JavaScript
+keywords: extend builtin types,inherit methods and properties from built-in types,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-07
+---
+
+To make a custom datatype or extend a built-in datatype you have to use the `extends` keyword followed by the name of datatype you want to extend.
+
+By this, you inherit the properties and methods of the extending datatype.
+
+Let's make an array of our own,
+
+```javascript
+// custom array type
+class MySuperCoolArray extends Array {
+  // custom array methods and properties here
+}
+```
+
+Here we have made a class `MySuperCoolArray` and is also inherits the basic functionalities of the normal array in JavaScript.
+
+Let now add a special method that returns the last element of our array.
+
+```javascript
+// our own array type
+class MySuperCoolArray extends Array {
+  // method which returns the last element
+  lastElement() {
+    // this --> here refers to the array itself
+    return this[this.length - 1];
+  }
+}
+
+// make an array from custom MySuperCoolArray
+const arr = new MySuperCoolArray(1, 2, 3, 4, 4);
+
+console.log(a.lastElement()); // 4
+```
+
+Yay!. 🚀
+
+The cool part is that we also get all the methods and properties which we were using in the normal array type.
+
+To understand that let's loop through all the elements of the custom array using the normal array `forEach()` method.
+
+```javascript
+// our own array type
+class MySuperCoolArray extends Array {
+  // method which returns the last element
+  lastElement() {
+    // this --> here refers to the array itself
+    return this[this.length - 1];
+  }
+}
+
+// make an array from custom MySuperCoolArray
+const arr = new MySuperCoolArray(1, 2, 3, 4, 4);
+
+// looping using the normal array forEach method
+arr.forEach((element) => console.log(element));
+
+/*
+
+OUTPUT
+------
+
+1
+2
+3
+4
+4
+
+*/
+```
+
+By extending the normal types you inherit their properties and methods with it.
+
+### Feel free to share if you found this useful 😃.
+
+---
