@@ -1,0 +1,94 @@
+---
+title: How to check if an object is of a particular class in JavaScript?
+description: Learn how to check if an object is of a particular class using the instanceof operator in JavaScript
+keywords: instanceof operator,instanceof operator javascript,check if an object belongs to a class,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-08
+---
+
+To check if an object or an instance belongs to a certain class you need to use the `instanceof` operator.
+
+To understand it better let's create a class `User` and instance of `User` class called `John`.
+
+```javascript
+// class User
+class User {
+  sayHello() {
+    console.log("Hi, I'm John");
+  }
+}
+
+// create an instance or object
+// of User class called John.
+const John = new User();
+```
+
+Now let's check if the instance `John` belongs to class `User` using the `instanceof` operator.
+
+```javascript
+// class User
+class User {
+  sayHello() {
+    console.log("Hi, I'm John");
+  }
+}
+
+// create an instance or object
+// of User class called John.
+const John = new User();
+
+// check if John instance is of class User
+console.log(John instanceof User); // true
+```
+
+- The syntax is `objectName instanceOf className`.
+- The `instanceof` operator returns boolean `true` if it belongs and `false` if it doesn't belong to the particular class.
+
+You can also use the `instanceof` operator to check for the instances of normal constructor functions.
+
+```javascript
+// User constructor funstion
+function User(name) {
+  this.name = name;
+}
+
+// instance of User construtor funtion
+const John = new User("John Doe");
+
+// check if John instance is of constructor function User
+console.log(John instanceof User); // true
+```
+
+One important thing to note with `instanceof` operator is it will return true for all the classes if it belongs to the prototype chain.
+
+Consider these 2 classes `User` and `Admin`, Where `Admin` class inherits all the properties and methods from the `User` class.
+
+```javascript
+// class User
+class User {
+  sayHello() {
+    console.log("Hi, I'm John");
+  }
+}
+
+// class Admin
+class Admin extends User {
+  givePermissions() {
+    console.log("Giving full permissions");
+  }
+}
+
+// create an instance or object
+// of Admin class called John.
+const John = new Admin();
+
+// check if John instance is of class User
+// the instanceof operator will return true
+// since the User class is in the prototype chain
+console.log(John instanceof User); // true
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
