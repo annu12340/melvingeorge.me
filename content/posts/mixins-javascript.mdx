@@ -1,0 +1,94 @@
+---
+title: Mixins in JavaScript
+description: Learn how to create and understand mixins in JavaScript
+keywords: mixins javascript,Object.assign,Object assign,copy methods,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-09
+---
+
+Mixins are those functions that cannot be used independently but when used with any class provide useful functionalities.
+
+Consider this class `User`,
+
+```javascript
+// class User
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+
+  getName() {
+    return this.name;
+  }
+}
+```
+
+Here we have a class `User` with the property `name` and a method that returns the property `name`.
+
+Let's now make an object with methods `sayGreeting()` and `sayGoodBye()` which greets a user by name and says goodbye to a user respectively.
+
+```javascript
+const greetAndBye = {
+  // greeting method
+  sayGreeting() {
+    return `Hello, ${this.name}`;
+  },
+
+  // goodbye method
+  sayGoodBye() {
+    return `Goodbye, ${this.name}`;
+  },
+};
+```
+
+As you can see, if we try to call the methods independently the methods are not useful at all.
+
+Let's now copy all these methods to the prototype chain of the `User` class using the `Object.assign()` static method.
+
+```javascript
+// greetAndBye Mixin
+const greetAndBye = {
+  // greeting method
+  sayGreeting() {
+    return `Hello, ${this.name}`;
+  },
+
+  // goodbye method
+  sayGoodBye() {
+    return `Goodbye, ${this.name}`;
+  },
+};
+
+// class User
+class User {
+  constructor(name) {
+    this.name = name;
+  }
+
+  getName() {
+    return this.name;
+  }
+}
+
+// copy greetAndBye object methods
+// to prototype of User class
+Object.assign(User.prototype, greetAndBye);
+
+// make an object
+const John = new User("John");
+
+// invoke mixin methods
+console.log(John.sayGreeting());
+console.log(John.sayGoodBye());
+```
+
+Now you can call the mixin methods we copied to the prototype chain of `User` class.
+
+- The `greetAndBye` object here is called a mixin.
+- We are not doing any inheritance but copying of all the methods to the prototype chain of the `User` class.
+- Mixins can be attached to more than one class.
+
+### Feel free to share if you found this useful 😃.
+
+---
