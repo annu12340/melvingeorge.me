@@ -1,0 +1,221 @@
+---
+title: Generator functions in JavaScript
+description: Learn how to make and understand the usage of generator funstions in JavaScript
+keywords: generator javascript,generator funtion javascript,function*,next(),yield,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-10
+---
+
+**Generators in JavaScript are a special type of function which returns a value when asked and then pauses the execution of the function until we ask to return the next value.**
+
+Normal functions on the other hand fully execute the code when called or invoked.
+
+## Syntax of the Generator function
+
+To make a generator function you have to use the `*` symbol after the `function` keyword followed by the name of the generator function and function body.
+
+```javascript
+// Generator function
+function* nameOfFunction() {
+  // function body
+}
+```
+
+This is the syntax of a generator function in JavaScript.
+
+There is one more keyword called `yield` which we use to get or return the value while executing.
+
+## Example - Candy Vending Machine
+
+To fully understand the generator function, consider the example of a candy vending machine where the user needs to press a button to get candy every time.
+
+![Vending machine](vending-machine.jpg)
+
+<p class="text-center">
+  Photo by
+  <a href="https://unsplash.com/photos/7sf1RGqn2DA" target="blank">
+    Fabrizio Chiagano
+  </a>
+</p>
+
+Let's write this as a generator function.
+
+```javascript
+// Generator function
+// Candy Vending Machine
+function* CandyVendingMachine() {}
+```
+
+Suppose we have 5 candies in the vending machine.
+
+Let's use the `yield` keyword to return the candy to the user.
+
+```javascript
+// Generator function
+// Candy Vending Machine
+function* CandyVendingMachine() {
+  yield "candy 1";
+  yield "candy 2";
+  yield "candy 3";
+  yield "candy 4";
+  yield "candy 5";
+}
+```
+
+Now we have 5 candies in our vending machine So that when the first user clicks the button in the vending machine he gets the `candy 1`, then clicking the button again would get him `candy 2` ... till `candy 5`.
+
+How do we get the first candy?
+
+To get the first candy we need to first plug the machine by this I meant we need to first call or invoke the `*CandyVendingMachine` generator function.
+
+```javascript
+// Generator function
+// Candy Vending Machine
+function* CandyVendingMachine() {
+  yield "candy 1";
+  yield "candy 2";
+  yield "candy 3";
+  yield "candy 4";
+  yield "candy 5";
+}
+
+// Invoke the generator function
+const CandyMachine = CandyVendingMachine();
+```
+
+But still, we are not able to get or yield the first candy.
+
+To get the first candy we need to use a method called `next()` in the `CandyMachine` variable.
+
+```javascript
+// Generator function
+// Candy Vending Machine
+function* CandyVendingMachine() {
+  yield "candy 1";
+  yield "candy 2";
+  yield "candy 3";
+  yield "candy 4";
+  yield "candy 5";
+}
+
+// Invoke the generator function
+const CandyMachine = CandyVendingMachine();
+
+// To get the first candy
+// we have to use the next()
+// method in CandyMachine variable
+console.log(CandyMachine.next()); // { done: false, value: "candy 1" }
+```
+
+As you can see that the `next()` method returns an object with 2 properties `done` and `value`.
+
+- The `done` property lets the user know if the function is paused. The `done` property returns boolean `true` if all candies are consumed using the `next()` method and returns boolean `false` if there are candies left to be consumed by the `next()` method.
+- The `value` property returns the current value the `yield` returns or in our case the current candy.
+
+Now let's try calling the `next()` method 5 times to consume all our candies from the Candy machine.
+
+```javascript
+// Generator function
+// Candy Vending Machine
+function* CandyVendingMachine() {
+  yield "candy 1";
+  yield "candy 2";
+  yield "candy 3";
+  yield "candy 4";
+  yield "candy 5";
+}
+
+// Invoke the generator function
+const CandyMachine = CandyVendingMachine();
+
+// To get the first candy
+// we have to use the next()
+// method in CandyMachine variable
+console.log(CandyMachine.next()); // { done: false, value: "candy 1" }
+// second candy
+console.log(CandyMachine.next()); // { done: false, value: "candy 2" }
+// third candy
+console.log(CandyMachine.next()); // { done: false, value: "candy 3" }
+// so on...
+console.log(CandyMachine.next()); // { done: false, value: "candy 4" }
+console.log(CandyMachine.next()); // { done: false, value: "candy 5" }
+```
+
+We have consumed all the candies from the vending machine using the `next()` method.
+
+Now if you try to call the `next()` again the `done` property changes to boolean `true` and `value` property to `undefined`.
+
+```javascript
+// Generator function
+// Candy Vending Machine
+function* CandyVendingMachine() {
+  yield "candy 1";
+  yield "candy 2";
+  yield "candy 3";
+  yield "candy 4";
+  yield "candy 5";
+}
+
+// Invoke the generator function
+const CandyMachine = CandyVendingMachine();
+
+// To get the first candy
+// we have to use the next()
+// method in CandyMachine variable
+console.log(CandyMachine.next()); // { done: false, value: "candy 1" }
+// second candy
+console.log(CandyMachine.next()); // { done: false, value: "candy 2" }
+// third candy
+console.log(CandyMachine.next()); // { done: false, value: "candy 3" }
+// so on...
+console.log(CandyMachine.next()); // { done: false, value: "candy 4" }
+console.log(CandyMachine.next()); // { done: false, value: "candy 5" }
+
+// try to call next() method
+// again after consumeing 5 candies
+
+console.log(CandyMachine.next()); // { done: true, value: undefined }
+```
+
+If you want `done` property to be boolean `true` when all the 5 candies are consumed, we need to use `return` instead of the `yield` keyword in the 5th candy like this,
+
+```javascript
+// Generator function
+// Candy Vending Machine
+function* CandyVendingMachine() {
+  yield "candy 1";
+  yield "candy 2";
+  yield "candy 3";
+  yield "candy 4";
+  // using return instead of yield
+  return "candy 5";
+}
+
+// Invoke the generator function
+const CandyMachine = CandyVendingMachine();
+
+// To get the first candy
+// we have to use the next()
+// method in CandyMachine variable
+console.log(CandyMachine.next()); // { done: false, value: "candy 1" }
+// second candy
+console.log(CandyMachine.next()); // { done: false, value: "candy 2" }
+// third candy
+console.log(CandyMachine.next()); // { done: false, value: "candy 3" }
+// so on...
+console.log(CandyMachine.next()); // { done: false, value: "candy 4" }
+console.log(CandyMachine.next()); // { done: true, value: "candy 5" }
+```
+
+Now the last `next()` method returns the `done` property as `true` instead of `false`.
+
+## Conclusion
+
+- To make a generator function we have to use the `function` keyword followed by the `*` symbol, generator function name, and the function body.
+- We need to use the `yield` keyword to return the value we need when using the `next()` method.
+- Generator functions are entirely different from normal function since it pauses the execution on every `yield` keyword and returns the value.
+
+### Feel free to share if you found this useful 😃.
+
+---
