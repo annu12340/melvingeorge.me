@@ -1,0 +1,52 @@
+---
+title: Generator function and for..of statement in JavaScript
+description: Learn how to use the generator function in a for...of looping statement in JavaScript
+keywords: generator for of javascript,generator function,generator and for of statement,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-11
+---
+
+Suppose we have a generator function which returns the even numbers from 0 to 100.
+
+```javascript
+// Even Numbers Generator Function
+function* EvenNumberGen() {
+  for (let i = 0; i <= 100; i++) {
+    if (i % 2 === 0) {
+      yield i;
+    } else {
+      continue;
+    }
+  }
+}
+```
+
+Let's use this generator function with a `for...of` looping statement.
+
+```javascript
+// Even Numbers Generator Function
+function* EvenNumberGen() {
+  for (let i = 0; i <= 100; i++) {
+    if (i % 2 === 0) {
+      yield i;
+    } else {
+      continue;
+    }
+  }
+}
+
+// using generator function inside
+// a for...of looping statement.
+for (let evenNumber of EvenNumberGen()) {
+  console.log(evenNumber);
+}
+```
+
+As you can see we never have to use the `next()` method and extract the value using the `value` property.
+
+This is because generator functions are **iterable** by default. The `next()` method in the generator function is called automatically and the `value` property is extracted in the `for...of` looping statement.
+
+### Feel free to share if you found this useful 😃.
+
+---
