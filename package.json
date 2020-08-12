@@ -11,7 +11,7 @@
     "server": "yarn build && NODE_ENV=production node server.js",
     "server-dev": "NODE_ENV=development node server.js",
     "deploy": "NODE_ENV=production npm run build && NODE_ENV=production npm run export",
-    "local-deploy": "git add . && git commit -m 'new content' && git push && yarn deploy && netlify deploy"
+    "local-deploy": "git add . && git commit -m 'auto commit for blog content' && git push && git fetch origin && git merge origin/master && yarn deploy && netlify deploy"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
