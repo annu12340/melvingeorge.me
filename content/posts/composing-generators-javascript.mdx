@@ -1,0 +1,108 @@
+---
+title: Composing Generator functions in JavaScript
+description: Learn how to compose generator functions in JavaScript
+keywords: compose generators javascript,yield* keyword javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-12
+---
+
+Composing generators in JavaScript is a way of combining and using a generator function inside another generator function body.
+
+Let's understand this with the help of an example,
+
+Suppose we have a generator function which generates number from a starting number to an ending number.
+
+```javascript
+// Generates numbers from start to end
+function* GenerateNumbers(start, end) {
+  for (let i = start; i <= end; i++) {
+    yield i;
+  }
+}
+```
+
+Now let's create another generator function that uses the above `GenerateNumbers()` generator function.
+
+The new generator function first generates values from 1 to 100 and then from 300 to 400.
+
+Let's use the `GenerateNumbers()` inside the new generator function to generate those numbers.
+
+```javascript
+// Generates numbers from start to end
+function* GenerateNumbers(start, end) {
+  for (let i = start; i <= end; i++) {
+    yield i;
+  }
+}
+
+// Sequence Generator 1 - 100 and 300 to 400
+function* SequenceGenerator() {
+  // embed another generator function here
+}
+```
+
+Inside this function, we need to use the `yield*` special keyword to compose or embed the generator function within a generator function.
+
+```javascript
+// Generates numbers from start to end
+function* GenerateNumbers(start, end) {
+  for (let i = start; i <= end; i++) {
+    yield i;
+  }
+}
+
+// Sequence Generator 1 - 100 and 300 to 400
+function* SequenceGenerator() {
+  yield* GenerateNumbers(1, 100);
+  yield* GenerateNumbers(300, 400);
+}
+```
+
+Let's use the `for..of` looping statement to print the values to the console.
+
+```javascript
+// Generates numbers from start to end
+function* GenerateNumbers(start, end) {
+  for (let i = start; i <= end; i++) {
+    yield i;
+  }
+}
+
+// Sequence Generator 1 - 100 and 300 to 400
+function* SequenceGenerator() {
+  yield* GenerateNumbers(1, 100);
+  yield* GenerateNumbers(300, 400);
+}
+
+for (let number of SequenceGenerator()) {
+  console.log(number);
+}
+
+/* 
+OUTPUT
+------
+
+1
+2
+3
+.
+.
+.
+100
+300
+301
+302
+.
+.
+.
+400
+
+*/
+```
+
+As you can see that first the numbers from 1 to 100 are printed then numbers from 300 to 400 are printed.
+
+### Feel free to share if you found this useful 😃.
+
+---
