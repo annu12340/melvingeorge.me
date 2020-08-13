@@ -1,0 +1,71 @@
+---
+title: Pass a value to the generator using next() method in JavaScript
+description: Learn how to pass values to the genrator function using the next() method in JavaScript
+keywords: pass value next() method javascript,yield keyword,next() method javscript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-13
+---
+
+The yield keyword in the generator function is commonly used to return a value from the generator function.
+
+But what if I told you it can do more than that!
+
+It can also accept a value to a generator function.
+
+Let's understand this,
+
+let's make a generator function that asks a question first and then takes a value and then yields a value based on that.
+
+```javascript
+// Multiply by 2 Generator function
+function* MultiplyBy2() {
+  const number = yield "Which number would you like to be multiplied by 2 with?";
+
+  yield number * 2;
+}
+
+// initializing genrator function
+const multiplyBy2 = MultiplyBy2();
+
+// First the question is returned from generator function
+// We can show the returned or yielded value using the
+// next() method and then using the value property
+console.log(multiplyBy2.next().value); // the question is shown
+```
+
+- Here we have a generator function which first gives a question `Which number would you like to be multiplied by 2 with?` to the user.
+
+- After initializing the generator function, then we are showing the first yield value which is the question to the user using the `next()` method and access the value using the `value` property.
+
+- **Now to pass a value to the generator function we need to pass that value as an argument to the `next()` method like this**.
+
+```javascript
+// Multiply by 2 Generator function
+function* MultiplyBy2() {
+  const number = yield "Which number would you like to be multiplied by 2 with?";
+
+  yield number * 2;
+}
+
+// initialising generator function
+const multiplyBy2 = MultiplyBy2();
+
+// First the question is returned from generator function
+// We can show the returned or yielded value using the
+// next() method and then using the value property
+console.log(multiplyBy2.next().value); // the question is shown
+
+// passing 4 as a value to the generator function
+// as an argument to the next() method
+// after that, the passed value is multiplied by 2
+// and then the next yield value is
+// returned from the generator function
+console.log(multiplyBy2.next(4).value);
+```
+
+- **Now the passed value will be stored inside the `number` variable inside the generator function, and the next value of the yield is returned from the generator function (The value which is multiplied by 2)**
+
+### Feel free to share if you found this useful 😃.
+
+---
