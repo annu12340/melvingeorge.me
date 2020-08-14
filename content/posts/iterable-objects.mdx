@@ -1,0 +1,222 @@
+---
+title: How to make an iterable object in JavaScript?
+description: Learn how to make an iterable object and the usage of iterables in JavaScript
+keywords: iterables javascript,iterator javascript,next() iterator javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-14
+---
+
+## What is an Iterable in JavaScript?
+
+Iterable is a fancy word for those objects which can be looped or iterated in JavaScript.
+
+Some of the common iterables we use in JavaScript are:
+
+- Strings
+- Arrays
+- Maps
+- Sets
+
+etc.
+
+These iterables if we put into a `for..of` looping statement just loops without any manual work from the programmer.
+
+For example,
+
+```javascript
+// a simple array
+const arr = [1, 2, 3, 4];
+
+// looping using for...of looping statement
+// beacuse array is an iterable
+for (let element of arr) {
+  console.log(element);
+}
+```
+
+The `for...of` looping statement can do that looping only on iterables. Not on ordinary objects.
+
+## How to make an Iterable Object in JavaScript?
+
+- To make an object iterable you have to attach a special method called `Symbol.iterator`.
+
+- This method should return an object with a valid `next()` method, this method is used by the `for...of` looping statement.
+
+- The `next()` method should also return the value in `{ done: false, value: value }` format.
+  - The `done` property refers to let know that whether the iteration has ended.
+  - The `value` property should contain the latest value which is getting looped.
+
+Let's understand this with the help of an example.
+
+Suppose we have an ordinary object called `oneToTen` with two properties `start` and `end` which represents the starting of the loop value and ending of the loop value respectively.
+
+We only have these two properties and we want to loop from 1 to 10 using the `for...of` looping statement instead of writing every value ourselves.
+
+Fro that we need to make this object into an iterable object.
+
+```javascript
+// oneToTen object
+const oneToTen = {
+  start: 1,
+  end: 10,
+};
+```
+
+Now Let make the special method `Symbol.iterator` to make it an iterable object.
+
+Let's add the `Symbol.iterator` method using the bracket notation.
+
+```javascript
+// oneToTen object
+const oneToTen = {
+  start: 1,
+  end: 10,
+};
+
+// adding Symbol.iterator to oneToTen object using
+// the bracket notation.
+oneToTen[Symbol.iterator] = function () {
+  // we need to return an object
+  // containing a valid next() method
+};
+```
+
+You need to return an object with a valid `next()` method from the `Symbol.iterator` special method.
+
+```javascript
+// oneToTen object
+const oneToTen = {
+  start: 1,
+  end: 10,
+};
+
+// adding Symbol.iterator to oneToTen object using
+// the bracket notation.
+oneToTen[Symbol.iterator] = function () {
+  // we need to return an object
+  // containing a valid next() method
+  return {
+    next() {
+      // the next() method is automatically called
+      // by the for..of looping statement
+    },
+  };
+};
+```
+
+This `next()` method is automatically invoked by the `for...of` looping statement. So that the `next()` needs to return an object in the format `{done: true | false, value: loopingValue}`.
+
+Inside this `next()` method is where we need to have our iterator logic of incrementing the looping value by 1.
+
+Let's write that logic and return looping value in the above format of .`{done: true | false, value: loopingValue}`.
+
+```javascript
+// oneToTen object
+const oneToTen = {
+  start: 1,
+  end: 10,
+};
+
+// adding Symbol.iterator to oneToTen object using
+// the bracket notation.
+oneToTen[Symbol.iterator] = function () {
+  // we need to return an object
+  // containing a valid next() method
+  let current = this.start;
+  let last = this.end;
+  return {
+    next() {
+      // the next() method is automatically called
+      // by the for..of looping statement
+
+      // checking is current is less than last
+      if (current <= last) {
+        return {
+          done: false,
+          value: current++, // incrementing current value by one
+        };
+      } else {
+        // otherwise return done:true
+        // to let know that looping has ended
+        return {
+          done: true,
+        };
+      }
+    },
+  };
+};
+```
+
+Now we have defined our iterator logic.
+
+Let's run it with the `for...of` looping statement.
+
+```javascript
+// oneToTen object
+const oneToTen = {
+  start: 1,
+  end: 10,
+};
+
+// adding Symbol.iterator to oneToTen object using
+// the bracket notation.
+oneToTen[Symbol.iterator] = function () {
+  // we need to return an object
+  // containing a valid next() method
+  let current = this.start;
+  let last = this.end;
+  return {
+    next() {
+      // the next() method is automatically called
+      // by the for..of looping statement
+
+      // checking is current is less than last
+      if (current <= last) {
+        return {
+          done: false,
+          value: current++, // incrementing current value by one
+        };
+      } else {
+        // otherwise return done:true
+        // to let know that looping has ended
+        return {
+          done: true,
+        };
+      }
+    },
+  };
+};
+
+// looping using for...of
+for (let value of oneToTen) {
+  console.log(value);
+}
+```
+
+### The Process here is as follows
+
+- The `for...of` looping statement automatically calls the `next()` method from the object returned by the special `Symbol.iterator` method.
+- The `next()` method returns the current looping value in a `{done: false, value: loopingValue}` format.
+- The `for...of` looping statement automatically extracts the value from the `value` property from the object.
+
+The output is:
+
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
+
+We have made our ordinary object into a valid iterable object.
+
+### Feel free to share if you found this useful 😃.
+
+---
