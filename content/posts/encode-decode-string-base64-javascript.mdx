@@ -1,0 +1,55 @@
+---
+title: How to convert string to base64 value and vice versa in JavaScript?
+description: Learn how to encode and decode base64 value in JavaScript
+keywords: string to base64 javascript,string to ASCII javascript,ASCII to string javascript,btoa method,atob method,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-16
+---
+
+In computer science, Base64 is a group of binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation - as stated in [Wikipedia](https://en.wikipedia.org/wiki/Base64).
+
+To make it simple, it represents binary data in ASCII format.
+
+## How to convert a string to base64?
+
+To convert a string to base64 you have to use the `btoa()` method in the `window` object in the browser.
+
+- You need to pass the string as an argument to the `btoa()` method.
+- The method returns a base64 encoded value.
+
+```javascript
+// string
+const str = "Hello, World!";
+
+// convert to base64
+const base64 = btoa(str);
+
+console.log(base64); // SGVsbG8sIFdvcmxkIQ==
+```
+
+## How to convert a base64 to string?
+
+To convert a base64 to string value you have to use the `atob()` method in the `window` object in the browser.
+
+- You need to pass the base64 value as an argument to the `atob()` method.
+- The method returns a string value.
+
+```javascript
+// base64 value
+const base64 = "SGVsbG8sIFdvcmxkIQ==";
+
+// convert to string
+const str = atob(base64);
+
+console.log(str); // Hello, World!
+```
+
+## Abbreviation
+
+- `btoa`: stands for **binary to ASCII**
+- `atob`: stands for **ASCII to binary**
+
+### Feel free to share if you found this useful 😃.
+
+---
