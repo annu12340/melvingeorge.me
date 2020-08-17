@@ -1,0 +1,74 @@
+---
+title: How to run a process in the background in JavaScript?
+description: Learn how to use the requestIdleCallback() method to run low priority processes in background in JavaScript
+keywords: run process in background javascript,run process when inactive javascript,requestIdleCallback method javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-17
+---
+
+To run background processes or those process which has a low priority in JavaScript, You can use the `requestIdleCallback()` method.
+
+This method helps to postpone some of the processes which are not super important like processes that involve sending analytics data to the server, caching images, etc.
+
+When using the `requestIdleCallback()`, the processes are executed only when the main thread is free or when the user is inactive.
+
+To use this first you have to check whether this method is available in the current browser context.
+
+```javascript
+if ("requestIdleCallback()" in window) {
+  // if method exists
+  // do some work
+} else {
+  // just do the work
+  // by using a polyfill or a shim
+}
+```
+
+- After checking, You need to call the `requestIdleCallback()` method.
+- Pass a callback function as the first argument.
+
+```javascript
+// function for low priority job
+function myLowPriorityJob() {
+  console.log("Hey, I'm Processing my low priority job now 🦄!");
+}
+
+if ("requestIdleCallback" in window) {
+  // if method exists
+  // do some work
+
+  // call method requestIdleCallback() and
+  // passing myLowPriorityJob() callback function
+  // as first argument.
+  requestIdleCallback(myLowPriorityJob);
+} else {
+  // just do the work
+  // by using a polyfill or a shim
+}
+```
+
+If you want to run your process no matter what after a certain amount of time, you can pass an options object with `timeout` property as the second argument to the `requestIdleCallback()` method.
+
+```javascript
+// function for low priority job
+function myLowPriorityJob() {
+  console.log("Hey, I'm Processng my low priority job now 🦄!");
+}
+
+if ("requestIdleCallback" in window) {
+  // passing object with timeout property
+  // as the second argument
+  // to make sure your process gets called after 4 seconds
+  requestIdleCallback(myLowPriorityJob, { timeout: 4000 });
+} else {
+  // just do the work
+  // by using a polyfill or a shim
+}
+```
+
+### _NOTE: Use timeout only when necessary, using it everywhere without any reason may cause the whole process of your program to slow down._
+
+### Feel free to share if you found this useful 😃.
+
+---
