@@ -1,0 +1,62 @@
+---
+title: How to pass data between the different browsing contexts of the same origin in JavaScript?
+description: Learn how to pass data between different browsing contexts of the same origin using the BroadcastChannel API in JavaScript
+keywords: broadcast channel API javascript,pass data between 2 tabs,pass data between service worker and javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-18
+---
+
+To pass data between different browsing contexts like passing data between 2 open tabs, passing data between a tab and service worker, or any context of the **same origin** in JavaScript, you can use the `BroadcastChannel` API.
+
+First, you have to make an instance of `BroadcastChannel` with the channel name of your choice.
+
+The channel name should be passed as an argument to the `BroadcastChannel()` as a string.
+
+```javascript
+// create an instance of BroadcastChannel
+// with channel name as test_channel
+const channel = new BroadcastChannel("test_channel");
+```
+
+After creating an instance you need to add a `message` event listener to the `channel` object so that when you receive messages the callback function inside the event handler is called.
+
+```javascript
+// create an instance of BroadcastChannel
+const channel = new BroadcastChannel("test_channel");
+
+// add message event listener to receive meesage
+channel.addEventListener("message", (event) => {
+  // data property
+  console.log(event.data);
+});
+```
+
+The callback function is passed with an `event` object.
+
+You can find the data inside the `data` property inside the event object.
+
+Now you may think how will I send data?
+
+For that you have to use the `postMessage()` method in the `channel` object.
+
+```javascript
+// create an instance of BroadcastChannel
+const channel = new BroadcastChannel("test_channel");
+
+// add message event listener to receive meesage
+channel.addEventListener("message", (event) => {
+  // data
+  console.log(event.data);
+});
+
+// send some data or message
+channel.postMessage({
+  name: "John Doe",
+  age: 23,
+});
+```
+
+Now to test this open a new tab of the website and when you open you can see that the data `{ name: "John Doe", age: 23 }` is shown in the console.
+
+For testing, you can head on to this **[JS Bin](https://jsbin.com/pemoquvoqo/2/edit?js,console)** and open a new tab of the same **JS BIN** URL to see the result.
