@@ -1,0 +1,55 @@
+---
+title: How to find or get a reference to the closest parent DOM element in JavaScript?
+description: Learn how to use the closest() DOM element method in JavaScript
+keywords: closest method DOM javascript,reference to the parent element in javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-19
+---
+
+Suppose you have an element and want to get a reference to the closest parent element up the DOM tree.
+
+To achieve that you can use the `closest()` method on a specific element and pass the selector string. The method returns a reference to the first closest parent element matching the selector.
+
+Consider this HTML,
+
+```html
+<section>
+  <div class="article">
+    <div class="heading-section">
+      <h1 id="main-heading">This is a big heading</h1>
+      <p id="sub-heading">A sub heading</p>
+    </div>
+  </div>
+</section>
+```
+
+Here we have an `h1` tag with `id="main-heading"` and we want to get a reference to the `div` tag with `class="article"`.
+
+Let's write the code for that.
+
+First, Let's get the reference to our `h1` tag.
+
+```javascript
+// reference to h1 tag
+const h1 = document.querySelector("#main-heading");
+```
+
+Now let's use the `closest()` DOM element method and pass the selector string for the parent tag that is the `.article` class name as an argument to it.
+
+```javascript
+// reference to h1 tag
+const h1 = document.querySelector("#main-heading");
+
+// get reference to parent element
+// with class name article
+const article = h1.closest(".article");
+
+console.dir(article); // article reference
+```
+
+- If there is no element with `.article` class name, the method returns null.
+
+### Feel free to share if you found this useful 😃.
+
+---
