@@ -1,0 +1,67 @@
+---
+title: How to use the attr() CSS method?
+description: Learn how to use the experimental attr() method in CSS
+keywords: attr(),attr css method,css
+category: CSS
+author: MELVIN GEORGE
+date: 2020-08-20
+---
+
+<h2 style="color:#e53e3e;">
+  WARNING 🤯: This is a new method and may not work in some browsers as of now.
+</h2>
+
+To get attribute values from HTML elements to css, you can use the `attr()` CSS function.
+
+Consider this html, where you have a `h1` tag with class name `heading`.
+
+```html
+<h1 class="heading">Hello World!</h1>
+```
+
+Now Let's style this `h1` tag with some CSS.
+
+```css
+.heading {
+  background-color: black;
+  color: red;
+}
+```
+
+Now you may ask what's cool about this? This is just normal stuff. 🧐
+
+What if we need to give custom background colors and text colors whenever we make another `h1` tag?
+
+This is not possible because we have already hard coded the styles in CSS.
+
+But not anymore!! That is why we have `attr()` CSS function.
+
+_The `attr()` function helps us to get values from attributes of HTML elements._
+
+Now let's rewrite our html and add custom properties called `data-bgcolor` and `data-textcolor` in the `h1` tag.
+
+```html
+<h1 class="heading" data-bgcolor="black" data-textcolor="red">Hello World!</h1>
+```
+
+Now lets use the `attr()` function in CSS to the values of the custom attributes in CSS.
+
+```css
+.heading {
+  background-color: attr(data-bgcolor color);
+  color: attr(data-textcolor color);
+}
+```
+
+- Here we are getting the values of both the `data-bgcolor` and `data-textcolor` custom attributes from the `h1` tag to the CSS.
+
+- The `attr()` function accepts the name of the custom attribute or native attribute name followed by a space and the unit for example,
+  - for strings - `string`
+  - for any kind of colors - `color`
+  - for numbers - `number`
+
+In our case, we have given the unit as `color` since we want to change the `background-color` property and `color` property.
+
+### Feel free to share if you found this useful 😃.
+
+---
