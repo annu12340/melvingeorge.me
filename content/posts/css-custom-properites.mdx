@@ -1,0 +1,96 @@
+---
+title: How to use CSS variables or CSS custom properties?
+description: Learn how to use CSS variables to avoid duplication of property values
+keywords: CSS variables,CSS custom properties,how to use CSS variables,CSS
+category: CSS
+author: MELVIN GEORGE
+date: 2020-08-21
+---
+
+CSS custom properties or more commonly called CSS variables are a way to use CSS properties throughout a single CSS file using an identifier.
+
+CSS variables work best when you have a lot of duplicate CSS properties and want to combine them into a single variable.
+
+We can define CSS variables globally or scope to certain elements.
+
+- Variables should be in the format `--your-variable-name` where the symbol `--` in front of it is mandatory.
+- To use the variable value in CSS you need to use the `var()` CSS function in elements.
+
+## Global CSS variables
+
+- To use CSS variables globally first you have to define a selector called `:root`.
+- Then you have to define your CSS variables inside this selector in the format `--your-variable-name`.
+- The `--` symbol is mandatory to define a CSS variable.
+
+```css
+/* :root selector */
+:root {
+  /* defining a global variable : --main-background-color */
+  --main-background-color: #fff;
+}
+```
+
+After defining this you can use the CSS global varible values in elements uisng the `var()` CSS function like this,
+
+```css
+/* :root selector */
+:root {
+  /* defining a global variable : --main-background-color */
+  --main-background-color: black;
+}
+
+/*using variable in h1 tag element using the var() CSS function*/
+h1 {
+  background-color: var(--main-background-color);
+}
+
+/* using the same varible in .article class elements */
+.article {
+  background-color: var(--main-background-color);
+}
+```
+
+## Scoped CSS variables
+
+Scoped CSS variables can be defined in the element itself and not in the `:root` selector.
+
+Let's define a scoped CSS variable `--article-bg-color` in the article class.
+
+```css
+.article {
+  --article-bg-color: #fff;
+  background-color: var(--article-bg-color);
+}
+```
+
+Now you may think why would I create a variable here when I can define the property directly.
+
+Since CSS styles are cascaded, so scoped variables are passed down to the children elements also.
+
+Suppose you have a `p` tag inside the `.article` class element.
+
+You can use the `-article-bg-color` scoped variable inside that `p` tag also.
+
+```css
+/* Scoped variable */
+.article {
+  --article-bg-color: #fff;
+  background-color: var(--article-bg-color);
+}
+
+/* 
+    Using Scoped variable 
+    Inside the descenetent element p tag
+    using the var() css function
+*/
+
+.article p {
+  color: var(--article-bg-color);
+}
+```
+
+Link to **[JSBIN](https://jsbin.com/cehutulili/edit?html,css,output)**.
+
+### Feel free to share if you found this useful 😃.
+
+---
