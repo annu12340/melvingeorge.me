@@ -1,0 +1,38 @@
+---
+title: How to use the calc() function in CSS?
+description: Learn how to use calc() function to calculate values dynamically in CSS
+keywords: calc function css,calc method css,calc() method css,css
+category: CSS
+author: MELVIN GEORGE
+date: 2020-08-22
+---
+
+The `calc()` function is used to dynamically calculate CSS property values.
+
+You can pass any valid CSS units as arguments to the `calc()` function.
+
+For example, you can use an expression to substract `50px - 20px`.
+
+```css
+h1 {
+  margin: calc(50px - 20px); // the value calculated will be 30px
+}
+```
+
+You can use any valid CSS property values like `px`, `percentage`, `number`, `em`, `vw`, `rem`, etc.
+
+One of the best usecases i have found with the `calc()` css function is to center the container element like this,
+
+```css
+// centering the container
+.container {
+  width: calc(100% - 50px);
+  margin: 0 auto;
+}
+```
+
+The width of the container is calculated to the full width of the viewing device and then `50px` is subtracted from `100%`.
+
+### Feel free to share if you found this useful 😃.
+
+---
