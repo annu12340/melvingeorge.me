@@ -1,0 +1,66 @@
+---
+title: How to check if two DOM nodes are equal in JavaScript?
+description: Learn how to use the isEqualNode() method to check if two DOM nodes are equal in JavaScript
+keywords: is equal node method,dom,check 2 elements equal javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-23
+---
+
+To check if 2 DOM nodes are equal in JavaScript, you can use the `isEqualNode()` node method.
+
+Suppose you have 2 HTML elements like this,
+
+```html
+<div class="heading">
+  Hello World
+</div>
+<div class="heading">
+  Hello World
+</div>
+```
+
+Now, let's use the `isEqualNode()` method to check if they are equal or not.
+
+```javascript
+// get all div tags
+const allDivtags = document.querySelectorAll("div");
+
+// get first and second div tag
+const firstDivTag = allDivtags[0];
+const secondDivTag = allDivtags[1];
+
+// check if both DOM nodes are equal
+const isEqual = firstDivTag.isEqualNode(secondDivTag);
+
+console.log(isEqual); // true
+```
+
+- The `isEqualNode()` method accepts a valid DOM node reference as an argument.
+- The method returns `false` for those DOM nodes whose attributes, id, or any other relevant properties are different.
+
+for example,
+
+Consider this HTML, where the 2 div tags are different.
+
+```html
+<div class="heading" id="myFavDivTag">
+  Hello World
+</div>
+<div class="heading">
+  Hello World
+</div>
+```
+
+Now if you check the equality it will return `false`.
+
+```javascript
+// check if both DOM nodes are equal
+const isEqual = firstDivTag.isEqualNode(secondDivTag);
+
+console.log(isEqual); // false
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
