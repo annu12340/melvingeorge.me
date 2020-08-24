@@ -1,0 +1,75 @@
+---
+title: How to create new HTML elements and add them to DOM using JavaScript?
+description: Learn how to create HTML elements and add those elements to DOM using JavaScript
+keywords: createElement method javascript, createTextNode method javascript,appendChild() method javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-24
+---
+
+To create a new HTML element using JavaScript, you need to use the `createElement()` document method and add it to the body of the HTML.
+
+Let's say we want to make a paragraph tag with some text content and add it to the body of the HTML.
+
+First, Let's create the paragraph tag using the `createElement()` method.
+
+- The method accepts a valid tag name as string eg: `p`, `div`, etc.
+
+```javascript
+// create paragraph tag
+const paragraph = document.createElement("p");
+```
+
+Now let's create some text content using the `createTextNode()` document method.
+
+- The method accepts a valid string.
+
+```javascript
+// create paragraph tag
+const paragraph = document.createElement("p");
+
+// create some text
+const textNode = document.createTextNode("Hello World!");
+```
+
+after creating text content, we need to attach the text content node to the paragraph node.
+
+For that let's use the `appendChild()` node method.
+
+- The `appendChild()` method accepts a valid node reference.
+
+```javascript
+// create paragraph tag
+const paragraph = document.createElement("p");
+
+// create some text
+const textNode = document.createTextNode("Hello World!");
+
+// add text node to paragragh node
+paragraph.appendChild(textNode);
+```
+
+Lastly, we need to attach the entire paragraph tag to the body of the HTML itself.
+
+Let's use the `appendChild()` node method again to attach it to the HTML body node.
+
+```javascript
+// create paragraph tag
+const paragraph = document.createElement("p");
+
+// create some text
+const textNode = document.createTextNode("Hello World!");
+
+// add text node to paragragh node
+paragraph.appendChild(textNode);
+
+// get the HTML body tag
+const body = document.querySelector("body");
+
+// attach paragraph to the body tag.
+body.appendChild(paragraph);
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
