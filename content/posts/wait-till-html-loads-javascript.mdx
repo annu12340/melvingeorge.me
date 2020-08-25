@@ -1,0 +1,49 @@
+---
+title: How to wait for the HTML or DOM to load using JavaScript?
+description: Learn how to wait for the DOM or HTML to load using JavaScript
+keywords: load event javascript,DOMContentLoaded event javascript,wait until page fully loads javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-25
+---
+
+To do operations and to ensure the application runs smoothly while performing operations on DOM, we have to wait till DOM or the whole HTML elements loads.
+
+There are 2 types of load event we can listen on the DOM:
+
+- `load` event on the `window` object
+- `DOMContentLoaded` event on the `document` object
+
+## The `load` event in the `window` object
+
+The `load` event in the `window` object waits until the DOM is fully loaded like all the resources including the images, iframes, etc is loaded.
+
+The `load` event is triggered after everything on a page is loaded.
+
+To do that, Let's add an event listener to listen for the `load` event in the global `window` object.
+
+```javascript
+// listen for load event in the window
+window.addEventListener("load", function () {
+  // do things after the DOM loads fully
+  console.log("Everything is loaded");
+});
+```
+
+## The `DOMContentLoaded` event in the `document` object
+
+The `DOMContentLoaded` event in the `document` object is a bit different from the `load` event as this event is triggered when the browser loads the HTML and the DOM is built. It won't wait for resources like images, iframes etc.to load.
+
+To do that, Let's add an event listener to listen for the `DOMContentLoaded` event in the `document` object.
+
+```javascript
+// listen for DOMContentLoaded event in teh document
+document.addEventListener("DOMContentLoaded", function () {
+  // do things after the DOM loads partially
+  console.log("DOM is loaded");
+});
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
