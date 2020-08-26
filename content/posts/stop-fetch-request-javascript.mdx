@@ -1,0 +1,64 @@
+---
+title: How to stop or abort a fetch request in JavaScript?
+description: Learn how to use the AbortController API to stop or abort a fetch request in JavaScript
+keywords: stop fetch request javascript,abort fetch request javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-26
+---
+
+To stop or abort a fetch request, you have to use the `AbortController` API. This helps to stop the fetch request from the client-side only but not on the server-side. The server continues to process the request even after the request is stopped from the client-side.
+
+Let's see this in action.
+
+First, we need to create an object of `AbortController`.
+
+```javascript
+// create an object of AbortController
+const controller = new AbortController();
+```
+
+Then we need to get the `signal` property from the controller object and pass it as an option to the fetch request as an option.
+
+```javascript
+// create an object of AbortController
+const controller = new AbortController();
+
+// get the signal property from the controller
+const signal = controller.signal;
+```
+
+Pass the `signal` property as an option to the fetch request.
+
+### The `signal` property is a Read-only property.
+
+Let's use an API endpoint from [JSONPlaceholder](https://jsonplaceholder.typicode.com/) website for the fetch request.
+
+```javascript
+// create an object of AbortController
+const controller = new AbortController();
+
+// get the signal property from the controller
+const signal = controller.signal;
+
+// fetch request
+// passing signal as an option
+fetch("https://jsonplaceholder.typicode.com/posts", { signal })
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+```
+
+We have now configured the fetch request to use the `AbortController`.
+
+Now to stop the ongoing fetch request we have to use the `abort()` method in the `controller` object.
+
+```javascript
+// To stop the ongoing fetch request
+controller.abort();
+```
+
+To see the working example see [JSBin](https://jsbin.com/pejeceyawi/1/edit?html,js,output).
+
+### Feel free to share if you found this useful 😃.
+
+---
