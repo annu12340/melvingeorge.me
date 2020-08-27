@@ -1,0 +1,42 @@
+---
+title: How to get all the images from HTML documents using JavaScript?
+description: Learn how to get all the images from HTML documents using JavaScript
+keywords: get all images javascript,document.images javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-27
+---
+
+To get all the images present in the document or HTML, you can use the read-only property called `images` in the `document` object.
+
+Let's say you have a HTML document with 3 image tags like this,
+
+```html
+<body>
+  <img src="https://via.placeholder.com/150" alt="Placeholder image" />
+  <img src="https://via.placeholder.com/200" alt="Placeholder image" />
+  <img src="https://via.placeholder.com/250" alt="Placeholder image" />
+</body>
+```
+
+Now let's get all the images in the HTML using the `document.images` property in JavaScript.
+
+```javascript
+// get all the images from HTML document
+const images = document.images;
+```
+
+The references to the images are returned as an `HTMLcollection`.
+
+```javascript
+// get all the images from HTML document
+const images = document.images;
+
+console.dir(images);
+```
+
+To see working example see [JSBin](https://jsbin.com/tuzojuqisi/edit?html,js,console,output).
+
+### Feel free to share if you found this useful 😃.
+
+---
