@@ -1,0 +1,38 @@
+---
+title: How to wait for all the fonts to load on a webpage using JavaScript?
+description: Learn how to use the FontFaceSet interface to wait for all the fonts to load on a webpage using JavaScript
+keywords: wait for fonts to load javascript,wait for fonts to load webpage javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-28
+---
+
+Many times we may want to do some work after all our fonts are loaded on a webpage.
+
+We can do this using the `document.fonts` object.
+
+The object returns another object called `FontFaceSet` in which you can find the `ready` property.
+
+- The `ready` in the `FontFaceSet` is a Promise.
+
+- This promise is resolved only after the fonts in an HTML document is loaded.
+
+Let's write the code to understand it better.
+
+```javascript
+document.fonts.ready
+  .then(() => {
+    // do those operations after
+    // the fonts are loaded here
+    console.log("Fonts are loaded!!!");
+  })
+  .catch(() => {
+    console.log("Error");
+  });
+```
+
+Here we have written a `then()` handler to do some operations when our fonts are loaded and a `catch()` handler when there is an error in loading fonts.
+
+### Feel free to share if you found this useful 😃.
+
+---
