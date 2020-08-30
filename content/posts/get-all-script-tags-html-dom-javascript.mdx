@@ -1,0 +1,35 @@
+---
+title: How to get all the script tags from HTML documents using JavaScript?
+description: Learn how to get all the script tags from HTML documents using JavaScript
+keywords: get all script tags javascript,document.scripts javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-30
+---
+
+To get all the script tags from an HTML document or the DOM, you can use the `document.scripts` property.
+
+Let's say you have many script tags in your HTML file like this,
+
+```html
+<script src="script1.js"></script>
+<script src="script2.js"></script>
+<script src="script3.js"></script>
+```
+
+Let' use the `document.scripts` property to get all the script tags using JavaScript
+
+- The property returns the script tags as an `HTMLCollection` Object.
+
+```javascript
+// get all script tags
+const scriptTags = document.scripts;
+
+console.log(scriptTags);
+```
+
+To see the working example see [JSBin](https://jsbin.com/xogifeteva/3/edit?html,js,console).
+
+### Feel free to share if you found this useful 😃.
+
+---
