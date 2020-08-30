@@ -1,0 +1,44 @@
+---
+title: How to get all the links or anchor tags from HTML documents using JavaScript?
+description: Learn how to get all the links or anchor tags from HTML documents using JavaScript
+keywords: get all links javascript,document.links javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-29
+---
+
+To get all the anchor tags or links from the HTML document or the DOM, you can use the `document.links` property.
+
+Let's say you have a list of many anchor tags all around your HTML document like this,
+
+```html
+<div>
+  <h1>Heading 1</h1>
+  <a href="https://google.com">Read More</a>
+</div>
+<div>
+  <h1>Heading 2</h1>
+  <a href="https://google.com">Read More</a>
+</div>
+<div>
+  <h1>Heading 3</h1>
+  <a href="https://google.com">Read More</a>
+</div>
+```
+
+- You can get all the links using the `document.links` property using JavaScript.
+
+```javascript
+// get all links
+const listOfLinks = document.links;
+
+console.dir(listOfLinks);
+```
+
+- The `document.links` property returns the list of links as an `HTMLCollection`.
+
+To see the working example see [JSBin](https://jsbin.com/nigozakaku/2/edit?html,js,console).
+
+### Feel free to share if you found this useful 😃.
+
+---
