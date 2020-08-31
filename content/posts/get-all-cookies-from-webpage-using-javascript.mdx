@@ -1,0 +1,33 @@
+---
+title: How to get all the cookies from a webpage using JavaScript?
+description: Learn how to get all the cookies from a webpage using JavaScript
+keywords: get all cookies javascript,document.cookie javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-08-31
+---
+
+To get all the cookies associated with a webpage, you can use the `document.cookie` property in JavaScript.
+
+```javascript
+// cookies as string
+const cookiesAsString = document.cookie; // eg: 'key=value key=value key-value'
+```
+
+This will return all the cookies as a string type.
+
+If you want to get those cookies separately, then we have to first split this long cookie string using the `split()` method.
+
+```javascript
+// cookies as string
+const cookiesAsString = document.cookie; // eg: 'key=value key=value key-value'
+
+// splitting cookies
+const cookiesArray = cookiesAsString.split(" "); // ['key=value','key=value', 'key-value']
+```
+
+The `split()` string method split the string into an array of strings using a separator, in our case we used whitespace as a separator to separate strings.
+
+### Feel free to share if you found this useful 😃.
+
+---
