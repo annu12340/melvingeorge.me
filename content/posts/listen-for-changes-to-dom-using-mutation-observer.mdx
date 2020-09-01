@@ -1,0 +1,98 @@
+---
+title: How to listen for changes in DOM elements using the MutationObserver API in JavaScript?
+description: Learn how to use the MutationObserver API in JavaScript
+keywords: mutation observer javascript,listen for changes in DOM javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-09-01
+---
+
+## What is Mutation Observer?
+
+Mutation Observer is a DOM API which helps us to listen for changes to elements in DOM and react according to it.
+
+## How to listen using Mutation Observer API?
+
+To observe or listen to a specific element in DOM first, we have to make the `MutationObserver`.
+
+```javascript
+// make mutation observer
+const observer = new MutationObserver();
+```
+
+- Here we have to pass a callback function inside the `MutationObserver()` constructor function because this callback function is fired whenever there is a change to that element.
+
+```javascript
+// make mutation observer
+// and passing a callback function
+// this callback function is triggered
+// whenever there is a chnage to the element
+const observer = new MutationObserver((event) => {
+  console.log(event);
+});
+```
+
+Yeah, I know that we haven't said the Mutation observer which element to look for changes.
+
+That is what we are going to do in the next step.
+
+To attach an element to the observer we have to use the `observe()` method on the `observer` object.
+
+```javascript
+// make mutation observer
+// and pass a callback function
+// this callback function is triggered
+// whenever there is a chnage to the element
+const observer = new MutationObserver((event) => {
+  console.log(event);
+});
+
+// get reference to the h1 tag
+const h1 = document.querySelector("h1");
+
+// attach an h1 element tag to the observer
+// to look for changes
+observer.observe(h1);
+```
+
+- The `observe()` method accepts a valid reference to a DOM element as the first argument.
+- It accepts a configuration object as the second argument. - The configuration object is used to tell the observer what type of changes to be observed on a specified element, in our case we have an `h1` tag and we want to look for changes such as a change in attribute, change in the list of children inside the `h1` tag and also any change in the sub-tree of the `h1` tag.
+  The config object looks like this,
+
+```javascript
+const config = {
+  attributes: true,
+  childList: true,
+  subtree: true,
+};
+```
+
+Let's pass this config object to the observer.
+
+```javascript
+// make mutation observer
+// and pass a callback function
+// this callback function is triggered
+// whenever there is a chnage to the element
+const observer = new MutationObserver((event) => {
+  console.log(event);
+});
+
+// get reference to the h1 tag
+const h1 = document.querySelector("h1");
+
+// attach an h1 element tag to the observer
+// to look for changes
+const config = {
+  attributes: true,
+  childList: true,
+  subtree: true,
+};
+observer.observe(h1, config);
+```
+
+Now the observer is ready and looking for changes and whenever there is a change in those specified configs, The observer calls the callback function and the details are passed into the callback function.
+
+### Feel free to share if you found this useful 😃.
+
+---
