@@ -1,0 +1,38 @@
+---
+title: How to check if an element in DOM has a specific attribute using JavaScript?
+description: Learn how to use the hasAttribute() element method in JavaScript
+keywords: check if the element has attribute javascript,hasAttribute method javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-09-02
+---
+
+To check if the element has a specific attribute in JavaScript, you can use the `hasAttribute()` method in the element.
+
+Let's say you have an `h1` element with custom attribute `data-color="red"` like this,
+
+```html
+<h1 data-color="red">Heading</h1>
+```
+
+Now let's check is the `data-color` custom attribute is present in the `h1` tag element using the `hasAttribute()` method in it.
+
+```javascript
+// get the reference to the h1 tag element
+const h1 = document.querySelector("h1");
+
+// chcek if h1 tag has attribute : data-color
+const isPresent = h1.hasAttribute("data-color");
+
+console.log(isPresent); // true;
+```
+
+- The `hasAttribute()` method accepts a valid name of the attribute as a string.
+
+- The method return boolean `true` is present and `false` is not present.
+
+See live example in [JSBin](https://jsbin.com/mumukofunu/1/edit?html,js,console,output).
+
+### Feel free to share if you found this useful 😃.
+
+---
