@@ -1,0 +1,38 @@
+---
+title: How to get the attribute value of a DOM element in JavaScript?
+description: Learn how to use the getAttribute() element method in JavaScript
+keywords: get attribute value of an element javascript,getAttribute method javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-09-03
+---
+
+To get the attribute values from a DOM element, you can use the `getAttribute()` element method in JavaScript.
+
+Let's say you have an `h1` html tag with custom attribute `data-color` like this,
+
+```html
+<h1 data-color="red">Heading</h1>
+```
+
+Here, you can get the value of the `data-color` attribute in the `h1` tag using the `getAttribute()` like this,
+
+```javascript
+// first get the reference to h1 element
+const h1 = document.querySelector("h1");
+
+// get the data-color sttribute value
+// using the getAttribute() method
+const value = h1.getAttribute("data-color");
+
+console.log(value); // red
+```
+
+- The method accepts a valid attribute name as an argument.
+- The method returns the corresponding value for the attribute as a string if supplied a valid attribute name and `null` if not.
+
+See live example in [JSBin](https://jsbin.com/nukucamubu/1/edit?html,js,console,output).
+
+### Feel free to share if you found this useful 😃.
+
+---
