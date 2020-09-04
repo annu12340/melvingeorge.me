@@ -1,0 +1,54 @@
+---
+title: How to get all the attributes of an element using JavaScript?
+description: Learn how to get all the attributes of an element using JavaScript
+keywords: get all attributes name-value javascript,document.attributes javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-09-04
+---
+
+To get all the attributes of a DOM element, we can use the `attributes` property on the element using JavaScript.
+
+Let's say we have a `h1` tag with custom attributes `data-color` and `data-maxlength` like this,
+
+```html
+<h1 data-color="red" data-maxlength="50">Heading</h1>
+```
+
+Let's get all the attributes using the `attributes` property on the element.
+
+```javascript
+// first get the reference to h1 element
+const h1 = document.querySelector("h1");
+
+// get all attributes
+// using attributes property
+const h1TagAttributes = h1.attributes;
+
+console.log(h1TagAttributes);
+```
+
+The property returns the attributes as `NamedNodeMap` array-like Object.
+
+So to make it easy let's map through each attribute using the `for...of` looping statement and get each attributes name and value.
+
+```javascript
+// first get the reference to h1 element
+const h1 = document.querySelector("h1");
+
+// get all attributes
+// using attributes property
+const h1TagAttributes = h1.attributes;
+
+// loop through each attribute
+for (let attribute of h1TagAttributes) {
+  console.log(attribute.name); // attribute name
+  console.log(attribute.value); // attribute value
+}
+```
+
+See live example in [JSBin](https://jsbin.com/wikogututi/1/edit?html,js,console,output).
+
+### Feel free to share if you found this useful 😃.
+
+---
