@@ -1,0 +1,42 @@
+---
+title: How to get all the class names of a DOM element using JavaScript?
+description: Learn how to all the class names of a DOM element using JavaScript
+keywords: get all class names element javascript,element.classList javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-09-05
+---
+
+To get all the class names present in a DOM element, you can use the `classList` property on the corresponding element using JavaScript.
+
+Let's say you have an `h1` element tag with class names `text-red` and `rounded-border` like this,
+
+PS: I'm not writing the CSS for `text-red` and `rounded-border` classes since it is not needed to understand this property.
+
+element.classList
+
+```html
+<h1 class="text-red rounded-border">Heading</h1>
+```
+
+Now let's get theses class names in JavaScript using the `classList` property like this,
+
+```javascript
+// first get the reference to the h1 tag
+const h1 = document.querySelector("h1");
+
+// using classList property
+const h1ClassNames = h1.classList;
+
+console.log(h1ClassNames);
+```
+
+- The `classList` property returns the class names as `DOMTokenList` array-like object.
+- You can get each class names from the object using the index as they are appearing in the element. For example, to get the first class name in the `h1` element, you can use `h1ClassNames[0]`.
+- The `DOMTokenList` object is iterable so that you can use any valid looping construct in JavaScript.
+
+See live example on [JSBin](https://jsbin.com/wojetatiwi/1/edit?html,css,js,console,output).
+
+### Feel free to share if you found this useful 😃.
+
+---
