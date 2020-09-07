@@ -1,0 +1,41 @@
+---
+title: How to remove class names from a DOM element using JavaScript?
+description: Learn the usage of remove() method to remove class names from a DOM element in JavaScript
+keywords: remove classnames javascript,remove() method classnames javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-09-07
+---
+
+## Remove class names from a DOM element
+
+To remove a class name from a DOM element, you can use the `remove()` method in the [`classList`](https://melvingeorge.me/blog/get-all-classnames-of-element-dom-javascript) property in an element using JavaScript.
+
+Let's say you want to remove a class name called `red` from an `h1` element.
+
+```javascript
+// first get the reference to the h1 element
+const h1 = document.querySelector("h1");
+
+// remove red class name from h1 element
+h1.classList.remove("red");
+```
+
+- The method accepts valid class names as arguments.
+
+If you want to remove multiple classes at the same time, you can pass those class names to the `remove()` method by passing them as arguments like this,
+
+```javascript
+// first get the reference to the h1 element
+const h1 = document.querySelector("h1");
+
+// remove red, border-red, bg-yellow classnames
+// from the h1 element at the same time
+h1.classList.remove("red", "border-red", "bg-yellow");
+```
+
+See this live example in [JSBin](https://jsbin.com/luziburayi/edit?html,css,js,output).
+
+### Feel free to share if you found this useful 😃.
+
+---
