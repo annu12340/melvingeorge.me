@@ -1,0 +1,82 @@
+---
+title: How to create an image element using JavaScript?
+description: Learn how to make image tags using JavaScript
+keywords: create img element javascript,Image() function javascript,document.createElement() image javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-09-08
+---
+
+## Using the `Image()` constructor function
+
+To create an image element using JavaScript, you can use the `Image()` constructor function available in the global `window` object.
+
+```javascript
+// create an image element
+const image = new Image();
+```
+
+The constructor function accepts 2 parameters:
+
+- The first parameter is the width of the image
+- The second parameter is the height of the image
+
+```javascript
+// create an image element
+const image = new Image(200, 200);
+```
+
+Now we need to specify a source for the image element, you can do that using the `src` property in the `image` object.
+
+```javascript
+// create an image element
+const image = new Image(200, 200);
+
+// source for the image element
+// source means the link to the image
+image.src = "https://via.placeholder.com/200";
+```
+
+You can add attributes to the image element using the dot `.` followed by the name of the attribute.
+
+For example, to add `alt` attribute, you can use the `alt` property in the `image` object like this,
+
+```javascript
+// create an image element
+const image = new Image(200, 200);
+
+// source for the image element
+// source means the link to the image
+image.src = "https://via.placeholder.com/200";
+
+// adding alt attribute
+image.alt = "A simple placeholder image";
+```
+
+## Using the `document.createElement()` function
+
+You can alternatively create image elements using the `document.createElement()` method like this,
+
+```javascript
+// create image element
+const image = document.createElement("img");
+```
+
+- The method needs a valid tag name as a string.
+
+To add `src` and `alt` tag you need to use the dot `.` operator followed by attribute name like this,
+
+```javascript
+// create image element
+const image = document.createElement("img");
+
+// add attributes src and alt
+image.src = "https://via.placeholder.com/200";
+image.alt = "A simple placeholder image";
+```
+
+See live example on both ways in [JSBin](https://jsbin.com/pagupicoqo/2/edit?html,js,output)
+
+### Feel free to share if you found this useful 😃.
+
+---
