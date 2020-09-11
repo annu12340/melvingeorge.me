@@ -1,0 +1,41 @@
+---
+title: How to add class names to a DOM element using JavaScript?
+description: Learn the usage of add() method to add class names to a DOM element in JavaScript
+keywords: add classnames javascript,add() method classnames javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-09-06
+---
+
+## Add class names to a DOM element
+
+To add a class name to a DOM element, you can use the `add()` method in the [`classList`](https://melvingeorge.me/blog/get-all-classnames-of-element-dom-javascript) property in an element using JavaScript.
+
+Let's say you want to add a class name called `red` to an `h1` element.
+
+```javascript
+// first get the reference to the h1 element
+const h1 = document.querySelector("h1");
+
+// add red class name to h1 element
+h1.classList.add("red");
+```
+
+- The method accepts valid class names as arguments.
+
+If you want to add multiple classes at the same time, you can pass those class names to the `add()` method by passing them as arguments like this,
+
+```javascript
+// first get the reference to the h1 element
+const h1 = document.querySelector("h1");
+
+// add red, border-red, bg-yellow classnames
+// to the h1 element at the same time
+h1.classList.add("red", "border-red", "bg-yellow");
+```
+
+See this live example in [JSBin](https://jsbin.com/namabuyugi/2/edit?html,css,js,output).
+
+### Feel free to share if you found this useful 😃.
+
+---
