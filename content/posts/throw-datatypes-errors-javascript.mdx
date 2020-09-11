@@ -1,0 +1,81 @@
+---
+title: How to throw or show datatype errors in JavaScript?
+description: Learn how to show or throw errors when types are not matching in JavaScript
+keywords: show errors type javascript,type error method javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-09-11
+---
+
+We can use the `TypeError()` constructor function to throw or show an error when the data type doesn't match in JavaScript.
+
+Let's consider a function which accepts values of `string` type only and wants to throw an error on an invalid type.
+
+So let's create that function,
+
+```javascript
+// a function which accepts only
+// values of string type
+function iAcceptStringOnly(name) {
+  // cool code goes here!
+}
+```
+
+Now, To know what is the type of data, we can use the `typeof` operator. This operator will return the type as a string eg: string, number, boolean, etc,.
+
+```javascript
+// a function which accepts only
+// values of string type
+function iAcceptStringOnly(name) {
+  // get what is the type of the parameter
+  const typeOfParameter = typeof name;
+}
+```
+
+Now check if the `name` variable is of type `string` using an if statement. If it is not of `string` type then it will throw a `TypeError` 🦄.
+
+```javascript
+// a function which accepts only
+// values of string type
+function iAcceptStringOnly(name) {
+  // get what is the type of the parameter
+  const typeOfParameter = typeof name;
+
+  // check whether the name variable has type string
+  if (typeOfParameter != "string") {
+    throw new TypeError();
+  }
+}
+```
+
+The `TypeError()` constructor functions accepts:
+
+- the error name as the first parameter
+- the filename where the error occurred as the second parameter
+- the line number where the error occurred as the third parameter
+
+These parameters are optional, but it's good to define them for understanding the error.
+
+```javascript
+// a function which accepts only
+// values of string type
+function iAcceptStringOnly(name) {
+  // get what is the type of the parameter
+  const typeOfParameter = typeof name;
+
+  // check whether the name variable has type string
+  if (typeOfParameter != "string") {
+    throw new TypeError("the name should be of string type", "main.js", 5);
+  }
+
+  console.log("No Error!, it's cool 🧘‍♂️");
+}
+```
+
+Now try invoking the function `iAcceptStringOnly` with a number and observe the error shown.
+
+See this example live in [JSBin](https://jsbin.com/josizejufe/2/edit?js,console).
+
+### Feel free to share if you found this useful 😃.
+
+---
