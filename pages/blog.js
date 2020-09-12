@@ -56,7 +56,6 @@ const Blog = ({ linksData }) => {
         <div className="moreContent mx-auto flex flex-wrap justify-center max-w-6xl">
           {allBlogs.length >= 0
             ? allBlogs.map((linkData) => {
-                console.log(linksData);
                 return <Card key={linkData.href} {...linkData} />;
               })
             : "Loading more blog...🚀"}
