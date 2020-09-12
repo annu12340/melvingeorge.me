@@ -1,0 +1,27 @@
+---
+title: How to check if the current context of a webpage is secure using JavaScript?
+description: Learn how to check if the current context is secure or HTTPS enabled using JavaScript
+keywords: check if current context is secure in javascript,check if https-enabled javascript,isSecureContext property javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-09-12
+---
+
+Often time we may want to do some processes like handling payments, accessing private information, working with service workers, etc. on our web app or web page. These activities should only be done when the current web page context is secure or if the context is `HTTPS` enabled
+
+The easy way to check if the current context of a web page is `HTTPS` enabled is to check using the `isSecureContext` property in the window object.
+
+```javascript
+// check if the current context is HTTPS enabled
+const isItHTTPS = window.isSecureContext;
+
+console.log(isItHTTPS); // true
+```
+
+- The property returns a boolean `true` if the current context is `HTTPS` enabled and `false` if not.
+
+See this snippet live in [JSBin](https://jsbin.com/hakaxosuye/3/edit?js,console).
+
+### Feel free to share if you found this useful 😃.
+
+---
