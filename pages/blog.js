@@ -53,13 +53,12 @@ const Blog = ({ linksData }) => {
         ) : (
           <p>It's empty here 👽</p>
         )}
-        <div className="moreContent mx-auto flex flex-wrap justify-center max-w-6xl">
-          {allBlogs.length >= 0
-            ? allBlogs.map((linkData) => {
-                return <Card key={linkData.href} {...linkData} />;
-              })
-            : "Loading more blog...🚀"}
-        </div>
+        <div className="moreContent"></div>
+        {allBlogs.length >= 0
+          ? allBlogs.map((linkData) => {
+              return <Card key={linkData.href} {...linkData} />;
+            })
+          : "Loading more blog...🚀"}
       </main>
     </>
   );
