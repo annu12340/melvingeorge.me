@@ -1,0 +1,85 @@
+---
+title: How to detect the Do not track option using JavaScript?
+description: Learn how to the detect Do not track option using JavaScript
+keywords: detect do not track javascript,window.doNotTrack javascript,navigator.doNotTrack,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-09-13
+---
+
+## What is Do not track?
+
+Do not track is an option set by users in many modern browsers to tell the websites and advertisers not to track their activities.
+
+## How to detect Do not track?
+
+Detecting Do not track settings from a browser is different for different browsers.
+
+### For Chrome and Firefox browsers
+
+- You need to use the `navigator.doNotTrack` property to detect the settings
+- The property returns a string `"1"` if the do not track option is turned on and `"0"` if it is turned off.
+
+```javascript
+// detect do not track option
+// for chrome and firefox browsers
+
+if (navigator.doNotTrack === "1") {
+  // if the options is true
+  console.log("Do not track is enabled");
+} else {
+  // if the option is false
+  console.log("Do not track is not enabled");
+}
+```
+
+### For Safari browsers
+
+- You need to use the `window.doNotTrack` property to detect the settings.
+- The property returns a string `"1"` if the do not track option is turned on and `"0"` if it is turned off.
+
+```javascript
+// detect do not track option
+// for safari browsers
+
+if (window.doNotTrack === "1") {
+  // if the options is true
+  console.log("Do not track is enabled");
+} else {
+  // if the option is false
+  console.log("Do not track is not enabled");
+}
+```
+
+### Caveat: For some browsers, the `doNotTrack` property may return string `yes` or `no` instead of `"1"` or `"0"` 🧘‍♂️.
+
+### A universal detection method
+
+To detect Do not track setting universally, you nned to check for both the `naviagtor` and `window` object for the `doNotTrack` property like this,
+
+```javascript
+// check whether the browser support Do not track
+if (naviagtor.doNotTrack || window.doNotTrack) {
+  // if it supports
+  // then check for the doNotTrack property in both of them
+  if (
+    window.doNotTrack === "1" ||
+    navigator.doNotTrack === "1" ||
+    navigator.doNotTrack === "yes"
+  ) {
+    // the options is enabled
+    console.log("Do not track is enabled");
+  } else {
+    // the option is not enabled
+    console.log("Do not track is not enabled");
+  }
+} else {
+  console.log("Do Not track is not supported");
+}
+```
+
+See this example live in [JSBin](https://jsbin.com/mobebatibi/3/edit?js,console).
+
+### Feel free to share if you found this useful 😃.
+
+---
