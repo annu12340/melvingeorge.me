@@ -17,7 +17,7 @@ const Tag = ({ name }) => {
       styleToApply = "bg-blue-500 text-white";
       break;
     case "Node.js":
-      styleToApply = "bg-green-500 text-white";
+      styleToApply = "bg-green-600 text-gray-100";
       break;
   }
   return (
