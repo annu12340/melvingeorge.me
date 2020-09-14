@@ -16,11 +16,12 @@ const Tag = ({ name }) => {
     case "CSS":
       styleToApply = "bg-blue-500 text-white";
       break;
+    case "Node.js":
+      styleToApply = "bg-green-500 text-white";
+      break;
   }
   return (
-    <div className={`text-xl px-3 py-1 rounded-sm ${styleToApply}`}>
-      {name}
-    </div>
+    <div className={`text-xl px-3 py-1 rounded-sm ${styleToApply}`}>{name}</div>
   );
 };
 
