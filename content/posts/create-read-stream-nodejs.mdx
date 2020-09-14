@@ -1,0 +1,66 @@
+---
+title: How to create a read stream in Node.js?
+description: Learn how to create a read stream in Node.js
+keywords: node.js streams,read stream nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-14
+---
+
+## Why do we need streams in Node.js?
+
+Streams are not limited to Node.js runtime, it is a method to transfer data continuously from one point to another in computer science. Large data cannot be loaded into a computer's primary memory at a time as it may be filled with only that data and thus streams were introduced to divide the large data into chunks. To simply put, Youtube videos are streams of small chunks of data coming from Youtube servers.
+
+## How to create a read stream in Node.js?
+
+To create a read stream in Node.js, you need to first import or require the native filesystem module. In Node.js filesystem module is named as `fs`.
+
+```javascript
+// import filesystem module
+const fs = require("fs");
+```
+
+Now we need to make use of a method called `createReadStream()` on the `fs` object.
+
+- The method requires a valid path to a file to read from as a string type.
+- The method returns a `ReadableStream` Object.
+
+```javascript
+// import filesystem module
+const fs = require("fs");
+
+// create a read stream
+// consider I have a file named hello.txt
+// inside the hello.txt, I have a text of "Hello World".
+const rs = fs.createReadStream("hello.txt");
+```
+
+Now to see the contents from the stream, you need to listen for the `data` event. Since it is a stream the data will be coming in small pieces called `chunks`.
+
+We need to set the encoding to `UTF8` so that it is streamed in text format.
+
+```javascript
+// import filesystem module
+const fs = require("fs");
+
+// create a read stream
+// consider i have a file named hello.txt
+// inside the hello.txt, i have text of "Hello World".
+const rs = fs.createReadStream("hello.txt");
+
+// set encoding
+rs.setEncoding("UTF8");
+
+// display the stream
+rs.on("data", (data) => {
+  console.log(data);
+});
+```
+
+Now if you Observe in the prompt you could see the contents inside the `hello.txt` file.
+
+See this snippet live in [repl.it](https://repl.it/repls/UnrulyWretchedBackground#index.js).
+
+### Feel free to share if you found this useful 😃.
+
+---
