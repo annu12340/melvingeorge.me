@@ -1,0 +1,112 @@
+---
+title: How to create a write stream in Node.js?
+description: Learn how to create a write stream in Node.js
+keywords: node.js streams,write stream nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-15
+---
+
+## How to create a write stream in Node.js?
+
+Write stream is primarily used to write some data to something as the data comes in.
+
+In the last blog, we looked at [How to create a read stream in Node.js?](https://melvingeorge.me/blog/create-read-stream-nodejs).
+
+We need the knowledge on reading stream to work with write stream because after reading a file then we will be writing those chunks of data into another file using the write streams.
+
+So let's look at how it's done,
+
+To create a write stream in Node.js, you need to first import or require the native filesystem module. In Node.js filesystem module is named as `fs`.
+
+```javascript
+// import filesystem module
+const fs = require("fs");
+```
+
+Now first let's create a read stream to read some data from a file called `hello.txt`.
+
+```javascript
+// import filesystem module
+const fs = require("fs");
+
+// create a read stream to read data from hello.txt
+const rs = fs.createReadStream("./hello.txt");
+```
+
+After creating a read stream, now we need to make a write stream to write the read data into that file.
+
+For that Now we need to make use of a method called `createWriteStream()` on the `fs` object.
+
+- The method requires a valid path to a file to write to as a string type.
+- The method returns a `WritableStream` Object.
+
+```javascript
+// import filesystem module
+const fs = require("fs");
+
+// create a read stream to read data from hello.txt
+const rs = fs.createReadStream("./hello.txt");
+
+// create a write stream
+// to write the read data into a file called toWrite.txt
+const ws = fs.createWriteStream("./toWrite.txt");
+```
+
+Now to write the content into that file, we need to join the two streams together i.e, to connect the read stream into the write stream.
+
+### Tip: Visualise streams just like the streams in nature 🦄. What we are doing is diverting a stream of read data into a write stream.
+
+For that, we need to first listen for the `data` event on `rs` (or ReadableStream) and write the data into the Write stream as it comes in.
+
+```javascript
+// import filesystem module
+const fs = require("fs");
+
+// create a read stream to read data from hello.txt
+const rs = fs.createReadStream("./hello.txt");
+
+// create a write stream
+// to write the read data into a file called toWrite.txt
+const ws = fs.createWriteStream("./toWrite.txt");
+
+// listen for data event on ReadbelStream
+// to write the data into WritableStream
+// as the data comes in
+rs.on("data", (data) => {
+  console.log("New chunq Recieved");
+});
+```
+
+Now we need to use the `write()` method in `ws` (WritableStream) object to write the data to the WritableStream.
+
+```javascript
+// import filesystem module
+const fs = require("fs");
+
+// create a read stream to read data from hello.txt
+const rs = fs.createReadStream("./hello.txt");
+
+// create a write stream
+// to write the read data into a file called toWrite.txt
+const ws = fs.createWriteStream("./toWrite.txt");
+
+// listen for data event on ReadbelStream
+// to write the data into WritableStream
+// as the data comes in
+rs.on("data", (data) => {
+  console.log("New chunq Recieved");
+
+  // write the data
+  // into the Write stream
+  ws.write(data);
+});
+```
+
+Now if you look into the contents of the `toWrite.txt` file, you can observe the contents are the same as in the `hello.txt` file.
+
+See this snippet live in [repl.it](https://repl.it/@melvin2016/create-a-write-stream-in-Nodejs).
+
+### Feel free to share if you found this useful 😃.
+
+---
