@@ -1,0 +1,59 @@
+---
+title: How to write to a Writable Stream using the pipe() method in Node.js?
+description: Learn how to use the pipe() method to write to a writable stream in Node.js
+keywords: pipe() method nodejs,write to writable stream nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-16
+---
+
+To write to a `WritableStream`, we can use the `write()` method available in the `WritableStream` object as the data comes in from the `ReadableStream` as we discussed in the [last blog post](https://melvingeorge.me/blog/create-write-stream-node).
+
+This is so common that the Node.js provides a simple way of doing this using the `pipe()` method in the `ReadableStream` object.
+
+Let's look at it now.
+
+Suppose we have a Read stream where we want to read some data from and a write stream to write the read data like this,
+
+```javascript
+// require the filesystem module
+const fs = require("fs");
+
+// create a read stream to read data
+// from hello.txt file
+const rs = fs.createReadStream("./hello.txt");
+
+// create a write stream to write the
+// read data to toWrite.txt file
+const ws = fs.createWriteStream("./toWrite.txt");
+```
+
+Now instead of listening on the `data` event and then using the `write()` method to write the data, we can use the `pipe()` method in `ReadableStream` object `rs` like this,
+
+```javascript
+// require the filesystem module
+const fs = require("fs");
+
+// create a read stream to read data
+// from hello.txt file
+const rs = fs.createReadStream("./hello.txt");
+
+// create a write stream to write the
+// read data to toWrite.txt file
+const ws = fs.createWriteStream("./toWrite.txt");
+
+// write to the ws WritableStream
+// using the pipe() method
+rs.pipe(ws);
+```
+
+- The `pipe()` method is only available in a `ReadableStream` and not in `WritableStream`.
+- The method accepts a valid `WritableStream` object as its parameter.
+
+Now, You can see that the data of the `hello.txt` file is written to the `toWrite.txt` file.
+
+See this snippet live in [repl.it](https://repl.it/@melvin2016/pipe-method#index.js).
+
+### Feel free to share if you found this useful 😃.
+
+---
