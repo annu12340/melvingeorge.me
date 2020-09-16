@@ -7,11 +7,12 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "postexport": "node scripts/sitemap/generateXML.js && node scripts/rss/generateRSS.js && node scripts/saveAllBlogsDetailsAsJSON.js",
+    "postexport": "node scripts/sitemap/generateXML.js && node scripts/rss/generateRSS.js",
+    "master": "git fetch origin && git merge origin/master",
     "server": "yarn build && NODE_ENV=production node server.js",
     "server-dev": "NODE_ENV=development node server.js",
     "deploy": "NODE_ENV=production npm run build && NODE_ENV=production npm run export",
-    "local-deploy": "git add . && git commit -m 'auto commit for blog content' && git push && git fetch origin && git merge origin/master && yarn deploy && netlify deploy"
+    "local-deploy": "node scripts/saveAllBlogsDetailsAsJSON.js && git add . && git commit -m 'auto commit for blog content' && git push && git fetch origin && git merge origin/master && yarn deploy && netlify deploy"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
