@@ -2,13 +2,14 @@
 import dynamic from "next/dynamic";
 import Navigation from "../Navigation/Navigation";
 const FontAwesomeIcon = dynamic(
-  async () => (await import("@fortawesome/react-fontawesome")).FontAwesomeIcon,
+  async () => (await import("@fortawesome/react-fontawesome")).FontAwesomeIcon
 );
 
 import {
   faGithub,
   faFacebook,
   faTwitter,
+  faLinkedin,
   faFirefoxBrowser,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -19,14 +20,10 @@ const Header = () => (
       {/* <!-- Header Container --> */}
       <div className="container max-w-screen-md mx-auto px-4">
         {/* <!-- Hero section --> */}
-        <section
-          className="flex flex-col items-center justify-center lg:flex-row pt-6"
-        >
+        <section className="flex flex-col items-center justify-center lg:flex-row pt-6">
           {/* <!-- Hero Section: About Text --> */}
           <div className="flex flex-col order-last lg:order-first">
-            <p
-              className="pb-2 text-white font-medium text-2xl lg:text-3xl leading-normal"
-            >
+            <p className="pb-2 text-white font-medium text-2xl lg:text-3xl leading-normal">
               Hi, I'm Melvin George. I help the world by building quality
               software.
             </p>
@@ -52,10 +49,10 @@ const Header = () => (
                 />
               </a>
               &nbsp;&nbsp;&nbsp;
-              <a href="https://www.facebook.com/alkitj10" target="blank">
+              <a href="https://www.linkedin.com/in/melvin2016/" target="blank">
                 <FontAwesomeIcon
                   className="transition transition-colors duration-300 hover:text-blue-700"
-                  icon={faFacebook}
+                  icon={faLinkedin}
                   size="2x"
                   width="0"
                 />
@@ -73,9 +70,7 @@ const Header = () => (
           </div>
           {/* Hero Section: Image */}
           <div className="order-first lg:order-last">
-            <div
-              className="heroImg block lg:hidden w-full"
-            />
+            <div className="heroImg block lg:hidden w-full" />
             <img
               width="640"
               height="360"
@@ -89,16 +84,16 @@ const Header = () => (
     </header>
     <style jsx>
       {`
-      .heroImg {
-        width: 160px;
-        height: 160px;
-        margin: 25px auto;
-        border-radius: 50%;
-        background: url(${require("../../public/me.png?webp")}) -30px / cover
-          no-repeat #4299E1;
-        background-repeat: no-repeat;
-      }
-    `}
+        .heroImg {
+          width: 160px;
+          height: 160px;
+          margin: 25px auto;
+          border-radius: 50%;
+          background: url(${require("../../public/me.png?webp")}) -30px / cover no-repeat
+            #4299e1;
+          background-repeat: no-repeat;
+        }
+      `}
     </style>
   </div>
 );
