@@ -1,0 +1,92 @@
+---
+title: How to stream data from server to client using Node.js?
+description: Learn how to stream data from server to client using Node.js
+keywords: stream video server client nodejs,nodejs streaming example,node js streaming server,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-17
+---
+
+Transferring data as small chunks is the best way to transfer files from the server to clients. Since the whole data is not loaded into the memory at once, so it saves a lot of memory and is very easy to transfer through the internet.
+
+For example, Let's say we have an endpoint for a video and want to stream the video data.
+
+We can use Streams in Node.js for solving this.
+
+For simplicity let's use Express.js to build our endpoint.
+
+```javascript
+// endpoint for /video
+app.get("/video", (req, res) => {
+  // code goes here
+});
+```
+
+Now consider that we have the required video file in a directory called `videos` and the name of the video file is `hello.mp4`. To stream the video you can create a read stream of the video file like this,
+
+```javascript
+// get the filesystem module
+const fs = require("fs");
+
+// endpoint for /video
+app.get("/video", (req, res) => {
+  // create a read stream for the video hello.mp4
+  const rs = fs.createReadStream("./videos/hello.mp4");
+});
+```
+
+After creating the read stream we need to set some headers to let know the client some information about the video that we are streaming.
+
+The basic information includes the size of the file and the type of the file. These pieces of information are set on the header of the response like this,
+
+```javascript
+// get the filesystem module
+const fs = require("fs");
+
+// endpoint for /video
+app.get("/video", (req, res) => {
+  // create a read stream for the video hello.mp4
+  const rs = fs.createReadStream("./videos/hello.mp4");
+
+  // get size of the video file
+  const { size } = fs.statSync("./videos/hello.mp4");
+
+  // set header
+  // including size of file and type of file
+  res.setHeader("Content-Type", "video/mp4");
+  re.setHeader("Content-Length", size);
+});
+```
+
+Here we are setting the content type as `video/mp4` and size of the file using the property `size`.
+
+After setting the response headers now we can start streaming the video using the `pipe()` method available in the [`ReadableStream`](https://melvingeorge.me/blog/create-read-stream-nodejs) object `rs` and pass the `Response` object `res` as the argument to it, This is possible because The `Response` object itself is a [`WritableStream`](https://melvingeorge.me/blog/create-write-stream-node) in Node.js.
+
+```javascript
+// get the filesystem module
+const fs = require("fs");
+
+// endpoint for /video
+app.get("/video", (req, res) => {
+  // create a read stream for the video hello.mp4
+  const rs = fs.createReadStream("./videos/hello.mp4");
+
+  // get size of the video file
+  const { size } = fs.statSync("./videos/hello.mp4");
+
+  // set header
+  // including size of file and type of file
+  res.setHeader("Content-Type", "video/mp4");
+  res.setHeader("Content-Length", size);
+
+  // start streaming the video
+  // using the pipe() method
+  rs.pipe(res);
+});
+```
+
+Now if you start the server and goes to the above endpoint in a browser, you can see that the video will start streaming in the browser.
+
+### Feel free to share if you found this useful 😃.
+
+---
