@@ -1,0 +1,78 @@
+---
+title: How to download files from server to client using Node.js?
+description: Learn how to download files from server to client using Node.js
+keywords: download files from nodejs server,expressjs download files,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-18
+---
+
+To download files from a Node.js server to a client, you have to read the file and set the response header `Content-Disposition`.
+
+Let's say we have a PDF named `resume.pdf` in a directory called `docs` and we want to download that PDF whenever the user goes to `/resume` endpoint.
+
+Let's write the code for that. 🦄
+
+First create a read stream to read the file like this,
+
+```javascript
+// filesystem module
+const fs = require("fs");
+
+// endpoint for /resume
+app.get("/resume", (req, res) => {
+  const rs = fs.createReadStream("./docs/resume.pdf");
+});
+```
+
+After that, set the `Content-Disposition` response header and give the value as `attachment; filename=nameOftheFileYouWant.pdf`. This tells the user's browser that this is an attachment that needs to download it.
+
+```javascript
+// filesystem module
+const fs = require("fs");
+
+// endpoint for /resume
+app.get("/resume", (req, res) => {
+  // create read steam for the pdf
+  const rs = fs.createReadStream("./docs/resume.pdf");
+
+  // set response header: Content-Disposition
+  res.setHeader("Content-Disposition", "attachment; john-resume.pdf");
+});
+```
+
+After setting the header all you have to do is pipe the read stream to the `Response` object `res` using the `pipe()` method like his,
+
+```javascript
+// filesystem module
+const fs = require("fs");
+
+// endpoint for /resume
+app.get("/resume", (req, res) => {
+  // create read steam for the pdf
+  const rs = fs.createReadStream("./docs/resume.pdf");
+
+  // set response header: Content-Disposition
+  res.setHeader("Content-Disposition", "attachment; john-resume.pdf");
+
+  // pipe the read stream to the Response object
+  rs.pipe(res);
+});
+```
+
+### If you are using Express.js, you can use the `res.download()` method and pass the file name as the argument to it like this.
+
+```javascript
+// filesystem module
+const fs = require("fs");
+
+// endpoint for /resume
+app.get("/resume", (req, res) => {
+  // express.js
+  res.download("./docs/resume.pdf");
+});
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
