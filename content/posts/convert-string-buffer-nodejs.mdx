@@ -1,0 +1,44 @@
+---
+title: How to convert a String to Buffer and vice versa in Node.js
+description: Learn how to use the from() method and toString() method in the Buffer class to convert string to buffer and vice versa in Node.js
+keywords: convert string to buffer nodejs,convert buffer to string nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-19
+---
+
+## Convert String to Buffer
+
+To convert a string to a Buffer, you can use the `from()` method from the global `Buffer` class in Node.js.
+
+```javascript
+// a string
+const str = "Hey. this is a string!";
+
+// convert string to Buffer
+const buff = Buffer.from(str, "utf-8");
+
+console.log(buff); // <Buffer 48 65 79 2e ... 72 69 6e 67 21>
+```
+
+- The method accepts a valid string as the first argument.
+- and an optional encoding as the second argument.
+
+## Convert Buffer to String
+
+To convert a Buffer to a String, you can use the `toString()` in the Buffer object.
+
+```javascript
+// buffer
+const str = "Hey. this is a string!";
+const buff = Buffer.from(str, "utf-8");
+
+// convert buffer to string
+const resultStr = buff.toString();
+
+console.log(resultStr); //Hey. this is a string!
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
