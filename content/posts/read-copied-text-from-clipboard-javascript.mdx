@@ -1,0 +1,58 @@
+---
+title: How to read copied text from Clipboard using  JavaScript?
+description: Learn the usage of the readText() method in the Clipboard API to read the copied text using JavaScript
+keywords: get copied text javascript,readText method copy javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-09-20
+---
+
+To read a copied text from a clipboard in JavaScript, you can use the `readText()` method in the `navigator.clipboard` object.
+
+```javascript
+// copy the text from clipboard
+navigator.clipboard.readText().then((copiedText) => {
+  console.log(copiedText); // copied text will be shown here.
+});
+```
+
+- The `readText()` method returns a [`Promise`](https://melvingeorge.me/blog/promises-javascript).
+
+## Example on reading copied text
+
+For example, suppose we want to display the copied text in the `paragraph` tag when we press a button.
+
+Let's see how it's done.
+
+First, let's create an empty `paragraph` tag and a `button` element.
+
+```html
+<!-- Paragraph tag -->
+<p id="textSpace"></p>
+<!-- Button -->
+<button id="btn">Click here to show the copied text in the paragraph</button>
+```
+
+Now let's use JavaScript to listen for the `click` event in the `button` element and display the text in the `paragraph` tag.
+
+```javascript
+// get reference to paragraph
+const paragraph = document.getElementById("textSpace");
+
+// get reference to the button
+const button = document.getElementById("btn");
+
+// add click event handler to the button
+// so that after clicking the button
+// the copied text will be displayed in the paragraph tag
+button.addEventListener("click", () => {
+  // copy the text from clipboard
+  navigator.clipboard.readText().then((copiedText) => {
+    paragraph.innerText = copiedText;
+  });
+});
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
