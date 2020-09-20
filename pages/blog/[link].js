@@ -44,6 +44,10 @@ export async function getStaticProps({ params }) {
   const fs = require("fs");
   const path = require("path");
   const matter = require("gray-matter");
+  const highlight = require("remark-highlight.js");
+  const renderToString = require("next-mdx-remote/render-to-string");
+  const customComponents = require("../../content/components/index");
+
   // Get File and get YAML data from markdown
   const post = fs
     .readFileSync(path.join("content", "posts/", `${params.link}.mdx`))
@@ -61,9 +65,19 @@ export async function getStaticProps({ params }) {
     link: params.link,
   };
 
+  const mdxSource = await renderToString(
+    `# ${frontMatter.title}\n<p className="date">Published ${frontMatter.date} </p>\n${content}`,
+    {
+      components: customComponents,
+      mdxOptions: {
+        remarkPlugins: [highlight],
+      },
+    }
+  );
+
   return {
     props: {
-      content: `# ${data.title}\n<p className="date">Published ${formattedDate}</p>\n${content}`,
+      content: mdxSource,
       frontMatter,
     },
   };
