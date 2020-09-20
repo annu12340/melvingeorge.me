@@ -1,13 +1,13 @@
 import "lazysizes";
 const ImageLoaderUtil = ({ alt: altText, src: source, link }) => {
-  const { trace } = require(`../../content/assets/${link}/${source}?trace`);
-  const src = require(`../../content/assets/${link}/${source}?webp`);
+  const { trace } = require(`../assets/${link}/${source}?trace`);
+  const src = require(`../assets/${link}/${source}?webp`);
   return (
     <img
       alt={altText}
       src={trace}
       data-srcset={src}
-      className="lazyload"
+      className="lazyload blur-up"
       data-sizes="auto"
     />
   );
