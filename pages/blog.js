@@ -22,7 +22,7 @@ const Blog = ({ linksData }) => {
             const res = await fetch("/blog-details.json");
             const json = await res.json();
             const requiredBlogs = [];
-            for (let i = 30; i < json.length; i++) {
+            for (let i = 15; i < json.length; i++) {
               requiredBlogs.push(json[i]);
             }
             setAllBlogs(requiredBlogs);
@@ -103,7 +103,7 @@ export async function getStaticProps() {
   });
 
   const filteredLinksData = linksData.filter((_, index) => {
-    return index < 15;
+    return index <= 15;
   });
 
   return {
