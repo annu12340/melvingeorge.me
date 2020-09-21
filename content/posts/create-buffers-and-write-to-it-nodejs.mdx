@@ -1,0 +1,81 @@
+---
+title: How to create a buffer space and write to it in Node.js?
+description: Learn how to create buffers and write contents into it in Node.js
+keywords: create buffer nodejs,create buffer write nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-21
+---
+
+## Create buffer space
+
+To create buffer space we can use the `alloc()` method in the global `Buffer` class in Node.js.
+
+- The method takes the number of bytes (`integer`) to allocate as the first argument.
+- The method returns a buffer object.
+
+Let's allocate a buffer space of 10 bytes.
+
+```javascript
+// allocate 10 bytes of buffer space
+const buff = Buffer.alloc(10);
+
+// display buff contents
+console.log(buff); // <Buffer 00 00 00 00 00 00 00 00 00 00>
+```
+
+To initialize the bytes with other than 0, you can pass that integer or string as the second argument like this,
+
+```javascript
+// allocate 10 bytes of buffer space
+// allocate with integer 1
+const buff = Buffer.alloc(10, 1);
+
+// display buff contents
+console.log(buff); // <Buffer 01 01 01 01 01 01 01 01 01 01>
+```
+
+## Write to Buffer
+
+To write to a buffer space we can use the `write()` method in the `Buffer` object.
+
+- The method accepts a string as the first argument to write.
+
+```javascript
+// allocate 10 bytes of buffer space
+const buff = Buffer.alloc(10);
+
+// write to buffer
+const bytesWrote = buff.write("John Doe");
+
+console.log(bytesWrote); // 8
+console.log(buff); // Raw Buffer: <Buffer 4a 6f 68 6e 20 44 6f 65 00 00>
+console.log(buff.toString()); // String: John Doe
+```
+
+### We can use the `toString()` method in the `buff` object to convert a raw buffer to string.
+
+We can also define the starting point where it needs to write to the buffer.
+
+For example, if we want to write to buffer after 2 bytes we can pass that as the second argument to the `write()` method.
+
+```javascript
+// allocate 10 bytes of buffer space
+const buff = Buffer.alloc(10);
+
+// write to buffer
+// after 2 bytes
+const bytesWrote = buff.write("John Doe", 2);
+
+console.log(bytesWrote); // 8
+console.log(buff); // Raw Buffer: <Buffer 00 00 4a 6f 68 6e 20 44 6f 65>
+console.log(buff.toString()); // String: John Doe
+```
+
+If you look closely into the contents inside the `buff` variable you can see that the first 2 bytes are `00 00` which means we started writing into the buffer after 2 bytes.
+
+See this example live in [repl.it](https://repl.it/@melvin2016/Create-Buffers-and-Write-to-it).
+
+### Feel free to share if you found this useful 😃.
+
+---
