@@ -21,7 +21,7 @@ const Blog = ({ linksData }) => {
           if (entry.isIntersecting != false) {
             const res = await fetch("/blog-details.json");
             const json = await res.json();
-            console.log(json);
+
             const requiredBlogs = [];
             for (let i = 15; i < json.length; i++) {
               requiredBlogs.push(json[i]);
@@ -41,9 +41,6 @@ const Blog = ({ linksData }) => {
     });
   }, []);
 
-  useEffect(() => {
-    console.log(allBlogs);
-  }, [allBlogs]);
   return (
     <>
       {/* SEO */}
