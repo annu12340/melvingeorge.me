@@ -1,4 +1,5 @@
 import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
+import Head from "next/head";
 import DefaultSeoConfig from "../default-seo.config";
 import { ActiveTabProvider } from "../context/ActiveTab";
 import "../styles/global.css";
@@ -7,6 +8,13 @@ import "highlight.js/styles/night-owl.css";
 const App = ({ Component, pageProps }) => {
   return (
     <>
+      <Head>
+        <script
+          async
+          src="https://cdn.requestmetrics.com/agent/current/rm.js"
+          data-rm-token="q9pq8mv:f4qg9se"
+        ></script>
+      </Head>
       <DefaultSeo {...DefaultSeoConfig}></DefaultSeo>
       <SocialProfileJsonLd
         type="Person"
