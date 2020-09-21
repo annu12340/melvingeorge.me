@@ -1,5 +1,19 @@
 [
   {
+    "title": "How to create a buffer space and write to it in Node.js?",
+    "href": "create-buffers-and-write-to-it-nodejs",
+    "description": "Learn how to create buffers and write contents into it in Node.js",
+    "date": "2020-09-21T00:00:00.000Z",
+    "tagName": "Node.js"
+  },
+  {
+    "title": "How to read copied text from Clipboard using  JavaScript?",
+    "href": "read-copied-text-from-clipboard-javascript",
+    "description": "Learn the usage of the readText() method in the Clipboard API to read the copied text using JavaScript",
+    "date": "2020-09-20T00:00:00.000Z",
+    "tagName": "JavaScript"
+  },
+  {
     "title": "How to convert a String to Buffer and vice versa in Node.js",
     "href": "convert-string-buffer-nodejs",
     "description": "Learn how to use the from() method and toString() method in the Buffer class to convert string to buffer and vice versa in Node.js",
