@@ -21,13 +21,11 @@ const Blog = ({ linksData }) => {
           if (entry.isIntersecting != false) {
             const res = await fetch("/blog-details.json");
             const json = await res.json();
-
             const requiredBlogs = [];
             for (let i = 15; i < json.length; i++) {
               requiredBlogs.push(json[i]);
             }
             setAllBlogs(requiredBlogs);
-
             paginationObserver.unobserve(entry.target);
           }
         });
