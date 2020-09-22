@@ -1,0 +1,27 @@
+---
+title: How to check whether a data or an object is a Buffer in Node.js?
+description: Learn how to use isBuffer() method in the Buffer class to check whether the data or an object is a Buffer in Node.js
+keywords: check whether buffer nodejs,isBuffer method nodejs,check whether data is buffer nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-22
+---
+
+To check whether some data or an object is a `Buffer`, you can use the `isBuffer()` method in the global `Buffer` class in Node.js.
+
+```javascript
+// a buffer
+const buff = Buffer.alloc(10);
+
+// check whether buff object is
+// an instance of Buffer class
+const isItBuffer = Buffer.isBuffer(buff);
+
+console.log(isItBuffer); // true
+```
+
+- The method returns boolean `true` if it is an instance of `Buffer` class and `false` if not.
+
+### Feel free to share if you found this useful 😃.
+
+---
