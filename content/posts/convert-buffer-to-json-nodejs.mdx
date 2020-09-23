@@ -1,0 +1,64 @@
+---
+title: How to convert a Buffer data to JSON in Node.js?
+description: Learn how to use the toJSON() method to convert buffers into JSON in Node.js
+keywords: convert buffer to JSON nodejs,buffer to json nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-23
+---
+
+To convert a `Buffer` to `JSON`, you can use the `toJSON()` method in the Buffer instance.
+
+```javascript
+// convert buff object to json
+const json = buff.toJSON();
+```
+
+For an example, let's say we have an array with some data like this,
+
+```javascript
+// data
+const data = [0x1, 0x2, 0x3, 0x4, 0x5];
+```
+
+Now let's convert this data to buffer using the `from()` method in the Buffer class.
+
+```javascript
+// data
+const data = [0x1, 0x2, 0x3, 0x4, 0x5];
+
+// for an example first let's convert
+// this object to buffer
+const buff = Buffer.from(data);
+```
+
+Now let's convert this buffer to `JSON` using the `toJSON()` method in the `buff` object.
+
+```javascript
+// data
+const data = {
+  name: "John Doe",
+  age: 23,
+};
+
+// for an example first let's convert
+// this object to buffer
+const buff = Buffer.from(data);
+
+// buffer to JSON
+// using the toJSON() method
+const json = buff.toJSON();
+
+console.log(json);
+/*
+{ type: 'Buffer', data: [ 1, 2, 3, 4, 5 ] }
+*/
+```
+
+- The actual data will be in a property called `data` and the type of data is in a property called `type` in the json object.
+
+See this example live in [repl.it](https://repl.it/@melvin2016/Convert-buffer-to-JSON).
+
+### Feel free to share if you found this useful 😃.
+
+---
