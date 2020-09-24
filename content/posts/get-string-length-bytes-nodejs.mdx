@@ -1,0 +1,39 @@
+---
+title: How to get the length of the string as bytes in Nodejs?
+description: Learn how to use the byteLength() method in the Buffer class to get the length of the string as bytes in Node.js
+keywords: length of string bytes nodejs,length of string nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-24
+---
+
+To get the string length in bytes in Node.js, you can use the `byteLength()` method in the `Buffer` class.
+
+Let's say you have a string called `Hello World!`,
+
+```javascript
+// string
+const str = "Hello World!";
+```
+
+Now let's use the `Buffer.byteLength()` to get the bytes of the string.
+
+```javascript
+// string
+const str = "Hello World!";
+
+// get string length in bytes
+const bytes = Buffer.byteLength(str, "utf-8");
+
+console.log(bytes); // 12
+```
+
+- The method accepts types of `Buffer`, `String`, etc as the first argument.
+- The second argument is the encoding, the default is `utf-8`.
+- The method returns the size of the bytes as an `integer`.
+
+See this example live in [repl.it](https://repl.it/@melvin2016/string-length-as-bytes).
+
+### Feel free to share if you found this useful 😃.
+
+---
