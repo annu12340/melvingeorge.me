@@ -1,0 +1,84 @@
+---
+title: How to compare two buffers in Node.js?
+description: Learn how to use the compare() method in the Buffer object in Node.js
+keywords: compare 2 buffers nodejs,compare buffer nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-27
+---
+
+To compare 2 buffers in Node.js, we can use the `compare()` method in the buffer object.
+
+Let's say we have a buffer object like this,
+
+```javascript
+// buffer 1
+const buff1 = Buffer.from("EFG");
+```
+
+and another buffer like this,
+
+```javascript
+// buffer 1
+const buff1 = Buffer.from("EFG");
+
+// buffer 2
+const buff2 = Buffer.from("HIJ");
+```
+
+Now let's use the `compare()` in the `buff1` Buffer object to compare our `buff2` Buffer object like this,
+
+```javascript
+// buffer 1
+const buff1 = Buffer.from("EFG");
+
+// buffer 2
+const buff2 = Buffer.from("HIJ");
+
+// comparing 2 buffers
+const value = buff1.compare(buff2);
+
+console.log(value); // -1
+```
+
+- The method will return `-1` if it finds that the buffer object which is passed as a parameter into the `compare()` method is coming after the string `EFG` in the first buffer.
+- The method will return `0` if it is the same.
+- The method will return `1` if it finds that the buffer object which is passed as a parameter into the `compare()` method is coming before the string `EFG` in the first buffer.
+
+Let's do another example to clearly understand it better
+
+Let's make 2 buffers,
+
+```javascript
+// buffer 1
+const buff1 = Buffer.from("KLM");
+
+// buffer 2
+const buff2 = Buffer.from("ABC");
+
+// comparing 2 buffers
+const value = buff1.compare(buff2);
+
+console.log(value); // 1
+```
+
+If you look closely here we have the two buffers and in the first buffer we have string `KLM` and the second string `ABC`, we know that the string `ABC` is coming before the string `KLM`, so the `compare()` method will return `1`.
+
+The method will return `0` if the string are same like this,
+
+```javascript
+// buffer 1
+const buff1 = Buffer.from("ABC");
+
+// buffer 2
+const buff2 = Buffer.from("ABC");
+
+// comparing 2 buffers
+const value = buff1.compare(buff2);
+
+console.log(value); // 0
+```
+
+### Feel free to share if you found this useful 😃.
+
+---
