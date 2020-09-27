@@ -1,0 +1,95 @@
+---
+title: How to loop through Buffers in Node.js?
+description: Learn how to loop through Buffers in Node.js
+keywords: loop through buffers nodejs,nodejs buffer loop,get single character buffer nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-27
+---
+
+To loop through a `Buffer` instance we can use the `entries()` method available in the buffer instance with the `for...of` looping statement.
+
+Let's say we have a Buffer instance with String `Hello World!` like his,
+
+```javascript
+// Buffer instance with string Hello World!
+const buff = Buffer.from("Hello World!");
+```
+
+Now to loop through the Buffer let's use the `entries()` method and the `for...of` looping statement like this,
+
+```javascript
+// Buffer instance with string Hello World!
+const buff = Buffer.from("Hello World!");
+
+// loop through buffer instance
+for (let pair of buff.entries()) {
+  console.log(pair);
+}
+```
+
+- The `entries()` method returns the data in `[index, byte]` format.
+
+The output of the above code looks like this.
+
+```js
+/*
+
+[ 0, 72 ]
+[ 1, 101 ]
+[ 2, 108 ]
+[ 3, 108 ]
+[ 4, 111 ]
+[ 5, 32 ]
+[ 6, 87 ]
+[ 7, 111 ]
+[ 8, 114 ]
+[ 9, 108 ]
+[ 10, 100 ]
+[ 11, 33 ]
+
+*/
+```
+
+But if you don't want this in the `[index, byte]` format but as a single string, you can use the `String.fromCharCode()` method to get the appropriate character inside the loop like this,
+
+```javascript
+// Buffer instance with string Hello World!
+const buff = Buffer.from("Hello World!");
+
+// loop through buffer instance
+for (let pair of buff.entries()) {
+  // get the byte of character
+  const charCode = pair[1];
+  // use String.fromCharCode() to get the appropriate character
+  // for the byte
+  console.log(String.fromCharCode(charCode));
+}
+```
+
+The output of the above code looks like this,
+
+```js
+/*
+
+H
+e
+l
+l
+o
+
+W
+o
+r
+l
+d
+!
+
+*/
+```
+
+See this example live in [repl.it](https://repl.it/@melvin2016/loop-buffers).
+
+### Feel free to share if you found this useful 😃.
+
+---

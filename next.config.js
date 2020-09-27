@@ -11,7 +11,6 @@ module.exports = withPlugins(
           swDest: "service-worker.js",
           exclude: [
             "react-loadable-manifest.json",
-            "blog-details.json",
             "build-manifest.json",
             /\.map$/,
             /\.(?:png|jpg|jpeg|svg|webp)$/,
