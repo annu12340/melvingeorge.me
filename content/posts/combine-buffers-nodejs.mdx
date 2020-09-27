@@ -1,0 +1,63 @@
+---
+title: How to combine Buffers in Node.js?
+description: Learn how to use the concat() method in the Buffer class to combine Buffers in Node.js
+keywords: combine buffers nodejs,concat buffers nodejs,add buffers nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-26
+---
+
+To combine `Buffer` instances in Node.js, we can use the `concat()` method in the `Buffer` class.
+
+Let's say we have 3 Buffer instances with 10 bytes of memory allocated like this,
+
+```javascript
+// Buffer 1
+const buff1 = Buffer.alloc(10);
+// Buffer 2
+const buff2 = Buffer.alloc(10);
+// Buffer 3
+const buff3 = Buffer.alloc(10);
+```
+
+Now we need to combine these buffers into a single buffer.
+
+- The `concat()` method requires 2 arguments, the first one being an array of buffer instances that we want to combine and the second argument being the total bytes of the combined buffer instances.
+
+- To get the total bytes of a buffer instance we can use the `length` property available int the buffer instance.
+
+```javascript
+// Buffer 1
+const buff1 = Buffer.alloc(10);
+// Buffer 2
+const buff2 = Buffer.alloc(10);
+// Buffer 3
+const buff3 = Buffer.alloc(10);
+
+// get the total bytes
+const totalBytes = buff1.length + buff2.length + buff3.length;
+```
+
+Now let's combine these instances using the `concat()` method to combine these buffers into a single buffer like this,
+
+```javascript
+// Buffer 1
+const buff1 = Buffer.alloc(10);
+// Buffer 2
+const buff2 = Buffer.alloc(10);
+// Buffer 3
+const buff3 = Buffer.alloc(10);
+
+// get the total bytes
+const totalBytes = buff1.length + buff2.length + buff3.length;
+
+// pass buffers an an array as the first argument
+// total bytes as the second argument
+const resultBuffer = Buffer.concat([buff1, buff2, buff3], totalBytes);
+```
+
+- The `concat()` method returns a new combined buffer instance.
+
+### Feel free to share if you found this useful 😃.
+
+---
