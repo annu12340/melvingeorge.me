@@ -1,0 +1,47 @@
+---
+title: How to check if two buffers are equal in Node.js?
+description: Learn how to use the equals() method in a buffer instance to check whether another buffer is equal in Node.js
+keywords: check buffers equal nodejs,equal buffer nodejs,equals method buffer nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-28
+---
+
+To check whether 2 `Buffer` instances are equal, We can use the `equals()` method in the `Buffer` Instance in Node.js.
+
+Let's say we have 2 buffers, one made from the string `Hello World` and another buffer made from Hex code `48656c6c6f20576f726c64` ( this is a hex representation of the string `Hello World` 🦄).
+
+```javascript
+// String buffer
+const strBuff = Buffer.from("Hello World", "utf-8");
+
+// Hex Buffer
+const hexBuff = Buffer.from("48656c6c6f20576f726c64", "hex");
+```
+
+Now let's check if both buffers made from the string and the hex are equal using the `equals()` method in the `strBuff` buffer object.
+
+```javascript
+// String buffer
+const strBuff = Buffer.from("Hello World", "utf-8");
+
+// Hex Buffer
+const hexBuff = Buffer.from("48656c6c6f20576f726c64", "hex");
+
+// check if both buffers are equal
+const isEqual = strBuff.equals(hexBuff);
+
+/*
+    The method will return true
+    because both buffers have the same content
+    even though their encoding is different
+*/
+console.log(isEqual); // true
+```
+
+- The method accepts a valid buffer as an argument.
+- It will return boolean `true` if the buffers are equal and `false` if not.
+
+### Feel free to share if you found this useful 😃.
+
+---
