@@ -1,0 +1,63 @@
+---
+title: How to overwrite or fill buffers with data in Node.js?
+description: Learn how to use the fill() method in the buffer object to fill the buffer with some data in Node.js
+keywords: fill buffer nodejs,overwrite buffer nodejs,fill data buffer nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-29
+---
+
+To fill or overwrite a buffer space with some content or data, we can use the `fill()` method in the `Buffer` instance in Node.js.
+
+Let's say we have a Buffer with 10 bytes of memory allocated like this,
+
+```javascript
+// create buffer
+const buff = Buffer.alloc(10);
+
+console.log(buff); // <Buffer 00 00 00 00 00 00 00 00 00 00>
+```
+
+If you look into the contents of the `buff` object, you can see that the buffer is filled with `0`.
+
+Now let's fill this with `2` instead of `0`, for that we can use the `fill()` method in the `buff` object like this,
+
+```javascript
+// create buffer
+const buff = Buffer.alloc(10);
+
+// fill the buffer with integer 2
+buff.fill(2);
+
+// Buffer filled with integer 2
+console.log(buff); // <Buffer 02 02 02 02 02 02 02 02 02 02>
+```
+
+We can also define the starting point where we want to start filling the buffer and also the ending point where we want to stop filling the buffer.
+
+The starting point is defined as the second argument to the `fill()` method and the endpoint is defined as the third argument to the `fill()` method.
+
+```javascript
+// create buffer
+const buff = Buffer.alloc(10);
+
+// fill the buffer with integer 2
+// but start filling from the 2nd byte and
+// stop filling at 4th byte
+buff.fill(2, 2, 4);
+
+console.log(buff); // <Buffer 00 00 02 02 00 00 00 00 00 00>
+```
+
+See the example live in [repl.it](https://repl.it/@melvin2016/fill-buffer-nodejs).
+
+## Points to note
+
+- The method accepts a `string`, `integer`, or a `Buffer` as the content to fill the buffer as the first argument.
+- The method accepts the starting point or the offset as the second argument.
+- The method accepts the ending point as the third argument.
+- The method returns a reference to the `buffer` instance.
+
+### Feel free to share if you found this useful 😃.
+
+---
