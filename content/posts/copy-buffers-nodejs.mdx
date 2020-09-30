@@ -1,0 +1,53 @@
+---
+title: How to copy contents from one buffer to another buffer in Node.js?
+description: Learn how to use the copy() method in the Buffer instance to copy contents from one buffer to another buffer instance in Node.js
+keywords: copy from buffer nodejs,copy method buffer nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-09-30
+---
+
+To copy contents from one `Buffer` instance to another, we can use the `copy()` method in the `Buffer` instance in Node.js.
+
+Let's say we have 2 `Buffer` instances from strings `Hai John` and `Hello Roy` like this,
+
+```javascript
+// Buffer 1
+const strBuff1 = Buffer.from("Hai John");
+
+// Buffer 2
+const strBuff2 = Buffer.from("Hello Roy");
+```
+
+We need to copy the `Roy` part from the `strBuff2` instance to the `strBuff1` instance and paste it from the first position of the `strBuff1` object.
+
+Let's look at how it is done using the `copy()` in the `strBuff2` object.
+
+```javascript
+// Buffer 1
+const strBuff1 = Buffer.from("Hai John");
+
+// Buffer 2
+const strBuff2 = Buffer.from("Hello Roy");
+
+// copy the Roy part from strBuff2
+strBuff2.copy(strBuff1, 0, 6, 9);
+
+// display the contents in strBuff1
+console.log(strBuff1.toString());
+```
+
+### The above line reads like this: " Copy the contents from the byte 6 till byte 9 in the strBuff2 instance and paste it into the byte 0 of strBuff1 ".
+
+The method:
+
+- Accepts a valid `Buffer` instance to copy to (i.e `strBuff1`) as the first argument.
+- Accepts a starting point in the target buffer (i.e `strBuff1`) to start pasting the content as the second argument.
+- Accepts a starting point in the source buffer (i.e `strBuff2`) to copy from as the third argument.
+- Accepts an ending point in the source buffer (i.e `strBuff2`) as the fourth argument.
+
+See this example live in [repl.it](https://repl.it/@melvin2016/copy-from-one-buffer-to-another).
+
+### Feel free to share if you found this useful 😃.
+
+---
