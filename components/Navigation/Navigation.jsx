@@ -1,5 +1,5 @@
 // MODULES
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { ActiveTabContext } from "../../context/ActiveTab";
@@ -9,14 +9,16 @@ const NavigationItems = dynamic(() => import("./NavigationItems"));
 const MobileNavigation = dynamic(() => import("./MobileNavigation"));
 
 const Navigation = () => {
+  // isIndex state
+  const [isIndex, setIsIndex] = useState("false");
   const activeTab = useContext(ActiveTabContext);
-  const isIndex = activeTab.tab === "" ? true : false;
+  useEffect(() => {
+    setIsIndex(activeTab.tab === "" ? true : false);
+  });
 
   return (
     <>
-      <nav
-        className="flex flex-row justify-between container max-w-screen-md mx-auto px-4 h-24"
-      >
+      <nav className="flex flex-row justify-between container max-w-screen-md mx-auto px-4 h-24">
         <Link href="/">
           <div className="flex flex-row  items-center">
             {!isIndex ? <div className="heroImg" /> : null}
@@ -40,16 +42,16 @@ const Navigation = () => {
       </nav>
       <style jsx>
         {`
-        .heroImg {
-          width: 60px;
-          height: 60px;
-          margin: 15px auto;
-          border-radius: 50%;
-          background: url(${require("../../public/me.png?webp")}) -10px / cover
-            no-repeat rgb(241, 241, 241);
-          background-repeat: no-repeat;
-        }
-      `}
+          .heroImg {
+            width: 60px;
+            height: 60px;
+            margin: 15px auto;
+            border-radius: 50%;
+            background: url(${require("../../public/me.png?webp")}) -10px / cover
+              no-repeat rgb(241, 241, 241);
+            background-repeat: no-repeat;
+          }
+        `}
       </style>
     </>
   );
