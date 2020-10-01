@@ -41,7 +41,6 @@ module.exports = withPlugins(
     [
       optimizedImages,
       {
-        optimizeImagesInDev: true,
         imageTrace: {
           color: "#E2E8F0",
         },
