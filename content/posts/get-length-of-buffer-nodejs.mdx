@@ -1,0 +1,35 @@
+---
+title: How to get the length of the Buffer in Node.js?
+description: Learn how to use the length property in the Buffer instance in Node.js
+keywords: length of buffer nodejs,length buffer nodejs,string length buffer nodejs,nodejs,javascript
+category: Node.js
+author: MELVIN GEORGE
+date: 2020-10-02
+---
+
+To get the length of a `Buffer` instance in Node.js, you can use the `length` property in the `Buffer` instance.
+
+Let's say we have a buffer from the string `Hello World!` like this,
+
+```javascript
+// Buffer from string Hello World!
+const buff = Buffer.from("Hello World!", "utf-8");
+```
+
+Now let's get its length using the property `length` in the `buff` object.
+
+```javascript
+// Buffer from string Hello World!
+const buff = Buffer.from("Hello World!", "utf-8");
+
+// get the length of the Buffer
+const length = buff.length;
+
+console.log(length); // 12
+```
+
+See this example live in [repl.it](https://repl.it/@melvin2016/length-of-buffer-nodejs).
+
+### Feel free to share if you found this useful 😃.
+
+---
