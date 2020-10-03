@@ -1,0 +1,118 @@
+---
+title: How to gracefully handle errors in JavaScript?
+description: Learn how to gracefully handle errors  using the try...catch statement in JavaScript
+keywords: handle errors javascript,try-catch block error javascript,try-catch javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-10-03
+---
+
+Errors are something that happens unexpectedly during the execution of a program. Handling errors is crucial for better user experience and better management of an application.
+
+In JavaScript, Errors can happen quite often due to its nature itself.
+
+The most common causes of Errors in JavaScript are from:
+
+- Syntax errors
+- Errors when accessing DOM
+- Error caused by User while the application is running
+  etc.
+
+You may have seen an error like this,
+
+![Error](error.png)
+
+If these errors are not handled properly, it may block the other parts of code to execute and finally make the application worthless and leaves the user in bad experience too.
+
+We cannot make our application error-prone but we can handle it gracefully.
+
+## How to handle errors in JavaScript?
+
+In JavaScript, Errors can be handled using the `try...catch` block.
+
+```javascript
+// try catch block
+try {
+  /*
+    Run your unguaranteed code here
+  */
+} catch (error) {
+  /*
+    Catch any errors from running the above code 
+    and deal with it here
+  */
+}
+```
+
+For example, let's say we have a function which changes the background color of an element like this,
+
+```javascript
+/* 
+    Function: 
+    Which changes the background color of
+    any element passed to it.
+*/
+function changeBackgroundColor(element, color) {
+  element.style.backgroundColor = color;
+}
+```
+
+But there is a slight problem with the above function. What if we executed `changeBackgroundColor()` and passed an incorrect reference for the `element` argument like this,
+
+```javascript
+/* 
+    Function: 
+    Which changes the background color of
+    any element passed to it.
+*/
+function changeBackgroundColor(element, color) {
+  element.style.backgroundColor = color;
+}
+
+// function
+changeBackgroundColor(123, "red");
+```
+
+We need the `element` argument to be a valid reference for a DOM element otherwise it wouldn't work. So then it throws an Error saying `Uncaught TypeError` and blocks the execution of the entire program.
+
+Now let's wrap this function execution in a `try...catch` block like this,
+
+```javascript
+/* 
+    Function: 
+    Which changes the background color of
+    any element passed to it.
+*/
+function changeBackgroundColor(element, color) {
+  element.style.backgroundColor = color;
+}
+
+/*
+    Calling Function inside
+    try...catch block
+*/
+try {
+  // function
+  changeBackgroundColor(123, "red");
+} catch (e) {
+  console.log(e.message); // Cannot set property 'backgroundColor' of undefined
+  /*
+        Contents of Error object:
+
+        {
+            message: "Cannot set property 'backgroundColor' of undefined"
+            stack: "TypeError: Cannot set property 'backgroundColor' of undefined...    
+        }
+    */
+}
+```
+
+The above `catch(e)` block receives the `error` object (here `e`) happened while running the code on the `try{}` block.
+
+We can gracefully handle the error in our `catch()` block here.
+
+See this example live in [JSBin](https://jsbin.com/mejucivegu/1/edit?js,console).
+
+### Feel free to share if you found this useful 😃.
+
+---
