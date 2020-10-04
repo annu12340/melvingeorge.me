@@ -1,0 +1,77 @@
+---
+title: How to add an element after a DOM element in JavaScript?
+description: Learn how to use the after() DOM element method in JavaScript
+keywords: after() method DOM,add element after DOM element javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-10-04
+---
+
+To insert a text or an element after an element, we can use the `after()` method in the element object in JavaScript.
+
+Let's say we have a HTML structure like this with a `div` tag and 2 `paragraph` tags inside it,
+
+```html
+<div>
+  <p id="para1">I'm paragraph 1</p>
+  <p id="para2">I'm paragraph 2</p>
+</div>
+```
+
+What if we want to insert a text or another element after the `para1` paragraph tag? Well, Don't worry, we can use the `after()` method of `para1` paragraph tag to insert an element or a text.
+
+So first, let's get the reference to the `para1` paragraph tag like this,
+
+```javascript
+// get reference to para1 paragraph tag
+const para1 = document.querySelector("#para1");
+```
+
+Now let's use the `after()` method in the `para1` element and pass another `span` element as an argument to the `after()` method.
+
+```javascript
+// get reference to para1 paragraph tag
+const para1 = document.querySelector("#para1");
+
+// create a span element
+const span = document.createElement("span");
+span.innerHTML = "I'm a span tag";
+
+// use the after() method in the para1 tag
+// to add the span tag after the para1 paragraph
+// element
+para1.after(span);
+```
+
+We can also add text content using the `after()` method.
+
+```javascript
+// get reference to para1 paragraph tag
+const para1 = document.querySelector("#para1");
+
+// create a span element
+const span = document.createElement("span");
+span.innerHTML = "I'm a span tag";
+
+// use the after() method in the para1 tag
+// to add the span tag after the para1 paragraph
+// element
+para1.after(span);
+para1.after("I'm just a text");
+```
+
+Now the output looks like this,
+
+```html
+<!-- 
+    I'm paragraph 1
+    I'm just a text I'm a span tag
+    I'm paragraph 2
+ -->
+```
+
+See this example live in [JSBin](https://jsbin.com/wuzuqovovo/edit?html,js,output).
+
+### Feel free to share if you found this useful 😃.
+
+---
