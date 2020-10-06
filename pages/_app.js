@@ -11,8 +11,9 @@ const App = ({ Component, pageProps }) => {
       <Head>
         <script
           async
-          src="https://cdn.requestmetrics.com/agent/current/rm.js"
-          data-rm-token="q9pq8mv:f4qg9se"
+          defer
+          data-domain="melvingeorge.me"
+          src="https://plausible.io/js/plausible.js"
         ></script>
       </Head>
       <DefaultSeo {...DefaultSeoConfig}></DefaultSeo>
