@@ -1,0 +1,40 @@
+---
+title: How to get the first child of a parent DOM element in JavaScript?
+description: Learn how to get the first child of a parent DOM element in JavaScript
+keywords: first-child of parent javascript,first child dom javascript,get first child of parent javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-10-06
+---
+
+To get the first child of a parent element, you can use the `firstElementChild` property in the DOM element in JavaScript.
+
+Let's say we have a parent element `div` and three `paragragh` tags inside it like this,
+
+```html
+<div id="container">
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <p>Paragraph 3</p>
+</div>
+```
+
+Now let's get the first `paragraph` element from the `div` tag.
+
+To get the first `paragragh` element, first we have to get a reference to the `div` tag and then use the `firstElementChild` property like this,
+
+```javascript
+// get refernece to tht div tag
+const div = document.querySelector("#container");
+
+// ge the first child element
+const firstChild = div.firstElementChild;
+
+console.dir(firstChild); // first p tag properties and methods
+```
+
+See this example live in [JSBin](https://jsbin.com/bexaticoha/edit?html,js,console).
+
+### Feel free to share if you found this useful 😃.
+
+---
