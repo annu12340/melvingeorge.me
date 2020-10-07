@@ -1,0 +1,63 @@
+---
+title: Peek Operation in Stacks and Arrays in JavaScript
+description: Learn how to do the peek operation in stacks or to add the peek method to arrays in JavaScript
+keywords: peek operation javascript,peek array javascript,peek stack javascript,add peek method to array javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-10-07
+---
+
+The `peek()` method is used to only view the last element of an array or view the recently added element in a stack data structure.
+
+Unfortunately, there is no method called `peek()` in the `Array` object. We have to implement it ourselves in JavaScript.
+
+All we have to do is get the last element but do not remove it.
+
+It can be done like this,
+
+```javascript
+const lastElement = array[array.length - 1];
+```
+
+But if you want to add this as a method to the `Array` object, you have to add this as a method to the `Array` prototype chain.
+
+So let's add our `peek()` method to the `Array` prototype chain,
+
+```javascript
+// Adding peek method to the Array
+// prototype chain
+Array.prototype.peek = function () {
+  if (this.length === 0) {
+    throw new Error("out of bounds");
+  }
+  return this[this.length - 1];
+};
+```
+
+The function first checks whether the length of the array is `0`, If it is `true` then it will make an Error, if its `false` then it will return the last element.
+
+Now you can use the `peek()` method just like how you would use the `push()`, `pop()` array methods.
+
+```javascript
+// Adding peek method to the Array
+// prototype chain
+Array.prototype.peek = function () {
+  if (this.length === 0) {
+    throw new Error("out of bounds");
+  }
+  return this[this.length - 1];
+};
+
+// array
+const arr = [1, 2, 3, 4, 5, 6];
+
+// peek() method
+const element = arr.peek();
+console.log(element); // 6
+```
+
+See this example live in [JSBin](https://jsbin.com/huvegataji/edit?js,console).
+
+### Feel free to share if you found this useful 😃.
+
+---
