@@ -7,7 +7,7 @@ const ImageLoaderUtil = ({ alt: altText, src: source, link }) => {
       alt={altText}
       src={trace}
       data-srcset={src}
-      className="lazyload blur-up"
+      className="lazyload blur-up shadow"
       data-sizes="auto"
     />
   );
