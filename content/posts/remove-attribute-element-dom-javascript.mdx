@@ -1,0 +1,39 @@
+---
+title: How to remove attributes from a DOM element using JavaScript?
+description: Learn the usage of the removeAttribute() method to remove attributes from a DOM element in JavaScript
+keywords: remove attribute javascript,removeAttribute() method javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-10-08
+---
+
+To remove an attribute from a DOM element, we can use the `removeAttribute()` method in the element in JavaScript.
+
+Let's say we have a paragraph tag with `id` attribute like this,
+
+```html
+<!-- Paragraph -->
+<p id="myParagraph">Hello World!</p>
+```
+
+Now let's remove the `id` attribute using the `removeAttribute()` method in the paragraph element.
+
+```javascript
+// get refernce to the paragragh element
+const paragraph = document.querySelector("p");
+
+// remove the id attribute using
+// the removeAttribute() method
+paragraph.removeAttribute("id");
+
+// try to get the id attribute now
+console.log(paragraph.getAttribute("id")); // null
+```
+
+- The method accepts a valid tag name of string type as the parameter.
+
+See this example live in [JSBin](https://jsbin.com/yavolejazo/1/edit?html,js,console).
+
+### Feel free to share if you found this useful 😃.
+
+---
