@@ -1,0 +1,53 @@
+---
+title: How to get the count of child elements of an element using JavaScript?
+description: Learn how to get the count of child elements of an element using JavaScript
+keywords: count child elements javascript,length child elements javascript,length of children dom javascript,length of children element parent javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-10-09
+---
+
+To get the count of child elements inside a parent element, You can use the
+
+`childElementCount`
+
+property in the DOM element in JavaScript.
+
+Let's say we have a `div` element with some `paragraph` elements inside it like this,
+
+```html
+<div>
+  <p>I'm a Paragraph</p>
+  <p>I'm a Paragraph</p>
+  <p>I'm a Paragraph</p>
+  <p>I'm a Paragraph</p>
+  <p>I'm a Paragraph</p>
+  <p>I'm a Paragraph</p>
+  <p>I'm a Paragraph</p>
+  <p>I'm a Paragraph</p>
+  <p>I'm a Paragraph</p>
+  <p>I'm a Paragraph</p>
+  <p>I'm a Paragraph</p>
+  <p>I'm a Paragraph</p>
+  <p>I'm a Paragraph</p>
+</div>
+```
+
+Now let's get the count of the child `paragraph` elements using the `childElementCount` property in the `div` element.
+
+```javascript
+// get reference to the div element
+const div = document.querySelector("div");
+
+// get the length of children
+// inside the div element
+const lengthOfChildren = div.childElementCount;
+
+console.log(lengthOfChildren); // 13
+```
+
+See this example live in [JSBin](https://jsbin.com/gifitadisu/edit?html,js,console).
+
+### Feel free to share if you found this useful 😃.
+
+---
