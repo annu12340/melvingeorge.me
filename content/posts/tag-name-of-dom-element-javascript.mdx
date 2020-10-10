@@ -1,0 +1,48 @@
+---
+title: How to get the tag name of an element using JavaScript?
+description: Learn how to get the tag name of an element using JavaScript
+keywords: get name element javascript,tagname javascript,get name of element javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-10-10
+---
+
+To get the tag name of a DOM element in JavaScript, you can use the
+
+```bash
+tagName
+```
+
+property in the element in JavaScript.
+
+Consider this `article` tag with some content inside it,
+
+```html
+<article id="myArticleSection">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae
+  mauris et arcu lobortis semper eget convallis enim. Sed at lorem in dolor
+  ultrices feugiat. Donec elementum at erat vitae pellentesque. Quisque laoreet
+  purus vitae felis porta, quis gravida odio condimentum. Donec faucibus
+  porttitor dui, nec efficitur nisi luctus eget.
+</article>
+```
+
+Now to get the element name, let's use the `tagName` property like this,
+
+```js
+// get reference to the article tag
+const element = document.querySelector("myArticleSection");
+
+// get the name of the tag
+// using the tagName property
+const elementName = element.tagName;
+
+console.log(elementName); // ARTICLE
+```
+
+- The property returns the name of the tag as a string and also in CAPITALISED letters.
+  eg: If it is an `img` tag then the property will return `IMG`.
+
+### Feel free to share if you found this useful 😃.
+
+---
