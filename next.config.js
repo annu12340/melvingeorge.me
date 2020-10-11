@@ -15,26 +15,6 @@ module.exports = withPlugins(
             /\.map$/,
             /\.(?:png|jpg|jpeg|svg|webp)$/,
           ],
-          // Ignore all URL parameters.
-          ignoreURLParametersMatching: [/.*/],
-          dontCacheBustURLsMatching: /.*/,
-          runtimeCaching: [
-            {
-              urlPattern: /\.(?:png|jpg|jpeg|svg|webp)/,
-              handler: "CacheFirst",
-            },
-            {
-              urlPattern: /^https?.*/,
-              handler: "NetworkFirst",
-              options: {
-                networkTimeoutSeconds: 4,
-                cacheName: "offlineCache",
-                expiration: {
-                  maxEntries: 200,
-                },
-              },
-            },
-          ],
         },
       },
     ],
