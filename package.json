@@ -19,6 +19,8 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
+    "@sentry/react": "^5.25.0",
+    "@sentry/tracing": "^5.25.0",
     "gray-matter": "^4.0.2",
     "highlight.js": "^10.1.1",
     "lazysizes": "^5.2.2",
