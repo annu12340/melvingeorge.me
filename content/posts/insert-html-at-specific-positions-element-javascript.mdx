@@ -1,0 +1,158 @@
+---
+title: How to insert HTML at different positions in an element using JavaScript?
+description: Learn how use the insertAdjacentHTML() DOM element method using JavaScript
+keywords: insertAdjacentHTML() dom emthod,insert html isnide element javascript,insert html at specific psotions,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-10-11
+---
+
+To insert HTML at different positions in an element, you can use the `insertAdjacentHTML()` DOM element method in JavaScript.
+
+The `insertAdjacentHTML()` DOM element method accepts 2 arguments:
+
+- The position to insert the HTML as the first argument. You can insert the HTML at different positions and these positions are:
+
+  - `beforebegin`: inserts the HTML before the beginning of the element
+  - `afterbegin`: inserts the HTML after the beginning of the element, i.e as the first child of the element.
+  - `beforeend`: inserts the HTML just before the element ends, i.e as the last child of the element
+  - `afterend`: inserts the HTML after the element
+
+- The HTML to insert as the second argument.
+
+Consider this HTML with a `nav` tag with 2 `anchor` tag inside it,
+
+```html
+<nav>
+  <a>Home</a>
+  <a>Blogs</a>
+</nav>
+```
+
+Let's look at the different positions we mentioned one by one.
+
+### `beforebegin` position
+
+We can insert a `h1` tag just before the `nav` tag using the `insertAdjacentHTML()` method and passing the postion `beforebegin` as the first argument and the HTML as the second argument like this,
+
+```js
+// get reference to the nav tag
+const nav = document.querySelector("nav");
+
+// insert heading tag
+// just before the nav tag
+nav.insertAdjacentHTML("beforebegin", "<h1>This is a Heading</h1>");
+```
+
+So now the HTML looks like this,
+
+```html
+<!-- This is the new Heading tag -->
+<h1>This is a Heading</h1>
+
+<nav>
+  <a>Home</a>
+  <a>Blogs</a>
+</nav>
+```
+
+### `afterbegin` position
+
+We insert an `anchor` tag just after the `nav` tag using the `insertAdjacentHTML()` method and passing the postion `afterbegin` as the first argument and the HTML as the second argument like this,
+
+```js
+// get reference to the nav tag
+const nav = document.querySelector("nav");
+
+// insert anchor tag
+// just after the nav tag
+nav.insertAdjacentHTML("afterbegin", "<a>Dashboard</a>");
+```
+
+So now the HTML looks like this,
+
+```html
+<!-- This is the new Heading tag -->
+<h1>This is a Heading</h1>
+
+<nav>
+  <!-- This is the new Anchor tag as the first child -->
+  <a>Dashboard</a>
+
+  <a>Home</a>
+  <a>Blogs</a>
+</nav>
+```
+
+### `beforeend` position
+
+We insert an `anchor` tag just before the `nav` tag ends using the `insertAdjacentHTML()` method and passing the postion `beforeend` as the first argument and the HTML as the second argument like this,
+
+```js
+// get reference to the nav tag
+const nav = document.querySelector("nav");
+
+// insert anchor tag
+// just before the nav tag ends
+nav.insertAdjacentHTML("beforeend", "<a>Logout</a>");
+```
+
+So now the HTML looks like this,
+
+```html
+<!-- This is the new Heading tag -->
+<h1>This is a Heading</h1>
+
+<nav>
+  <!-- This is the new Anchor tag as the first child -->
+  <a>Dashboard</a>
+
+  <a>Home</a>
+  <a>Blogs</a>
+
+  <a>Logout</a>
+  <!-- This is the new Anchor tag as the last child child -->
+</nav>
+```
+
+### `afterend` position
+
+We insert a `paragraph` tag just after the `nav` tag using the `insertAdjacentHTML()` method and passing the postion `afterend` as the first argument and the HTML as the second argument like this,
+
+```js
+// get reference to the nav tag
+const nav = document.querySelector("nav");
+
+// insert paragraph tag
+// after the nav tag
+nav.insertAdjacentHTML("afterend", "<p>This is a paragraph</p>");
+```
+
+So now the HTML looks like this,
+
+```html
+<!-- This is the new Heading tag -->
+<h1>This is a Heading</h1>
+
+<nav>
+  <!-- This is the new Anchor tag as the first child -->
+  <a>Dashboard</a>
+
+  <a>Home</a>
+  <a>Blogs</a>
+
+  <a>Logout</a>
+  <!-- This is the new Anchor tag as the last child child -->
+</nav>
+
+<!-- This is the new Paragraph tag -->
+<p>This is a paragraph</p>
+```
+
+---
+
+I Have summarised all the above positions mentioned above in this [JSBin](https://jsbin.com/vefeyocati/1/edit?html,js,output).
+
+### Feel free to share if you found this useful 😃.
+
+---
