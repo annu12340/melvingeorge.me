@@ -1,0 +1,40 @@
+---
+title: How to get the last child of a parent DOM element in JavaScript?
+description: Learn how to get the last child of a parent DOM element in JavaScript
+keywords: last-child of parent javascript,last child dom javascript,get last child of parent javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-10-12
+---
+
+To get the last child of a parent element, you can use the `lastElementChild` property in the DOM element in JavaScript.
+
+Let's say we have a parent element `div` and three `paragragh` tags inside it like this,
+
+```html
+<div id="container">
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <p>Paragraph 3</p>
+</div>
+```
+
+Now let's get the last `paragraph` element from the `div` tag.
+
+To get the last `paragragh` element, last we have to get a reference to the `div` tag and then use the `lastElementChild` property like this,
+
+```javascript
+// get refernece to tht div tag
+const div = document.querySelector("#container");
+
+// ge the last child element
+const lastChild = div.lastElementChild;
+
+console.dir(lastChild); // last p tag properties and methods
+```
+
+See this example live in [JSBin](https://jsbin.com/kuvecezeyi/1/edit?html,js,console).
+
+### Feel free to share if you found this useful 😃.
+
+---
