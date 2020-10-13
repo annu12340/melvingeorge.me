@@ -19,6 +19,9 @@ const Tag = ({ name }) => {
       case "Resource":
         setStyleToApply("bg-blue-300 text-gray-800");
         break;
+      case "HTML5":
+        setStyleToApply("bg-orange-600 text-white");
+        break;
       case "CSS":
         setStyleToApply("bg-blue-500 text-white");
         break;
