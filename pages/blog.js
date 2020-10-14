@@ -60,7 +60,13 @@ const Blog = ({ linksData }) => {
         <div className="moreContent"></div>
         {allBlogs.length >= 0
           ? allBlogs.map((linkData) => {
-              return <Card key={linkData.href} {...linkData} />;
+              return (
+                <Card
+                  key={linkData.href}
+                  {...linkData}
+                  shouldPrefetch={false}
+                />
+              );
             })
           : "Loading more blog...🚀"}
       </main>
