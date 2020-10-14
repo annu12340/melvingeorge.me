@@ -1,0 +1,50 @@
+---
+title: Differences between firstChild and firstElementChild DOM element property in JavaScript
+description: Learn the correct usages of firstChild and firstElementChild DOM element property in JavaScript
+keywords: difference between firstChild and firstElementChild property javascript,firstChild vs firstElementChild javascript,firstChild property javascript,firstElementChild propery javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-10-14
+---
+
+The core difference between the `firstChild` and `firstElementChild` DOM element properties is that,
+
+- The `firstChild` DOM element property returns a `text`, `comment`, or an `Element` as the value. Put simply, it returns the first thing that comes as the first child of an element.
+
+- The `firstElementChild` element property on the other hand returns the first `Element` as the value. Even If there are `text` or `comment` which comes before it, it doesn't return the `text` or the `comment` as the values.
+
+Let's look at an example.
+
+Consider this `div` tag with some `text` and a `span` tag inside it as its children.
+
+```html
+<div>
+  Hello World!
+  <span>I'm inside a SPAN tag</span>
+</div>
+```
+
+Now let's use the `firstChild` and the `firstElementChild` DOM element properties on the `div` element to check what it returns.
+
+```js
+// get reference to the div tag
+const div = document.querySelector("div");
+
+// firstChild DOM element property
+const firstChild = div.firstChild;
+
+// firstElementChild DOM element property
+const firstElementChild = div.firstElementChild;
+
+console.log(firstChild); // Hello World!
+
+console.log(firstElementChild); // <span>I'm inside a SPAN tag</span>
+```
+
+As you can see the `firstChild` returns the text content `Hello World!` and the `firstElementChild` returns the `span` tag `<span>I'm inside a SPAN tag</span>`.
+
+See this example live in [JSBin](https://jsbin.com/dehajosobu/1/edit?html,js,output).
+
+### Feel free to share if you found this useful 😃.
+
+---

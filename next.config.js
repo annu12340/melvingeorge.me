@@ -8,6 +8,7 @@ module.exports = withPlugins(
       nextPwa,
       {
         pwa: {
+          disable: process.env.NODE_ENV !== "production",
           dest: "public",
           buildExcludes: [/images\/.*$/],
           publicExcludes: [
