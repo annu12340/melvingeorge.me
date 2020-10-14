@@ -1,39 +1,20 @@
 const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
-const nextOffline = require("next-offline");
+const nextPwa = require("next-pwa");
 
 module.exports = withPlugins(
   [
     [
-      nextOffline,
+      nextPwa,
       {
-        workboxOpts: {
-          swDest: "service-worker.js",
-          exclude: [
-            "react-loadable-manifest.json",
-            "build-manifest.json",
-            /\.map$/,
-            /\.(?:png|jpg|jpeg|svg|webp)$/,
-          ],
-          // Ignore all URL parameters.
-          ignoreURLParametersMatching: [/.*/],
-          dontCacheBustURLsMatching: /.*/,
-          runtimeCaching: [
-            {
-              urlPattern: /\.(?:png|jpg|jpeg|svg|webp)/,
-              handler: "CacheFirst",
-            },
-            {
-              urlPattern: /^https?.*/,
-              handler: "NetworkFirst",
-              options: {
-                networkTimeoutSeconds: 4,
-                cacheName: "offlineCache",
-                expiration: {
-                  maxEntries: 200,
-                },
-              },
-            },
+        pwa: {
+          dest: "public",
+          buildExcludes: [/images\/.*$/],
+          publicExcludes: [
+            "!blog-details.json",
+            "!robots.txt",
+            "!sitemap_main.xml",
+            "!metame.png",
           ],
         },
       },
