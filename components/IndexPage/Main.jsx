@@ -9,7 +9,7 @@ const Main = ({ linksData }) => (
       ? null
       : linksData.map((linkData, index) => (
           <SinglePostLink
-            shouldPrefetch={index < 10 ? true : false}
+            shouldPrefetch={index > 10 ? false : null}
             title={linkData.title}
             key={linkData.href}
             href={linkData.href}

@@ -51,7 +51,7 @@ const Blog = ({ linksData }) => {
             <Card
               key={linkData.href}
               {...linkData}
-              shouldPrefetch={index < 4 ? true : false}
+              shouldPrefetch={index > 4 ? false : null}
             />
           ))
         ) : (
