@@ -47,8 +47,12 @@ const Blog = ({ linksData }) => {
       {/* Main content */}
       <main className="mt-16 mx-auto flex flex-wrap justify-center max-w-6xl">
         {linksData.length > 0 ? (
-          linksData.map((linkData) => (
-            <Card key={linkData.href} {...linkData} />
+          linksData.map((linkData, index) => (
+            <Card
+              key={linkData.href}
+              {...linkData}
+              shouldPrefetch={index < 4 ? true : false}
+            />
           ))
         ) : (
           <p>It's empty here 👽</p>
