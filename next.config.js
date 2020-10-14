@@ -10,7 +10,13 @@ module.exports = withPlugins(
         pwa: {
           disable: process.env.NODE_ENV !== "production",
           dest: "public",
-          buildExcludes: [/images\/.*$/],
+          buildExcludes: [
+            /images\/.*$/,
+            "react-loadable-manifest.json",
+            "build-manifest.json",
+            /\.map$/,
+            /\.(?:png|jpg|jpeg|svg|webp)$/,
+          ],
           publicExcludes: [
             "!blog-details.json",
             "!robots.txt",
