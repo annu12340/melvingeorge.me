@@ -1,0 +1,79 @@
+---
+title: How to serve different image formats in websites using the HTML5 picture tag?
+description: Learn how to serve different image formats in different browsers using the HTML5 picture tag
+keywords: serve different image format browsers,picture tag HTML,source tag HTML,server webp image HTML,serve jpeg images HTML,html5
+category: HTML5
+author: MELVIN GEORGE
+date: 2020-10-13
+---
+
+## Why do we need to serve different image formats?
+
+Since the introduction of `WebP` image format by Google, many of the sites are converting to use WebP format to increase performance, Since `JPEG` images are larger than `WebP` and the loading times are horrible for `JPEG` images.
+
+But still, WebP is not supported by many of the browsers and we want to show the `JPEG` if the `WebP` image is not supported.
+
+`WebP` Provides lossless and lossy compression to images.
+
+To know more about the performance of WebP image format, you can check out the blog [WebP Images & Performance on davidwalsh.name](https://davidwalsh.name/webp-images-performance).
+
+## How to use this?
+
+To serve different image formats, you use the `<picture>` HTML tag and provide different sources using the `<source>` tag. The source tag acts like fallbacks. Let's look at how it's done.
+
+Let's say I have one image, one in `jpeg` format and one in `webp` format.
+
+Our goal is to show the `webp` image if it is supported and if it's not supported by the browser then it should show the `jpeg` image.
+
+First let's write the `picture` tag like this,
+
+```html
+<picture>
+  <!-- Picture Tag -->
+</picture>
+```
+
+After that you need to make a `source` tag and with `srcset` and `type` attribute like this,
+
+```html
+<picture>
+  <source srcset="" type="" />
+</picture>
+```
+
+You need to pass the source of the `webp` image in the `srcset` attribute and the type of the image i.e `image/webp` like this.
+
+```html
+<picture>
+  <source srcset="myImage.webp" type="image/webp" />
+</picture>
+```
+
+Let's also provide the `jpeg` format if the browser doesn't support the `webp` format.
+
+```html
+<picture>
+  <source srcset="myImage.webp" type="image/webp" />
+  <source srcset="myImage.jpeg" type="image/jpeg" />
+</picture>
+```
+
+It's actually done, But what if the browser doesn't support the `<picture>` tag itself so let's add an `img` tag inside the `picture` tag so that the image is guaranteed to show in every browser. 😃
+
+```html
+<picture>
+  <source srcset="myImage.webp" type="image/webp" />
+  <source srcset="myImage.jpeg" type="image/jpeg" />
+  <img src="myImage.jpeg" alt="A JPEG Image" />
+</picture>
+```
+
+That's all! 🌟.
+
+To understand it better I have made this [JSBin](https://jsbin.com/henoyuposu/1/edit?html,output).
+
+If you view this link in the Chrome browser it will show an image of a House (WebP Image) and if you view it in the Safari browser (Not supports WebP image format yet!) it will show an Image of a Squirrel (JPEG Image).
+
+### Feel free to share if you found this useful 😃.
+
+---
