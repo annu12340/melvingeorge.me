@@ -1,0 +1,59 @@
+---
+title: Differences between lastChild and lastElementChild DOM element property in JavaScript
+description: Learn the correct usages of lastChild and lastElementChild DOM element property in JavaScript
+keywords: difference between lastChild and lastElementChild property javascript,lastChild vs lastElementChild javascript,lastChild property javascript,lastElementChild property javascript,javascript
+category: JavaScript
+author: MELVIN GEORGE
+date: 2020-10-15
+---
+
+The core difference between the `lastChild` and `lastElementChild` DOM element properties is that,
+
+- The `lastChild` DOM element property returns a `text`, `comment`, or an `Element` that comes as the last in a parent element. Put simply, it returns the last thing whether it may be of `text`, `comment`, or an `Element` type.
+
+- The `lastElementChild` element property, on the other hand, returns the last `Element` type as the value. Even If there are `text` or `comment` which comes after it, it doesn't return the `text` or the `comment` as the values.
+
+Let's look at an example.
+
+Consider this `div` tag with:
+
+- `span` tag
+- `text` of `Hello World!`
+- a `paragraph` tag
+- another text of `Hai, I'm another simple text`
+
+inside it as its children.
+
+```html
+<div>
+  <span>I'm inside a SPAN tag</span>
+  Hello World!
+  <p>I'm a paragraph</p>
+  Hai, I'm another simple text.
+</div>
+```
+
+Now let's use the `lastChild` and the `lastElementChild` DOM element properties on the `div` element to check what it returns.
+
+```js
+// get reference to the div tag
+const div = document.querySelector("div");
+
+// lastChild DOM element property
+const lastChild = div.lastChild;
+
+// lastElementChild DOM element property
+const lastElementChild = div.lastElementChild;
+
+console.log(lastChild); // Hai, I'm another simple text.
+
+console.log(lastElementChild); // <p>I'm a paragraph</p>
+```
+
+As you can see the `lastChild` returns the last text content `Hai, I'm another simple text` and the `lastElementChild` returns the last element i.e `para` tag (`<p>I'm a paragraph</p>`).
+
+See this example live in [JSBin](https://jsbin.com/pavotazafi/1/edit?html,js,output).
+
+### Feel free to share if you found this useful 😃.
+
+---
