@@ -1,6 +1,7 @@
 # build output
 dist
 .next
+build
 out
 **/public/workbox-*.js
 **/public/sw.js
