@@ -31,6 +31,9 @@ const Tag = ({ name }) => {
       case "Node.js":
         setStyleToApply("bg-green-600 text-gray-100");
         break;
+      case "Git":
+        setStyleToApply("bg-orange-300 text-orange-900");
+        break;
     }
   }, [name]);
 
