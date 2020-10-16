@@ -1,9 +1,6 @@
 import React from "react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
-const ImageLoader = dynamic(() =>
-  import("../../content/components/ImageLoaderUtil")
-);
+import ImageLoader from "../../content/components/ImageLoaderUtil";
 
 const Card = ({ title, description, href, shouldPrefetch }) => {
   return (

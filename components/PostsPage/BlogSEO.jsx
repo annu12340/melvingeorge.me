@@ -15,7 +15,7 @@ const BlogSEO = ({ metadata }) => (
         {
           name: "image",
           property: "og:image",
-          content: `https://melvingeorge.me${require(`../../content/assets/${metadata.link}/meta.jpg?resize&size=1200`)}`,
+          content: `https://melvingeorge.me${require(`../../content/assets/${metadata.link}/meta.jpg`)}`,
         },
       ]}
       openGraph={{
@@ -26,7 +26,7 @@ const BlogSEO = ({ metadata }) => (
         site_name: "MELVIN GEORGE Blog",
         images: [
           {
-            url: `https://melvingeorge.me${require(`../../content/assets/${metadata.link}/meta.jpg?resize&size=1200`)}`,
+            url: `https://melvingeorge.me${require(`../../content/assets/${metadata.link}/meta.jpg`)}`,
           },
         ],
       }}
@@ -40,7 +40,7 @@ const BlogSEO = ({ metadata }) => (
       url={`https://melvingeorge.me/blog/${metadata.link}`}
       title={metadata.title}
       images={[
-        `https://melvingeorge.me${require(`../../content/assets/${metadata.link}/meta.jpg?resize&size=1200`)}`,
+        `https://melvingeorge.me${require(`../../content/assets/${metadata.link}/meta.jpg`)}`,
       ]}
       datePublished={new Date(metadata.date).toISOString()}
       dateModified={new Date(metadata.date).toISOString()}

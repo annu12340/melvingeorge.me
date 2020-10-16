@@ -1,19 +1,11 @@
-import "lazysizes";
 const ImageLoaderUtil = ({ alt: altText, src: source, link }) => {
-  const { trace } = require(`../assets/${link}/${source}?trace`);
-  const src = require(`../assets/${link}/${source}?webp`);
+  const src = require(`../assets/${link}/${source}`);
   const jpeg = require(`../assets/${link}/${source}`);
   return (
-    <picture>
-      <source srcSet={src} type="image/webp" />
+    <picture style={{ height: "200px" }}>
+      <source srcSet={src.replace(/\.[^/.]+$/, ".webp")} type="image/webp" />
       <source srcSet={jpeg} type="image/jpeg" />
-      <img
-        alt={altText}
-        src={trace}
-        data-srcset={src}
-        className="lazyload blur-up shadow"
-        data-sizes="auto"
-      />
+      <img alt={altText} src={src} />
     </picture>
   );
 };

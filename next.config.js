@@ -1,9 +1,20 @@
 const withPlugins = require("next-compose-plugins");
-const optimizedImages = require("next-optimized-images");
 const nextPwa = require("next-pwa");
+const webpLoader = require("./webp-loader-nextjs");
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+
+const nextConfig = {
+  devIndicators: {
+    autoPrerender: false,
+  },
+};
 
 module.exports = withPlugins(
   [
+    [withBundleAnalyzer({})],
+
     [
       nextPwa,
       {
@@ -26,18 +37,8 @@ module.exports = withPlugins(
         },
       },
     ],
-    [
-      optimizedImages,
-      {
-        imageTrace: {
-          color: "#E2E8F0",
-        },
-      },
-    ],
+    // [nextImages],
+    [webpLoader],
   ],
-  {
-    devIndicators: {
-      autoPrerender: false,
-    },
-  }
+  nextConfig
 );

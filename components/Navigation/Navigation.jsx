@@ -47,8 +47,10 @@ const Navigation = () => {
             height: 60px;
             margin: 15px auto;
             border-radius: 50%;
-            background: url(${require("../../public/me.png?webp")}) -10px / cover
-              no-repeat rgb(241, 241, 241);
+            background: url(${require("../../public/me.png").replace(
+                /\.[^/.]+$/,
+                ".webp"
+              )}) -10px / cover no-repeat rgb(241, 241, 241);
             background-repeat: no-repeat;
           }
         `}
