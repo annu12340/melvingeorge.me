@@ -1,0 +1,38 @@
+---
+title: How to save current code changes without committing the changes in Git?
+description: Learn the usage of git stash and git stash pop Git commands
+keywords: save code without commit git,git stash,save code no commit git,git stash pop,git
+category: Git
+author: MELVIN GEORGE
+date: 2020-10-17
+---
+
+To save the code changes on a branch without committing in Git, you can use the
+
+```bash
+git stash
+```
+
+command.
+
+Now all the uncommitted code will be saved to the Git Stash and all the uncommitted code will be removed from the files too but that doesn't mean it's gone, it's saved 😃.
+
+After doing this operation, you can perform any operation in Git including, changing branches, creating new commits, etc.
+
+To get back the saved code from the stash, you can use the
+
+```bash
+git stash pop
+```
+
+command.
+
+Now the uncommitted code which was in the stash is added again to the files.
+
+Nifty Trick. Right 🌟. I use this all the time when I have uncommitted code and want to save them but not commit it when switching between branches.
+
+### Meaning of [Stash according to Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/stash) **_to store or hide something, especially a large amount: _**
+
+### Feel free to share if you found this useful 😃.
+
+---
