@@ -1,0 +1,66 @@
+---
+title: How to change the name of branches locally and remotely in Git?
+description: Learn how to properly change the name of branches locally and remotely in Git
+keywords: rename branch git,rename branches git,change name of branch remote git,change name of branch local git,git
+category: Git
+author: MELVIN GEORGE
+date: 2020-10-17
+---
+
+## Change the branch name locally
+
+There is 2 scenarios here:
+
+### Scenario 1: If you are on the branch
+
+If you are on the branch which you want to change the name then you can use this
+
+```bash
+git branch -m new-name-of-branch
+```
+
+command.
+
+### Scenario 2: If you are on another branch
+
+If you are on another branch but want to change the name of a specific branch then you can use this
+
+```bash
+git branch -m old-name-of-branch new-name-of-branch
+```
+
+command.
+
+## Change the branch name remotely
+
+After changing the name of the branch locally in git, now you may want to get the same name reflected remotely like in GitHub, Gitlab, Bitbucket, etc, Git hosting services.
+
+To do that first, you need to delete the old branch in remote, you can do this with this command,
+
+## 🚀 NOTE: BEFORE DELETING ANY REMOTE BRANCHES ALWAYS MAKE SURE YOU HAVE THE LATEST CODE CONTENT LOCALLY.
+
+```bash
+git push origin --delete old-name-of-branch
+```
+
+Then you need to push the newly renamed local branch to remote, to do that you can use this,
+
+```bash
+git push origin new-name-of-branch
+```
+
+And lastly, you need to reset the upstream branch for the new local branch. You can achieve this using this,
+
+```bash
+git push origin -u new-name-of-branch
+```
+
+This is done to keep the sync between the remote and local branches.
+
+This is what I do personally to rename the branches in my projects ✅.
+
+That's all! 🌟
+
+### Feel free to share if you found this useful 😃.
+
+---
