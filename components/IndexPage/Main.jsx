@@ -7,9 +7,8 @@ const Main = ({ linksData }) => (
     <h1 className="text-2xl mb-10 font-semibold text-gray-800">Recent blogs</h1>
     {linksData && linksData.length <= 0
       ? null
-      : linksData.map((linkData, index) => (
+      : linksData.map((linkData) => (
           <SinglePostLink
-            shouldPrefetch={index < 10 ? true : false}
             title={linkData.title}
             key={linkData.href}
             href={linkData.href}

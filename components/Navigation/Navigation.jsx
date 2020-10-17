@@ -2,6 +2,7 @@
 import { useContext, useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+
 import { ActiveTabContext } from "../../context/ActiveTab";
 
 // COMPONENTS
@@ -9,6 +10,9 @@ const NavigationItems = dynamic(() => import("./NavigationItems"));
 const MobileNavigation = dynamic(() => import("./MobileNavigation"));
 
 const Navigation = () => {
+  // img
+  const img = require("../../public/me.png").images[1].path;
+
   // isIndex state
   const [isIndex, setIsIndex] = useState("false");
   const activeTab = useContext(ActiveTabContext);
@@ -47,8 +51,7 @@ const Navigation = () => {
             height: 60px;
             margin: 15px auto;
             border-radius: 50%;
-            background: url(${require("../../public/me.png?webp")}) -10px / cover
-              no-repeat rgb(241, 241, 241);
+            background: url(${img}) -10px / cover no-repeat rgb(241, 241, 241);
             background-repeat: no-repeat;
           }
         `}

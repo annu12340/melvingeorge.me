@@ -1,6 +1,7 @@
 // ICONS
 import dynamic from "next/dynamic";
 import Navigation from "../Navigation/Navigation";
+import { Picture } from "next-img";
 const FontAwesomeIcon = dynamic(
   async () => (await import("@fortawesome/react-fontawesome")).FontAwesomeIcon
 );
@@ -14,8 +15,7 @@ import {
 
 const Header = () => {
   // hero images
-  const heroImgWebp = require("../../public/me2.png?webp");
-  const heroImgPng = require("../../public/me2.png");
+  const heroImg = require("../../public/me2.png");
 
   return (
     <div className="bgHero">
@@ -78,17 +78,7 @@ const Header = () => {
             {/* Hero Section: Image */}
             <div className="order-first lg:order-last">
               <div className="heroImg block lg:hidden w-full" />
-              <picture>
-                <source srcSet={heroImgWebp} type="image/webp" />
-                <source srcSet={heroImgPng} type="image/png" />
-                <img
-                  width="640"
-                  height="360"
-                  className="hidden lg:block order-first md:order-last z-0"
-                  src={heroImgWebp}
-                  alt="Picture of Melvin george"
-                />
-              </picture>
+              <Picture className="hidden lg:block" src={heroImg} />
             </div>
           </section>
         </div>
@@ -100,8 +90,8 @@ const Header = () => {
             height: 160px;
             margin: 25px auto;
             border-radius: 50%;
-            background: url(${require("../../public/me.png?webp")}) -30px / cover
-              no-repeat #4299e1;
+            background: url(${require("../../public/me.png").images[1].path}) -30px /
+              cover no-repeat #4299e1;
             background-repeat: no-repeat;
           }
         `}

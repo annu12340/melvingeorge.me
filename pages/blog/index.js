@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { NextSeo } from "next-seo";
-import Card from "../components/BlogPage/Card";
-import { SetActiveTabContext } from "../context/ActiveTab";
-import Navigation from "../components/Navigation/Navigation";
+import Card from "../../components/BlogPage/Card";
+import { SetActiveTabContext } from "../../context/ActiveTab";
+import Navigation from "../../components/Navigation/Navigation";
 
 const Blog = ({ linksData }) => {
   // all blog details data
@@ -47,12 +47,8 @@ const Blog = ({ linksData }) => {
       {/* Main content */}
       <main className="mt-16 mx-auto flex flex-wrap justify-center max-w-6xl">
         {linksData.length > 0 ? (
-          linksData.map((linkData, index) => (
-            <Card
-              key={linkData.href}
-              {...linkData}
-              shouldPrefetch={index < 4 ? true : false}
-            />
+          linksData.map((linkData) => (
+            <Card key={linkData.href} {...linkData} />
           ))
         ) : (
           <p>It's empty here 👽</p>

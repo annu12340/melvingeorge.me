@@ -1,8 +1,5 @@
 import React, { useRef } from "react";
-import dynamic from "next/dynamic";
-const ImageLoaderUtil = dynamic(() =>
-  import("../../content/components/ImageLoaderUtil")
-);
+import ImageLoaderUtil from "../../content/components/ImageLoaderUtil";
 import hydrate from "next-mdx-remote/hydrate";
 import customComponents from "../../content/components/index";
 
