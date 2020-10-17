@@ -1,5 +1,5 @@
 const withPlugins = require("next-compose-plugins");
-const optimizedImages = require("next-optimized-images");
+const nextImg = require("next-img/plugin");
 const nextPwa = require("next-pwa");
 
 module.exports = withPlugins(
@@ -27,10 +27,25 @@ module.exports = withPlugins(
       },
     ],
     [
-      optimizedImages,
+      nextImg,
       {
-        imageTrace: {
-          color: "#E2E8F0",
+        jpeg: {
+          quality: 100,
+          webp: {
+            quality: 50,
+            reductionEffort: 6,
+            alphaQuality: 10,
+          },
+        },
+
+        png: {
+          quality: 100,
+          webp: {
+            quality: 50,
+            alphaQuality: 10,
+            reductionEffort: 6,
+            lossless: false,
+          },
         },
       },
     ],
