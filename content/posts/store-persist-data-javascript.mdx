@@ -1,7 +1,7 @@
 ---
 title: How to store and persist data in JavaScript?
-description: Learn how to use the localStorage browser API
-keywords: localStorage,setItem method,getItem method,removeItem method,store data in javascript,persist data,javascript,
+description: Learn how to use the localStorage and sessionStorage browser API
+keywords: localStorage,sessionStorage, setItem method,getItem method,removeItem method,store data in javascript,persist data,javascript,
 category: JavaScript
 author: MELVIN GEORGE
 date: 2020-07-04
@@ -18,13 +18,24 @@ date: 2020-07-04
 
 When you build a web application, often we might need to save data for a user across visits to the website in the future.
 
-You can achieve this functionality with the help of `localStorage` Browser API.
+You can achieve this functionality with the following:-
+ - `localStorage` Browser API : for storing data with no expiration date 
+ - `sessionStorage` Browser API : for storing data for just one session ie data will be lost when the browser tab is closed
+ 
+ # Local Storage
+ 
+`localStorage` is a Web API for storing data without any expiration date. The data wouldn't not be deleted when the browser tab is closed, and hence would be available the next day, week, month or year.
 
-`localStorage` is a Web API for storing data. We can store data into it in a key/pair format.
+. We can store data into it in a key/pair format.
 
 ## Storing Data
 
 To store data we need to use the `setItem()` method available in the `localStorage` object.
+
+**Syntax** 
+```javascript
+localStorage.setItem("key", "value");
+```
 
 Let's store our user's names.
 
@@ -44,6 +55,13 @@ The method accepts:
 
 To get the stored data we need to use the `getItem()` method available in the `localStorage` object.
 
+**Syntax**
+
+```javascript
+localStorage.getItem("key");
+```
+
+
 Let's retrieve the stored user's name
 
 ```javascript
@@ -60,6 +78,12 @@ The method accepts:
 
 To remove stored data we need to use the `removeItem()` method available in the `localStorage` object.
 
+**Syntax**
+
+```javascript
+localStorage.removeItem("key");
+```
+
 Let's remove the stored user's name
 
 ```javascript
@@ -70,6 +94,52 @@ localStorage.removeItem("name");
 The method accepts:
 
 - the key name to remove as an argument.
+
+
+For clearing all saved data from local storage use ```localStorage.clear();``` 
+
+# Session Storage
+
+The sessionStorage object is similar to the localStorage object, except that it stores the data for only one session and this data will be cleared when the page session ends. Thus the sessionStorage exists only within the current browser tab and another tab with the same page will have a different storage.
+
+
+## Storing Data
+
+To store data we need to use the `setItem()` method available in the `sessionStorage` object.
+
+Let's store our user's names.
+
+```javascript
+
+// storing user's name
+sessionStorage.setItem('name', 'Tom');
+```
+
+## Get Stored Data
+
+To get the stored data we need to use the `getItem()` method available in the `sessionStorage` object.
+
+Let's retrieve the stored user's name
+
+```javascript
+// get stored name
+const name = sessionStorage.getItem("name");
+```
+
+
+## Removing Stored Data
+
+To remove stored data we need to use the `removeItem()` method available in the `sessionStorage` object.
+
+Let's remove the stored user's name
+
+```javascript
+// remove the stored user's name
+sessionStorage.removeItem("name");
+```
+
+
+
 
 ### Feel free to share if you found this useful 😃.
 
